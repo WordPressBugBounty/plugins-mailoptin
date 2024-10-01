@@ -9,13 +9,7 @@ use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Connections\Init as ConnectionsInit;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_USER_COMMENT_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/CommentOptinConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_USER_COMMENT_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_USER_COMMENT_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
 class Init
 {

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca
+class ComposerStaticInit732a7b0da0b0d8d73ec28fe66ff95d81
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -46,6 +46,7 @@ class ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca
             'MailOptin\\WooCommerceConnect\\' => 29,
             'MailOptin\\WebHookConnect\\' => 25,
             'MailOptin\\WeMailConnect\\' => 24,
+            'MailOptin\\WSFormConnect\\' => 24,
             'MailOptin\\WPMLConnect\\' => 22,
             'MailOptin\\WPFormsConnect\\' => 25,
             'MailOptin\\VerticalResponseConnect\\' => 34,
@@ -217,6 +218,10 @@ class ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca
         'MailOptin\\WeMailConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WeMailConnect',
+        ),
+        'MailOptin\\WSFormConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/WSFormConnect',
         ),
         'MailOptin\\WPMLConnect\\' => 
         array (
@@ -1348,6 +1353,8 @@ class ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca
         'MailOptin\\VerticalResponseConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/VerticalResponseConnect/Subscription.php',
         'MailOptin\\WPFormsConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/WPFormsConnect/Connect.php',
         'MailOptin\\WPFormsConnect\\MailOptin' => __DIR__ . '/../..' . '/src/connections/WPFormsConnect/MailOptin.php',
+        'MailOptin\\WSFormConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/WSFormConnect/Connect.php',
+        'MailOptin\\WSFormConnect\\WSFMailOptin' => __DIR__ . '/../..' . '/src/connections/WSFormConnect/WSFMailOptin.php',
         'MailOptin\\WeMailConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/WeMailConnect/APIClass.php',
         'MailOptin\\WeMailConnect\\AbstractWeMailConnect' => __DIR__ . '/../..' . '/src/connections/WeMailConnect/AbstractWeMailConnect.php',
         'MailOptin\\WeMailConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/WeMailConnect/Connect.php',
@@ -1595,9 +1602,9 @@ class ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit25850ac2eb2a0cbbac85da020345f8ca::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit732a7b0da0b0d8d73ec28fe66ff95d81::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit732a7b0da0b0d8d73ec28fe66ff95d81::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit732a7b0da0b0d8d73ec28fe66ff95d81::$classMap;
 
         }, null, ClassLoader::class);
     }

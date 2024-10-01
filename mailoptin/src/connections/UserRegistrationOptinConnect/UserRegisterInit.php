@@ -4,19 +4,12 @@ namespace MailOptin\UserRegistrationOptinConnect;
 
 use MailOptin\Core\AjaxHandler;
 use MailOptin\Core\Connections\AbstractConnect;
-use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Connections\Init;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_USER_REGISTER_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/UserRegistrationOptinConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_USER_REGISTER_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_USER_REGISTER_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
 class UserRegisterInit
 {

@@ -147,6 +147,8 @@ class ConnectSettingsPage extends AbstractZohoCRMConnect
             // delete connection cache
             delete_transient("_mo_connection_cache_$connection");
 
+            self::delete_oauth_refresh_error_count('zohocrm');
+
             wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
             exit;
         }

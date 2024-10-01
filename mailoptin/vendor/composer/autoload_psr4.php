@@ -24,6 +24,7 @@ return array(
     'MailOptin\\WooCommerceConnect\\' => array($baseDir . '/src/connections/WooCommerceConnect'),
     'MailOptin\\WebHookConnect\\' => array($baseDir . '/src/connections/WebHookConnect'),
     'MailOptin\\WeMailConnect\\' => array($baseDir . '/src/connections/WeMailConnect'),
+    'MailOptin\\WSFormConnect\\' => array($baseDir . '/src/connections/WSFormConnect'),
     'MailOptin\\WPMLConnect\\' => array($baseDir . '/src/connections/WPMLConnect'),
     'MailOptin\\WPFormsConnect\\' => array($baseDir . '/src/connections/WPFormsConnect'),
     'MailOptin\\VerticalResponseConnect\\' => array($baseDir . '/src/connections/VerticalResponseConnect'),

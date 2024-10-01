@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 5.8
 Requires PHP: 7.3
 Tested up to: 6.6
-Stable tag: 1.2.70.4
+Stable tag: 1.2.71.0
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -63,7 +63,7 @@ MailOptin integrates with the WordPress user system to [create custom user regis
 
 = Integration with Form Plugins =
 
-MailOptin integrates with [Gravity Forms](https://mailoptin.io/article/gravity-forms-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Contact Form 7](https://mailoptin.io/article/contact-form-7-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Ninja Forms](https://mailoptin.io/article/ninja-forms-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [WPForms](https://mailoptin.io/article/wpforms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Formidable Forms](https://mailoptin.io/article/formidable-forms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Forminator](https://mailoptin.io/article/forminator-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Fluent Forms](https://mailoptin.io/article/fluent-forms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) and [Elementor forms](https://mailoptin.io/article/elementor-form-integration/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) so you can capture and save leads to your email marketing software and CRMs.
+MailOptin integrates with [Gravity Forms](https://mailoptin.io/article/gravity-forms-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Contact Form 7](https://mailoptin.io/article/contact-form-7-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Ninja Forms](https://mailoptin.io/article/ninja-forms-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [WPForms](https://mailoptin.io/article/wpforms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Formidable Forms](https://mailoptin.io/article/formidable-forms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Forminator](https://mailoptin.io/article/forminator-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Fluent Forms](https://mailoptin.io/article/fluent-forms-email-marketing-crm/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), [Elementor forms](https://mailoptin.io/article/elementor-form-integration/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) and [WS Form](https://mailoptin.io/article/ws-form-mailchimp-aweber-more/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) so you can capture and save leads to your email marketing software and CRMs.
 
 = WooCommerce, LearnDash, LifterLMS, MemberPress, Ultimate Member, Tutor LMS, Paid Memberships Pro, Easy Digital Downloads, GiveWP & Restrict Content Pro =
 
@@ -183,6 +183,12 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 10. Elementor form integration with MailOptin
 
 == Changelog ==
+
+= 1.2.71.0 =
+* Added [WS Form integration](https://mailoptin.io/article/ws-form-mailchimp-aweber-more/?ref=changelog).
+* Fixed: PHP Warning: Undefined array key "placeholder"
+* Reworked how asset URLs in the plugin are dynamically retrieved.
+* Fixed bug where rate-limit counter didn’t reset after successful token refresh.
 
 = 1.2.70.4 =
 * Added more donation data for field mapping in GiveWP integration.

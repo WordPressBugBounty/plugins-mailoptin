@@ -2,19 +2,12 @@
 
 namespace MailOptin\RCPConnect;
 
-use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use function MailOptin\Core\moVar;
 use function MailOptin\Core\moVarGET;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_RCP_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/RCPConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_RCP_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_RCP_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
 class RCPInit
 {

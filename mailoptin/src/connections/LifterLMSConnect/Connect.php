@@ -9,13 +9,7 @@ use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Core\Repositories\EmailCampaignRepository;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_LLMS_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/LifterLMSConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_LLMS_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_LLMS_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
 class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 {

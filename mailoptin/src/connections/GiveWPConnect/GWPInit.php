@@ -9,13 +9,7 @@ use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_GWP_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/GiveWPConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_GWP_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_GWP_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
 class GWPInit
 {
@@ -539,7 +533,7 @@ class GWPInit
                 'ID'                            => $payment->user_id,
                 'mogwp_donation_transaction_id' => $payment->transaction_id,
                 'mogwp_donation_id'             => $payment->ID,
-                'mogwp_donation_total'          => $payment->total,
+                'mogwp_donation_total'          => (string)$payment->total,
                 'mogwp_donation_form_title'     => $payment->form_title,
                 'mogwp_donation_form_id'        => $payment->form_id,
                 'mogwp_donation_form_price_id'  => $payment->price_id,
@@ -548,7 +542,9 @@ class GWPInit
                 'mogwp_donation_gateway'        => $payment->gateway,
             ];
 
-            if (isset($hash_map[$value])) return $hash_map[$value];
+            if (isset($hash_map[$value])) {
+                return apply_filters('mo_gwp_field_value', $hash_map[$value], $value, $payment);
+            }
 
             $user_data = get_user_by('email', $email);
 

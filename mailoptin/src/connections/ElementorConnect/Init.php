@@ -5,15 +5,8 @@ namespace MailOptin\ElementorConnect;
 use Elementor\Controls_Manager;
 use ElementorPro\Modules\Forms\Registrars\Form_Actions_Registrar;
 use MailOptin\Core\Connections\ConnectionFactory;
-use MailOptin\SendinblueConnect\Connect as SendinblueConnect;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_ELEMENTOR_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/ElementorConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_ELEMENTOR_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_ELEMENTOR_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
 class Init
 {

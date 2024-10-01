@@ -148,6 +148,8 @@ class ConnectSettingsPage extends AbstractZohoCampaignsConnect
             // delete connection cache
             delete_transient("_mo_connection_cache_$connection");
 
+            self::delete_oauth_refresh_error_count('zohocampaigns');
+
             wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
             exit;
         }

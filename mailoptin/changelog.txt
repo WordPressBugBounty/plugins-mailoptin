@@ -1,5 +1,11 @@
 ﻿== Changelog ==
 
+= 1.2.71.0 =
+* Added [WS Form integration](https://mailoptin.io/article/ws-form-mailchimp-aweber-more/?ref=changelog).
+* Fixed: PHP Warning: Undefined array key "placeholder"
+* Reworked how asset URLs in the plugin are dynamically retrieved.
+* Fixed bug where rate-limit counter didn’t reset after successful token refresh.
+
 = 1.2.70.4 =
 * Added more donation data for field mapping in GiveWP integration.
 * Remove deprecated jQuery codes.

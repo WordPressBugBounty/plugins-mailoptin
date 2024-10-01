@@ -246,6 +246,7 @@ class Init
         \MailOptin\EasyDigitalDownloadsConnect\Connect::get_instance();
         \MailOptin\GiveWPConnect\Connect::get_instance();
         \MailOptin\FluentFormConnect\Connect::get_instance();
+        \MailOptin\WSFormConnect\Connect::get_instance();
         GoogleAnalytics::get_instance();
     }
 }

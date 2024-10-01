@@ -80,6 +80,7 @@
       "MailOptin\\EasyDigitalDownloadsConnect\\": "EasyDigitalDownloadsConnect/",
       "MailOptin\\GiveWPConnect\\": "GiveWPConnect/",
       "MailOptin\\FluentFormConnect\\": "FluentFormConnect/",
+      "MailOptin\\WSFormConnect\\": "WSFormConnect/",
       "MailOptin\\Connections\\": "./"
     },
     "classmap": [

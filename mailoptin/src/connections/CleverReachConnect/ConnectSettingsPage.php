@@ -52,7 +52,7 @@ class ConnectSettingsPage extends AbstractCleverReachConnect
             'section_title_without_status' => __('CleverReach', 'mailoptin'),
             'section_title'                => __('CleverReach Connection', 'mailoptin') . " $status",
             'type'                         => self::CRM_TYPE,
-            'cleverreach_auth'            => array(
+            'cleverreach_auth'             => array(
                 'type'        => 'arbitrary',
                 'data'        => sprintf(
                     '<div class="moBtncontainer"><a href="%s" class="mobutton mobtnPush %s">%s</a></div>%s',
@@ -135,6 +135,8 @@ class ConnectSettingsPage extends AbstractCleverReachConnect
 
             // delete connection cache
             delete_transient("_mo_connection_cache_$connection");
+
+            self::delete_oauth_refresh_error_count('cleverreach');
 
             wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
             exit;

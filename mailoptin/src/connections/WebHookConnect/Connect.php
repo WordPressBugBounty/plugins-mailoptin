@@ -8,13 +8,7 @@ use MailOptin\Core\Connections\ConnectionInterface;
 use function MailOptin\Core\moVar;
 use function MailOptin\Core\system_form_fields;
 
-if (strpos(__FILE__, 'mailoptin' . DIRECTORY_SEPARATOR . 'src') !== false) {
-    // production url path to assets folder.
-    define('MAILOPTIN_WEBHOOK_CONNECT_ASSETS_URL', MAILOPTIN_URL . 'src/connections/WebHookConnect/assets/');
-} else {
-    // dev url path to assets folder.
-    define('MAILOPTIN_WEBHOOK_CONNECT_ASSETS_URL', MAILOPTIN_URL . '../' . dirname(substr(__FILE__, strpos(__FILE__, 'mailoptin'))) . '/assets/');
-}
+define('MAILOPTIN_WEBHOOK_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
 class Connect extends AbstractConnect implements ConnectionInterface
 {

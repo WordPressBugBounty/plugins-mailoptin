@@ -821,6 +821,8 @@ return array(
     'MailOptin\\VerticalResponseConnect\\Subscription' => $baseDir . '/src/connections/VerticalResponseConnect/Subscription.php',
     'MailOptin\\WPFormsConnect\\Connect' => $baseDir . '/src/connections/WPFormsConnect/Connect.php',
     'MailOptin\\WPFormsConnect\\MailOptin' => $baseDir . '/src/connections/WPFormsConnect/MailOptin.php',
+    'MailOptin\\WSFormConnect\\Connect' => $baseDir . '/src/connections/WSFormConnect/Connect.php',
+    'MailOptin\\WSFormConnect\\WSFMailOptin' => $baseDir . '/src/connections/WSFormConnect/WSFMailOptin.php',
     'MailOptin\\WeMailConnect\\APIClass' => $baseDir . '/src/connections/WeMailConnect/APIClass.php',
     'MailOptin\\WeMailConnect\\AbstractWeMailConnect' => $baseDir . '/src/connections/WeMailConnect/AbstractWeMailConnect.php',
     'MailOptin\\WeMailConnect\\Connect' => $baseDir . '/src/connections/WeMailConnect/Connect.php',

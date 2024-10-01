@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.70.4\n"
+"Project-Id-Version: MailOptin - Lite 1.2.71.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-16T10:00:31+00:00\n"
+"POT-Creation-Date: 2024-10-01T13:12:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: mailoptin\n"
@@ -95,33 +95,37 @@ msgstr ""
 #: src/connections/CleverReachConnect/Connect.php:196
 #: src/connections/ContactForm7Connect/CF7.php:144
 #: src/connections/ContactForm7Connect/panel-settings-view.php:47
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:544
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:538
 #: src/connections/EgoiConnect/ConnectSettingsPage.php:23
 #: src/connections/EmmaConnect/Connect.php:58
 #: src/connections/FormidableFormConnect/panel-settings-view.php:37
 #: src/connections/FormidableFormConnect/panel-settings-view.php:94
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:216
 #: src/connections/GetResponseConnect/ConnectSettingsPage.php:79
-#: src/connections/GiveWPConnect/GWPInit.php:507
+#: src/connections/GiveWPConnect/GWPInit.php:501
 #: src/connections/GravityFormsConnect/GFMailOptin.php:260
 #: src/connections/GravityFormsConnect/GFMailOptin.php:295
 #: src/connections/InfusionsoftConnect/Connect.php:125
 #: src/connections/InfusionsoftConnect/Connect.php:170
 #: src/connections/InfusionsoftConnect/Connect.php:184
 #: src/connections/Init.php:127
-#: src/connections/LearnDashConnect/LearnDashInit.php:739
-#: src/connections/LifterLMSConnect/Connect.php:350
-#: src/connections/LifterLMSConnect/Connect.php:393
-#: src/connections/MailChimpConnect/Connect.php:575
-#: src/connections/MemberPressConnect/MemberPressInit.php:458
-#: src/connections/MoosendConnect/Connect.php:98
+#: src/connections/LearnDashConnect/LearnDashInit.php:733
+#: src/connections/LifterLMSConnect/Connect.php:344
+#: src/connections/LifterLMSConnect/Connect.php:387
+#: src/connections/MailChimpConnect/Connect.php:568
+#: src/connections/MemberPressConnect/MemberPressInit.php:452
+#: src/connections/MoosendConnect/Connect.php:91
 #: src/connections/SendGridConnect/ConnectSettingsPage.php:32
 #: src/connections/SendGridConnect/ConnectSettingsPage.php:69
 #: src/connections/SendinblueConnect/ConnectSettingsPage.php:47
-#: src/connections/TutorLMSConnect/TutorInit.php:517
-#: src/connections/UltimateMemberConnect/UMInit.php:474
-#: src/connections/WooCommerceConnect/WooInit.php:543
+#: src/connections/TutorLMSConnect/TutorInit.php:511
+#: src/connections/UltimateMemberConnect/UMInit.php:468
+#: src/connections/WooCommerceConnect/WooInit.php:537
 #: src/connections/WooMembershipConnect/OptinSubscription.php:131
+#: src/connections/WSFormConnect/WSFMailOptin.php:321
+#: src/connections/WSFormConnect/WSFMailOptin.php:335
+#: src/connections/WSFormConnect/WSFMailOptin.php:377
+#: src/connections/WSFormConnect/WSFMailOptin.php:469
 #: src/connections/ZohoCRMConnect/Connect.php:95
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/SettingsFields.php:37
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Integration_Repeater_Control.php:528
@@ -352,7 +356,7 @@ msgstr ""
 #: src/connections/InfusionsoftConnect/Subscription.php:241
 #: src/connections/KlaviyoConnect/Subscription.php:109
 #: src/connections/KlaviyoConnect/Subscription.php:114
-#: src/connections/LearnDashConnect/LearnDashInit.php:539
+#: src/connections/LearnDashConnect/LearnDashInit.php:533
 #: src/connections/MailChimpConnect/Subscription.php:253
 #: src/connections/MailChimpConnect/Subscription.php:258
 #: src/connections/MailerliteConnect/Subscription.php:84
@@ -509,8 +513,8 @@ msgstr ""
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:141
 #: src/connections/ContactForm7Connect/panel-settings-view.php:70
 #: src/connections/ContactForm7Connect/panel-settings-view.php:86
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:478
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:504
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:472
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:498
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:236
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:248
 #: src/connections/ElementorConnect/Elementor.php:120
@@ -520,24 +524,24 @@ msgstr ""
 #: src/connections/FluentFormConnect/FluentForms.php:195
 #: src/connections/FormidableFormConnect/panel-settings-view.php:57
 #: src/connections/FormidableFormConnect/panel-settings-view.php:73
-#: src/connections/GiveWPConnect/GWPInit.php:441
-#: src/connections/GiveWPConnect/GWPInit.php:467
+#: src/connections/GiveWPConnect/GWPInit.php:435
+#: src/connections/GiveWPConnect/GWPInit.php:461
 #: src/connections/GiveWPConnect/Settings.php:242
 #: src/connections/GiveWPConnect/Settings.php:262
 #: src/connections/GravityFormsConnect/GFMailOptin.php:380
 #: src/connections/GravityFormsConnect/GFMailOptin.php:394
 #: src/connections/HighLevelConnect/Connect.php:107
-#: src/connections/LearnDashConnect/LearnDashInit.php:292
-#: src/connections/LearnDashConnect/LearnDashInit.php:318
+#: src/connections/LearnDashConnect/LearnDashInit.php:286
+#: src/connections/LearnDashConnect/LearnDashInit.php:312
 #: src/connections/LearnDashConnect/LearnDashSettings.php:136
 #: src/connections/LearnDashConnect/LearnDashSettings.php:144
 #: src/connections/LifterLMSConnect/CourseSidebarSettings.php:228
 #: src/connections/LifterLMSConnect/CourseSidebarSettings.php:254
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:434
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:446
-#: src/connections/MailChimpConnect/Connect.php:379
-#: src/connections/MemberPressConnect/MemberPressInit.php:366
-#: src/connections/MemberPressConnect/MemberPressInit.php:392
+#: src/connections/MailChimpConnect/Connect.php:372
+#: src/connections/MemberPressConnect/MemberPressInit.php:360
+#: src/connections/MemberPressConnect/MemberPressInit.php:386
 #: src/connections/NinjaFormsConnect/Connect.php:33
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:231
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:231
@@ -597,25 +601,28 @@ msgstr ""
 #: src/connections/RCPConnect/Membership.php:221
 #: src/connections/RCPConnect/RCPSettings.php:136
 #: src/connections/RCPConnect/RCPSettings.php:144
-#: src/connections/TutorLMSConnect/TutorInit.php:286
-#: src/connections/TutorLMSConnect/TutorInit.php:312
+#: src/connections/TutorLMSConnect/TutorInit.php:280
+#: src/connections/TutorLMSConnect/TutorInit.php:306
 #: src/connections/TutorLMSConnect/TutorSettings.php:136
 #: src/connections/TutorLMSConnect/TutorSettings.php:144
-#: src/connections/UltimateMemberConnect/UMInit.php:408
-#: src/connections/UltimateMemberConnect/UMInit.php:434
+#: src/connections/UltimateMemberConnect/UMInit.php:402
+#: src/connections/UltimateMemberConnect/UMInit.php:428
 #: src/connections/UltimateMemberConnect/UMSettings.php:221
 #: src/connections/UltimateMemberConnect/UMSettings.php:229
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:134
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:142
 #: src/connections/WeMailConnect/Connect.php:60
-#: src/connections/WooCommerceConnect/WooInit.php:499
-#: src/connections/WooCommerceConnect/WooInit.php:527
+#: src/connections/WooCommerceConnect/WooInit.php:493
+#: src/connections/WooCommerceConnect/WooInit.php:521
 #: src/connections/WooCommerceConnect/WooSettings.php:293
 #: src/connections/WooCommerceConnect/WooSettings.php:301
 #: src/connections/WooMembershipConnect/OptinSubscription.php:222
 #: src/connections/WooMembershipConnect/OptinSubscription.php:250
 #: src/connections/WPFormsConnect/MailOptin.php:513
 #: src/connections/WPFormsConnect/MailOptin.php:543
+#: src/connections/WSFormConnect/WSFMailOptin.php:416
+#: src/connections/WSFormConnect/WSFMailOptin.php:437
+#: src/connections/WSFormConnect/WSFMailOptin.php:480
 #: src/connections/ZohoCRMConnect/Connect.php:163
 msgid "Tags"
 msgstr ""
@@ -754,7 +761,7 @@ msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:18
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:174
-#: src/connections/CommentOptinConnect/Init.php:97
+#: src/connections/CommentOptinConnect/Init.php:91
 msgid "Comment Form Optin"
 msgstr ""
 
@@ -912,6 +919,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/WooSettings.php:221
 #: src/connections/WooMembershipConnect/OptinSubscription.php:317
 #: src/connections/WPFormsConnect/MailOptin.php:333
+#: src/connections/WSFormConnect/WSFMailOptin.php:318
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:666
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Integration_Repeater_Control.php:553
 msgid "Select Integration"
@@ -947,34 +955,35 @@ msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:72
 #: src/connections/ContactForm7Connect/panel-settings-view.php:43
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:311
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:305
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:96
 #: src/connections/FluentFormConnect/FluentForms.php:126
 #: src/connections/FluentFormConnect/FluentForms.php:127
 #: src/connections/FormidableFormConnect/panel-settings-view.php:34
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:214
-#: src/connections/GiveWPConnect/GWPInit.php:273
+#: src/connections/GiveWPConnect/GWPInit.php:267
 #: src/connections/GiveWPConnect/Settings.php:52
 #: src/connections/GravityFormsConnect/GFMailOptin.php:439
-#: src/connections/LearnDashConnect/LearnDashInit.php:190
+#: src/connections/LearnDashConnect/LearnDashInit.php:184
 #: src/connections/LearnDashConnect/LearnDashSettings.php:75
-#: src/connections/LifterLMSConnect/Connect.php:503
+#: src/connections/LifterLMSConnect/Connect.php:497
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:372
-#: src/connections/MemberPressConnect/MemberPressInit.php:237
+#: src/connections/MemberPressConnect/MemberPressInit.php:231
 #: src/connections/MemberPressConnect/MemberPressSettings.php:49
 #: src/connections/PmProConnect/Membership.php:93
 #: src/connections/PmProConnect/PMPROSettings.php:75
 #: src/connections/RCPConnect/Membership.php:96
 #: src/connections/RCPConnect/RCPSettings.php:75
-#: src/connections/TutorLMSConnect/TutorInit.php:184
+#: src/connections/TutorLMSConnect/TutorInit.php:178
 #: src/connections/TutorLMSConnect/TutorSettings.php:75
-#: src/connections/UltimateMemberConnect/UMInit.php:241
+#: src/connections/UltimateMemberConnect/UMInit.php:235
 #: src/connections/UltimateMemberConnect/UMSettings.php:158
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:73
-#: src/connections/WooCommerceConnect/WooInit.php:248
-#: src/connections/WooCommerceConnect/WooInit.php:276
+#: src/connections/WooCommerceConnect/WooInit.php:242
+#: src/connections/WooCommerceConnect/WooInit.php:270
 #: src/connections/WooCommerceConnect/WooSettings.php:231
 #: src/connections/WooMembershipConnect/OptinSubscription.php:368
+#: src/connections/WSFormConnect/WSFMailOptin.php:331
 msgid "Select List"
 msgstr ""
 
@@ -985,21 +994,21 @@ msgstr ""
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:86
 #: src/connections/ContactForm7Connect/panel-settings-view.php:58
 #: src/connections/DripConnect/Connect.php:117
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:593
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:587
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:198
 #: src/connections/EgoiConnect/Connect.php:125
 #: src/connections/FlodeskConnect/Connect.php:72
 #: src/connections/FluentFormConnect/FluentForms.php:210
 #: src/connections/FormidableFormConnect/panel-settings-view.php:49
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:232
-#: src/connections/GiveWPConnect/GWPInit.php:582
+#: src/connections/GiveWPConnect/GWPInit.php:578
 #: src/connections/GiveWPConnect/Settings.php:204
 #: src/connections/GravityFormsConnect/GFMailOptin.php:333
-#: src/connections/LearnDashConnect/LearnDashInit.php:430
+#: src/connections/LearnDashConnect/LearnDashInit.php:424
 #: src/connections/LearnDashConnect/LearnDashSettings.php:89
-#: src/connections/LifterLMSConnect/Connect.php:426
+#: src/connections/LifterLMSConnect/Connect.php:420
 #: src/connections/MailjetConnect/Connect.php:135
-#: src/connections/MemberPressConnect/MemberPressInit.php:330
+#: src/connections/MemberPressConnect/MemberPressInit.php:324
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:194
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:194
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:194
@@ -1055,12 +1064,12 @@ msgstr ""
 #: src/connections/RCPConnect/Membership.php:120
 #: src/connections/RCPConnect/RCPSettings.php:89
 #: src/connections/SendinblueConnect/Connect.php:74
-#: src/connections/TutorLMSConnect/TutorInit.php:424
+#: src/connections/TutorLMSConnect/TutorInit.php:418
 #: src/connections/TutorLMSConnect/TutorSettings.php:89
-#: src/connections/UltimateMemberConnect/UMInit.php:509
+#: src/connections/UltimateMemberConnect/UMInit.php:503
 #: src/connections/UltimateMemberConnect/UMSettings.php:172
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:87
-#: src/connections/WooCommerceConnect/WooInit.php:436
+#: src/connections/WooCommerceConnect/WooInit.php:430
 #: src/connections/WooCommerceConnect/WooSettings.php:245
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
 #: src/connections/WPFormsConnect/MailOptin.php:480
@@ -1069,21 +1078,21 @@ msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:86
 #: src/connections/ContactForm7Connect/panel-settings-view.php:58
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:593
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:587
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:198
 #: src/connections/FluentCRMConnect/Connect.php:184
 #: src/connections/FluentFormConnect/FluentForms.php:210
 #: src/connections/FormidableFormConnect/panel-settings-view.php:49
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:234
-#: src/connections/GiveWPConnect/GWPInit.php:582
+#: src/connections/GiveWPConnect/GWPInit.php:578
 #: src/connections/GiveWPConnect/Settings.php:204
 #: src/connections/GravityFormsConnect/GFMailOptin.php:333
-#: src/connections/LearnDashConnect/LearnDashInit.php:430
+#: src/connections/LearnDashConnect/LearnDashInit.php:424
 #: src/connections/LearnDashConnect/LearnDashSettings.php:89
-#: src/connections/LifterLMSConnect/Connect.php:426
-#: src/connections/MailChimpConnect/Connect.php:388
+#: src/connections/LifterLMSConnect/Connect.php:420
+#: src/connections/MailChimpConnect/Connect.php:381
 #: src/connections/MailsterConnect/Connect.php:178
-#: src/connections/MemberPressConnect/MemberPressInit.php:330
+#: src/connections/MemberPressConnect/MemberPressInit.php:324
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:196
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:196
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:196
@@ -1138,12 +1147,12 @@ msgstr ""
 #: src/connections/PmProConnect/PMPROSettings.php:89
 #: src/connections/RCPConnect/Membership.php:120
 #: src/connections/RCPConnect/RCPSettings.php:89
-#: src/connections/TutorLMSConnect/TutorInit.php:424
+#: src/connections/TutorLMSConnect/TutorInit.php:418
 #: src/connections/TutorLMSConnect/TutorSettings.php:89
-#: src/connections/UltimateMemberConnect/UMInit.php:509
+#: src/connections/UltimateMemberConnect/UMInit.php:503
 #: src/connections/UltimateMemberConnect/UMSettings.php:172
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:87
-#: src/connections/WooCommerceConnect/WooInit.php:436
+#: src/connections/WooCommerceConnect/WooInit.php:430
 #: src/connections/WooCommerceConnect/WooSettings.php:245
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
 #: src/connections/WPFormsConnect/MailOptin.php:482
@@ -1155,28 +1164,28 @@ msgid "Double optin requires commenters to confirm their email address before th
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:102
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:350
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:344
 #: src/connections/FluentFormConnect/FluentForms.php:135
-#: src/connections/GiveWPConnect/GWPInit.php:313
+#: src/connections/GiveWPConnect/GWPInit.php:307
 #: src/connections/GiveWPConnect/Settings.php:72
 #: src/connections/GravityFormsConnect/GFMailOptin.php:460
-#: src/connections/LearnDashConnect/LearnDashInit.php:230
+#: src/connections/LearnDashConnect/LearnDashInit.php:224
 #: src/connections/LearnDashConnect/LearnDashSettings.php:105
-#: src/connections/LifterLMSConnect/Connect.php:542
+#: src/connections/LifterLMSConnect/Connect.php:536
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:393
-#: src/connections/MemberPressConnect/MemberPressInit.php:276
+#: src/connections/MemberPressConnect/MemberPressInit.php:270
 #: src/connections/MemberPressConnect/MemberPressSettings.php:86
 #: src/connections/PmProConnect/Membership.php:142
 #: src/connections/PmProConnect/PMPROSettings.php:105
 #: src/connections/RCPConnect/Membership.php:145
 #: src/connections/RCPConnect/RCPSettings.php:105
-#: src/connections/TutorLMSConnect/TutorInit.php:224
+#: src/connections/TutorLMSConnect/TutorInit.php:218
 #: src/connections/TutorLMSConnect/TutorSettings.php:105
-#: src/connections/UltimateMemberConnect/UMInit.php:280
+#: src/connections/UltimateMemberConnect/UMInit.php:274
 #: src/connections/UltimateMemberConnect/UMSettings.php:190
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:103
-#: src/connections/WooCommerceConnect/WooInit.php:332
-#: src/connections/WooCommerceConnect/WooInit.php:376
+#: src/connections/WooCommerceConnect/WooInit.php:326
+#: src/connections/WooCommerceConnect/WooInit.php:370
 #: src/connections/WooCommerceConnect/WooSettings.php:262
 #: src/connections/WooMembershipConnect/OptinSubscription.php:404
 msgid "Map Fields"
@@ -1255,7 +1264,7 @@ msgid "This is only used if Subscribe Commenters is set to \"Ask for permission\
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:168
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:209
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:203
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:158
 #: src/connections/GiveWPConnect/Settings.php:115
 #: src/connections/LearnDashConnect/LearnDashSettings.php:171
@@ -1269,124 +1278,124 @@ msgstr ""
 msgid "Subscribe to our newsletter"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:203
+#: src/connections/CommentOptinConnect/Init.php:197
 msgid "Comment Author Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:204
+#: src/connections/CommentOptinConnect/Init.php:198
 msgid "Comment Author Email"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:205
+#: src/connections/CommentOptinConnect/Init.php:199
 msgid "Comment Author Website"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:206
+#: src/connections/CommentOptinConnect/Init.php:200
 msgid "Comment Content"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:218
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:607
-#: src/connections/GiveWPConnect/GWPInit.php:600
-#: src/connections/LearnDashConnect/LearnDashInit.php:715
-#: src/connections/MemberPressConnect/MemberPressInit.php:405
-#: src/connections/PmProConnect/PMPROInit.php:97
-#: src/connections/RCPConnect/RCPInit.php:99
-#: src/connections/TutorLMSConnect/TutorInit.php:493
+#: src/connections/CommentOptinConnect/Init.php:212
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:601
+#: src/connections/GiveWPConnect/GWPInit.php:596
+#: src/connections/LearnDashConnect/LearnDashInit.php:709
+#: src/connections/MemberPressConnect/MemberPressInit.php:399
+#: src/connections/PmProConnect/PMPROInit.php:90
+#: src/connections/RCPConnect/RCPInit.php:92
+#: src/connections/TutorLMSConnect/TutorInit.php:487
 #: src/connections/UltimateMemberConnect/UMSettings.php:283
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:204
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:197
 msgid "User ID"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:219
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:608
-#: src/connections/GiveWPConnect/GWPInit.php:601
-#: src/connections/LearnDashConnect/LearnDashInit.php:716
-#: src/connections/MemberPressConnect/MemberPressInit.php:406
-#: src/connections/PmProConnect/PMPROInit.php:98
-#: src/connections/RCPConnect/RCPInit.php:100
-#: src/connections/TutorLMSConnect/TutorInit.php:494
+#: src/connections/CommentOptinConnect/Init.php:213
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:602
+#: src/connections/GiveWPConnect/GWPInit.php:597
+#: src/connections/LearnDashConnect/LearnDashInit.php:710
+#: src/connections/MemberPressConnect/MemberPressInit.php:400
+#: src/connections/PmProConnect/PMPROInit.php:91
+#: src/connections/RCPConnect/RCPInit.php:93
+#: src/connections/TutorLMSConnect/TutorInit.php:488
 #: src/connections/UltimateMemberConnect/UMSettings.php:284
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:205
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:198
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:134
 msgid "Username"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:220
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:609
-#: src/connections/GiveWPConnect/GWPInit.php:602
-#: src/connections/LearnDashConnect/LearnDashInit.php:717
-#: src/connections/MemberPressConnect/MemberPressInit.php:407
-#: src/connections/PmProConnect/PMPROInit.php:99
-#: src/connections/RCPConnect/RCPInit.php:101
-#: src/connections/TutorLMSConnect/TutorInit.php:495
+#: src/connections/CommentOptinConnect/Init.php:214
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:603
+#: src/connections/GiveWPConnect/GWPInit.php:598
+#: src/connections/LearnDashConnect/LearnDashInit.php:711
+#: src/connections/MemberPressConnect/MemberPressInit.php:401
+#: src/connections/PmProConnect/PMPROInit.php:92
+#: src/connections/RCPConnect/RCPInit.php:94
+#: src/connections/TutorLMSConnect/TutorInit.php:489
 #: src/connections/UltimateMemberConnect/UMSettings.php:285
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:206
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:199
 msgid "User Nicename"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:221
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:610
-#: src/connections/GiveWPConnect/GWPInit.php:603
-#: src/connections/LearnDashConnect/LearnDashInit.php:718
-#: src/connections/MemberPressConnect/MemberPressInit.php:408
-#: src/connections/PmProConnect/PMPROInit.php:100
-#: src/connections/RCPConnect/RCPInit.php:102
-#: src/connections/TutorLMSConnect/TutorInit.php:496
+#: src/connections/CommentOptinConnect/Init.php:215
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:604
+#: src/connections/GiveWPConnect/GWPInit.php:599
+#: src/connections/LearnDashConnect/LearnDashInit.php:712
+#: src/connections/MemberPressConnect/MemberPressInit.php:402
+#: src/connections/PmProConnect/PMPROInit.php:93
+#: src/connections/RCPConnect/RCPInit.php:95
+#: src/connections/TutorLMSConnect/TutorInit.php:490
 #: src/connections/UltimateMemberConnect/UMSettings.php:286
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:207
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:200
 msgid "Website URL"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:222
-#: src/connections/LearnDashConnect/LearnDashInit.php:719
-#: src/connections/MemberPressConnect/MemberPressInit.php:409
-#: src/connections/PmProConnect/PMPROInit.php:101
-#: src/connections/RCPConnect/RCPInit.php:103
-#: src/connections/TutorLMSConnect/TutorInit.php:497
+#: src/connections/CommentOptinConnect/Init.php:216
+#: src/connections/LearnDashConnect/LearnDashInit.php:713
+#: src/connections/MemberPressConnect/MemberPressInit.php:403
+#: src/connections/PmProConnect/PMPROInit.php:94
+#: src/connections/RCPConnect/RCPInit.php:96
+#: src/connections/TutorLMSConnect/TutorInit.php:491
 #: src/connections/UltimateMemberConnect/UMSettings.php:287
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:208
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:201
 msgid "Email address"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:223
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:611
-#: src/connections/GiveWPConnect/GWPInit.php:604
-#: src/connections/LearnDashConnect/LearnDashInit.php:720
-#: src/connections/MemberPressConnect/MemberPressInit.php:410
-#: src/connections/PmProConnect/PMPROInit.php:102
-#: src/connections/RCPConnect/RCPInit.php:104
-#: src/connections/TutorLMSConnect/TutorInit.php:498
+#: src/connections/CommentOptinConnect/Init.php:217
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:605
+#: src/connections/GiveWPConnect/GWPInit.php:600
+#: src/connections/LearnDashConnect/LearnDashInit.php:714
+#: src/connections/MemberPressConnect/MemberPressInit.php:404
+#: src/connections/PmProConnect/PMPROInit.php:95
+#: src/connections/RCPConnect/RCPInit.php:97
+#: src/connections/TutorLMSConnect/TutorInit.php:492
 #: src/connections/UltimateMemberConnect/UMSettings.php:288
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:209
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:202
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:137
 msgid "Display Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:224
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:612
-#: src/connections/GiveWPConnect/GWPInit.php:605
+#: src/connections/CommentOptinConnect/Init.php:218
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:606
+#: src/connections/GiveWPConnect/GWPInit.php:601
 #: src/connections/InfusionsoftConnect/Connect.php:269
-#: src/connections/LearnDashConnect/LearnDashInit.php:721
-#: src/connections/MemberPressConnect/MemberPressInit.php:411
-#: src/connections/PmProConnect/PMPROInit.php:103
-#: src/connections/RCPConnect/RCPInit.php:105
-#: src/connections/TutorLMSConnect/TutorInit.php:499
+#: src/connections/LearnDashConnect/LearnDashInit.php:715
+#: src/connections/MemberPressConnect/MemberPressInit.php:405
+#: src/connections/PmProConnect/PMPROInit.php:96
+#: src/connections/RCPConnect/RCPInit.php:98
+#: src/connections/TutorLMSConnect/TutorInit.php:493
 #: src/connections/UltimateMemberConnect/UMSettings.php:289
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:210
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:203
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:138
 msgid "Nickname"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:225
+#: src/connections/CommentOptinConnect/Init.php:219
 #: src/connections/ContactForm7Connect/CF7.php:181
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:613
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:607
 #: src/connections/FluentFormConnect/FluentForms.php:154
 #: src/connections/FormidableFormConnect/FormidableForm.php:75
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:367
 #: src/connections/GravityFormsConnect/GFMailOptin.php:172
-#: src/connections/LearnDashConnect/LearnDashInit.php:722
-#: src/connections/MemberPressConnect/MemberPressInit.php:412
+#: src/connections/LearnDashConnect/LearnDashInit.php:716
+#: src/connections/MemberPressConnect/MemberPressInit.php:406
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:113
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:113
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:113
@@ -1437,25 +1446,26 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCampaignsConnect.php:113
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:113
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:113
-#: src/connections/PmProConnect/PMPROInit.php:104
-#: src/connections/RCPConnect/RCPInit.php:106
-#: src/connections/TutorLMSConnect/TutorInit.php:500
+#: src/connections/PmProConnect/PMPROInit.php:97
+#: src/connections/RCPConnect/RCPInit.php:99
+#: src/connections/TutorLMSConnect/TutorInit.php:494
 #: src/connections/UltimateMemberConnect/UMSettings.php:290
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:211
-#: src/connections/WebHookConnect/Connect.php:44
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:204
+#: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:402
+#: src/connections/WSFormConnect/WSFMailOptin.php:765
 msgid "First Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:226
+#: src/connections/CommentOptinConnect/Init.php:220
 #: src/connections/ContactForm7Connect/CF7.php:182
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:614
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:608
 #: src/connections/FluentFormConnect/FluentForms.php:159
 #: src/connections/FormidableFormConnect/FormidableForm.php:76
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:368
 #: src/connections/GravityFormsConnect/GFMailOptin.php:176
-#: src/connections/LearnDashConnect/LearnDashInit.php:723
-#: src/connections/MemberPressConnect/MemberPressInit.php:413
+#: src/connections/LearnDashConnect/LearnDashInit.php:717
+#: src/connections/MemberPressConnect/MemberPressInit.php:407
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:117
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:117
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:117
@@ -1506,50 +1516,51 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCampaignsConnect.php:117
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:117
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:117
-#: src/connections/PmProConnect/PMPROInit.php:105
-#: src/connections/RCPConnect/RCPInit.php:107
-#: src/connections/TutorLMSConnect/TutorInit.php:501
+#: src/connections/PmProConnect/PMPROInit.php:98
+#: src/connections/RCPConnect/RCPInit.php:100
+#: src/connections/TutorLMSConnect/TutorInit.php:495
 #: src/connections/UltimateMemberConnect/UMSettings.php:291
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:212
-#: src/connections/WebHookConnect/Connect.php:45
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:205
+#: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:407
+#: src/connections/WSFormConnect/WSFMailOptin.php:770
 msgid "Last Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:227
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:615
-#: src/connections/GiveWPConnect/GWPInit.php:606
-#: src/connections/LearnDashConnect/LearnDashInit.php:724
-#: src/connections/MemberPressConnect/MemberPressInit.php:414
-#: src/connections/PmProConnect/PMPROInit.php:106
-#: src/connections/RCPConnect/RCPInit.php:108
-#: src/connections/TutorLMSConnect/TutorInit.php:502
+#: src/connections/CommentOptinConnect/Init.php:221
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:609
+#: src/connections/GiveWPConnect/GWPInit.php:602
+#: src/connections/LearnDashConnect/LearnDashInit.php:718
+#: src/connections/MemberPressConnect/MemberPressInit.php:408
+#: src/connections/PmProConnect/PMPROInit.php:99
+#: src/connections/RCPConnect/RCPInit.php:101
+#: src/connections/TutorLMSConnect/TutorInit.php:496
 #: src/connections/UltimateMemberConnect/UMSettings.php:292
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:213
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:206
 msgid "Biographical Info "
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:241
+#: src/connections/CommentOptinConnect/Init.php:235
 #: src/connections/ContactForm7Connect/CF7.php:126
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:630
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:624
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:265
 #: src/connections/ElementorConnect/Elementor.php:44
 #: src/connections/FluentFormConnect/FluentForms.php:257
 #: src/connections/FormidableFormConnect/FormidableForm.php:119
 #: src/connections/ForminatorFormConnect/FFMailOptin.php:165
-#: src/connections/GiveWPConnect/GWPInit.php:631
+#: src/connections/GiveWPConnect/GWPInit.php:627
 #: src/connections/GiveWPConnect/Settings.php:278
 #: src/connections/GravityFormsConnect/GFMailOptin.php:243
 #: src/connections/LeadBankConnect/Connect.php:48
-#: src/connections/LearnDashConnect/LearnDashInit.php:701
-#: src/connections/LifterLMSConnect/Connect.php:373
-#: src/connections/MemberPressConnect/MemberPressInit.php:617
-#: src/connections/PmProConnect/PMPROInit.php:193
-#: src/connections/RCPConnect/RCPInit.php:168
-#: src/connections/TutorLMSConnect/TutorInit.php:480
-#: src/connections/UltimateMemberConnect/UMInit.php:527
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:243
-#: src/connections/WooCommerceConnect/WooInit.php:567
+#: src/connections/LearnDashConnect/LearnDashInit.php:695
+#: src/connections/LifterLMSConnect/Connect.php:367
+#: src/connections/MemberPressConnect/MemberPressInit.php:611
+#: src/connections/PmProConnect/PMPROInit.php:186
+#: src/connections/RCPConnect/RCPInit.php:161
+#: src/connections/TutorLMSConnect/TutorInit.php:474
+#: src/connections/UltimateMemberConnect/UMInit.php:521
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:236
+#: src/connections/WooCommerceConnect/WooInit.php:561
 #: src/connections/WooMembershipConnect/OptinSubscription.php:112
 msgid "MailOptin Leads"
 msgstr ""
@@ -1560,7 +1571,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:365
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:162
-#: src/connections/WebHookConnect/Connect.php:46
+#: src/connections/WebHookConnect/Connect.php:40
 msgid "Email Address"
 msgstr ""
 
@@ -1619,8 +1630,9 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCampaignsConnect.php:109
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:109
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:109
-#: src/connections/WebHookConnect/Connect.php:43
+#: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:397
+#: src/connections/WSFormConnect/WSFMailOptin.php:760
 msgid "Full Name"
 msgstr ""
 
@@ -1656,17 +1668,18 @@ msgstr ""
 #: src/connections/FluentCRMConnect/Connect.php:185
 #: src/connections/FormidableFormConnect/panel-settings-view.php:51
 #: src/connections/GravityFormsConnect/GFMailOptin.php:344
-#: src/connections/LearnDashConnect/LearnDashInit.php:431
+#: src/connections/LearnDashConnect/LearnDashInit.php:425
 #: src/connections/LearnDashConnect/LearnDashSettings.php:94
 #: src/connections/MailsterConnect/Connect.php:179
 #: src/connections/PmProConnect/Membership.php:127
 #: src/connections/PmProConnect/PMPROSettings.php:94
 #: src/connections/RCPConnect/Membership.php:130
 #: src/connections/RCPConnect/RCPSettings.php:94
-#: src/connections/TutorLMSConnect/TutorInit.php:425
+#: src/connections/TutorLMSConnect/TutorInit.php:419
 #: src/connections/TutorLMSConnect/TutorSettings.php:94
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:92
 #: src/connections/WPFormsConnect/MailOptin.php:497
+#: src/connections/WSFormConnect/WSFMailOptin.php:356
 msgid "Double optin requires users to confirm their email address before they are added or subscribed."
 msgstr ""
 
@@ -1746,6 +1759,7 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:169
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:169
 #: src/connections/WPFormsConnect/MailOptin.php:561
+#: src/connections/WSFormConnect/WSFMailOptin.php:76
 msgid "Upgrade to %s to remove the 500 subscribers monthly limit, add support for custom field mapping and assign tags to subscribers."
 msgstr ""
 
@@ -2195,14 +2209,14 @@ msgstr ""
 #: src/connections/GiveWPConnect/Connect.php:188
 #: src/connections/LeadBankConnect/Connect.php:108
 #: src/connections/LearnDashConnect/Connect.php:260
-#: src/connections/LifterLMSConnect/Connect.php:763
+#: src/connections/LifterLMSConnect/Connect.php:757
 #: src/connections/MemberPressConnect/Connect.php:433
 #: src/connections/PmProConnect/Connect.php:371
 #: src/connections/RCPConnect/Connect.php:366
 #: src/connections/RegisteredUsersConnect/Connect.php:194
 #: src/connections/TutorLMSConnect/Connect.php:195
 #: src/connections/WooCommerceConnect/Connect.php:313
-#: src/connections/WooMembershipConnect/Connect.php:514
+#: src/connections/WooMembershipConnect/Connect.php:508
 #: src/connections/WooSubscriptionsConnect/Connect.php:581
 msgid "You've successfully been unsubscribed."
 msgstr ""
@@ -2211,30 +2225,30 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add customers that purchase this product to your email list, assign tags and custom field data to them."
 msgstr ""
 
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:314
-#: src/connections/GiveWPConnect/GWPInit.php:276
-#: src/connections/UltimateMemberConnect/UMInit.php:244
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:308
+#: src/connections/GiveWPConnect/GWPInit.php:270
+#: src/connections/UltimateMemberConnect/UMInit.php:238
 msgid "Select the email list or audience to add customers."
 msgstr ""
 
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:482
-#: src/connections/GiveWPConnect/GWPInit.php:445
-#: src/connections/UltimateMemberConnect/UMInit.php:412
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:476
+#: src/connections/GiveWPConnect/GWPInit.php:439
+#: src/connections/UltimateMemberConnect/UMInit.php:406
 msgid "Select tags to assign to users that made purchases."
 msgstr ""
 
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:505
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:499
 msgid "Enter a comma-separated list of tags to assign to customers. The Download title is automatically included in the list of tags."
 msgstr ""
 
-#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:594
+#: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:588
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:199
-#: src/connections/GiveWPConnect/GWPInit.php:583
+#: src/connections/GiveWPConnect/GWPInit.php:579
 #: src/connections/GiveWPConnect/Settings.php:205
-#: src/connections/LifterLMSConnect/Connect.php:427
-#: src/connections/UltimateMemberConnect/UMInit.php:510
+#: src/connections/LifterLMSConnect/Connect.php:421
+#: src/connections/UltimateMemberConnect/UMInit.php:504
 #: src/connections/UltimateMemberConnect/UMSettings.php:178
-#: src/connections/WooCommerceConnect/WooInit.php:437
+#: src/connections/WooCommerceConnect/WooInit.php:431
 #: src/connections/WooCommerceConnect/WooSettings.php:250
 #: src/connections/WooMembershipConnect/OptinSubscription.php:166
 msgid "Double optin requires customers to confirm their email address before they are added or subscribed."
@@ -2263,6 +2277,8 @@ msgstr ""
 #: src/connections/GiveWPConnect/Settings.php:14
 #: src/connections/GiveWPConnect/Settings.php:149
 #: src/connections/WooCommerceConnect/Product.php:28
+#: src/connections/WSFormConnect/WSFMailOptin.php:40
+#: src/connections/WSFormConnect/WSFMailOptin.php:43
 #: src/core/src/Admin/SettingsPage/AbstractSettingsPage.php:34
 #: src/core/src/OptinForms/SidebarWidgets.php:20
 msgid "MailOptin"
@@ -2330,7 +2346,7 @@ msgstr ""
 
 #: src/connections/EgoiConnect/Connect.php:126
 #: src/connections/FlodeskConnect/Connect.php:73
-#: src/connections/MailChimpConnect/Connect.php:389
+#: src/connections/MailChimpConnect/Connect.php:382
 #: src/connections/SendinblueConnect/Connect.php:75
 msgid "Double optin requires users to confirm their email address before they are added or subscribed (recommended)."
 msgstr ""
@@ -2624,8 +2640,8 @@ msgstr ""
 #: src/connections/GravityFormsConnect/GFMailOptin.php:497
 #: src/connections/GravityFormsConnect/GFMailOptin.php:503
 #: src/connections/GravityFormsConnect/GFMailOptin.php:644
-#: src/connections/WebHookConnect/Connect.php:163
-#: src/connections/WebHookConnect/Connect.php:164
+#: src/connections/WebHookConnect/Connect.php:157
+#: src/connections/WebHookConnect/Connect.php:158
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:152
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:317
 #: src/core/src/Admin/SettingsPage/Newsletter_List.php:45
@@ -2917,6 +2933,7 @@ msgid "Lastly, match up your module fields with your campaign fields to make sur
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:4
+#: src/connections/WSFormConnect/WSFMailOptin.php:466
 msgid "Field"
 msgstr ""
 
@@ -3074,63 +3091,63 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add donors that donated via this form to your email list, assign tags and custom field data to them."
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:197
+#: src/connections/GiveWPConnect/GWPInit.php:191
 msgid "Subscribe to our newsletterz"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:468
+#: src/connections/GiveWPConnect/GWPInit.php:462
 msgid "Enter a comma-separated list of tags to assign to customers. The form title is automatically included in the list of tags."
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:596
+#: src/connections/GiveWPConnect/GWPInit.php:592
 msgid "Donor First Name"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:597
+#: src/connections/GiveWPConnect/GWPInit.php:593
 msgid "Donor Last Name"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:598
+#: src/connections/GiveWPConnect/GWPInit.php:594
 msgid "Donor Prefix/Salutation"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:599
+#: src/connections/GiveWPConnect/GWPInit.php:595
 msgid "Donor Email Address"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:609
+#: src/connections/GiveWPConnect/GWPInit.php:605
 msgid "Last Donation Transaction ID"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:610
+#: src/connections/GiveWPConnect/GWPInit.php:606
 msgid "Last Donation ID"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:611
+#: src/connections/GiveWPConnect/GWPInit.php:607
 msgid "Last Donation Total Amount"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:612
+#: src/connections/GiveWPConnect/GWPInit.php:608
 msgid "Last Donation Form Title"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:613
+#: src/connections/GiveWPConnect/GWPInit.php:609
 msgid "Last Donation Form ID"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:614
+#: src/connections/GiveWPConnect/GWPInit.php:610
 msgid "Last Donation Form Price ID"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:615
+#: src/connections/GiveWPConnect/GWPInit.php:611
 msgid "Last Donation Date"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:616
+#: src/connections/GiveWPConnect/GWPInit.php:612
 msgid "Last  Donation Completed Date"
 msgstr ""
 
-#: src/connections/GiveWPConnect/GWPInit.php:617
+#: src/connections/GiveWPConnect/GWPInit.php:613
 msgid "Last Donation Payment Gateway"
 msgstr ""
 
@@ -3718,28 +3735,28 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add students that enrols this course to a specific email list, assign tags and custom field data to them."
 msgstr ""
 
-#: src/connections/LearnDashConnect/LearnDashInit.php:193
-#: src/connections/TutorLMSConnect/TutorInit.php:187
+#: src/connections/LearnDashConnect/LearnDashInit.php:187
+#: src/connections/TutorLMSConnect/TutorInit.php:181
 msgid "Select the email list, audience or segment to add students to."
 msgstr ""
 
-#: src/connections/LearnDashConnect/LearnDashInit.php:296
-#: src/connections/TutorLMSConnect/TutorInit.php:290
+#: src/connections/LearnDashConnect/LearnDashInit.php:290
+#: src/connections/TutorLMSConnect/TutorInit.php:284
 msgid "Select tags to assign to enrolled students."
 msgstr ""
 
-#: src/connections/LearnDashConnect/LearnDashInit.php:319
+#: src/connections/LearnDashConnect/LearnDashInit.php:313
 #: src/connections/LearnDashConnect/LearnDashSettings.php:145
-#: src/connections/TutorLMSConnect/TutorInit.php:313
+#: src/connections/TutorLMSConnect/TutorInit.php:307
 #: src/connections/TutorLMSConnect/TutorSettings.php:145
 msgid "Enter a comma-separated list of tags to assign to enrolled students. The course title is automatically included in the list of tags."
 msgstr ""
 
-#: src/connections/LearnDashConnect/LearnDashInit.php:634
+#: src/connections/LearnDashConnect/LearnDashInit.php:628
 msgid "failed"
 msgstr ""
 
-#: src/connections/LearnDashConnect/LearnDashInit.php:636
+#: src/connections/LearnDashConnect/LearnDashInit.php:630
 msgid "success"
 msgstr ""
 
@@ -3797,49 +3814,49 @@ msgstr ""
 msgid "LearnDash Integration"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:69
+#: src/connections/LifterLMSConnect/Connect.php:63
 msgid "LifterLMS"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:118
+#: src/connections/LifterLMSConnect/Connect.php:112
 msgid "Courses"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:122
+#: src/connections/LifterLMSConnect/Connect.php:116
 msgid "Memberships"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:134
+#: src/connections/LifterLMSConnect/Connect.php:128
 msgid "Restrict to Enrolled Courses/Memberships"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:137
+#: src/connections/LifterLMSConnect/Connect.php:131
 #: src/connections/TutorLMSConnect/Connect.php:88
 msgid "Select the courses whose enrolled users will receive the emails from this campaign."
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:147
+#: src/connections/LifterLMSConnect/Connect.php:141
 msgid "Restrict to Cancelled Courses/Memberships"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:150
+#: src/connections/LifterLMSConnect/Connect.php:144
 msgid "Select the courses whose cancelled users will receive the emails from this campaign."
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:160
+#: src/connections/LifterLMSConnect/Connect.php:154
 msgid "Restrict to Expired Courses/Memberships"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:163
+#: src/connections/LifterLMSConnect/Connect.php:157
 msgid "Select the courses whose expired users will receive the emails from this campaign."
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:466
+#: src/connections/LifterLMSConnect/Connect.php:460
 #: src/connections/VerticalResponseConnect/Connect.php:106
 msgid "Street Address 2"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:506
+#: src/connections/LifterLMSConnect/Connect.php:500
 msgid "Select the email list or audience to add students."
 msgstr ""
 
@@ -3913,109 +3930,109 @@ msgstr ""
 msgid "MailChimp API key not found."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:107
+#: src/connections/MailChimpConnect/Connect.php:100
 msgid "First Name Merge Tag"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:109
+#: src/connections/MailChimpConnect/Connect.php:102
 msgid "If subscribers first names are missing, change this to the correct merge tag. %sLearn more%s"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:116
+#: src/connections/MailChimpConnect/Connect.php:109
 msgid "Last Name Merge Tag"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:118
+#: src/connections/MailChimpConnect/Connect.php:111
 msgid "If subscribers last names are missing, change this to the correct merge tag. %sLearn more%s"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:135
+#: src/connections/MailChimpConnect/Connect.php:128
 #: src/connections/MailChimpConnect/ConnectSettingsPage.php:82
 msgid "Mailchimp"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:313
+#: src/connections/MailChimpConnect/Connect.php:306
 msgid "Select Your Group"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:320
+#: src/connections/MailChimpConnect/Connect.php:313
 msgid "You did not select any group"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:381
+#: src/connections/MailChimpConnect/Connect.php:374
 msgid "Comma-separated list of tags to assign to a new subscriber in MailChimp"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:394
+#: src/connections/MailChimpConnect/Connect.php:387
 msgid "Group Segmentation"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:401
+#: src/connections/MailChimpConnect/Connect.php:394
 msgid "Automatic"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:402
+#: src/connections/MailChimpConnect/Connect.php:395
 msgid "User Input"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:405
+#: src/connections/MailChimpConnect/Connect.php:398
 msgid "Segmentation Method"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:406
+#: src/connections/MailChimpConnect/Connect.php:399
 msgid "Select how Segmentation is performed."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:413
+#: src/connections/MailChimpConnect/Connect.php:406
 msgid "Checkboxes"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:414
+#: src/connections/MailChimpConnect/Connect.php:407
 msgid "Radio Buttons"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:417
+#: src/connections/MailChimpConnect/Connect.php:410
 msgid "Choice Type"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:418
+#: src/connections/MailChimpConnect/Connect.php:411
 msgid "Choose how users will select groups to subscribe to."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:430
+#: src/connections/MailChimpConnect/Connect.php:423
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Integration_Repeater_Control.php:295
 msgid "No MailChimp group found. Try selecting another email list."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:446
+#: src/connections/MailChimpConnect/Connect.php:439
 msgid "Show Group Category"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:453
+#: src/connections/MailChimpConnect/Connect.php:446
 msgid "Field Label"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:460
+#: src/connections/MailChimpConnect/Connect.php:453
 msgid "Field Color"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:467
+#: src/connections/MailChimpConnect/Connect.php:460
 msgid "Field Font"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:474
+#: src/connections/MailChimpConnect/Connect.php:467
 msgid "Inline"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:475
+#: src/connections/MailChimpConnect/Connect.php:468
 msgid "Block"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:478
+#: src/connections/MailChimpConnect/Connect.php:471
 msgid "Display Style"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:485
+#: src/connections/MailChimpConnect/Connect.php:478
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Button.php:81
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Image.php:64
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/SettingsFields.php:172
@@ -4025,7 +4042,7 @@ msgstr ""
 msgid "Left"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:486
+#: src/connections/MailChimpConnect/Connect.php:479
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Button.php:83
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Image.php:66
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:634
@@ -4034,7 +4051,7 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:487
+#: src/connections/MailChimpConnect/Connect.php:480
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Button.php:82
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Image.php:65
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/SettingsFields.php:164
@@ -4044,27 +4061,27 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:490
+#: src/connections/MailChimpConnect/Connect.php:483
 msgid "Display Alignment"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:497
+#: src/connections/MailChimpConnect/Connect.php:490
 msgid "Group Selection Required?"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:498
+#: src/connections/MailChimpConnect/Connect.php:491
 msgid "Toggle ON if you want visitors to select at least one group before they are subscribed."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:505
+#: src/connections/MailChimpConnect/Connect.php:498
 msgid "Group Selection Error"
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:506
+#: src/connections/MailChimpConnect/Connect.php:499
 msgid "Error message displayed when a visitor failed to select at least a group."
 msgstr ""
 
-#: src/connections/MailChimpConnect/Connect.php:824
+#: src/connections/MailChimpConnect/Connect.php:817
 msgid "No Mailchimp group found. Try selecting another email list."
 msgstr ""
 
@@ -4278,7 +4295,7 @@ msgstr ""
 #: src/connections/MemberPressConnect/Connect.php:208
 #: src/connections/PmProConnect/Connect.php:183
 #: src/connections/RCPConnect/Connect.php:177
-#: src/connections/WooMembershipConnect/Connect.php:231
+#: src/connections/WooMembershipConnect/Connect.php:225
 msgid "Restrict to Selected Members"
 msgstr ""
 
@@ -4292,27 +4309,27 @@ msgstr ""
 msgid "Leave \"Restrict to Active Memberships\", \"Restrict to Inactive/Expired Memberships\" and \"Restrict to Selected Members\" empty to send to all members."
 msgstr ""
 
-#: src/connections/MemberPressConnect/MemberPressInit.php:146
+#: src/connections/MemberPressConnect/MemberPressInit.php:140
 #: src/connections/MemberPressConnect/MemberPressSettings.php:127
-#: src/connections/PmProConnect/PMPROInit.php:62
-#: src/connections/RCPConnect/RCPInit.php:62
+#: src/connections/PmProConnect/PMPROInit.php:55
+#: src/connections/RCPConnect/RCPInit.php:55
 msgid "Subscribe to our newsletters"
 msgstr ""
 
-#: src/connections/MemberPressConnect/MemberPressInit.php:240
+#: src/connections/MemberPressConnect/MemberPressInit.php:234
 #: src/connections/MemberPressConnect/MemberPressSettings.php:52
 msgid "Select the email list, audience or segment to add members to."
 msgstr ""
 
-#: src/connections/MemberPressConnect/MemberPressInit.php:331
+#: src/connections/MemberPressConnect/MemberPressInit.php:325
 msgid "Double optin requires members to confirm their email address before they are added or subscribed."
 msgstr ""
 
-#: src/connections/MemberPressConnect/MemberPressInit.php:370
+#: src/connections/MemberPressConnect/MemberPressInit.php:364
 msgid "Select tags to assign to members that sign up."
 msgstr ""
 
-#: src/connections/MemberPressConnect/MemberPressInit.php:393
+#: src/connections/MemberPressConnect/MemberPressInit.php:387
 msgid "Enter a comma-separated list of tags to assign to subscribed members."
 msgstr ""
 
@@ -4443,7 +4460,7 @@ msgstr ""
 msgid "Moosend API Key not found."
 msgstr ""
 
-#: src/connections/MoosendConnect/Connect.php:84
+#: src/connections/MoosendConnect/Connect.php:77
 #: src/connections/MoosendConnect/ConnectSettingsPage.php:79
 msgid "Moosend"
 msgstr ""
@@ -4729,31 +4746,31 @@ msgstr ""
 msgid "Enter a comma-separated list of tags to assign to subscribed members. The membership-level name is automatically included in the list of tags."
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:108
+#: src/connections/PmProConnect/PMPROInit.php:101
 msgid "Billing Name"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:109
+#: src/connections/PmProConnect/PMPROInit.php:102
 msgid "Billing Street"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:110
+#: src/connections/PmProConnect/PMPROInit.php:103
 msgid "Billing City"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:111
+#: src/connections/PmProConnect/PMPROInit.php:104
 msgid "Billing State/Province"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:112
+#: src/connections/PmProConnect/PMPROInit.php:105
 msgid "Billing Postal Code"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:113
+#: src/connections/PmProConnect/PMPROInit.php:106
 msgid "Billing Phone Number"
 msgstr ""
 
-#: src/connections/PmProConnect/PMPROInit.php:114
+#: src/connections/PmProConnect/PMPROInit.php:107
 msgid "Billing Country"
 msgstr ""
 
@@ -5161,7 +5178,7 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add users that register via this registration form to your email list, assign tags and custom field data to them."
 msgstr ""
 
-#: src/connections/UltimateMemberConnect/UMInit.php:435
+#: src/connections/UltimateMemberConnect/UMInit.php:429
 msgid "Enter a comma-separated list of tags to assign to customers. The Registration Form title is automatically included in the list of tags."
 msgstr ""
 
@@ -5189,7 +5206,7 @@ msgid "Disable"
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:222
-#: src/connections/WooCommerceConnect/WooInit.php:503
+#: src/connections/WooCommerceConnect/WooInit.php:497
 #: src/connections/WooCommerceConnect/WooSettings.php:294
 #: src/connections/WooMembershipConnect/OptinSubscription.php:226
 msgid "Select tags to assign to buyers or customers."
@@ -5220,7 +5237,7 @@ msgstr ""
 msgid "Ultimate Member Integration"
 msgstr ""
 
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:114
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:107
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:19
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:175
 msgid "User Registration Optin"
@@ -5306,164 +5323,164 @@ msgstr ""
 msgid "VerticalResponse Connection"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:85
+#: src/connections/WebHookConnect/Connect.php:79
 msgid "Enter Request URL"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:86
+#: src/connections/WebHookConnect/Connect.php:80
 msgid "Request URL (Required)"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:93
+#: src/connections/WebHookConnect/Connect.php:87
 msgid "Request Format (Required)"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:129
+#: src/connections/WebHookConnect/Connect.php:123
 msgid "Select a Name"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:130
+#: src/connections/WebHookConnect/Connect.php:124
 msgid "Accept"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:131
+#: src/connections/WebHookConnect/Connect.php:125
 msgid "Accept-Charset"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:132
+#: src/connections/WebHookConnect/Connect.php:126
 msgid "Accept-Encoding"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:133
+#: src/connections/WebHookConnect/Connect.php:127
 msgid "Accept-Language"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:134
+#: src/connections/WebHookConnect/Connect.php:128
 msgid "Accept-Datetime"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:135
+#: src/connections/WebHookConnect/Connect.php:129
 msgid "Authorization"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:136
+#: src/connections/WebHookConnect/Connect.php:130
 msgid "Cache-Control"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:137
+#: src/connections/WebHookConnect/Connect.php:131
 msgid "Connection"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:138
+#: src/connections/WebHookConnect/Connect.php:132
 msgid "Content-Length"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:139
+#: src/connections/WebHookConnect/Connect.php:133
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:84
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:606
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:1346
 msgid "Date"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:140
+#: src/connections/WebHookConnect/Connect.php:134
 msgid "Expect"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:141
+#: src/connections/WebHookConnect/Connect.php:135
 msgid "From"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:142
+#: src/connections/WebHookConnect/Connect.php:136
 msgid "Host"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:143
+#: src/connections/WebHookConnect/Connect.php:137
 msgid "If-Match"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:144
+#: src/connections/WebHookConnect/Connect.php:138
 msgid "If-Modified-Since"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:145
+#: src/connections/WebHookConnect/Connect.php:139
 msgid "If-None-Match"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:146
+#: src/connections/WebHookConnect/Connect.php:140
 msgid "If-Range"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:147
+#: src/connections/WebHookConnect/Connect.php:141
 msgid "If-Unmodified-Since"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:148
+#: src/connections/WebHookConnect/Connect.php:142
 msgid "Max-Forwards"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:149
+#: src/connections/WebHookConnect/Connect.php:143
 msgid "Origin"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:150
+#: src/connections/WebHookConnect/Connect.php:144
 msgid "Pragma"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:151
+#: src/connections/WebHookConnect/Connect.php:145
 msgid "Proxy-Authorization"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:152
+#: src/connections/WebHookConnect/Connect.php:146
 msgid "Range"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:153
+#: src/connections/WebHookConnect/Connect.php:147
 msgid "Referer"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:154
+#: src/connections/WebHookConnect/Connect.php:148
 msgid "TE"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:155
+#: src/connections/WebHookConnect/Connect.php:149
 msgid "User-Agent"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:156
+#: src/connections/WebHookConnect/Connect.php:150
 msgid "Upgrade"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:157
+#: src/connections/WebHookConnect/Connect.php:151
 msgid "Via"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:158
+#: src/connections/WebHookConnect/Connect.php:152
 msgid "Warning"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:159
+#: src/connections/WebHookConnect/Connect.php:153
 msgid "Add Custom Header"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:165
-#: src/connections/WebHookConnect/Connect.php:181
+#: src/connections/WebHookConnect/Connect.php:159
+#: src/connections/WebHookConnect/Connect.php:175
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:663
 msgid "Value"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:180
+#: src/connections/WebHookConnect/Connect.php:174
 msgid "Key"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:202
+#: src/connections/WebHookConnect/Connect.php:196
 msgid "Request Headers"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:221
+#: src/connections/WebHookConnect/Connect.php:215
 msgid "Request Body"
 msgstr ""
 
-#: src/connections/WebHookConnect/Connect.php:288
+#: src/connections/WebHookConnect/Connect.php:282
 msgid "Webhook"
 msgstr ""
 
@@ -5551,37 +5568,37 @@ msgstr ""
 msgid "Add buyers or customers that purchase products with this tag to your email marketing or CRM list."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:251
-#: src/connections/WooCommerceConnect/WooInit.php:286
+#: src/connections/WooCommerceConnect/WooInit.php:245
+#: src/connections/WooCommerceConnect/WooInit.php:280
 #: src/connections/WooMembershipConnect/OptinSubscription.php:372
 msgid "Select the email list, audience or segment to add customers to."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:454
+#: src/connections/WooCommerceConnect/WooInit.php:448
 msgid "Select one"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:463
+#: src/connections/WooCommerceConnect/WooInit.php:457
 msgid "Last Order Product Names"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:464
+#: src/connections/WooCommerceConnect/WooInit.php:458
 msgid "Last Order Total"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:465
+#: src/connections/WooCommerceConnect/WooInit.php:459
 msgid "Last Order Date"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:466
+#: src/connections/WooCommerceConnect/WooInit.php:460
 msgid "Last Order Payment Method"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:467
+#: src/connections/WooCommerceConnect/WooInit.php:461
 msgid "Last Order Notes"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:528
+#: src/connections/WooCommerceConnect/WooInit.php:522
 msgid "Enter a comma-separated list of tags to assign to buyers or customers."
 msgstr ""
 
@@ -5645,47 +5662,47 @@ msgstr ""
 msgid "WooCommerce Integration"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:57
+#: src/connections/WooMembershipConnect/Connect.php:51
 msgid "WooCommerce Memberships"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:179
+#: src/connections/WooMembershipConnect/Connect.php:173
 msgid "Restrict to Active Membership Plans"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:182
+#: src/connections/WooMembershipConnect/Connect.php:176
 msgid "Select the membership plans whose active members will receive emails from this campaign."
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:192
+#: src/connections/WooMembershipConnect/Connect.php:186
 msgid "Restrict to Expired Membership Plans"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:195
+#: src/connections/WooMembershipConnect/Connect.php:189
 msgid "Select the membership plans whose expired members will receive emails from this campaign."
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:205
+#: src/connections/WooMembershipConnect/Connect.php:199
 msgid "Restrict to Cancelled Membership Plans"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:208
+#: src/connections/WooMembershipConnect/Connect.php:202
 msgid "Select the membership plans whose cancelled members will receive emails from this campaign."
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:218
+#: src/connections/WooMembershipConnect/Connect.php:212
 msgid "Restrict to Paused Membership Plans"
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:221
+#: src/connections/WooMembershipConnect/Connect.php:215
 msgid "Select the membership plans whose paused members will receive emails from this campaign."
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:234
+#: src/connections/WooMembershipConnect/Connect.php:228
 msgid "Select the members that emails will be delivered to."
 msgstr ""
 
-#: src/connections/WooMembershipConnect/Connect.php:253
+#: src/connections/WooMembershipConnect/Connect.php:247
 msgid "Leave \"Restrict to Active Membership Plans\", \"Restrict to Expired Membership Plans\", \"Restrict to Cancelled Membership Plans\", \"Restrict to Paused Membership Plans\" and \"Restrict to Selected Members\" empty to send to all members."
 msgstr ""
 
@@ -5784,6 +5801,7 @@ msgid "Marketing provider connection"
 msgstr ""
 
 #: src/connections/WPFormsConnect/MailOptin.php:391
+#: src/connections/WSFormConnect/WSFMailOptin.php:752
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:220
 msgid "Email"
 msgstr ""
@@ -5801,6 +5819,56 @@ msgstr ""
 
 #: src/connections/WPFormsConnect/MailOptin.php:563
 msgid "Learn more about our %slead generation and email automation features%s"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:90
+msgid "Auto Map"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:91
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:215
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:192
+msgid "Update"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:106
+msgid "Integration is not set"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:110
+msgid "List ID is not set"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:137
+msgid "Email address not mapped"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:152
+msgid "User did not opt in, no data pushed to action"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:333
+msgid "Select the list for the integration above."
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:354
+msgid "Double optin"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:374
+msgid "Opt-In Field"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:379
+msgid "Checkbox recommended"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:390
+msgid "List Fields"
+msgstr ""
+
+#: src/connections/WSFormConnect/WSFMailOptin.php:476
+msgid "Tag"
 msgstr ""
 
 #: src/connections/ZohoCampaignsConnect/AbstractZohoCampaignsConnect.php:68
@@ -5885,104 +5953,116 @@ msgstr ""
 msgid "Authorization is required to grant <strong>%s</strong> access to interact with your Zoho CRM account."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:76
+#: src/core/src/Admin/AdminNotices.php:79
 msgid "Optin campaigns cache successfully cleared."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:94
+#: src/core/src/Admin/AdminNotices.php:97
 msgid "There was an error fetching email campaign template dependency."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:112
+#: src/core/src/Admin/AdminNotices.php:115
 msgid "There was an error fetching optin dependency. Try again or select another template."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:128
+#: src/core/src/Admin/AdminNotices.php:131
 msgid "Email campaigned resent."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:148
+#: src/core/src/Admin/AdminNotices.php:151
 msgid "MailOptin branding is now included on all optin forms unless you explicitly disabled it at \"Configuration\" panel in form builder. %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:192
+#: src/core/src/Admin/AdminNotices.php:195
 msgid "Hey, I noticed you have been using MailOptin for at least 7 days now - that's awesome! Could you please do me a BIG favor and give it a %1$s5-star rating on WordPress?%2$s This will help us spread the word and boost our motivation - thanks!"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:196
+#: src/core/src/Admin/AdminNotices.php:199
 msgid "Sure! I'd love to give a review"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:198
+#: src/core/src/Admin/AdminNotices.php:201
 msgid "Dismiss Forever"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:224
+#: src/core/src/Admin/AdminNotices.php:227
 msgid "Upgrade to %s now to create multiple email automation with advance targeting and option to send directly to your email list subscribers."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:225
+#: src/core/src/Admin/AdminNotices.php:228
 msgid "MailOptin premium"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:243
+#: src/core/src/Admin/AdminNotices.php:246
 msgid "Did you know you can display targeted message & optin forms across your WooCommerce store, add customers to your email list after their purchase, automatically send email of new products and send newsletters to active subscribers and members in WooCommerce Memberships and Subscriptions plugins? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:262
+#: src/core/src/Admin/AdminNotices.php:265
 msgid "Did you know you can add Easy Digital Downloads customers to your email list after they purchase any product or based on their purchased product, send newsletters and automated email of new downloads? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:281
+#: src/core/src/Admin/AdminNotices.php:284
 msgid "Did you know you can add LearnDash students to your email list after they enroll to any course or based on the group or course they are enrolled in? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:300
+#: src/core/src/Admin/AdminNotices.php:303
 msgid "Did you know you can add Tutor LMS students to your email list after enrollment to any course and send automated emails and broadcasts to enrolled students? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:318
+#: src/core/src/Admin/AdminNotices.php:321
 msgid "Did you know you can %1$sadd GiveWP donors to your email list%2$s after they have donated or based on the donation form they donated through %3$sand send emails to donors%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:340
+#: src/core/src/Admin/AdminNotices.php:343
 msgid "Did you know you can %1$sadd LifterLMS students to your email list%2$s after enrollment or based on the membership/course they are enrolled %3$sand send emails to students%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:362
+#: src/core/src/Admin/AdminNotices.php:365
 msgid "Did you know you can %1$sadd MemberPress members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:383
+#: src/core/src/Admin/AdminNotices.php:386
 msgid "Did you know you can %1$sadd members in WooCommerce memberships to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime?"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:403
+#: src/core/src/Admin/AdminNotices.php:406
 msgid "Did you know you can %1$sadd Restrict Content Pro members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:422
+#: src/core/src/Admin/AdminNotices.php:425
 msgid "Did you know you can %1$sadd Paid Memberships Pro members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:443
+#: src/core/src/Admin/AdminNotices.php:446
 msgid "Did you know with MailOptin, you can connect Contact Form 7 to major email marketing software such as Mailchimp, AWeber, Campaign Monitor, MailerLite, ActiveCampaign? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:462
+#: src/core/src/Admin/AdminNotices.php:465
 msgid "Did you know with MailOptin, you can connect Forminator to major email marketing software such as Mailchimp, Constant Contact, MailerLite, ActiveCampaign, ConvertKit? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:481
+#: src/core/src/Admin/AdminNotices.php:484
 msgid "Did you know with MailOptin, you can connect Ninja Forms to major email marketing software such as Mailchimp, AWeber, Campaign Monitor, MailerLite, ActiveCampaign? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:500
-msgid "Did you know with MailOptin, you can connect Gravity Forms to your email marketing software and CRM including Mailchimp, Brevo (Sendinblue), MailerLite, Ontraport, GetResponse? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:503
+msgid "Did you know with MailOptin, you can connect Gravity Forms to your email marketing software and CRM including Mailchimp, Brevo, MailerLite, Ontraport, GetResponse? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:519
-msgid "Did you know with MailOptin, you can connect WPForms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo (Sendinblue)? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:522
+msgid "Did you know with MailOptin, you can connect WPForms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+msgstr ""
+
+#: src/core/src/Admin/AdminNotices.php:541
+msgid "Did you know with MailOptin, you can connect Fluent Forms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+msgstr ""
+
+#: src/core/src/Admin/AdminNotices.php:560
+msgid "Did you know with MailOptin, you can connect Formidable Forms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+msgstr ""
+
+#: src/core/src/Admin/AdminNotices.php:579
+msgid "Did you know with MailOptin, you can connect WS Form to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/AbstractElement.php:40
@@ -7018,11 +7098,6 @@ msgstr ""
 msgid "Updating..."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:215
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:192
-msgid "Update"
-msgstr ""
-
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:361
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:377
 msgid "View available tags"
@@ -7669,7 +7744,7 @@ msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/Customizer.php:754
 #: src/core/src/Admin/SettingsPage/Connections.php:49
-#: src/core/src/Admin/SettingsPage/Connections.php:222
+#: src/core/src/Admin/SettingsPage/Connections.php:224
 msgid "Integrations"
 msgstr ""
 
