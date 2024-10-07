@@ -1,5 +1,8 @@
 ﻿== Changelog ==
 
+= 1.2.71.1 =
+* PHP Fixes and performance improvements.
+
 = 1.2.71.0 =
 * Added [WS Form integration](https://mailoptin.io/article/ws-form-mailchimp-aweber-more/?ref=changelog).
 * Fixed: PHP Warning: Undefined array key "placeholder"
