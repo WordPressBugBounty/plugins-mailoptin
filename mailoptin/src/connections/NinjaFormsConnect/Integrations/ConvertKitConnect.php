@@ -10,7 +10,7 @@ use function MailOptin\Core\moVar;
 
 class ConvertKitConnect extends \NF_Abstracts_ActionNewsletter
 {
-    public $connection_name = 'ConvertKit';
+    public $connection_name = 'Kit (ConvertKit)';
 
     public $connection = 'ConvertKitConnect';
 
@@ -147,7 +147,7 @@ class ConvertKitConnect extends \NF_Abstracts_ActionNewsletter
         if (is_array($lists)) {
             foreach ($lists as $key => $value) {
                 $nf_lists[] = [
-                    'value'  => $key,
+                    'value'  => (string)$key,
                     'label'  => $value,
                     'fields' => $this->get_list_fields($key)
                 ];

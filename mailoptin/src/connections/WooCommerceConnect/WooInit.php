@@ -55,7 +55,7 @@ class WooInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
             wp_enqueue_script('mailoptin-woocommerce-settings', MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
             wp_localize_script('mailoptin-woocommerce-settings', 'moWooCommerce', [
                 'fields'                  => [],
@@ -458,7 +458,6 @@ class WooInit
         $fields['mowoo_order_total']          = esc_html__('Last Order Total', 'mailoptin');
         $fields['mowoo_order_date']           = esc_html__('Last Order Date', 'mailoptin');
         $fields['mowoo_order_payment_method'] = esc_html__('Last Order Payment Method', 'mailoptin');
-        $fields['mowoo_order_notes']          = esc_html__('Last Order Notes', 'mailoptin');
 
         return apply_filters('mailoptin_woocommerce_mapping_checkout_fields', $fields, $this);
     }

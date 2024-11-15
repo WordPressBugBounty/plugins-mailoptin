@@ -32,7 +32,7 @@ class PMPROInit
 
         $screen = get_current_screen();
 
-        if (strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
             wp_enqueue_script('mailoptin-pmpro-settings', MAILOPTIN_PMPRO_CONNECT_ASSETS_URL . 'settings.js', ['jquery'], MAILOPTIN_VERSION_NUMBER, true);
             wp_enqueue_script('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.js', ['jquery'], false, true);
             wp_enqueue_style('mailoptin-core-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.css', null);

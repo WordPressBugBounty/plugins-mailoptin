@@ -67,8 +67,7 @@ class Tags
             <p>
                 <a href="<?= $upsell_url ?>" style="margin-right: 10px;" class="button-primary" target="_blank">
                     <?php esc_html_e('Upgrade to MailOptin Premium', 'mailoptin'); ?>
-                </a>
-                <a href="<?= $doc_url ?>" target="_blank">
+                </a> <a href="<?= $doc_url ?>" target="_blank">
                     <?php esc_html_e('Learn more', 'mailoptin'); ?>
                 </a>
             </p>
@@ -127,7 +126,7 @@ class Tags
 
                 foreach (Init::merge_vars_field_map($connection, $connection_email_list) as $key => $value) {
                     $mapped_key = rawurlencode('mailoptinWooCommerceMappedFields-' . $key);
-                    if ( isset($_POST[$mapped_key])) {
+                    if (isset($_POST[$mapped_key])) {
                         update_term_meta($term_id, $connection . '[' . $mapped_key . ']', sanitize_text_field($_POST[$mapped_key]));
                     }
                 }
@@ -217,7 +216,6 @@ class Tags
         return $return_data;
     }
 
-
     public function process_submission($product_tag_id, $order)
     {
         $field_map = [];
@@ -227,6 +225,8 @@ class Tags
         if (empty($connection_service)) return;
 
         $connection_email_list = get_term_meta($product_tag_id, $connection_service . '[mailoptinWooCommerceSelectList]', true);
+        
+        if (empty($connection_email_list)) return;
 
         foreach (Init::merge_vars_field_map($connection_service, $connection_email_list) as $key => $value) {
             $mapped_key = rawurlencode('mailoptinWooCommerceMappedFields-' . $key);

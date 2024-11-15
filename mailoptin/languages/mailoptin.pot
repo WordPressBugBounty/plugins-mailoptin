@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.71.1\n"
+"Project-Id-Version: MailOptin - Lite 1.2.72.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-07T12:29:11+00:00\n"
+"POT-Creation-Date: 2024-11-15T17:50:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: mailoptin\n"
@@ -92,9 +92,10 @@ msgid "Organization Name"
 msgstr ""
 
 #: src/connections/ActiveCampaignConnect/Connect.php:248
+#: src/connections/CampaignMonitorConnect/Connect.php:111
 #: src/connections/CleverReachConnect/Connect.php:196
 #: src/connections/ContactForm7Connect/CF7.php:144
-#: src/connections/ContactForm7Connect/panel-settings-view.php:47
+#: src/connections/ContactForm7Connect/panel-settings-view.php:49
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:538
 #: src/connections/EgoiConnect/ConnectSettingsPage.php:23
 #: src/connections/EmmaConnect/Connect.php:58
@@ -103,8 +104,8 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:216
 #: src/connections/GetResponseConnect/ConnectSettingsPage.php:79
 #: src/connections/GiveWPConnect/GWPInit.php:501
-#: src/connections/GravityFormsConnect/GFMailOptin.php:260
-#: src/connections/GravityFormsConnect/GFMailOptin.php:295
+#: src/connections/GravityFormsConnect/GFMailOptin.php:261
+#: src/connections/GravityFormsConnect/GFMailOptin.php:296
 #: src/connections/InfusionsoftConnect/Connect.php:125
 #: src/connections/InfusionsoftConnect/Connect.php:170
 #: src/connections/InfusionsoftConnect/Connect.php:184
@@ -120,7 +121,7 @@ msgstr ""
 #: src/connections/SendinblueConnect/ConnectSettingsPage.php:47
 #: src/connections/TutorLMSConnect/TutorInit.php:511
 #: src/connections/UltimateMemberConnect/UMInit.php:468
-#: src/connections/WooCommerceConnect/WooInit.php:537
+#: src/connections/WooCommerceConnect/WooInit.php:536
 #: src/connections/WooMembershipConnect/OptinSubscription.php:131
 #: src/connections/WSFormConnect/WSFMailOptin.php:321
 #: src/connections/WSFormConnect/WSFMailOptin.php:335
@@ -280,7 +281,7 @@ msgstr ""
 
 #: src/connections/ActiveCampaignConnect/SendCampaign.php:114
 #: src/connections/AweberConnect/SendCampaign.php:73
-#: src/connections/CampaignMonitorConnect/SendCampaign.php:88
+#: src/connections/CampaignMonitorConnect/SendCampaign.php:109
 #: src/connections/CleverReachConnect/SendCampaign.php:101
 #: src/connections/ConvertKitConnect/SendCampaign.php:81
 #: src/connections/CtctConnect/SendCampaign.php:123
@@ -511,8 +512,8 @@ msgstr ""
 #: src/connections/CleverReachConnect/Connect.php:117
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:133
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:141
-#: src/connections/ContactForm7Connect/panel-settings-view.php:70
-#: src/connections/ContactForm7Connect/panel-settings-view.php:86
+#: src/connections/ContactForm7Connect/panel-settings-view.php:72
+#: src/connections/ContactForm7Connect/panel-settings-view.php:88
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:472
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:498
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:236
@@ -528,8 +529,8 @@ msgstr ""
 #: src/connections/GiveWPConnect/GWPInit.php:461
 #: src/connections/GiveWPConnect/Settings.php:242
 #: src/connections/GiveWPConnect/Settings.php:262
-#: src/connections/GravityFormsConnect/GFMailOptin.php:380
-#: src/connections/GravityFormsConnect/GFMailOptin.php:394
+#: src/connections/GravityFormsConnect/GFMailOptin.php:381
+#: src/connections/GravityFormsConnect/GFMailOptin.php:395
 #: src/connections/HighLevelConnect/Connect.php:107
 #: src/connections/LearnDashConnect/LearnDashInit.php:286
 #: src/connections/LearnDashConnect/LearnDashInit.php:312
@@ -612,14 +613,14 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:134
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:142
 #: src/connections/WeMailConnect/Connect.php:60
-#: src/connections/WooCommerceConnect/WooInit.php:493
-#: src/connections/WooCommerceConnect/WooInit.php:521
+#: src/connections/WooCommerceConnect/WooInit.php:492
+#: src/connections/WooCommerceConnect/WooInit.php:520
 #: src/connections/WooCommerceConnect/WooSettings.php:293
 #: src/connections/WooCommerceConnect/WooSettings.php:301
 #: src/connections/WooMembershipConnect/OptinSubscription.php:222
 #: src/connections/WooMembershipConnect/OptinSubscription.php:250
-#: src/connections/WPFormsConnect/MailOptin.php:513
-#: src/connections/WPFormsConnect/MailOptin.php:543
+#: src/connections/WPFormsConnect/MailOptin.php:514
+#: src/connections/WPFormsConnect/MailOptin.php:544
 #: src/connections/WSFormConnect/WSFMailOptin.php:416
 #: src/connections/WSFormConnect/WSFMailOptin.php:437
 #: src/connections/WSFormConnect/WSFMailOptin.php:480
@@ -690,9 +691,14 @@ msgstr ""
 msgid "CampaignMonitor access token not found."
 msgstr ""
 
-#: src/connections/CampaignMonitorConnect/Connect.php:64
+#: src/connections/CampaignMonitorConnect/Connect.php:89
 #: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:73
 msgid "Campaign Monitor"
+msgstr ""
+
+#: src/connections/CampaignMonitorConnect/Connect.php:189
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:55
+msgid "Select a segment to send to. Leave empty to send to all list subscribers."
 msgstr ""
 
 #: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:34
@@ -733,7 +739,7 @@ msgid "Last Name Field"
 msgstr ""
 
 #: src/connections/CleverReachConnect/Connect.php:118
-#: src/connections/ContactForm7Connect/panel-settings-view.php:90
+#: src/connections/ContactForm7Connect/panel-settings-view.php:92
 #: src/connections/FluentFormConnect/FluentForms.php:196
 #: src/connections/FormidableFormConnect/panel-settings-view.php:76
 msgid "Enter a comma-separated list of tags to assign to subscribers."
@@ -770,7 +776,7 @@ msgid "Upgrade to %sMailOptin Premium%s to add your website commenters to your e
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:33
-#: src/connections/ContactForm7Connect/panel-settings-view.php:142
+#: src/connections/ContactForm7Connect/panel-settings-view.php:144
 #: src/connections/EasyDigitalDownloadsConnect/Downloads.php:50
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:50
 #: src/connections/FluentFormConnect/FluentForms.php:222
@@ -778,7 +784,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:119
 #: src/connections/GiveWPConnect/Forms.php:50
 #: src/connections/GiveWPConnect/Settings.php:173
-#: src/connections/GravityFormsConnect/GFMailOptin.php:421
+#: src/connections/GravityFormsConnect/GFMailOptin.php:422
 #: src/connections/LearnDashConnect/Course.php:49
 #: src/connections/LearnDashConnect/Group.php:46
 #: src/connections/LearnDashConnect/LearnDashSettings.php:36
@@ -850,7 +856,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Tags.php:69
 #: src/connections/WooCommerceConnect/WooSettings.php:192
 #: src/connections/WooMembershipConnect/OptinSubscription.php:304
-#: src/connections/WPFormsConnect/MailOptin.php:562
+#: src/connections/WPFormsConnect/MailOptin.php:563
 msgid "Upgrade to MailOptin Premium"
 msgstr ""
 
@@ -877,7 +883,7 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:37
 #: src/connections/WooCommerceConnect/Category.php:73
 #: src/connections/WooCommerceConnect/Product.php:79
-#: src/connections/WooCommerceConnect/Tags.php:72
+#: src/connections/WooCommerceConnect/Tags.php:71
 #: src/connections/WooCommerceConnect/WooSettings.php:195
 #: src/connections/WooMembershipConnect/OptinSubscription.php:307
 #: src/core/src/Cron.php:61
@@ -889,14 +895,14 @@ msgid "This integration subscribes all commenters to your email marketing softwa
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:62
-#: src/connections/ContactForm7Connect/panel-settings-view.php:28
+#: src/connections/ContactForm7Connect/panel-settings-view.php:30
 #: src/connections/EasyDigitalDownloadsConnect/Downloads.php:63
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:82
 #: src/connections/FormidableFormConnect/panel-settings-view.php:16
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:61
 #: src/connections/GiveWPConnect/Forms.php:63
 #: src/connections/GiveWPConnect/Settings.php:39
-#: src/connections/GravityFormsConnect/GFMailOptin.php:509
+#: src/connections/GravityFormsConnect/GFMailOptin.php:510
 #: src/connections/LearnDashConnect/Course.php:62
 #: src/connections/LearnDashConnect/Group.php:59
 #: src/connections/LearnDashConnect/LearnDashSettings.php:65
@@ -915,10 +921,10 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:63
 #: src/connections/WooCommerceConnect/Category.php:93
 #: src/connections/WooCommerceConnect/Product.php:89
-#: src/connections/WooCommerceConnect/Tags.php:90
+#: src/connections/WooCommerceConnect/Tags.php:89
 #: src/connections/WooCommerceConnect/WooSettings.php:221
 #: src/connections/WooMembershipConnect/OptinSubscription.php:317
-#: src/connections/WPFormsConnect/MailOptin.php:333
+#: src/connections/WPFormsConnect/MailOptin.php:334
 #: src/connections/WSFormConnect/WSFMailOptin.php:318
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:666
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Integration_Repeater_Control.php:553
@@ -947,14 +953,14 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:64
 #: src/connections/WooCommerceConnect/Category.php:103
 #: src/connections/WooCommerceConnect/Product.php:92
-#: src/connections/WooCommerceConnect/Tags.php:100
+#: src/connections/WooCommerceConnect/Tags.php:99
 #: src/connections/WooCommerceConnect/WooSettings.php:222
 #: src/connections/WooMembershipConnect/OptinSubscription.php:321
 msgid "Select your email marketing software or CRM."
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:72
-#: src/connections/ContactForm7Connect/panel-settings-view.php:43
+#: src/connections/ContactForm7Connect/panel-settings-view.php:45
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:305
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:96
 #: src/connections/FluentFormConnect/FluentForms.php:126
@@ -963,10 +969,10 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:214
 #: src/connections/GiveWPConnect/GWPInit.php:267
 #: src/connections/GiveWPConnect/Settings.php:52
-#: src/connections/GravityFormsConnect/GFMailOptin.php:439
+#: src/connections/GravityFormsConnect/GFMailOptin.php:440
 #: src/connections/LearnDashConnect/LearnDashInit.php:184
 #: src/connections/LearnDashConnect/LearnDashSettings.php:75
-#: src/connections/LifterLMSConnect/Connect.php:497
+#: src/connections/LifterLMSConnect/Connect.php:499
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:372
 #: src/connections/MemberPressConnect/MemberPressInit.php:231
 #: src/connections/MemberPressConnect/MemberPressSettings.php:49
@@ -992,7 +998,7 @@ msgid "Select the email list, audience or contact list to add commenters to."
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:86
-#: src/connections/ContactForm7Connect/panel-settings-view.php:58
+#: src/connections/ContactForm7Connect/panel-settings-view.php:60
 #: src/connections/DripConnect/Connect.php:117
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:587
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:198
@@ -1003,10 +1009,10 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:232
 #: src/connections/GiveWPConnect/GWPInit.php:578
 #: src/connections/GiveWPConnect/Settings.php:204
-#: src/connections/GravityFormsConnect/GFMailOptin.php:333
+#: src/connections/GravityFormsConnect/GFMailOptin.php:334
 #: src/connections/LearnDashConnect/LearnDashInit.php:424
 #: src/connections/LearnDashConnect/LearnDashSettings.php:89
-#: src/connections/LifterLMSConnect/Connect.php:420
+#: src/connections/LifterLMSConnect/Connect.php:422
 #: src/connections/MailjetConnect/Connect.php:135
 #: src/connections/MemberPressConnect/MemberPressInit.php:324
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:194
@@ -1072,12 +1078,12 @@ msgstr ""
 #: src/connections/WooCommerceConnect/WooInit.php:430
 #: src/connections/WooCommerceConnect/WooSettings.php:245
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
-#: src/connections/WPFormsConnect/MailOptin.php:480
+#: src/connections/WPFormsConnect/MailOptin.php:481
 msgid "Enable Double Optin"
 msgstr ""
 
 #: src/connections/CommentOptinConnect/CommentOptinSettings.php:86
-#: src/connections/ContactForm7Connect/panel-settings-view.php:58
+#: src/connections/ContactForm7Connect/panel-settings-view.php:60
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:587
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:198
 #: src/connections/FluentCRMConnect/Connect.php:184
@@ -1086,10 +1092,10 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:234
 #: src/connections/GiveWPConnect/GWPInit.php:578
 #: src/connections/GiveWPConnect/Settings.php:204
-#: src/connections/GravityFormsConnect/GFMailOptin.php:333
+#: src/connections/GravityFormsConnect/GFMailOptin.php:334
 #: src/connections/LearnDashConnect/LearnDashInit.php:424
 #: src/connections/LearnDashConnect/LearnDashSettings.php:89
-#: src/connections/LifterLMSConnect/Connect.php:420
+#: src/connections/LifterLMSConnect/Connect.php:422
 #: src/connections/MailChimpConnect/Connect.php:381
 #: src/connections/MailsterConnect/Connect.php:178
 #: src/connections/MemberPressConnect/MemberPressInit.php:324
@@ -1155,7 +1161,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/WooInit.php:430
 #: src/connections/WooCommerceConnect/WooSettings.php:245
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
-#: src/connections/WPFormsConnect/MailOptin.php:482
+#: src/connections/WPFormsConnect/MailOptin.php:483
 msgid "Disable Double Optin"
 msgstr ""
 
@@ -1168,10 +1174,10 @@ msgstr ""
 #: src/connections/FluentFormConnect/FluentForms.php:135
 #: src/connections/GiveWPConnect/GWPInit.php:307
 #: src/connections/GiveWPConnect/Settings.php:72
-#: src/connections/GravityFormsConnect/GFMailOptin.php:460
+#: src/connections/GravityFormsConnect/GFMailOptin.php:461
 #: src/connections/LearnDashConnect/LearnDashInit.php:224
 #: src/connections/LearnDashConnect/LearnDashSettings.php:105
-#: src/connections/LifterLMSConnect/Connect.php:536
+#: src/connections/LifterLMSConnect/Connect.php:538
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:393
 #: src/connections/MemberPressConnect/MemberPressInit.php:270
 #: src/connections/MemberPressConnect/MemberPressSettings.php:86
@@ -1303,7 +1309,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:92
 #: src/connections/TutorLMSConnect/TutorInit.php:487
 #: src/connections/UltimateMemberConnect/UMSettings.php:283
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:197
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:200
 msgid "User ID"
 msgstr ""
 
@@ -1316,7 +1322,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:93
 #: src/connections/TutorLMSConnect/TutorInit.php:488
 #: src/connections/UltimateMemberConnect/UMSettings.php:284
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:198
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:201
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:134
 msgid "Username"
 msgstr ""
@@ -1330,7 +1336,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:94
 #: src/connections/TutorLMSConnect/TutorInit.php:489
 #: src/connections/UltimateMemberConnect/UMSettings.php:285
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:199
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:202
 msgid "User Nicename"
 msgstr ""
 
@@ -1343,7 +1349,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:95
 #: src/connections/TutorLMSConnect/TutorInit.php:490
 #: src/connections/UltimateMemberConnect/UMSettings.php:286
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:200
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:203
 msgid "Website URL"
 msgstr ""
 
@@ -1354,7 +1360,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:96
 #: src/connections/TutorLMSConnect/TutorInit.php:491
 #: src/connections/UltimateMemberConnect/UMSettings.php:287
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:201
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:204
 msgid "Email address"
 msgstr ""
 
@@ -1367,7 +1373,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:97
 #: src/connections/TutorLMSConnect/TutorInit.php:492
 #: src/connections/UltimateMemberConnect/UMSettings.php:288
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:202
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:205
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:137
 msgid "Display Name"
 msgstr ""
@@ -1382,7 +1388,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:98
 #: src/connections/TutorLMSConnect/TutorInit.php:493
 #: src/connections/UltimateMemberConnect/UMSettings.php:289
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:203
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:206
 #: src/connections/WordPressUserRegistrationConnect/Connect.php:138
 msgid "Nickname"
 msgstr ""
@@ -1393,7 +1399,7 @@ msgstr ""
 #: src/connections/FluentFormConnect/FluentForms.php:154
 #: src/connections/FormidableFormConnect/FormidableForm.php:75
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:367
-#: src/connections/GravityFormsConnect/GFMailOptin.php:172
+#: src/connections/GravityFormsConnect/GFMailOptin.php:173
 #: src/connections/LearnDashConnect/LearnDashInit.php:716
 #: src/connections/MemberPressConnect/MemberPressInit.php:406
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:113
@@ -1450,9 +1456,9 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:99
 #: src/connections/TutorLMSConnect/TutorInit.php:494
 #: src/connections/UltimateMemberConnect/UMSettings.php:290
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:204
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:207
 #: src/connections/WebHookConnect/Connect.php:38
-#: src/connections/WPFormsConnect/MailOptin.php:402
+#: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
 msgid "First Name"
 msgstr ""
@@ -1463,7 +1469,7 @@ msgstr ""
 #: src/connections/FluentFormConnect/FluentForms.php:159
 #: src/connections/FormidableFormConnect/FormidableForm.php:76
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:368
-#: src/connections/GravityFormsConnect/GFMailOptin.php:176
+#: src/connections/GravityFormsConnect/GFMailOptin.php:177
 #: src/connections/LearnDashConnect/LearnDashInit.php:717
 #: src/connections/MemberPressConnect/MemberPressInit.php:407
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:117
@@ -1520,9 +1526,9 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:100
 #: src/connections/TutorLMSConnect/TutorInit.php:495
 #: src/connections/UltimateMemberConnect/UMSettings.php:291
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:205
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:208
 #: src/connections/WebHookConnect/Connect.php:39
-#: src/connections/WPFormsConnect/MailOptin.php:407
+#: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
 msgid "Last Name"
 msgstr ""
@@ -1536,7 +1542,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:101
 #: src/connections/TutorLMSConnect/TutorInit.php:496
 #: src/connections/UltimateMemberConnect/UMSettings.php:292
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:206
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:209
 msgid "Biographical Info "
 msgstr ""
 
@@ -1550,7 +1556,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/FFMailOptin.php:165
 #: src/connections/GiveWPConnect/GWPInit.php:627
 #: src/connections/GiveWPConnect/Settings.php:278
-#: src/connections/GravityFormsConnect/GFMailOptin.php:243
+#: src/connections/GravityFormsConnect/GFMailOptin.php:244
 #: src/connections/LeadBankConnect/Connect.php:48
 #: src/connections/LearnDashConnect/LearnDashInit.php:695
 #: src/connections/LifterLMSConnect/Connect.php:367
@@ -1559,8 +1565,8 @@ msgstr ""
 #: src/connections/RCPConnect/RCPInit.php:161
 #: src/connections/TutorLMSConnect/TutorInit.php:474
 #: src/connections/UltimateMemberConnect/UMInit.php:521
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:236
-#: src/connections/WooCommerceConnect/WooInit.php:561
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:239
+#: src/connections/WooCommerceConnect/WooInit.php:560
 #: src/connections/WooMembershipConnect/OptinSubscription.php:112
 msgid "MailOptin Leads"
 msgstr ""
@@ -1570,7 +1576,7 @@ msgstr ""
 #: src/connections/FormidableFormConnect/FormidableForm.php:73
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:365
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
-#: src/connections/GravityFormsConnect/GFMailOptin.php:162
+#: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
 msgid "Email Address"
 msgstr ""
@@ -1579,7 +1585,7 @@ msgstr ""
 #: src/connections/FluentFormConnect/FluentForms.php:149
 #: src/connections/FormidableFormConnect/FormidableForm.php:74
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:366
-#: src/connections/GravityFormsConnect/GFMailOptin.php:168
+#: src/connections/GravityFormsConnect/GFMailOptin.php:169
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:109
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:109
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:109
@@ -1631,13 +1637,13 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:109
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:109
 #: src/connections/WebHookConnect/Connect.php:37
-#: src/connections/WPFormsConnect/MailOptin.php:397
+#: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
 msgid "Full Name"
 msgstr ""
 
 #: src/connections/ContactForm7Connect/IntegrationsListing.php:33
-msgid "The MailOptin integration allows you to send contact data collected through your contact forms to any email marketing software and CRM including Mailchimp, AWeber, Campaign Monitor, MailerLite, Drip, ConvertKit, Zoho, ActiveCampaign, HubSpot, Brevo (Sendinblue), Sendy, GetResponse and more. %sFor details, see %s."
+msgid "The MailOptin integration allows you to send contact data collected through your contact forms to any email marketing software and CRM including Mailchimp, AWeber, Campaign Monitor, MailerLite, Drip, Kit (ConvertKit), Zoho, ActiveCampaign, HubSpot, Brevo (Sendinblue), Sendy, GetResponse and more. %sFor details, see %s."
 msgstr ""
 
 #: src/connections/ContactForm7Connect/IntegrationsListing.php:37
@@ -1645,7 +1651,7 @@ msgstr ""
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:75
 #: src/connections/GiveWPConnect/Forms.php:22
 #: src/connections/GiveWPConnect/Settings.php:27
-#: src/connections/GravityFormsConnect/GFMailOptin.php:645
+#: src/connections/GravityFormsConnect/GFMailOptin.php:646
 #: src/connections/LearnDashConnect/Course.php:22
 #: src/connections/LearnDashConnect/Group.php:19
 #: src/connections/LifterLMSConnect/CourseSidebarSettings.php:20
@@ -1663,11 +1669,11 @@ msgstr ""
 msgid "Setup Integration"
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:62
+#: src/connections/ContactForm7Connect/panel-settings-view.php:64
 #: src/connections/ElementorConnect/Elementor.php:113
 #: src/connections/FluentCRMConnect/Connect.php:185
 #: src/connections/FormidableFormConnect/panel-settings-view.php:51
-#: src/connections/GravityFormsConnect/GFMailOptin.php:344
+#: src/connections/GravityFormsConnect/GFMailOptin.php:345
 #: src/connections/LearnDashConnect/LearnDashInit.php:425
 #: src/connections/LearnDashConnect/LearnDashSettings.php:94
 #: src/connections/MailsterConnect/Connect.php:179
@@ -1678,36 +1684,36 @@ msgstr ""
 #: src/connections/TutorLMSConnect/TutorInit.php:419
 #: src/connections/TutorLMSConnect/TutorSettings.php:94
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:92
-#: src/connections/WPFormsConnect/MailOptin.php:497
+#: src/connections/WPFormsConnect/MailOptin.php:498
 #: src/connections/WSFormConnect/WSFMailOptin.php:356
 msgid "Double optin requires users to confirm their email address before they are added or subscribed."
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:78
+#: src/connections/ContactForm7Connect/panel-settings-view.php:80
 #: src/connections/FluentFormConnect/FluentForms.php:185
 #: src/connections/FormidableFormConnect/panel-settings-view.php:66
-#: src/connections/WPFormsConnect/MailOptin.php:544
+#: src/connections/WPFormsConnect/MailOptin.php:545
 msgid "Select tags to assign to subscribers."
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:99
+#: src/connections/ContactForm7Connect/panel-settings-view.php:101
 #: src/connections/ElementorConnect/Elementor.php:154
 msgid "Field Mapping"
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:125
+#: src/connections/ContactForm7Connect/panel-settings-view.php:127
 msgid "Require Acceptance"
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:133
+#: src/connections/ContactForm7Connect/panel-settings-view.php:135
 msgid "Select acceptance field that must be checked before this integration is processed. This is optional."
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:141
+#: src/connections/ContactForm7Connect/panel-settings-view.php:143
 #: src/connections/FluentFormConnect/FluentForms.php:221
 #: src/connections/FormidableFormConnect/panel-settings-view.php:112
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:118
-#: src/connections/GravityFormsConnect/GFMailOptin.php:420
+#: src/connections/GravityFormsConnect/GFMailOptin.php:421
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:169
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:169
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:169
@@ -1758,15 +1764,15 @@ msgstr ""
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCampaignsConnect.php:169
 #: src/connections/NinjaFormsConnect/Integrations/ZohoCRMConnect.php:169
 #: src/connections/NinjaFormsConnect/MoNinjaConnect.php:169
-#: src/connections/WPFormsConnect/MailOptin.php:561
+#: src/connections/WPFormsConnect/MailOptin.php:562
 #: src/connections/WSFormConnect/WSFMailOptin.php:76
 msgid "Upgrade to %s to remove the 500 subscribers monthly limit, add support for custom field mapping and assign tags to subscribers."
 msgstr ""
 
-#: src/connections/ContactForm7Connect/panel-settings-view.php:143
+#: src/connections/ContactForm7Connect/panel-settings-view.php:145
 #: src/connections/FluentFormConnect/FluentForms.php:223
 #: src/connections/FormidableFormConnect/panel-settings-view.php:114
-#: src/connections/GravityFormsConnect/GFMailOptin.php:422
+#: src/connections/GravityFormsConnect/GFMailOptin.php:423
 #: src/connections/NinjaFormsConnect/Integrations/ActiveCampaignConnect.php:171
 #: src/connections/NinjaFormsConnect/Integrations/AweberConnect.php:171
 #: src/connections/NinjaFormsConnect/Integrations/BeehiivConnect.php:171
@@ -1851,24 +1857,19 @@ msgstr ""
 msgid "Learn how to %sget your Gist API Key%s."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/AbstractConvertKitConnect.php:82
-msgid "ConvertKit API Key not found."
+#: src/connections/ConvertKitConnect/AbstractConvertKitConnect.php:80
+msgid "Kit (ConvertKit) API Key not found."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:50
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:29
-msgid "ConvertKit"
-msgstr ""
-
-#: src/connections/ConvertKitConnect/Connect.php:165
+#: src/connections/ConvertKitConnect/Connect.php:163
 msgid "Subscriber Sequences"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:166
-msgid "Select ConvertKit sequences subscribers will be added to."
+#: src/connections/ConvertKitConnect/Connect.php:164
+msgid "Select Kit (ConvertKit) sequences subscribers will be added to."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:173
+#: src/connections/ConvertKitConnect/Connect.php:171
 #: src/connections/Ctctv3Connect/Connect.php:225
 #: src/connections/EgoiConnect/Connect.php:118
 #: src/connections/GetResponseConnect/Connect.php:112
@@ -1876,28 +1877,28 @@ msgstr ""
 msgid "Subscriber Tags"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:174
-msgid "Select ConvertKit tags that will be assigned to subscribers."
+#: src/connections/ConvertKitConnect/Connect.php:172
+msgid "Select Kit (ConvertKit) tags that will be assigned to subscribers."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:180
+#: src/connections/ConvertKitConnect/Connect.php:178
 msgid "%sMailOptin Premium%s allows you to apply tags to subscribers, add subscribers to sequences."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:216
+#: src/connections/ConvertKitConnect/Connect.php:214
 msgid "Post to Your Public Feed"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:259
+#: src/connections/ConvertKitConnect/Connect.php:257
 msgid "All Subscribers"
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:30
-msgid "ConvertKit Connection"
+msgid "Kit (ConvertKit) Connection"
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:37
-msgid "Log in to your %sConvertKit account%s to get your api key."
+msgid "Log in to your %sKit (ConvertKit) account%s to get your api key."
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:45
@@ -1906,7 +1907,7 @@ msgid "Enter API Secret"
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:47
-msgid "Log in to your %sConvertKit account%s to get your api secret."
+msgid "Log in to your %sKit (ConvertKit) account%s to get your api secret."
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:54
@@ -1914,7 +1915,7 @@ msgid "Email Template Name"
 msgstr ""
 
 #: src/connections/ConvertKitConnect/ConnectSettingsPage.php:56
-msgid "The name of the template to use for all emails we send to your ConvertKit subscribers. Leave blank to use your account default. %sLearn more%s."
+msgid "The name of the template to use for all emails we send to your Kit (ConvertKit) subscribers. Leave blank to use your account default. %sLearn more%s."
 msgstr ""
 
 #: src/connections/CtctConnect/AbstractCtctConnect.php:44
@@ -2209,7 +2210,7 @@ msgstr ""
 #: src/connections/GiveWPConnect/Connect.php:188
 #: src/connections/LeadBankConnect/Connect.php:108
 #: src/connections/LearnDashConnect/Connect.php:260
-#: src/connections/LifterLMSConnect/Connect.php:757
+#: src/connections/LifterLMSConnect/Connect.php:759
 #: src/connections/MemberPressConnect/Connect.php:433
 #: src/connections/PmProConnect/Connect.php:371
 #: src/connections/RCPConnect/Connect.php:366
@@ -2245,7 +2246,7 @@ msgstr ""
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:199
 #: src/connections/GiveWPConnect/GWPInit.php:579
 #: src/connections/GiveWPConnect/Settings.php:205
-#: src/connections/LifterLMSConnect/Connect.php:421
+#: src/connections/LifterLMSConnect/Connect.php:423
 #: src/connections/UltimateMemberConnect/UMInit.php:504
 #: src/connections/UltimateMemberConnect/UMSettings.php:178
 #: src/connections/WooCommerceConnect/WooInit.php:431
@@ -2404,14 +2405,14 @@ msgstr ""
 
 #: src/connections/ElementorConnect/Elementor.php:90
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Integration_Repeater_Control.php:554
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:281
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:293
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:319
 msgid "Select Email List"
 msgstr ""
 
 #: src/connections/ElementorConnect/Elementor.php:105
-#: src/connections/GravityFormsConnect/GFMailOptin.php:341
-#: src/connections/WPFormsConnect/MailOptin.php:470
+#: src/connections/GravityFormsConnect/GFMailOptin.php:342
+#: src/connections/WPFormsConnect/MailOptin.php:471
 msgid "Double Optin"
 msgstr ""
 
@@ -2426,7 +2427,7 @@ msgstr ""
 #: src/connections/ElementorConnect/Elementor.php:126
 #: src/connections/SendlaneConnect/Connect.php:61
 #: src/connections/WeMailConnect/Connect.php:61
-#: src/connections/WPFormsConnect/MailOptin.php:514
+#: src/connections/WPFormsConnect/MailOptin.php:515
 msgid "Enter comma-separated list of tags to assign to subscribers."
 msgstr ""
 
@@ -2637,9 +2638,9 @@ msgstr ""
 
 #: src/connections/FacebookCustomAudienceConnect/create-audience-tmpl.php:9
 #: src/connections/FluentFormConnect/FluentForms.php:119
-#: src/connections/GravityFormsConnect/GFMailOptin.php:497
-#: src/connections/GravityFormsConnect/GFMailOptin.php:503
-#: src/connections/GravityFormsConnect/GFMailOptin.php:644
+#: src/connections/GravityFormsConnect/GFMailOptin.php:498
+#: src/connections/GravityFormsConnect/GFMailOptin.php:504
+#: src/connections/GravityFormsConnect/GFMailOptin.php:645
 #: src/connections/WebHookConnect/Connect.php:157
 #: src/connections/WebHookConnect/Connect.php:158
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:152
@@ -3177,52 +3178,52 @@ msgstr ""
 msgid "Upgrade Now!"
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:93
+#: src/connections/GravityFormsConnect/GFMailOptin.php:94
 msgid "Subscribe contact to your email marketing software or CRM via MailOptin only when payment is received."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:223
+#: src/connections/GravityFormsConnect/GFMailOptin.php:224
 msgid "Feed Settings"
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:385
+#: src/connections/GravityFormsConnect/GFMailOptin.php:386
 msgid "Select tags to assign to subscribers or leads."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:396
+#: src/connections/GravityFormsConnect/GFMailOptin.php:397
 msgid "Enter a comma-separated list of tags to assign to subscribers."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:443
+#: src/connections/GravityFormsConnect/GFMailOptin.php:444
 msgid "Please ensure you have an email list created to continue."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:446
+#: src/connections/GravityFormsConnect/GFMailOptin.php:447
 msgid "Select the email list or segment you would like to add your contacts to."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:473
-#: src/connections/GravityFormsConnect/GFMailOptin.php:477
+#: src/connections/GravityFormsConnect/GFMailOptin.php:474
+#: src/connections/GravityFormsConnect/GFMailOptin.php:478
 msgid "Conditional Logic"
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:478
+#: src/connections/GravityFormsConnect/GFMailOptin.php:479
 msgid "When conditional logic is enabled, this integration will only be processed when the conditions are met. When disabled all form submissions will be exported."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:504
+#: src/connections/GravityFormsConnect/GFMailOptin.php:505
 msgid "Enter a feed name to uniquely identify this setup."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:514
+#: src/connections/GravityFormsConnect/GFMailOptin.php:515
 msgid "%sConnect MailOptin first%s to your email marketing marketing software or CRM to continue setup."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:543
+#: src/connections/GravityFormsConnect/GFMailOptin.php:544
 msgid "A valid Email address must be provided."
 msgstr ""
 
-#: src/connections/GravityFormsConnect/GFMailOptin.php:606
+#: src/connections/GravityFormsConnect/GFMailOptin.php:607
 msgid "Unable to add subscriber via MailOptin: "
 msgstr ""
 
@@ -3851,12 +3852,12 @@ msgstr ""
 msgid "Select the courses whose expired users will receive the emails from this campaign."
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:460
+#: src/connections/LifterLMSConnect/Connect.php:462
 #: src/connections/VerticalResponseConnect/Connect.php:106
 msgid "Street Address 2"
 msgstr ""
 
-#: src/connections/LifterLMSConnect/Connect.php:500
+#: src/connections/LifterLMSConnect/Connect.php:502
 msgid "Select the email list or audience to add students."
 msgstr ""
 
@@ -4463,10 +4464,6 @@ msgstr ""
 #: src/connections/MoosendConnect/Connect.php:77
 #: src/connections/MoosendConnect/ConnectSettingsPage.php:79
 msgid "Moosend"
-msgstr ""
-
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:55
-msgid "Select a segment to send to. Leave empty to send to all list subscribers."
 msgstr ""
 
 #: src/connections/MoosendConnect/ConnectSettingsPage.php:80
@@ -5206,7 +5203,7 @@ msgid "Disable"
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:222
-#: src/connections/WooCommerceConnect/WooInit.php:497
+#: src/connections/WooCommerceConnect/WooInit.php:496
 #: src/connections/WooCommerceConnect/WooSettings.php:294
 #: src/connections/WooMembershipConnect/OptinSubscription.php:226
 msgid "Select tags to assign to buyers or customers."
@@ -5237,7 +5234,7 @@ msgstr ""
 msgid "Ultimate Member Integration"
 msgstr ""
 
-#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:107
+#: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:110
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:19
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:175
 msgid "User Registration Optin"
@@ -5531,7 +5528,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Category.php:86
 #: src/connections/WooCommerceConnect/Tags.php:43
 #: src/connections/WooCommerceConnect/Tags.php:61
-#: src/connections/WooCommerceConnect/Tags.php:85
+#: src/connections/WooCommerceConnect/Tags.php:84
 msgid "Connect MailOptin"
 msgstr ""
 
@@ -5540,7 +5537,7 @@ msgid "Add buyers or customers that purchase products in this category to your e
 msgstr ""
 
 #: src/connections/WooCommerceConnect/Category.php:111
-#: src/connections/WooCommerceConnect/Tags.php:106
+#: src/connections/WooCommerceConnect/Tags.php:105
 msgid "Save Settings"
 msgstr ""
 
@@ -5564,7 +5561,7 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add customers that purchase products with this tag to a specific email list, add custom field data and assign tags to them."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Tags.php:78
+#: src/connections/WooCommerceConnect/Tags.php:77
 msgid "Add buyers or customers that purchase products with this tag to your email marketing or CRM list."
 msgstr ""
 
@@ -5594,11 +5591,7 @@ msgstr ""
 msgid "Last Order Payment Method"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:461
-msgid "Last Order Notes"
-msgstr ""
-
-#: src/connections/WooCommerceConnect/WooInit.php:522
+#: src/connections/WooCommerceConnect/WooInit.php:521
 msgid "Enter a comma-separated list of tags to assign to buyers or customers."
 msgstr ""
 
@@ -5784,40 +5777,40 @@ msgid "Error: select an integration"
 msgstr ""
 
 #: src/connections/WPFormsConnect/MailOptin.php:244
-#: src/connections/WPFormsConnect/MailOptin.php:345
+#: src/connections/WPFormsConnect/MailOptin.php:346
 msgid "Add New Integration"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:303
+#: src/connections/WPFormsConnect/MailOptin.php:304
 msgid "API list error: No lists"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:306
+#: src/connections/WPFormsConnect/MailOptin.php:307
 msgid "MailOptin error: %s"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:381
+#: src/connections/WPFormsConnect/MailOptin.php:382
 msgid "Marketing provider connection"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:391
+#: src/connections/WPFormsConnect/MailOptin.php:392
 #: src/connections/WSFormConnect/WSFMailOptin.php:752
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:220
 msgid "Email"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:505
-#: src/connections/WPFormsConnect/MailOptin.php:524
+#: src/connections/WPFormsConnect/MailOptin.php:506
+#: src/connections/WPFormsConnect/MailOptin.php:525
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:662
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:667
 msgid "Options"
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:529
+#: src/connections/WPFormsConnect/MailOptin.php:530
 msgid "Lead tagging disabled because no tag was found. Consider creating one in your CRM or email service provider and try again."
 msgstr ""
 
-#: src/connections/WPFormsConnect/MailOptin.php:563
+#: src/connections/WPFormsConnect/MailOptin.php:564
 msgid "Learn more about our %slead generation and email automation features%s"
 msgstr ""
 
@@ -5826,7 +5819,7 @@ msgid "Auto Map"
 msgstr ""
 
 #: src/connections/WSFormConnect/WSFMailOptin.php:91
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:215
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:212
 #: src/core/src/Admin/Customizer/OptinForm/Customizer.php:192
 msgid "Update"
 msgstr ""
@@ -5953,116 +5946,116 @@ msgstr ""
 msgid "Authorization is required to grant <strong>%s</strong> access to interact with your Zoho CRM account."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:79
+#: src/core/src/Admin/AdminNotices.php:80
 msgid "Optin campaigns cache successfully cleared."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:97
+#: src/core/src/Admin/AdminNotices.php:98
 msgid "There was an error fetching email campaign template dependency."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:115
+#: src/core/src/Admin/AdminNotices.php:116
 msgid "There was an error fetching optin dependency. Try again or select another template."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:131
+#: src/core/src/Admin/AdminNotices.php:132
 msgid "Email campaigned resent."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:151
+#: src/core/src/Admin/AdminNotices.php:152
 msgid "MailOptin branding is now included on all optin forms unless you explicitly disabled it at \"Configuration\" panel in form builder. %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:195
+#: src/core/src/Admin/AdminNotices.php:196
 msgid "Hey, I noticed you have been using MailOptin for at least 7 days now - that's awesome! Could you please do me a BIG favor and give it a %1$s5-star rating on WordPress?%2$s This will help us spread the word and boost our motivation - thanks!"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:199
+#: src/core/src/Admin/AdminNotices.php:200
 msgid "Sure! I'd love to give a review"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:201
+#: src/core/src/Admin/AdminNotices.php:202
 msgid "Dismiss Forever"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:227
+#: src/core/src/Admin/AdminNotices.php:228
 msgid "Upgrade to %s now to create multiple email automation with advance targeting and option to send directly to your email list subscribers."
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:228
+#: src/core/src/Admin/AdminNotices.php:229
 msgid "MailOptin premium"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:246
+#: src/core/src/Admin/AdminNotices.php:247
 msgid "Did you know you can display targeted message & optin forms across your WooCommerce store, add customers to your email list after their purchase, automatically send email of new products and send newsletters to active subscribers and members in WooCommerce Memberships and Subscriptions plugins? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:265
+#: src/core/src/Admin/AdminNotices.php:266
 msgid "Did you know you can add Easy Digital Downloads customers to your email list after they purchase any product or based on their purchased product, send newsletters and automated email of new downloads? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:284
+#: src/core/src/Admin/AdminNotices.php:285
 msgid "Did you know you can add LearnDash students to your email list after they enroll to any course or based on the group or course they are enrolled in? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:303
+#: src/core/src/Admin/AdminNotices.php:304
 msgid "Did you know you can add Tutor LMS students to your email list after enrollment to any course and send automated emails and broadcasts to enrolled students? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:321
+#: src/core/src/Admin/AdminNotices.php:322
 msgid "Did you know you can %1$sadd GiveWP donors to your email list%2$s after they have donated or based on the donation form they donated through %3$sand send emails to donors%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:343
+#: src/core/src/Admin/AdminNotices.php:344
 msgid "Did you know you can %1$sadd LifterLMS students to your email list%2$s after enrollment or based on the membership/course they are enrolled %3$sand send emails to students%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:365
+#: src/core/src/Admin/AdminNotices.php:366
 msgid "Did you know you can %1$sadd MemberPress members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:386
+#: src/core/src/Admin/AdminNotices.php:387
 msgid "Did you know you can %1$sadd members in WooCommerce memberships to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime?"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:406
+#: src/core/src/Admin/AdminNotices.php:407
 msgid "Did you know you can %1$sadd Restrict Content Pro members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:425
+#: src/core/src/Admin/AdminNotices.php:426
 msgid "Did you know you can %1$sadd Paid Memberships Pro members to your email list%2$s after membership subscription %3$sand send emails to members%2$s at anytime? %4$sLearn more%2$s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:446
+#: src/core/src/Admin/AdminNotices.php:447
 msgid "Did you know with MailOptin, you can connect Contact Form 7 to major email marketing software such as Mailchimp, AWeber, Campaign Monitor, MailerLite, ActiveCampaign? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:465
-msgid "Did you know with MailOptin, you can connect Forminator to major email marketing software such as Mailchimp, Constant Contact, MailerLite, ActiveCampaign, ConvertKit? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:466
+msgid "Did you know with MailOptin, you can connect Forminator to major email marketing software such as Mailchimp, Constant Contact, MailerLite, ActiveCampaign, Kit (ConvertKit)? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:484
+#: src/core/src/Admin/AdminNotices.php:485
 msgid "Did you know with MailOptin, you can connect Ninja Forms to major email marketing software such as Mailchimp, AWeber, Campaign Monitor, MailerLite, ActiveCampaign? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:503
+#: src/core/src/Admin/AdminNotices.php:504
 msgid "Did you know with MailOptin, you can connect Gravity Forms to your email marketing software and CRM including Mailchimp, Brevo, MailerLite, Ontraport, GetResponse? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:522
-msgid "Did you know with MailOptin, you can connect WPForms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:523
+msgid "Did you know with MailOptin, you can connect WPForms to major email marketing software such as Mailchimp, Kit (ConvertKit), MailerLite, HubSpot, Brevo? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:541
-msgid "Did you know with MailOptin, you can connect Fluent Forms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:542
+msgid "Did you know with MailOptin, you can connect Fluent Forms to major email marketing software such as Mailchimp, Kit (ConvertKit), MailerLite, HubSpot, Brevo? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:560
-msgid "Did you know with MailOptin, you can connect Formidable Forms to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:561
+msgid "Did you know with MailOptin, you can connect Formidable Forms to major email marketing software such as Mailchimp, Kit (ConvertKit), MailerLite, HubSpot, Brevo? %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/AdminNotices.php:579
-msgid "Did you know with MailOptin, you can connect WS Form to major email marketing software such as Mailchimp, ConvertKit, MailerLite, HubSpot, Brevo? %sLearn more%s"
+#: src/core/src/Admin/AdminNotices.php:580
+msgid "Did you know with MailOptin, you can connect WS Form to major email marketing software such as Mailchimp, Kit (ConvertKit), MailerLite, HubSpot, Brevo? %sLearn more%s"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/AbstractElement.php:40
@@ -6139,8 +6132,8 @@ msgstr ""
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Image.php:33
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:39
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Text.php:33
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:599
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:605
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:596
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:602
 msgid "Content"
 msgstr ""
 
@@ -6518,7 +6511,7 @@ msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Text.php:22
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:600
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:262
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:274
 msgid "Text"
 msgstr ""
 
@@ -7021,43 +7014,43 @@ msgstr ""
 msgid "Saved"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:263
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:275
 msgid "Visual"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:264
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:276
 msgid "Add Media"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:273
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:285
 msgid "Select User Role (Required)"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:274
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:286
 msgid "Select Salesforce Object"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:275
-msgid "Select ConvertKit Form"
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:287
+msgid "Select Kit (ConvertKit) Form"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:276
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:288
 msgid "Select beehiiv Tier"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:277
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:289
 msgid "Select Drip Campaign"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:278
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:290
 msgid "Select ZohoCRM Module"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:279
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:291
 msgid "Select Custom Audience"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomizerTrait.php:280
+#: src/core/src/Admin/Customizer/CustomizerTrait.php:292
 msgid "Request Method"
 msgstr ""
 
@@ -7081,82 +7074,82 @@ msgstr ""
 msgid "unsubscribe"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:168
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:165
 msgid "Are you sure you want to send this newsletter now?"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:170
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:167
 msgid "Send Broadcast"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:190
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:187
 msgid "Toggle to activate and deactivate email automation."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:215
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:212
 #: src/core/src/Admin/Customizer/OptinForm/Customizer.php:192
 msgid "Updating..."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:361
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:377
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:358
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:374
 msgid "View available tags"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:362
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:378
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:619
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:359
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:375
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:616
 msgid "Preview"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:363
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:360
 msgid "Code Editor"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:379
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:376
 msgid "Newsletter Content"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:416
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:413
 #: src/core/src/Admin/SettingsPage/AbstractSettingsPage.php:249
 #: src/core/src/Admin/SettingsPage/AddNewEmail.php:69
 #: src/core/src/Admin/SettingsPage/EmailCampaigns.php:85
 msgid "Email Automation"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:436
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:433
 msgid "The customizer allows you to design, preview and set up to email campaigns."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:561
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:558
 #: src/core/src/Admin/Customizer/OptinForm/Customizer.php:683
 msgid "Check out MailOptin Premium!"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:572
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:569
 #: src/core/src/Admin/SettingsPage/ProUpgrade.php:71
 #: src/core/src/Admin/SettingsPage/Settings.php:35
 #: src/core/src/Admin/SettingsPage/Settings.php:241
 msgid "Settings"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:580
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:577
 msgid "View Available Tags"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:586
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:583
 msgid "Body"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:592
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:589
 msgid "Header"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:612
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:609
 msgid "Footer"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:625
+#: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:622
 #: src/core/src/Admin/PostListMenu/PostPreview.php:31
 #: src/core/src/Admin/PostListMenu/PostPreview.php:46
 msgid "Send Test Email"

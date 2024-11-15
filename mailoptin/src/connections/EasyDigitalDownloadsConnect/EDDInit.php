@@ -70,7 +70,7 @@ class EDDInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, 'edd') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'edd') !== false) {
             wp_enqueue_script('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.js', array('jquery'), false, true);
             wp_enqueue_style('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.css', null);
             wp_enqueue_script('mailoptin-edd-settings', MAILOPTIN_EDD_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore', 'mailoptin-select2'], MAILOPTIN_VERSION_NUMBER, true);
@@ -140,7 +140,7 @@ class EDDInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, 'edd') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'edd') !== false) {
             ob_start();
             ?>
             <style>

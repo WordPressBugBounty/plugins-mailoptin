@@ -2,8 +2,13 @@
 
 namespace MailOptin\CampaignMonitorConnect;
 
+use MailOptin\Core\Admin\Customizer\CustomControls\WP_Customize_Chosen_Single_Select_Control;
+use MailOptin\Core\Admin\Customizer\EmailCampaign\Customizer;
 use MailOptin\Core\Connections\ConnectionInterface;
 use MailOptin\Core\Logging\CampaignLogRepository;
+use MailOptin\Core\Repositories\EmailCampaignRepository;
+
+define('MAILOPTIN_CAMPAIGNMONITOR_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
 class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterface
 {
@@ -19,6 +24,26 @@ class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterf
         add_filter('mailoptin_registered_connections', array($this, 'register_connection'));
 
         add_action('init', [$this, 'campaign_log_public_preview']);
+
+        add_filter('mailoptin_email_campaign_customizer_page_settings', array($this, 'campaign_customizer_settings'));
+        add_filter('mailoptin_email_campaign_customizer_settings_controls', array(
+            $this,
+            'campaign_customizer_controls'
+        ), 10, 4);
+
+        add_action('mailoptin_email_campaign_enqueue_customizer_js', function () {
+            wp_enqueue_script(
+                'campaign-monitor-segment-control',
+                MAILOPTIN_CAMPAIGNMONITOR_CONNECT_ASSETS_URL . 'emailcustomizer.js',
+                array('jquery', 'customize-controls'),
+                MAILOPTIN_VERSION_NUMBER
+            );
+        });
+
+        add_action('wp_ajax_mailoptin_customizer_fetch_campaign_monitor_segment', [
+            $this,
+            'customizer_fetch_campaign_monitor_segment'
+        ]);
 
         parent::__construct();
     }
@@ -66,6 +91,111 @@ class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterf
         return $connections;
     }
 
+    public function campaign_customizer_settings($settings)
+    {
+        $settings['CampaignMonitorConnect_segment'] = array(
+            'default'   => '',
+            'type'      => 'option',
+            'transport' => 'postMessage',
+        );
+
+        return $settings;
+    }
+
+    public function get_list_segments($listid)
+    {
+        $output = get_transient("mo_campaign_monitor_get_list_segment_$listid");
+
+        if ($output === false) {
+
+            $segments = ['' => __('Select...', 'mailoptin')];
+
+            try {
+
+                $response = $this->campaignmonitorInstance()->apiRequest("lists/{$listid}/segments.json");
+
+                if (is_array($response) && ! empty($response)) {
+
+                    foreach ($response as $item) {
+                        $segments[$item->SegmentID] = $item->Title;
+                    }
+                }
+
+            } catch (\Exception $e) {
+                self::save_optin_error_log($e->getMessage(), 'campaignmonitor');
+            }
+
+            $output = $segments;
+
+            set_transient("mo_campaign_monitor_get_list_segment_$listid", $segments, 10 * MINUTE_IN_SECONDS);
+        }
+
+        return $output;
+    }
+
+    /**
+     * Fetch Campaign Monitor segment of a list for Email Customizer.
+     */
+    public function customizer_fetch_campaign_monitor_segment()
+    {
+        check_ajax_referer('customizer-fetch-email-list', 'security');
+
+        \MailOptin\Core\current_user_has_privilege() || exit;
+
+        $list_id = sanitize_text_field($_REQUEST['list_id']);
+
+        $segments = $this->get_list_segments($list_id);
+
+        ob_start();
+
+        if (count($segments) > 1) {
+            foreach ($segments as $key => $value) {
+                echo '<option value="' . esc_attr($key) . '">' . $value . '</option>';
+            }
+        }
+
+        $structure = ob_get_clean();
+
+        wp_send_json_success($structure);
+
+        wp_die();
+    }
+
+    /**
+     * @param $controls
+     * @param $wp_customize
+     * @param $option_prefix
+     * @param Customizer $customizerClassInstance
+     *
+     * @return mixed
+     */
+    public function campaign_customizer_controls($controls, $wp_customize, $option_prefix, $customizerClassInstance)
+    {
+        $segments = $this->get_list_segments(
+            EmailCampaignRepository::get_merged_customizer_value(
+                $customizerClassInstance->email_campaign_id,
+                'connection_email_list'
+            )
+        );
+
+        // always prefix with the name of the connect/connection service.
+        $controls['CampaignMonitorConnect_segment'] = new WP_Customize_Chosen_Single_Select_Control(
+            $wp_customize,
+            $option_prefix . '[CampaignMonitorConnect_segment]',
+            apply_filters('mailoptin_customizer_settings_campaign_CampaignMonitorConnect_segment_args', array(
+                    'label'       => __('Campaign Monitor Segment'),
+                    'section'     => $customizerClassInstance->campaign_settings_section_id,
+                    'settings'    => $option_prefix . '[CampaignMonitorConnect_segment]',
+                    'description' => __('Select a segment to send to. Leave empty to send to all list subscribers.', 'mailoptin'),
+                    'choices'     => $segments,
+                    'priority'    => 199
+                )
+            )
+        );
+
+        return $controls;
+    }
+
     /**
      * Fulfill interface contract.
      *
@@ -90,7 +220,10 @@ class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterf
         if ($type == 'html') {
             // use regex to replace the "view web version" and unsubribe mailoptin tag with campaignmonitor html tag equivalent.
             // see https://help.campaignmonitor.com/topic.aspx?t=97
-            $pattern     = ['/<a .+ href="{{webversion}}(?:.+)?">(.+)<\/a>/', '/<a .+ href="{{unsubscribe}}(?:.+)?">(.+)<\/a>/'];
+            $pattern     = [
+                '/<a .+ href="{{webversion}}(?:.+)?">(.+)<\/a>/',
+                '/<a .+ href="{{unsubscribe}}(?:.+)?">(.+)<\/a>/'
+            ];
             $replacement = ['<webversion>$1</webversion>', '<unsubscribe>$1</unsubscribe>'];
             $content     = preg_replace($pattern, $replacement, $content);
         }
@@ -122,7 +255,6 @@ class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterf
 
             return $lists_array;
 
-
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getMessage(), 'campaignmonitor');
 
@@ -148,7 +280,6 @@ class Connect extends AbstractCampaignMonitorConnect implements ConnectionInterf
             }
 
             self::save_optin_error_log($response->result_message, 'campaignmonitor');
-
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getMessage(), 'campaignmonitor');

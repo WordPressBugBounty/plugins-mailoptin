@@ -130,6 +130,8 @@ class Init
 
                 if (empty($value)) continue;
 
+                $value = (string)$value;
+
                 // Add list to select options.
                 $options[$value] = $label;
             }

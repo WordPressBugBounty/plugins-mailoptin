@@ -26,16 +26,16 @@ class ConnectSettingsPage
         }
 
         $settingsArg[] = array(
-            'section_title_without_status' => __('ConvertKit', 'mailoptin'),
-            'section_title'                => __('ConvertKit Connection', 'mailoptin') . " $status",
+            'section_title_without_status' => 'Kit (ConvertKit)',
+            'section_title'                => __('Kit (ConvertKit) Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
             'convertkit_api_key'           => array(
                 'type'          => 'text',
                 'obfuscate_val' => true,
                 'label'         => __('Enter API Key', 'mailoptin'),
                 'description'   => sprintf(
-                    __('Log in to your %sConvertKit account%s to get your api key.', 'mailoptin'),
-                    '<a target="_blank" href="https://app.convertkit.com/account/edit">',
+                    __('Log in to your %sKit (ConvertKit) account%s to get your api key.', 'mailoptin'),
+                    '<a target="_blank" href="https://app.kit.com/account_settings/developer_settings">',
                     '</a>'
                 ),
             ),
@@ -44,8 +44,8 @@ class ConnectSettingsPage
                 'obfuscate_val' => true,
                 'label'         => __('Enter API Secret', 'mailoptin'),
                 'description'   => sprintf(
-                    __('Log in to your %sConvertKit account%s to get your api secret.', 'mailoptin'),
-                    '<a target="_blank" href="https://app.convertkit.com/account/edit">',
+                    __('Log in to your %sKit (ConvertKit) account%s to get your api secret.', 'mailoptin'),
+                    '<a target="_blank" href="https://app.kit.com/account_settings/developer_settings">',
                     '</a>'
                 ),
             ),
@@ -53,7 +53,7 @@ class ConnectSettingsPage
                 'type'          => 'text',
                 'label'         => __('Email Template Name', 'mailoptin'),
                 'description'   => sprintf(
-                    __('The name of the template to use for all emails we send to your ConvertKit subscribers. Leave blank to use your account default. %sLearn more%s.', 'mailoptin'),
+                    __('The name of the template to use for all emails we send to your Kit (ConvertKit) subscribers. Leave blank to use your account default. %sLearn more%s.', 'mailoptin'),
                     '<a target="_blank" href="https://mailoptin.io/article/connect-mailoptin-with-convertkit/?utm_source=wp_dashboard&utm_medium=integrations_setting_page&utm_campaign=convertkit">',
                     '</a>'
                 ),

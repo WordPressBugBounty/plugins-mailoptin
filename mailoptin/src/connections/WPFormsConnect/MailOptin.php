@@ -291,6 +291,7 @@ class MailOptin extends \WPForms_Provider
                 $l = [];
 
                 foreach ($lists as $id => $name) {
+                    $id = (string)$id;
                     $l[$id] = [
                         'id'   => $id,
                         'name' => $name,

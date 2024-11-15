@@ -1,5 +1,12 @@
 ﻿== Changelog ==
 
+= 1.2.72.0 =
+* Customizer UI bug fix for WP 6.7
+* Fixed bug where email campaign might not work for selected post/tag automation.
+* Fixed bug where optin error email lacked optin campaign context.
+* Fixed a couple of PHP warning errors.
+* Fixed integer precision loss in echo/output in MailerLite by casting large API IDs to strings.
+
 = 1.2.71.1 =
 * PHP Fixes and performance improvements.
 

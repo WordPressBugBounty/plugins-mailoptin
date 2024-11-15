@@ -104,6 +104,12 @@ trait CustomizerTrait
             add_action('wp_head', 'wp_print_head_scripts', 9);
             add_action('wp_head', 'wp_site_icon');
 
+            add_action('customize_controls_head', function () {
+                if ( ! did_action('admin_enqueue_scripts')) {
+                    do_action('admin_enqueue_scripts');
+                }
+            });
+
             // Handle `wp_footer`
             add_action('wp_footer', 'wp_print_footer_scripts', 20);
 
@@ -238,6 +244,12 @@ trait CustomizerTrait
 
         add_action('customize_controls_print_footer_scripts', [$this, 'js_script']);
         add_action('customize_controls_print_footer_scripts', [$this, 'js_wp_editor']);
+        add_action('customize_controls_print_footer_scripts', function () {
+            if ( ! did_action('admin_print_footer_scripts')) {
+                do_action('admin_print_footer_scripts');
+            }
+
+        }, 9999);
     }
 
     public function mo_customizer_js()
@@ -266,13 +278,13 @@ trait CustomizerTrait
     }
 
     /**
-     * Change the label from "Email Provider List" to "ConvertKit Form" on convertkit selected as email provider.
+     * Change the label from "Email Provider List" to "Kit (ConvertKit) Form" on convertkit selected as email provider.
      */
     public function js_script()
     {
         $wp_user_reg_label = __('Select User Role (Required)', 'mailoptin');
         $salesforce_label  = __('Select Salesforce Object', 'mailoptin');
-        $ck_label          = __('Select ConvertKit Form', 'mailoptin');
+        $ck_label          = __('Select Kit (ConvertKit) Form', 'mailoptin');
         $beehiiv_label     = __('Select beehiiv Tier', 'mailoptin');
         $drip_label        = __('Select Drip Campaign', 'mailoptin');
         $zohocrm_label     = __('Select ZohoCRM Module', 'mailoptin');

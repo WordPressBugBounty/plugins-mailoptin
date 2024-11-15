@@ -123,6 +123,8 @@ class Product
 
         $connection_email_list = $product_object->get_meta($connection_service . '[mailoptinWooCommerceSelectList]');
 
+        if (empty($connection_email_list)) return;
+
         foreach (Init::merge_vars_field_map($connection_service, $connection_email_list) as $key => $value) {
             $mapped_key = rawurlencode('mailoptinWooCommerceMappedFields-' . $key);
             if ( ! empty($product_object->get_meta($connection_service . '[' . $mapped_key . ']'))) {

@@ -51,7 +51,7 @@ class TutorInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
             wp_enqueue_script('mailoptin-tutorlms-settings', MAILOPTIN_TUTORLMS_CONNECT_ASSETS_URL . 'settings.js', ['jquery'], MAILOPTIN_VERSION_NUMBER, true);
             wp_localize_script('mailoptin-tutorlms-settings', 'moTutorLMS', [
                 'fields'                  => [],

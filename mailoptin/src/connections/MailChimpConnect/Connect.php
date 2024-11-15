@@ -876,6 +876,8 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
 
         $segments = $this->get_list_segments($list_id);
 
+        ob_start();
+
         if (count($segments) > 1) {
             foreach ($segments as $key => $value) {
                 echo '<option value="' . esc_attr($key) . '">' . $value . '</option>';

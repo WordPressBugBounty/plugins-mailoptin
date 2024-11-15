@@ -215,7 +215,7 @@ trait ModuleSettingsPageTrait
                     $html_select_list .= '<select name="' . $connected_email_providers . '[lists]" class="sui-select sui-form-control" id="' . $connected_email_providers . '[lists]">';
                     $html_select_list .= '<option value="">' . esc_html__('Select...', 'mailoptin') . '</option>';
                     foreach ($lists as $key => $value) {
-                        $html_select_list .= '<option value="' . $key . '"' . selected($key, $connected_lists, false) . '>' . $value . '</option>';
+                        $html_select_list .= '<option value="' . (string)$key . '"' . selected($key, $connected_lists, false) . '>' . $value . '</option>';
                     }
                     $html_select_list .= "</select></div>";
                 }

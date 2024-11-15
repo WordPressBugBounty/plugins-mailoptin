@@ -50,7 +50,7 @@ class MemberPressInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, 'memberpress') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'memberpress') !== false) {
             wp_enqueue_script('mailoptin-memberpress-settings', MAILOPTIN_MEMBERPRESS_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
 
             wp_enqueue_script('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.js', ['jquery'], false, true);

@@ -37,7 +37,7 @@ $mofm_custom_fields         = $this->get_field_name('mofm_custom_fields');
                 <option value=""><?= esc_html__('Select...', 'mailoptin'); ?></option>
 
                 <?php if (is_array($lists) && ! empty($lists)) : ?>
-                    <?php foreach ($lists as $key => $value) : ?>
+                    <?php foreach ($lists as $key => $value) : $key = (string)$key; ?>
                         <option value="<?= $key ?>" <?= selected($saved_list, $key, false); ?>><?= FrmAppHelper::truncate($value, 40) ?></option>
                     <?php endforeach; ?>
                 <?php endif; ?>

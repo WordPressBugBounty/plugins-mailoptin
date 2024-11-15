@@ -146,7 +146,7 @@ class ElasticEmailConnect extends \NF_Abstracts_ActionNewsletter {
 		if (is_array($lists)) {
 			foreach ($lists as $key => $value) {
 				$nf_lists[] = [
-					'value'  => $key,
+					'value'  => (string)$key,
 					'label'  => $value,
 					'fields' => $this->get_list_fields($key)
 				];

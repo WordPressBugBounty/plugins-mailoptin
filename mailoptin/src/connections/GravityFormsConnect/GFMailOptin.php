@@ -8,6 +8,7 @@ use MailOptin\Core\Connections\AbstractConnect;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use MailOptin\Core\Repositories\ConnectionsRepository;
+
 use function MailOptin\Core\moVar;
 
 // Include the Gravity Forms Feed Add-On Framework.
@@ -304,7 +305,7 @@ class GFMailOptin extends \GFFeedAddOn
                 // Add list to select options.
                 $options[] = [
                     'label' => $label,
-                    'value' => $value,
+                    'value' => (string)$value,
                 ];
             }
 
@@ -318,12 +319,12 @@ class GFMailOptin extends \GFFeedAddOn
     {
         $saved_integration = $this->get_setting('mailoptinSelectIntegration');
 
-        if(empty($saved_integration)) return false;
+        if (empty($saved_integration)) return false;
 
-        $is_double_optin = false;
+        $is_double_optin          = false;
         $double_optin_connections = Init::double_optin_support_connections();
-        foreach($double_optin_connections as $key => $value) {
-            if($saved_integration === $key) {
+        foreach ($double_optin_connections as $key => $value) {
+            if ($saved_integration === $key) {
                 $is_double_optin = $value;
             }
         }
@@ -331,17 +332,17 @@ class GFMailOptin extends \GFFeedAddOn
         $options = [
             [
                 'label' => ($is_double_optin === false) ? esc_html__('Enable Double Optin', 'mailoptin') : esc_html__('Disable Double Optin', 'mailoptin'),
-                'name' => 'mailoptinDoubleOptin',
+                'name'  => 'mailoptinDoubleOptin',
             ]
         ];
 
         if (in_array($saved_integration, Init::double_optin_support_connections(true))) {
             return [
-                'name'          => 'mailoptinDoubleOptin',
-                'label'         => esc_html__('Double Optin', 'mailoptin'),
-                'type'          => 'checkbox',
-                'choices'       => $options,
-                'tooltip'       => esc_html__('Double optin requires users to confirm their email address before they are added or subscribed.', 'mailoptin'),
+                'name'    => 'mailoptinDoubleOptin',
+                'label'   => esc_html__('Double Optin', 'mailoptin'),
+                'type'    => 'checkbox',
+                'choices' => $options,
+                'tooltip' => esc_html__('Double optin requires users to confirm their email address before they are added or subscribed.', 'mailoptin'),
             ];
         }
 
@@ -449,11 +450,11 @@ class GFMailOptin extends \GFFeedAddOn
             ];
         }
 
-        if(defined('MAILOPTIN_DETACH_LIBSODIUM')) {
+        if (defined('MAILOPTIN_DETACH_LIBSODIUM')) {
             $double_optin_settings = $this->gf_double_optin_settings();
         }
 
-        if(!empty($double_optin_settings)) $fields[] = $double_optin_settings;
+        if ( ! empty($double_optin_settings)) $fields[] = $double_optin_settings;
 
         $fields[] = [
             'name'      => 'mappedFields',
@@ -552,8 +553,8 @@ class GFMailOptin extends \GFFeedAddOn
         }
 
         $connection_service = rgars($feed, 'meta/mailoptinSelectIntegration');
-        $double_optin = false;
-        if(in_array($connection_service, Init::double_optin_support_connections(true))) {
+        $double_optin       = false;
+        if (in_array($connection_service, Init::double_optin_support_connections(true))) {
             $double_optin = rgars($feed, 'meta/mailoptinDoubleOptin') === "1";
         }
 
@@ -575,9 +576,9 @@ class GFMailOptin extends \GFFeedAddOn
 
         $optin_data->user_agent                = esc_html($_SERVER['HTTP_USER_AGENT']);
         $optin_data->is_timestamp_check_active = false;
-        $optin_data->is_double_optin      = $double_optin;
+        $optin_data->is_double_optin           = $double_optin;
 
-        if (!empty($entry['source_url'])) {
+        if ( ! empty($entry['source_url'])) {
             $optin_data->conversion_page = esc_url_raw($entry['source_url']);
         }
 

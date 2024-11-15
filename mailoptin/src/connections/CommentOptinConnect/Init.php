@@ -25,7 +25,7 @@ class Init
     public function enqueue_scripts()
     {
         $screen = get_current_screen();
-        if (strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
             wp_enqueue_script('mailoptin-user-comment-settings', MAILOPTIN_USER_COMMENT_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
             wp_localize_script('mailoptin-user-comment-settings', 'moUserComment', [
                 'fields'                  => [],

@@ -82,7 +82,7 @@ class GWPInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, 'give') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'give') !== false) {
             wp_enqueue_script('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.js', array('jquery'), false, true);
             wp_enqueue_style('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.css', null);
             wp_enqueue_script('mailoptin-gwp-settings', MAILOPTIN_GWP_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore', 'mailoptin-select2'], MAILOPTIN_VERSION_NUMBER, true);
@@ -153,7 +153,7 @@ class GWPInit
             echo mo_minify_css(ob_get_clean());
         }
 
-        if (strpos($screen->id, 'give') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'give') !== false) {
             ob_start();
             ?>
             <style>

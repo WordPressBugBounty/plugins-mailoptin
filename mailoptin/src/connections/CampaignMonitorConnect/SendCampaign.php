@@ -4,6 +4,7 @@ namespace MailOptin\CampaignMonitorConnect;
 
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\AbstractCampaignLogMeta;
+use MailOptin\Core\Repositories\EmailCampaignRepository;
 
 class SendCampaign extends AbstractCampaignMonitorConnect
 {
@@ -55,25 +56,45 @@ class SendCampaign extends AbstractCampaignMonitorConnect
 
             $list_id = $this->get_email_campaign_list_id($this->email_campaign_id);
 
+            $segment_id = EmailCampaignRepository::get_customizer_value(
+                $this->email_campaign_id,
+                'CampaignMonitorConnect_segment'
+            );
+
             $campaign_title = $this->get_email_campaign_campaign_title($this->email_campaign_id);
 
             $home_url = defined('W3GUY_LOCAL') ? 'http://d40973e4.ngrok.io/' : home_url();
 
+            $payload = [
+                // susceptible to duplicate campaign name error
+                'Name'      => $campaign_title . ' ' . gmdate("Y-m-d H:i:s", current_time('timestamp')),
+                'Subject'   => $this->campaign_subject,
+                'FromName'  => Settings::instance()->from_name(),
+                'FromEmail' => Settings::instance()->from_email(),
+                'ReplyTo'   => Settings::instance()->reply_to(),
+                'HtmlUrl'   => add_query_arg([
+                    'campaignmonitor_preview_type' => 'html',
+                    'uuid'                         => $preview_uuid
+                ], $home_url),
+                'TextUrl'   => add_query_arg([
+                    'campaignmonitor_preview_type' => 'text',
+                    'uuid'                         => $preview_uuid
+                ], $home_url),
+                "ListIDs"   => [
+                    "$list_id"
+                ]
+            ];
+
+            if ( ! empty($segment_id)) {
+                unset($payload['ListIDs']);
+                $payload['SegmentIDs'] = [
+                    "$segment_id"
+                ];
+            }
+
             $created_campaign_id = $this->campaignmonitorInstance()->createDraftCampaign(
                 $this->client_id,
-                apply_filters('mailoptin_campaignmonitor_campaign_settings', [
-                    // susceptible to duplicate campaign name error
-                    'Name'      => $campaign_title . ' ' . gmdate("Y-m-d H:i:s", current_time('timestamp')),
-                    'Subject'   => $this->campaign_subject,
-                    'FromName'  => Settings::instance()->from_name(),
-                    'FromEmail' => Settings::instance()->from_email(),
-                    'ReplyTo'   => Settings::instance()->reply_to(),
-                    'HtmlUrl'   => add_query_arg(['campaignmonitor_preview_type' => 'html', 'uuid' => $preview_uuid], $home_url),
-                    'TextUrl'   => add_query_arg(['campaignmonitor_preview_type' => 'text', 'uuid' => $preview_uuid], $home_url),
-                    "ListIDs"   => [
-                        "$list_id"
-                    ]
-                ], $this->email_campaign_id)
+                apply_filters('mailoptin_campaignmonitor_campaign_settings', $payload, $this->email_campaign_id)
             );
 
             if (is_string($created_campaign_id)) {

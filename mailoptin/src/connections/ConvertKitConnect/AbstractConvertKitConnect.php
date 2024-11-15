@@ -23,8 +23,6 @@ class AbstractConvertKitConnect extends AbstractConnect
     }
 
     /**
-     * Is ConvertKit successfully connected to?
-     *
      * @return bool
      */
     public static function is_connected($return_error = false)
@@ -79,7 +77,7 @@ class AbstractConvertKitConnect extends AbstractConnect
         $api_secret = $this->connections_settings->convertkit_api_secret();
 
         if (empty($api_key)) {
-            throw new \Exception(__('ConvertKit API Key not found.', 'mailoptin'));
+            throw new \Exception(__('Kit (ConvertKit) API Key not found.', 'mailoptin'));
         }
 
         return new APIClass($api_key, $api_secret);

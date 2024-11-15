@@ -238,6 +238,8 @@ class Category
 
         $connection_email_list = get_term_meta($product_cat_id, $connection_service . '[mailoptinWooCommerceSelectList]', true);
 
+        if (empty($connection_email_list)) return;
+
         foreach (Init::merge_vars_field_map($connection_service, $connection_email_list) as $key => $value) {
             $mapped_key = rawurlencode('mailoptinWooCommerceMappedFields-' . $key);
             if ( ! empty(get_term_meta($product_cat_id, $connection_service . '[' . $mapped_key . ']', true))) {

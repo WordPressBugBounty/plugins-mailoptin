@@ -211,7 +211,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
         $screen = get_current_screen();
 
-        if (strpos($screen->id, 'llms') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'llms') !== false) {
             wp_enqueue_script('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.js', array('jquery'), false, true);
             wp_enqueue_style('mailoptin-select2', MAILOPTIN_ASSETS_URL . 'js/customizer-controls/select2/select2.min.css', null);
             wp_enqueue_script('mailoptin-llms-settings', MAILOPTIN_LLMS_CONNECT_ASSETS_URL . 'settings.js', ['jquery'], MAILOPTIN_VERSION_NUMBER, true);
@@ -281,7 +281,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
         $screen = get_current_screen();
 
-        if (strpos($screen->id, 'llms') !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, 'llms') !== false) {
             ob_start();
             ?>
             <style>
@@ -389,6 +389,8 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
             foreach ($lists as $value => $label) {
 
                 if (empty($value)) continue;
+
+                $value = (string)$value;
 
                 // Add list to select options.
                 $options[$value] = $label;

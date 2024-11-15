@@ -646,7 +646,7 @@ class WSFMailOptin extends \WS_Form_Action
 
                 if ($connectionList && is_array($connectionList)) {
                     foreach ($connectionList as $key => $label) {
-                        $lists[] = ['id' => $key, 'label' => $label];
+                        $lists[] = ['id' => (string)$key, 'label' => $label];
                     }
                 }
             } catch (\Exception $e) {

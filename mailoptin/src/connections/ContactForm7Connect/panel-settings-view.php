@@ -1,6 +1,7 @@
 <?php
 
 use MailOptin\Connections\Init;
+
 use function MailOptin\Core\moVar;
 
 ?>
@@ -8,6 +9,7 @@ use function MailOptin\Core\moVar;
     #contact-form-editor #mailoptin .form-table th {
         width: 200px;
     }
+
     #contact-form-editor #mailoptin .mo-cf7-upsell-block {
         background-color: #d9edf7;
         border: 1px solid #bce8f1;
@@ -45,7 +47,7 @@ use function MailOptin\Core\moVar;
                 <td>
                     <select id="mocf7SelectList" name="mocf7_settings[list]" style="width: 25em;">
                         <option value=""><?= esc_html__('Select...', 'mailoptin'); ?></option>
-                        <?php foreach ($lists as $key => $value) : ?>
+                        <?php foreach ($lists as $key => $value) : $key = (string)$key; ?>
                             <option value="<?= $key ?>" <?= selected($saved_list, $key, false); ?>><?= $value ?></option>
                         <?php endforeach; ?>
                     </select>

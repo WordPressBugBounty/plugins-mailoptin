@@ -39,15 +39,13 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
     }
 
     /**
-     * Register ConvertKit Connection.
-     *
      * @param array $connections
      *
      * @return array
      */
     public function register_connection($connections)
     {
-        $connections[self::$connectionName] = __('ConvertKit', 'mailoptin');
+        $connections[self::$connectionName] = 'Kit (ConvertKit)';
 
         return $connections;
     }
@@ -163,7 +161,7 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
                 'name'        => 'ConvertKitConnect_subscriber_sequences',
                 'choices'     => $this->sequences(),
                 'label'       => __('Subscriber Sequences', 'mailoptin'),
-                'description' => __('Select ConvertKit sequences subscribers will be added to.', 'mailoptin')
+                'description' => __('Select Kit (ConvertKit) sequences subscribers will be added to.', 'mailoptin')
             ];
 
             $controls[] = [
@@ -171,7 +169,7 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
                 'name'        => 'ConvertKitConnect_subscriber_tags',
                 'choices'     => $this->get_tags(),
                 'label'       => __('Subscriber Tags', 'mailoptin'),
-                'description' => __('Select ConvertKit tags that will be assigned to subscribers.', 'mailoptin')
+                'description' => __('Select Kit (ConvertKit) tags that will be assigned to subscribers.', 'mailoptin')
             ];
 
         } else {
@@ -218,7 +216,7 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
                 'settings'    => $option_prefix . '[ConvertKitConnect_make_public]',
                 'description' => sprintf(
                     __('Include emails from this campaign in customizable newsletter feed, embedded directly in your landing page. %sLearn more%s'),
-                    '<a target="_blank" href="https://help.convertkit.com/en/articles/4446421-how-to-add-a-newsletter-feed-to-your-landing-page">', '</a>'
+                    '<a target="_blank" href="https://help.kit.com/en/articles/4446421-how-to-add-a-newsletter-feed-to-your-landing-page">', '</a>'
                 ),
                 'priority'    => 195,
             ]

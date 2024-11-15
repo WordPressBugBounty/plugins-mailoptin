@@ -57,7 +57,7 @@ class LearnDashInit
         }
 
         $screen = get_current_screen();
-        if (strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
+        if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
             wp_enqueue_script('mailoptin-learndash-settings', MAILOPTIN_LEARNDASH_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
             wp_localize_script('mailoptin-learndash-settings', 'moLearnDash', [
                 'fields'                  => [],
