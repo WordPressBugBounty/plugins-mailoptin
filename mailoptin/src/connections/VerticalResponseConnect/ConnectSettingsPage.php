@@ -101,8 +101,7 @@ class ConnectSettingsPage extends AbstractVerticalResponseConnect
         // delete connection cache
         delete_transient("_mo_connection_cache_$connection");
 
-        wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
-        exit;
+        \MailOptin\Core\do_admin_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
     }
 
     /**
@@ -134,8 +133,7 @@ class ConnectSettingsPage extends AbstractVerticalResponseConnect
             $connection = Connect::$connectionName;
             delete_transient("_mo_connection_cache_$connection");
 
-            wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
-            exit;
+            \MailOptin\Core\do_admin_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
         }
     }
 

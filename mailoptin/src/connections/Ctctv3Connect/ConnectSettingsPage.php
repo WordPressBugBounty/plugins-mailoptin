@@ -145,8 +145,7 @@ class ConnectSettingsPage extends AbstractCtctv3Connect
         // delete connection cache
         delete_transient("_mo_connection_cache_$connection");
 
-        wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
-        exit;
+        \MailOptin\Core\do_admin_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
     }
 
     public function output_error_log_link($option, $args)

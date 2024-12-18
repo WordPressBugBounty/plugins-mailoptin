@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
+class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -17,6 +17,7 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         '1064428a5c96d5b26937d911d5bd0e95' => __DIR__ . '/../..' . '/src/core/src/Functions/php-html-css-js-minifier.php',
         '0a894b0fefb3ff1b2043ad324a2d5cfd' => __DIR__ . '/../..' . '/src/core/src/Functions/FuseWPAdminNotice.php',
         'e180ca08fee0de2c7165b35361a1b492' => __DIR__ . '/../..' . '/src/core/src/Functions/MoBFnote.php',
+        '325caeca09e74529119168f79f75095a' => __DIR__ . '/../..' . '/src/core/src/Functions/Shogun.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -1602,9 +1603,9 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$classMap;
 
         }, null, ClassLoader::class);
     }

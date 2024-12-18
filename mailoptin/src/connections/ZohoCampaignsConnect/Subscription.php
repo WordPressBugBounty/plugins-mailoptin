@@ -3,6 +3,7 @@
 namespace MailOptin\ZohoCampaignsConnect;
 
 use MailOptin\Core\Repositories\OptinCampaignsRepository as OCR;
+
 use function MailOptin\Core\strtotime_utc;
 
 class Subscription extends AbstractZohoCampaignsConnect
@@ -97,10 +98,15 @@ class Subscription extends AbstractZohoCampaignsConnect
             $response = $this->zcInstance()->apiRequest('json/listsubscribe?resfmt=JSON', 'POST', $payload);
 
             if (isset($response->status) && $response->status == 'success') {
+
+                $subscriber_tags = $this->get_integration_tags('ZohoCampaignsConnect_subscriber_tags');
+
+                $this->assign_tag_to_contact($this->email, $subscriber_tags);
+
                 return parent::ajax_success();
             }
 
-            self::save_optin_error_log(json_encode($response), 'zohocampaigns', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
+            self::save_optin_error_log(wp_json_encode($response), 'zohocampaigns', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
             return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
 
@@ -108,6 +114,23 @@ class Subscription extends AbstractZohoCampaignsConnect
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'zohocampaigns', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
             return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+        }
+    }
+
+    protected function assign_tag_to_contact($email_address, $db_tags)
+    {
+        try {
+
+            if ( ! empty($db_tags) && is_array($db_tags)) {
+
+                foreach ($db_tags as $tag) {
+
+                    $payload = ['tagName' => $tag, 'lead_email' => $email_address];
+
+                    $this->zcInstance()->apiRequest('tag/associate?resfmt=JSON', 'GET', $payload);
+                }
+            }
+        } catch (\Exception $e) {
         }
     }
 }

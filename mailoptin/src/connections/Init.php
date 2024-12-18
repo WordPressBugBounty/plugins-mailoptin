@@ -15,7 +15,8 @@ class Init
             'InfusionsoftConnect',
             'FluentCRMConnect',
             'Ctctv3Connect',
-            'EgoiConnect'
+            'EgoiConnect',
+            'ZohoCampaignsConnect'
         ];
     }
 

@@ -143,8 +143,7 @@ class ConnectSettingsPage extends AbstractHubspotConnect
         // delete connection cache
         delete_transient("_mo_connection_cache_$connection");
 
-        wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
-        exit;
+        \MailOptin\Core\do_admin_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
     }
 
     /**
@@ -177,8 +176,7 @@ class ConnectSettingsPage extends AbstractHubspotConnect
 
             self::delete_oauth_refresh_error_count('hubspot');
 
-            wp_safe_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
-            exit;
+            \MailOptin\Core\do_admin_redirect(MAILOPTIN_CONNECTIONS_SETTINGS_PAGE);
         }
     }
 

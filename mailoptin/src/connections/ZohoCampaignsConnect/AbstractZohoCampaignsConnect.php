@@ -30,6 +30,9 @@ class AbstractZohoCampaignsConnect extends AbstractConnect
             case 'eu':
                 $location = '.eu';
                 break;
+            case 'in':
+                $location = '.in';
+                break;
             case 'au':
                 $location = '.com.au';
                 break;
@@ -117,7 +120,7 @@ class AbstractZohoCampaignsConnect extends AbstractConnect
                         'zoho.accounts_server' => $accounts_server,
                     ]));
 
-                $instance->apiBaseUrl = sprintf('https://campaigns.zoho%s/api/v1.1/', $this->parse_location($result['data']['location']));
+                $instance->apiBaseUrl = sprintf('https://campaigns.zoho%s/api/v1.1/', $this->parse_location($result['data']['location'] ?? $location));
 
             } catch (\Exception $e) {
                 throw new \Exception($e->getMessage());

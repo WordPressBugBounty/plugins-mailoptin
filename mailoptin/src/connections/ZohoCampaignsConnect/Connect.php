@@ -5,6 +5,8 @@ namespace MailOptin\ZohoCampaignsConnect;
 use MailOptin\Core\Connections\ConnectionInterface;
 use MailOptin\Core\Logging\CampaignLogRepository;
 
+use function MailOptin\Core\cache_transform;
+
 class Connect extends AbstractZohoCampaignsConnect implements ConnectionInterface
 {
     /**
@@ -17,6 +19,9 @@ class Connect extends AbstractZohoCampaignsConnect implements ConnectionInterfac
         ConnectSettingsPage::get_instance();
 
         add_filter('mailoptin_registered_connections', array($this, 'register_connection'));
+
+        add_filter('mo_optin_form_integrations_default', array($this, 'integration_customizer_settings'));
+        add_filter('mo_optin_integrations_controls_after', array($this, 'integration_customizer_controls'));
 
 
         add_filter('mailoptin_email_campaign_customizer_page_settings', array($this, 'campaign_customizer_settings'));
@@ -46,6 +51,89 @@ class Connect extends AbstractZohoCampaignsConnect implements ConnectionInterfac
         $connections[self::$connectionName] = __('Zoho Campaigns', 'mailoptin');
 
         return $connections;
+    }
+
+    /**
+     * @return array
+     */
+    public function get_tags()
+    {
+        return cache_transform('zohocampaigns_tags', function () {
+
+            $tags = [];
+
+            try {
+
+                $response = $this->zcInstance()->apiRequest('tag/getalltags?resfmt=JSON');
+
+                if (isset($response->tags) && is_array($response->tags)) {
+
+                    foreach ($response->tags as $tag) {
+
+                        $tag = new \ArrayObject($tag);
+
+                        $tag_name = $tag->getIterator()->current()->tag_name;
+
+                        $tags[$tag_name] = $tag_name;
+                    }
+                }
+
+            } catch (\Exception $e) {
+                self::save_optin_error_log($e->getMessage(), 'zohocampaigns');
+            }
+
+            return $tags;
+        });
+    }
+
+    /**
+     * @param array $settings
+     *
+     * @return mixed
+     */
+    public function integration_customizer_settings($settings)
+    {
+        $settings['ZohoCampaignsConnect_subscriber_tags'] = [];
+
+        return $settings;
+    }
+
+    /**
+     * @param array $controls
+     *
+     * @return mixed
+     */
+    public function integration_customizer_controls($controls)
+    {
+        if (defined('MAILOPTIN_DETACH_LIBSODIUM') === true) {
+            // always prefix with the name of the connect/connection service.
+            $controls[] = [
+                'field'       => 'chosen_select',
+                'name'        => 'ZohoCampaignsConnect_subscriber_tags',
+                'choices'     => $this->get_tags(),
+                'label'       => __('Subscriber Tags', 'mailoptin'),
+                'description' => __('Select Zoho Campaigns tags to assign to subscribers.', 'mailoptin')
+            ];
+
+        } else {
+
+            $content = sprintf(
+                __("%sMailOptin Premium%s allows you to apply tags to subscribers.", 'mailoptin'),
+                '<a target="_blank" href="https://mailoptin.io/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=zohocampaigns_connection">',
+                '</a>',
+                '<strong>',
+                '</strong>'
+            );
+
+            // always prefix with the name of the connect/connection service.
+            $controls[] = [
+                'name'    => 'ZohoCampaignsConnect_upgrade_notice',
+                'field'   => 'custom_content',
+                'content' => $content
+            ];
+        }
+
+        return $controls;
     }
 
     public function campaign_customizer_settings($settings)
@@ -133,7 +221,10 @@ class Connect extends AbstractZohoCampaignsConnect implements ConnectionInterfac
 
             while ($loop === true) {
 
-                $response = $this->zcInstance()->apiRequest('getmailinglists?resfmt=JSON', 'GET', ['range' => 1000, 'fromindex' => $offset]);
+                $response = $this->zcInstance()->apiRequest('getmailinglists?resfmt=JSON', 'GET', [
+                    'range'     => 1000,
+                    'fromindex' => $offset
+                ]);
 
                 if (isset($response->list_of_details) && is_array($response->list_of_details) && ! empty($response->list_of_details)) {
 

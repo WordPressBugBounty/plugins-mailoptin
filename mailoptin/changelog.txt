@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 1.2.72.1 =
+* Added tagging support to Zoho Campaigns
+* Updated Campaign Monitor API to 3.3.
+* Fixed bug with incorrect insertion of ob_start().
+
 = 1.2.72.0 =
 * Customizer UI bug fix for WP 6.7
 * Fixed bug where email campaign might not work for selected post/tag automation.
