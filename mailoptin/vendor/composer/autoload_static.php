@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
+class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -949,6 +949,7 @@ class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
         'MailOptin\\Core\\Admin\\Customizer\\OptinForm\\CustomizerControls' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php',
         'MailOptin\\Core\\Admin\\Customizer\\OptinForm\\CustomizerSettings' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/OptinForm/CustomizerSettings.php',
         'MailOptin\\Core\\Admin\\Customizer\\OptinForm\\OptinFormFactory' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/OptinForm/OptinFormFactory.php',
+        'MailOptin\\Core\\Admin\\Customizer\\SafeModeMUInstaller' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/SafeModeMUInstaller.php',
         'MailOptin\\Core\\Admin\\Customizer\\UpsellCustomizerSection' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/UpsellCustomizerSection.php',
         'MailOptin\\Core\\Admin\\FuseWP' => __DIR__ . '/../..' . '/src/core/src/Admin/FuseWP.php',
         'MailOptin\\Core\\Admin\\Installer\\MailOptin_Install_Skin' => __DIR__ . '/../..' . '/src/core/src/Admin/Installer/MailOptin_Install_Skin.php',
@@ -1113,11 +1114,6 @@ class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
         'MailOptin\\ForminatorFormConnect\\ConnectionFormSettingsPage' => __DIR__ . '/../..' . '/src/connections/ForminatorFormConnect/ConnectionFormSettingsPage.php',
         'MailOptin\\ForminatorFormConnect\\ConnectionQuizSettingsPage' => __DIR__ . '/../..' . '/src/connections/ForminatorFormConnect/ConnectionQuizSettingsPage.php',
         'MailOptin\\ForminatorFormConnect\\FFMailOptin' => __DIR__ . '/../..' . '/src/connections/ForminatorFormConnect/FFMailOptin.php',
-        'MailOptin\\GEMConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/GEMConnect/APIClass.php',
-        'MailOptin\\GEMConnect\\AbstractGEMConnect' => __DIR__ . '/../..' . '/src/connections/GEMConnect/AbstractGEMConnect.php',
-        'MailOptin\\GEMConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GEMConnect/Connect.php',
-        'MailOptin\\GEMConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/GEMConnect/ConnectSettingsPage.php',
-        'MailOptin\\GEMConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/GEMConnect/Subscription.php',
         'MailOptin\\GetResponseConnect\\AbstractGetResponseConnect' => __DIR__ . '/../..' . '/src/connections/GetResponseConnect/AbstractGetResponseConnect.php',
         'MailOptin\\GetResponseConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GetResponseConnect/Connect.php',
         'MailOptin\\GetResponseConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/GetResponseConnect/ConnectSettingsPage.php',
@@ -1251,7 +1247,6 @@ class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
         'MailOptin\\NinjaFormsConnect\\Integrations\\FacebookCustomAudienceConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FacebookCustomAudienceConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\FlodeskConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FlodeskConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\FluentCRMConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FluentCRMConnect.php',
-        'MailOptin\\NinjaFormsConnect\\Integrations\\GEMConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GEMConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\GetResponseConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GetResponseConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HighLevelConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HighLevelConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HubspotConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HubspotConnect.php',
@@ -1603,9 +1598,9 @@ class ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd9973ffa7230488a7d1421ddd221f73e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$classMap;
 
         }, null, ClassLoader::class);
     }

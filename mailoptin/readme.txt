@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 5.8
 Requires PHP: 7.3
 Tested up to: 6.6
-Stable tag: 1.2.72.1
+Stable tag: 1.2.72.2
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -184,16 +184,15 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.72.2 =
+* Added filter to email campaign email subject.
+* Added safemode customizer feature.
+* Removed Godaddy email marketing integration.
+* Fixed PHP warnings and notices.
+
 = 1.2.72.1 =
 * Added tagging support to Zoho Campaigns
 * Updated Campaign Monitor API to 3.3.
 * Fixed bug with incorrect insertion of ob_start().
-
-= 1.2.72.0 =
-* Customizer UI bug fix for WP 6.7
-* Fixed bug where email campaign might not work for selected post/tag automation.
-* Fixed bug where optin error email lacked optin campaign context.
-* Fixed a couple of PHP warning errors.
-* Fixed integer precision loss in echo/output in MailerLite by casting large API IDs to strings.
 
 See the [changelog file](https://plugins.svn.wordpress.org/mailoptin/trunk/changelog.txt) for complete change log information.

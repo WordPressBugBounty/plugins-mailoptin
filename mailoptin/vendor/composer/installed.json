@@ -511,11 +511,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1734526755",
-            "version_normalized": "0.2.1734526755.0",
+            "version": "0.2.1737813382",
+            "version_normalized": "0.2.1737813382.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_882OO/mailoptinauthifly-0-2-1734526755.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_b51Dz/mailoptinauthifly-0-2-1737813382.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -567,11 +567,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1734526803",
-            "version_normalized": "0.2.1734526803.0",
+            "version": "0.2.1737813430",
+            "version_normalized": "0.2.1737813430.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1aJxuI/mailoptinconnections-0-2-1734526803.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1gv9sb/mailoptinconnections-0-2-1737813430.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -674,17 +674,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1734526797",
-            "version_normalized": "0.1.0.0-alpha1734526797",
+            "version": "0.1.0-alpha.1737813424",
+            "version_normalized": "0.1.0.0-alpha1737813424",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "9f5db10db1841264895cff39c94fda1388838563"
+                "reference": "b1718b1cf6aa63a4d5f6103fbe403a4816804447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/9f5db10db1841264895cff39c94fda1388838563",
-                "reference": "9f5db10db1841264895cff39c94fda1388838563",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/b1718b1cf6aa63a4d5f6103fbe403a4816804447",
+                "reference": "b1718b1cf6aa63a4d5f6103fbe403a4816804447",
                 "shasum": ""
             },
             "require": {
@@ -695,7 +695,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2024-12-17T20:49:20+00:00",
+            "time": "2025-01-25T13:34:08+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -715,7 +715,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1734526797"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1737813424"
             },
             "install-path": "../../src/core"
         },
@@ -770,17 +770,17 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.5",
-            "version_normalized": "2.72.5.0",
+            "version": "2.72.6",
+            "version_normalized": "2.72.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "afd46589c216118ecd48ff2b95d77596af1e57ed"
+                "url": "https://github.com/CarbonPHP/carbon.git",
+                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/afd46589c216118ecd48ff2b95d77596af1e57ed",
-                "reference": "afd46589c216118ecd48ff2b95d77596af1e57ed",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1e9d50601e7035a4c61441a208cb5bed73e108c5",
+                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5",
                 "shasum": ""
             },
             "require": {
@@ -800,7 +800,7 @@
                 "doctrine/orm": "^2.7 || ^3.0",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
-                "ondrejmirtes/better-reflection": "*",
+                "ondrejmirtes/better-reflection": "<6",
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12.99 || ^1.7.14",
@@ -808,16 +808,12 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2024-06-03T19:18:41+00:00",
+            "time": "2024-12-27T09:28:11+00:00",
             "bin": [
                 "bin/carbon"
             ],
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev",
-                    "dev-2.x": "2.x-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -827,6 +823,10 @@
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev",
+                    "dev-master": "3.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1226,12 +1226,12 @@
             "time": "2024-09-25T14:11:13+00:00",
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "2.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "installation-source": "dist",
@@ -1565,12 +1565,12 @@
             "time": "2024-09-25T14:11:13+00:00",
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "2.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "installation-source": "dist",

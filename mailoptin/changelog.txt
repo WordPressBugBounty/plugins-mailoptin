@@ -1,5 +1,11 @@
 ﻿== Changelog ==
 
+= 1.2.72.2 =
+* Added filter to email campaign email subject.
+* Added safemode customizer feature.
+* Removed Godaddy email marketing integration.
+* Fixed PHP warnings and notices.
+
 = 1.2.72.1 =
 * Added tagging support to Zoho Campaigns
 * Updated Campaign Monitor API to 3.3.

@@ -11,9 +11,9 @@ class SendyPHP
     public function __construct(array $config)
     {
         //error checking
-        $list_id          = @$config['list_id'];
-        $installation_url = @$config['installation_url'];
-        $api_key          = @$config['api_key'];
+        $list_id          = $config['list_id'] ?? '';
+        $installation_url = $config['installation_url'] ?? '';
+        $api_key          = $config['api_key'] ?? '';
 
         if (empty($installation_url)) {
             throw new \Exception("Required config parameter [installation_url] is not set or empty", 1);

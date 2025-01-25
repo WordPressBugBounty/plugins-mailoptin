@@ -204,7 +204,6 @@ class Init
         \MailOptin\EmailOctopusConnect\Connect::get_instance();
         \MailOptin\FluentCRMConnect\Connect::get_instance();
         \MailOptin\WebHookConnect\Connect::get_instance();
-        \MailOptin\GEMConnect\Connect::get_instance();
         \MailOptin\SendinblueConnect\Connect::get_instance();
         \MailOptin\SendGridConnect\Connect::get_instance();
         \MailOptin\MailgunConnect\Connect::get_instance();
