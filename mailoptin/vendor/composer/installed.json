@@ -511,11 +511,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1737813382",
-            "version_normalized": "0.2.1737813382.0",
+            "version": "0.2.1739703619",
+            "version_normalized": "0.2.1739703619.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_b51Dz/mailoptinauthifly-0-2-1737813382.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_mhwH/mailoptinauthifly-0-2-1739703619.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -548,7 +548,8 @@
                     "Mailchimp.php",
                     "Salesforce.php",
                     "Microsoft.php",
-                    "HighLevel.php"
+                    "HighLevel.php",
+                    "Google.php"
                 ]
             },
             "license": [
@@ -567,11 +568,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1737813430",
-            "version_normalized": "0.2.1737813430.0",
+            "version": "0.2.1739703667",
+            "version_normalized": "0.2.1739703667.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1gv9sb/mailoptinconnections-0-2-1737813430.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1Ipc8t/mailoptinconnections-0-2-1739703667.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -624,7 +625,6 @@
                     "MailOptin\\MailgunConnect\\": "MailgunConnect/",
                     "MailOptin\\ActiveCampaignConnect\\": "ActiveCampaignConnect/",
                     "MailOptin\\EmailOctopusConnect\\": "EmailOctopusConnect/",
-                    "MailOptin\\GEMConnect\\": "GEMConnect/",
                     "MailOptin\\MailPoetConnect\\": "MailPoetConnect/",
                     "MailOptin\\FluentCRMConnect\\": "FluentCRMConnect/",
                     "MailOptin\\GetResponseConnect\\": "GetResponseConnect/",
@@ -663,6 +663,8 @@
                     "MailOptin\\GiveWPConnect\\": "GiveWPConnect/",
                     "MailOptin\\FluentFormConnect\\": "FluentFormConnect/",
                     "MailOptin\\WSFormConnect\\": "WSFormConnect/",
+                    "MailOptin\\GoogleSheetConnect\\": "GoogleSheetConnect/",
+                    "MailOptin\\EnchargeConnect\\": "EnchargeConnect/",
                     "MailOptin\\Connections\\": "./"
                 },
                 "classmap": [
@@ -674,17 +676,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1737813424",
-            "version_normalized": "0.1.0.0-alpha1737813424",
+            "version": "0.1.0-alpha.1739703662",
+            "version_normalized": "0.1.0.0-alpha1739703662",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "b1718b1cf6aa63a4d5f6103fbe403a4816804447"
+                "reference": "9db72ff58cd214b742a2c9072f7f072f52da1c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/b1718b1cf6aa63a4d5f6103fbe403a4816804447",
-                "reference": "b1718b1cf6aa63a4d5f6103fbe403a4816804447",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/9db72ff58cd214b742a2c9072f7f072f52da1c40",
+                "reference": "9db72ff58cd214b742a2c9072f7f072f52da1c40",
                 "shasum": ""
             },
             "require": {
@@ -695,7 +697,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2025-01-25T13:34:08+00:00",
+            "time": "2025-02-11T21:01:32+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -715,7 +717,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1737813424"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1739703662"
             },
             "install-path": "../../src/core"
         },
@@ -770,17 +772,17 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.6",
-            "version_normalized": "2.72.6.0",
+            "version": "2.73.0",
+            "version_normalized": "2.73.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5"
+                "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1e9d50601e7035a4c61441a208cb5bed73e108c5",
-                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/9228ce90e1035ff2f0db84b40ec2e023ed802075",
+                "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075",
                 "shasum": ""
             },
             "require": {
@@ -808,7 +810,7 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2024-12-27T09:28:11+00:00",
+            "time": "2025-01-08T20:10:23+00:00",
             "bin": [
                 "bin/carbon"
             ],

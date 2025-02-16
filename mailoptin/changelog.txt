@@ -1,5 +1,13 @@
 ﻿== Changelog ==
 
+= 1.2.73.0 =
+* Pro: [Google Sheets integration](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?ref=changelog).
+* Added [Encharge integration](https://mailoptin.io/article/connect-wordpress-encharge/?ref=changelog).
+* Fixed fatal error caused in our Ninja forms integration.
+* Fixed fatal error in Forminator integration.
+* Fixed bug with email digest formatting in email campaign.
+* Fixed bug with Leads exporting not working.
+
 = 1.2.72.2 =
 * Added filter to email campaign email subject.
 * Added safemode customizer feature.

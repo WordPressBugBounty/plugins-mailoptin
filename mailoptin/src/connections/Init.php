@@ -35,7 +35,8 @@ class Init
             'OmnisendConnect',
             'EmailOctopusConnect',
             'HighLevelConnect',
-            'BeehiivConnect'
+            'BeehiivConnect',
+            'EnchargeConnect'
         ];
     }
 
@@ -249,6 +250,8 @@ class Init
         \MailOptin\GiveWPConnect\Connect::get_instance();
         \MailOptin\FluentFormConnect\Connect::get_instance();
         \MailOptin\WSFormConnect\Connect::get_instance();
+        \MailOptin\EnchargeConnect\Connect::get_instance();
         GoogleAnalytics::get_instance();
+        \MailOptin\GoogleSheetConnect\Connect::get_instance();
     }
 }

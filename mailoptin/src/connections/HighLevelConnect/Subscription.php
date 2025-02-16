@@ -41,7 +41,7 @@ class Subscription extends AbstractHighLevelConnect
 
             $workflow = $this->get_integration_data('HighLevelConnect_workflows');
 
-            $tags = $this->get_integration_data('HighLevelConnect_lead_tags');
+            $tags = $this->get_integration_tags('HighLevelConnect_lead_tags');
 
             $custom_field_mappings = $this->form_custom_field_mappings();
 

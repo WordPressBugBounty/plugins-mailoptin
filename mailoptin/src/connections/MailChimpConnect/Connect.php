@@ -413,7 +413,7 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
 
             $interest_groups = [];
             if (isset($index)) {
-                $list_id         = isset($saved_values[$index]['connection_email_list']) ? $saved_values[$index]['connection_email_list'] : '';
+                $list_id         = $saved_values[$index]['connection_email_list'] ?? '';
                 $interest_groups = $this->get_group_interests($list_id);
             }
 

@@ -2,9 +2,9 @@
 
 namespace MailOptin\Connections\ForminatorFormConnect;
 
+use Forminator_Integration;
 use MailOptin\Connections\Init;
 use MailOptin\Core\Connections\ConnectionFactory;
-use Forminator_Addon_Abstract;
 use MailOptin\ForminatorFormConnect\FFMailOptin;
 
 trait ModuleSettingsPageTrait
@@ -434,11 +434,11 @@ trait ModuleSettingsPageTrait
 
         $buttons = array(
             'cancel' => array(
-                'markup' => Forminator_Addon_Abstract::get_button_markup(esc_html__('Back', 'mailoptin'), 'sui-button-ghost forminator-addon-back'),
+                'markup' => Forminator_Integration::get_button_markup(esc_html__('Back', 'mailoptin'), 'sui-button-ghost forminator-addon-back'),
             ),
             'next'   => array(
                 'markup' => '<div class="sui-actions-right">' .
-                            Forminator_Addon_Abstract::get_button_markup(esc_html__('Save', 'mailoptin'), 'sui-button-primary forminator-addon-finish') .
+                            Forminator_Integration::get_button_markup(esc_html__('Save', 'mailoptin'), 'sui-button-primary forminator-addon-finish') .
                             '</div>',
             ),
         );
@@ -453,7 +453,7 @@ trait ModuleSettingsPageTrait
         }
 
         $html = '<div class="forminator-integration-popup__header">';
-        $html .= '<h3 id="dialogTitle2" class="sui-box-title sui-lg" style="overflow: initial; text-overflow: none; white-space: normal;">' . esc_html__('Assign Fields', 'mailoptin') . '</h3>';
+        $html .= '<h3 id="dialogTitle2" class="sui-box-title sui-lg" style="overflow: initial; text-overflow: unset; white-space: normal;">' . esc_html__('Assign Fields', 'mailoptin') . '</h3>';
         $html .= '<p class="sui-description">' . esc_html__('Lastly, match up your module fields with your campaign fields to make sure we\'re sending data to the right place.', 'mailoptin') . '</p>';
         $html .= $error_message;
         $html .= '</div>';

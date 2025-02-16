@@ -88,15 +88,16 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
             'MailOptin\\HubspotConnect\\' => 25,
             'MailOptin\\HighLevelConnect\\' => 27,
             'MailOptin\\GravityFormsConnect\\' => 30,
+            'MailOptin\\GoogleSheetConnect\\' => 29,
             'MailOptin\\GiveWPConnect\\' => 24,
             'MailOptin\\GetResponseConnect\\' => 29,
-            'MailOptin\\GEMConnect\\' => 21,
             'MailOptin\\ForminatorFormConnect\\' => 32,
             'MailOptin\\FormidableFormConnect\\' => 32,
             'MailOptin\\FluentFormConnect\\' => 28,
             'MailOptin\\FluentCRMConnect\\' => 27,
             'MailOptin\\FlodeskConnect\\' => 25,
             'MailOptin\\FacebookCustomAudienceConnect\\' => 40,
+            'MailOptin\\EnchargeConnect\\' => 26,
             'MailOptin\\EmmaConnect\\' => 22,
             'MailOptin\\EmailOctopusConnect\\' => 30,
             'MailOptin\\ElementorConnect\\' => 27,
@@ -384,6 +385,10 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect',
         ),
+        'MailOptin\\GoogleSheetConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect',
+        ),
         'MailOptin\\GiveWPConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GiveWPConnect',
@@ -391,10 +396,6 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'MailOptin\\GetResponseConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GetResponseConnect',
-        ),
-        'MailOptin\\GEMConnect\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/connections/GEMConnect',
         ),
         'MailOptin\\ForminatorFormConnect\\' => 
         array (
@@ -419,6 +420,10 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'MailOptin\\FacebookCustomAudienceConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FacebookCustomAudienceConnect',
+        ),
+        'MailOptin\\EnchargeConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/EnchargeConnect',
         ),
         'MailOptin\\EmmaConnect\\' => 
         array (
@@ -601,6 +606,7 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'Authifly\\Provider\\ConstantContact' => __DIR__ . '/..' . '/mailoptin/authifly/ConstantContact.php',
         'Authifly\\Provider\\ConstantContactV3' => __DIR__ . '/..' . '/mailoptin/authifly/ConstantContactV3.php',
         'Authifly\\Provider\\Facebook' => __DIR__ . '/..' . '/mailoptin/authifly/Facebook.php',
+        'Authifly\\Provider\\Google' => __DIR__ . '/..' . '/mailoptin/authifly/Google.php',
         'Authifly\\Provider\\HighLevel' => __DIR__ . '/..' . '/mailoptin/authifly/HighLevel.php',
         'Authifly\\Provider\\Hubspot' => __DIR__ . '/..' . '/mailoptin/authifly/Hubspot.php',
         'Authifly\\Provider\\Infusionsoft' => __DIR__ . '/..' . '/mailoptin/authifly/Infusionsoft.php',
@@ -1095,6 +1101,11 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'MailOptin\\EmmaConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/EmmaConnect/Connect.php',
         'MailOptin\\EmmaConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/EmmaConnect/ConnectSettingsPage.php',
         'MailOptin\\EmmaConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/EmmaConnect/Subscription.php',
+        'MailOptin\\EnchargeConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/EnchargeConnect/APIClass.php',
+        'MailOptin\\EnchargeConnect\\AbstractEnchargeConnect' => __DIR__ . '/../..' . '/src/connections/EnchargeConnect/AbstractEnchargeConnect.php',
+        'MailOptin\\EnchargeConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/EnchargeConnect/Connect.php',
+        'MailOptin\\EnchargeConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/EnchargeConnect/ConnectSettingsPage.php',
+        'MailOptin\\EnchargeConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/EnchargeConnect/Subscription.php',
         'MailOptin\\FacebookCustomAudienceConnect\\AbstractFacebookCustomAudienceConnect' => __DIR__ . '/../..' . '/src/connections/FacebookCustomAudienceConnect/AbstractFacebookCustomAudienceConnect.php',
         'MailOptin\\FacebookCustomAudienceConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/FacebookCustomAudienceConnect/Connect.php',
         'MailOptin\\FacebookCustomAudienceConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php',
@@ -1125,6 +1136,10 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'MailOptin\\GiveWPConnect\\GWPInit' => __DIR__ . '/../..' . '/src/connections/GiveWPConnect/GWPInit.php',
         'MailOptin\\GiveWPConnect\\MailBGProcess' => __DIR__ . '/../..' . '/src/connections/GiveWPConnect/MailBGProcess.php',
         'MailOptin\\GiveWPConnect\\Settings' => __DIR__ . '/../..' . '/src/connections/GiveWPConnect/Settings.php',
+        'MailOptin\\GoogleSheetConnect\\AbstractGoogleSheetConnect' => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect/AbstractGoogleSheetConnect.php',
+        'MailOptin\\GoogleSheetConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect/Connect.php',
+        'MailOptin\\GoogleSheetConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect/ConnectSettingsPage.php',
+        'MailOptin\\GoogleSheetConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect/Subscription.php',
         'MailOptin\\GravityFormsConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect/Connect.php',
         'MailOptin\\GravityFormsConnect\\GFMailOptin' => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect/GFMailOptin.php',
         'MailOptin\\HighLevelConnect\\AbstractHighLevelConnect' => __DIR__ . '/../..' . '/src/connections/HighLevelConnect/AbstractHighLevelConnect.php',

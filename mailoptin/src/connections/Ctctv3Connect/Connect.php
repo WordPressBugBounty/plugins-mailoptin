@@ -225,9 +225,9 @@ class Connect extends AbstractCtctv3Connect implements ConnectionInterface
                 'label'       => __('Subscriber Tags', 'mailoptin'),
                 'description' => __('Select Constant Contact tags that will be assigned to contacts.', 'mailoptin')
             ];
-
-            return $controls;
         }
+
+        return $controls;
     }
 
     /**
