@@ -67,21 +67,17 @@ class ConnectSettingsPage
     public function connection_settings($arg)
     {
 
-        $connected = AbstractMailChimpConnect::is_connected(true);
+        $connected = AbstractMailChimpConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settingsArg[] = array(
             'section_title_without_status' => __('Mailchimp', 'mailoptin'),
             'section_title'                => __('Mailchimp Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/mailchimp-integration.png',
             'mailchimp_api_key'            => array(
                 'type'          => 'text',
                 'obfuscate_val' => true,

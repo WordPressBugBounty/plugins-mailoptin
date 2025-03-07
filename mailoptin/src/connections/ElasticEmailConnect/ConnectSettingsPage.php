@@ -14,21 +14,17 @@ class ConnectSettingsPage {
 
 	public function connection_settings($arg)
 	{
-		$connected = AbstractElasticEmailConnect::is_connected(true);
-		if (true === $connected) {
-			$status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-		} else {
-			$msg = '';
-			if (is_string($connected)) {
-				$msg = esc_html(" &mdash; $connected");
-			}
-			$status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
-		}
+		$connected = AbstractElasticEmailConnect::is_connected();
+        $status = '';
+        if (true === $connected) {
+            $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
+        }
 
 		$settingsArg[] = [
 			'section_title_without_status' => __('Elastic Email', 'mailoptin'),
 			'section_title'                => __('Elastic Email Connection', 'mailoptin') . " $status",
 			'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/elastic-email-integration.svg',
 			'elasticemail_api_key'             => [
 				'type'          => 'text',
 				'obfuscate_val' => true,

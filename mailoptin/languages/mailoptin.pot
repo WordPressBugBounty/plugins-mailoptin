@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.73.0\n"
+"Project-Id-Version: MailOptin - Lite 1.2.73.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-16T11:10:41+00:00\n"
+"POT-Creation-Date: 2025-03-07T09:32:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: mailoptin\n"
@@ -74,7 +74,7 @@ msgid "Upgrade to %sMailOptin Premium%s to select %sActiveCampaign form and tags
 msgstr ""
 
 #: src/connections/ActiveCampaignConnect/Connect.php:132
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:30
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:25
 msgid "ActiveCampaign"
 msgstr ""
 
@@ -102,14 +102,14 @@ msgstr ""
 #: src/connections/FormidableFormConnect/panel-settings-view.php:37
 #: src/connections/FormidableFormConnect/panel-settings-view.php:94
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:216
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:79
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:75
 #: src/connections/GiveWPConnect/GWPInit.php:501
 #: src/connections/GravityFormsConnect/GFMailOptin.php:261
 #: src/connections/GravityFormsConnect/GFMailOptin.php:296
 #: src/connections/InfusionsoftConnect/Connect.php:125
 #: src/connections/InfusionsoftConnect/Connect.php:170
 #: src/connections/InfusionsoftConnect/Connect.php:184
-#: src/connections/Init.php:129
+#: src/connections/Init.php:131
 #: src/connections/LearnDashConnect/LearnDashInit.php:733
 #: src/connections/LifterLMSConnect/Connect.php:344
 #: src/connections/LifterLMSConnect/Connect.php:387
@@ -118,10 +118,10 @@ msgstr ""
 #: src/connections/MoosendConnect/Connect.php:91
 #: src/connections/SendGridConnect/ConnectSettingsPage.php:32
 #: src/connections/SendGridConnect/ConnectSettingsPage.php:69
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:47
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:43
 #: src/connections/TutorLMSConnect/TutorInit.php:511
 #: src/connections/UltimateMemberConnect/UMInit.php:468
-#: src/connections/WooCommerceConnect/WooInit.php:536
+#: src/connections/WooCommerceConnect/WooInit.php:540
 #: src/connections/WooMembershipConnect/OptinSubscription.php:131
 #: src/connections/WSFormConnect/WSFMailOptin.php:321
 #: src/connections/WSFormConnect/WSFMailOptin.php:335
@@ -134,7 +134,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:957
 #: src/core/src/Admin/SettingsPage/AddEmailCampaign.php:78
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:382
-#: src/core/src/AjaxHandler.php:1202
+#: src/core/src/AjaxHandler.php:1204
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1160
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1191
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1204
@@ -144,50 +144,50 @@ msgstr ""
 msgid "Select..."
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:20
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:21
 #: src/connections/AweberConnect/ConnectSettingsPage.php:31
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:19
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:20
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:20
+#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:21
 #: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:31
 #: src/connections/CleverReachConnect/ConnectSettingsPage.php:31
 #: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:20
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:19
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:20
 #: src/connections/CtctConnect/ConnectSettingsPage.php:31
 #: src/connections/Ctctv3Connect/ConnectSettingsPage.php:27
-#: src/connections/DripConnect/ConnectSettingsPage.php:19
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:55
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:19
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:20
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:19
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:19
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:40
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:19
+#: src/connections/DripConnect/ConnectSettingsPage.php:20
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:56
+#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:20
+#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:21
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:20
+#: src/connections/EnchargeConnect/ConnectSettingsPage.php:20
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:42
+#: src/connections/FlodeskConnect/ConnectSettingsPage.php:20
 #: src/connections/ForminatorFormConnect/FFMailOptin.php:144
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:42
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:55
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:43
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:56
 #: src/connections/HighLevelConnect/ConnectSettingsPage.php:33
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:35
-#: src/connections/IContactConnect/ConnectSettingsPage.php:21
+#: src/connections/IContactConnect/ConnectSettingsPage.php:22
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:31
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:19
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:72
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:20
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:20
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:21
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:19
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:49
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:69
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:20
+#: src/connections/MailChimpConnect/ConnectSettingsPage.php:73
+#: src/connections/MailerliteConnect/ConnectSettingsPage.php:21
+#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:21
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:22
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:20
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:50
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:70
 #: src/connections/NewsmanConnect/ConnectSettingsPage.php:31
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:20
-#: src/connections/OntraportConnect/ConnectSettingsPage.php:19
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:48
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:45
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:103
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:19
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:19
-#: src/connections/SendyConnect/ConnectSettingsPage.php:67
+#: src/connections/OmnisendConnect/ConnectSettingsPage.php:21
+#: src/connections/OntraportConnect/ConnectSettingsPage.php:20
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:49
+#: src/connections/SendFoxConnect/ConnectSettingsPage.php:46
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:104
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:20
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:20
+#: src/connections/SendyConnect/ConnectSettingsPage.php:68
 #: src/connections/VerticalResponseConnect/ConnectSettingsPage.php:31
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:21
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:22
 #: src/connections/WooCommerceConnect/Category.php:47
 #: src/connections/WooCommerceConnect/Tags.php:46
 #: src/connections/ZohoCampaignsConnect/ConnectSettingsPage.php:31
@@ -196,89 +196,41 @@ msgid "Connected"
 msgstr ""
 
 #: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:26
-#: src/connections/AweberConnect/ConnectSettingsPage.php:45
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:25
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:26
-#: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:45
-#: src/connections/CleverReachConnect/ConnectSettingsPage.php:45
-#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:26
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:25
-#: src/connections/CtctConnect/ConnectSettingsPage.php:45
-#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:29
-#: src/connections/DripConnect/ConnectSettingsPage.php:25
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:61
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:25
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:26
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:25
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:25
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:46
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:25
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:48
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:57
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:47
-#: src/connections/HubspotConnect/ConnectSettingsPage.php:49
-#: src/connections/IContactConnect/ConnectSettingsPage.php:27
-#: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:45
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:25
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:78
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:26
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:26
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:27
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:25
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:51
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:75
-#: src/connections/NewsmanConnect/ConnectSettingsPage.php:45
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:26
-#: src/connections/OntraportConnect/ConnectSettingsPage.php:21
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:50
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:51
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:109
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:25
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:25
-#: src/connections/SendyConnect/ConnectSettingsPage.php:73
-#: src/connections/VerticalResponseConnect/ConnectSettingsPage.php:45
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:27
-#: src/connections/ZohoCampaignsConnect/ConnectSettingsPage.php:45
-#: src/connections/ZohoCRMConnect/ConnectSettingsPage.php:45
-msgid "Not Connected"
-msgstr ""
-
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:31
 msgid "ActiveCampaign Connection"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:35
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:31
 msgid "Enter API URL"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:37
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sActiveCampaign account%s to get your API URL at \"Developer\" account settings."
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:45
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:35
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:36
-#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:36
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:35
-#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:67
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:35
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:36
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:35
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:35
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:58
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:35
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:88
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:36
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:36
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:35
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:85
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:36
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:41
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:31
+#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:32
+#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:31
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:31
+#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:68
+#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:31
+#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:32
+#: src/connections/EnchargeConnect/ConnectSettingsPage.php:31
+#: src/connections/FlodeskConnect/ConnectSettingsPage.php:31
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:54
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:31
+#: src/connections/MailChimpConnect/ConnectSettingsPage.php:84
+#: src/connections/MailerliteConnect/ConnectSettingsPage.php:32
+#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:32
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:31
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:81
+#: src/connections/OmnisendConnect/ConnectSettingsPage.php:32
 #: src/connections/OntraportConnect/ConnectSettingsPage.php:31
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:35
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:31
 msgid "Enter API Key"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:47
+#: src/connections/ActiveCampaignConnect/ConnectSettingsPage.php:43
 msgid "Log in to your %sActiveCampaign account%s to get your \"API key\" at \"Developer\" account settings."
 msgstr ""
 
@@ -448,13 +400,13 @@ msgstr ""
 #: src/connections/CleverReachConnect/ConnectSettingsPage.php:37
 #: src/connections/CtctConnect/ConnectSettingsPage.php:37
 #: src/connections/Ctctv3Connect/ConnectSettingsPage.php:34
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:62
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:63
 #: src/connections/HighLevelConnect/ConnectSettingsPage.php:39
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:41
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:37
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:56
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:57
 #: src/connections/NewsmanConnect/ConnectSettingsPage.php:37
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:55
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:56
 #: src/connections/VerticalResponseConnect/ConnectSettingsPage.php:37
 #: src/connections/ZohoCampaignsConnect/ConnectSettingsPage.php:37
 #: src/connections/ZohoCRMConnect/ConnectSettingsPage.php:37
@@ -466,13 +418,13 @@ msgstr ""
 #: src/connections/CleverReachConnect/ConnectSettingsPage.php:42
 #: src/connections/CtctConnect/ConnectSettingsPage.php:42
 #: src/connections/Ctctv3Connect/ConnectSettingsPage.php:39
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:67
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:68
 #: src/connections/HighLevelConnect/ConnectSettingsPage.php:44
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:46
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:42
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:61
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:62
 #: src/connections/NewsmanConnect/ConnectSettingsPage.php:42
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:60
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:61
 #: src/connections/VerticalResponseConnect/ConnectSettingsPage.php:42
 #: src/connections/ZohoCampaignsConnect/ConnectSettingsPage.php:42
 #: src/connections/ZohoCRMConnect/ConnectSettingsPage.php:42
@@ -510,7 +462,7 @@ msgid "Beehiiv publication ID not found."
 msgstr ""
 
 #: src/connections/BeehiivConnect/Connect.php:50
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:29
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:24
 msgid "Beehiiv"
 msgstr ""
 
@@ -619,10 +571,10 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:134
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:142
 #: src/connections/WeMailConnect/Connect.php:60
-#: src/connections/WooCommerceConnect/WooInit.php:492
-#: src/connections/WooCommerceConnect/WooInit.php:520
-#: src/connections/WooCommerceConnect/WooSettings.php:293
-#: src/connections/WooCommerceConnect/WooSettings.php:301
+#: src/connections/WooCommerceConnect/WooInit.php:496
+#: src/connections/WooCommerceConnect/WooInit.php:524
+#: src/connections/WooCommerceConnect/WooSettings.php:315
+#: src/connections/WooCommerceConnect/WooSettings.php:323
 #: src/connections/WooMembershipConnect/OptinSubscription.php:222
 #: src/connections/WooMembershipConnect/OptinSubscription.php:250
 #: src/connections/WPFormsConnect/MailOptin.php:514
@@ -659,19 +611,19 @@ msgstr ""
 msgid "Free Tier"
 msgstr ""
 
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:30
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:25
 msgid "Beehiiv Connection"
 msgstr ""
 
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:37
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sBeehiiv account%s to get your api key."
 msgstr ""
 
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:44
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:40
 msgid "Enter Publication ID"
 msgstr ""
 
-#: src/connections/BeehiivConnect/ConnectSettingsPage.php:46
+#: src/connections/BeehiivConnect/ConnectSettingsPage.php:42
 msgid "Log in to your %sBeehiiv account%s to get your publication ID."
 msgstr ""
 
@@ -680,16 +632,16 @@ msgid "Benchmark Email API Key not found."
 msgstr ""
 
 #: src/connections/BenchmarkEmailConnect/Connect.php:41
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:30
+#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:25
 msgid "Benchmark Email"
 msgstr ""
 
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:31
+#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:26
 msgid "Benchmark Email Connection"
 msgstr ""
 
-#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:38
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:38
+#: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:34
+#: src/connections/OmnisendConnect/ConnectSettingsPage.php:34
 msgid "%sGet your API key here%s"
 msgstr ""
 
@@ -719,11 +671,11 @@ msgstr ""
 msgid "CampaignMonitor Connection"
 msgstr ""
 
-#: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:90
+#: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:91
 msgid "No clients found. Ensure CampaignMonitor is connected"
 msgstr ""
 
-#: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:91
+#: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:92
 msgid "Campaign Monitor Client"
 msgstr ""
 
@@ -859,7 +811,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Category.php:70
 #: src/connections/WooCommerceConnect/Product.php:76
 #: src/connections/WooCommerceConnect/Tags.php:69
-#: src/connections/WooCommerceConnect/WooSettings.php:192
+#: src/connections/WooCommerceConnect/WooSettings.php:214
 #: src/connections/WooMembershipConnect/OptinSubscription.php:304
 #: src/connections/WPFormsConnect/MailOptin.php:563
 msgid "Upgrade to MailOptin Premium"
@@ -889,7 +841,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Category.php:73
 #: src/connections/WooCommerceConnect/Product.php:79
 #: src/connections/WooCommerceConnect/Tags.php:71
-#: src/connections/WooCommerceConnect/WooSettings.php:195
+#: src/connections/WooCommerceConnect/WooSettings.php:217
 #: src/connections/WooMembershipConnect/OptinSubscription.php:307
 #: src/core/src/Cron.php:61
 msgid "Learn more"
@@ -927,7 +879,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Category.php:93
 #: src/connections/WooCommerceConnect/Product.php:89
 #: src/connections/WooCommerceConnect/Tags.php:89
-#: src/connections/WooCommerceConnect/WooSettings.php:221
+#: src/connections/WooCommerceConnect/WooSettings.php:243
 #: src/connections/WooMembershipConnect/OptinSubscription.php:317
 #: src/connections/WPFormsConnect/MailOptin.php:334
 #: src/connections/WSFormConnect/WSFMailOptin.php:318
@@ -959,7 +911,7 @@ msgstr ""
 #: src/connections/WooCommerceConnect/Category.php:103
 #: src/connections/WooCommerceConnect/Product.php:92
 #: src/connections/WooCommerceConnect/Tags.php:99
-#: src/connections/WooCommerceConnect/WooSettings.php:222
+#: src/connections/WooCommerceConnect/WooSettings.php:244
 #: src/connections/WooMembershipConnect/OptinSubscription.php:321
 msgid "Select your email marketing software or CRM."
 msgstr ""
@@ -990,9 +942,9 @@ msgstr ""
 #: src/connections/UltimateMemberConnect/UMInit.php:235
 #: src/connections/UltimateMemberConnect/UMSettings.php:158
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:73
-#: src/connections/WooCommerceConnect/WooInit.php:242
-#: src/connections/WooCommerceConnect/WooInit.php:270
-#: src/connections/WooCommerceConnect/WooSettings.php:231
+#: src/connections/WooCommerceConnect/WooInit.php:244
+#: src/connections/WooCommerceConnect/WooInit.php:272
+#: src/connections/WooCommerceConnect/WooSettings.php:253
 #: src/connections/WooMembershipConnect/OptinSubscription.php:368
 #: src/connections/WSFormConnect/WSFMailOptin.php:331
 msgid "Select List"
@@ -1079,8 +1031,8 @@ msgstr ""
 #: src/connections/UltimateMemberConnect/UMInit.php:503
 #: src/connections/UltimateMemberConnect/UMSettings.php:172
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:87
-#: src/connections/WooCommerceConnect/WooInit.php:430
-#: src/connections/WooCommerceConnect/WooSettings.php:245
+#: src/connections/WooCommerceConnect/WooInit.php:432
+#: src/connections/WooCommerceConnect/WooSettings.php:267
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
 #: src/connections/WPFormsConnect/MailOptin.php:481
 msgid "Enable Double Optin"
@@ -1161,8 +1113,8 @@ msgstr ""
 #: src/connections/UltimateMemberConnect/UMInit.php:503
 #: src/connections/UltimateMemberConnect/UMSettings.php:172
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:87
-#: src/connections/WooCommerceConnect/WooInit.php:430
-#: src/connections/WooCommerceConnect/WooSettings.php:245
+#: src/connections/WooCommerceConnect/WooInit.php:432
+#: src/connections/WooCommerceConnect/WooSettings.php:267
 #: src/connections/WooMembershipConnect/OptinSubscription.php:165
 #: src/connections/WPFormsConnect/MailOptin.php:483
 msgid "Disable Double Optin"
@@ -1193,9 +1145,9 @@ msgstr ""
 #: src/connections/UltimateMemberConnect/UMInit.php:274
 #: src/connections/UltimateMemberConnect/UMSettings.php:190
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:103
-#: src/connections/WooCommerceConnect/WooInit.php:326
-#: src/connections/WooCommerceConnect/WooInit.php:370
-#: src/connections/WooCommerceConnect/WooSettings.php:262
+#: src/connections/WooCommerceConnect/WooInit.php:328
+#: src/connections/WooCommerceConnect/WooInit.php:372
+#: src/connections/WooCommerceConnect/WooSettings.php:284
 #: src/connections/WooMembershipConnect/OptinSubscription.php:404
 msgid "Map Fields"
 msgstr ""
@@ -1218,7 +1170,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPSettings.php:153
 #: src/connections/UltimateMemberConnect/UMSettings.php:238
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:151
-#: src/connections/WooCommerceConnect/WooSettings.php:310
+#: src/connections/WooCommerceConnect/WooSettings.php:332
 msgid "Other Settings"
 msgstr ""
 
@@ -1240,7 +1192,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPSettings.php:161
 #: src/connections/UltimateMemberConnect/UMSettings.php:246
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:159
-#: src/connections/WooCommerceConnect/WooSettings.php:318
+#: src/connections/WooCommerceConnect/WooSettings.php:340
 msgid "Automatically"
 msgstr ""
 
@@ -1254,7 +1206,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPSettings.php:162
 #: src/connections/UltimateMemberConnect/UMSettings.php:247
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:160
-#: src/connections/WooCommerceConnect/WooSettings.php:319
+#: src/connections/WooCommerceConnect/WooSettings.php:341
 msgid "Ask for permission"
 msgstr ""
 
@@ -1283,7 +1235,7 @@ msgstr ""
 #: src/connections/RCPConnect/RCPSettings.php:170
 #: src/connections/UltimateMemberConnect/UMSettings.php:256
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:169
-#: src/connections/WooCommerceConnect/WooSettings.php:328
+#: src/connections/WooCommerceConnect/WooSettings.php:350
 msgid "Subscribe to our newsletter"
 msgstr ""
 
@@ -1462,7 +1414,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
-#: src/core/src/AjaxHandler.php:1193
+#: src/core/src/AjaxHandler.php:1195
 msgid "First Name"
 msgstr ""
 
@@ -1532,7 +1484,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
-#: src/core/src/AjaxHandler.php:1194
+#: src/core/src/AjaxHandler.php:1196
 msgid "Last Name"
 msgstr ""
 
@@ -1569,7 +1521,7 @@ msgstr ""
 #: src/connections/TutorLMSConnect/TutorInit.php:474
 #: src/connections/UltimateMemberConnect/UMInit.php:521
 #: src/connections/UserRegistrationOptinConnect/UserRegisterInit.php:239
-#: src/connections/WooCommerceConnect/WooInit.php:560
+#: src/connections/WooCommerceConnect/WooInit.php:564
 #: src/connections/WooMembershipConnect/OptinSubscription.php:112
 msgid "MailOptin Leads"
 msgstr ""
@@ -1581,7 +1533,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
-#: src/core/src/AjaxHandler.php:1195
+#: src/core/src/AjaxHandler.php:1197
 msgid "Email Address"
 msgstr ""
 
@@ -1642,7 +1594,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
-#: src/core/src/AjaxHandler.php:1192
+#: src/core/src/AjaxHandler.php:1194
 msgid "Full Name"
 msgstr ""
 
@@ -1833,7 +1785,7 @@ msgid "Gist API Key not found."
 msgstr ""
 
 #: src/connections/ConvertFoxConnect/Connect.php:40
-#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:30
+#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:24
 msgid "Gist"
 msgstr ""
 
@@ -1852,11 +1804,11 @@ msgstr ""
 msgid "All Contacts"
 msgstr ""
 
-#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:31
+#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:25
 msgid "Gist Connection"
 msgstr ""
 
-#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:38
+#: src/connections/ConvertFoxConnect/ConnectSettingsPage.php:33
 msgid "Learn how to %sget your Gist API Key%s."
 msgstr ""
 
@@ -1864,15 +1816,15 @@ msgstr ""
 msgid "Kit (ConvertKit) API Key not found."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:163
+#: src/connections/ConvertKitConnect/Connect.php:170
 msgid "Subscriber Sequences"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:164
+#: src/connections/ConvertKitConnect/Connect.php:171
 msgid "Select Kit (ConvertKit) sequences subscribers will be added to."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:171
+#: src/connections/ConvertKitConnect/Connect.php:178
 #: src/connections/Ctctv3Connect/Connect.php:225
 #: src/connections/EgoiConnect/Connect.php:118
 #: src/connections/GetResponseConnect/Connect.php:112
@@ -1881,44 +1833,44 @@ msgstr ""
 msgid "Subscriber Tags"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:172
+#: src/connections/ConvertKitConnect/Connect.php:179
 msgid "Select Kit (ConvertKit) tags that will be assigned to subscribers."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:178
+#: src/connections/ConvertKitConnect/Connect.php:185
 msgid "%sMailOptin Premium%s allows you to apply tags to subscribers, add subscribers to sequences."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:214
+#: src/connections/ConvertKitConnect/Connect.php:221
 msgid "Post to Your Public Feed"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/Connect.php:257
+#: src/connections/ConvertKitConnect/Connect.php:264
 msgid "All Subscribers"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:30
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:25
 msgid "Kit (ConvertKit) Connection"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:37
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sKit (ConvertKit) account%s to get your api key."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:45
-#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:72
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:41
+#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:73
 msgid "Enter API Secret"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:47
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:43
 msgid "Log in to your %sKit (ConvertKit) account%s to get your api secret."
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:54
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:50
 msgid "Email Template Name"
 msgstr ""
 
-#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:56
+#: src/connections/ConvertKitConnect/ConnectSettingsPage.php:52
 msgid "The name of the template to use for all emails we send to your Kit (ConvertKit) subscribers. Leave blank to use your account default. %sLearn more%s."
 msgstr ""
 
@@ -2082,14 +2034,14 @@ msgstr ""
 msgid "Constant Contact Connection"
 msgstr ""
 
-#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:58
+#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:59
 msgid "The major improvement in this new Constant Contact integration is the support for custom fields."
 msgstr ""
 
-#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:80
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:105
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:103
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:96
+#: src/connections/Ctctv3Connect/ConnectSettingsPage.php:81
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:107
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:105
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:98
 msgid "AUTHORIZE YOUR ACCOUNT"
 msgstr ""
 
@@ -2126,27 +2078,27 @@ msgid "Upgrade to %sMailOptin Premium%s to enable Drip %sdouble optin%s, apply t
 msgstr ""
 
 #: src/connections/DripConnect/Connect.php:150
-#: src/connections/DripConnect/ConnectSettingsPage.php:29
+#: src/connections/DripConnect/ConnectSettingsPage.php:24
 msgid "Drip"
 msgstr ""
 
-#: src/connections/DripConnect/ConnectSettingsPage.php:30
+#: src/connections/DripConnect/ConnectSettingsPage.php:25
 msgid "Drip Connection"
 msgstr ""
 
-#: src/connections/DripConnect/ConnectSettingsPage.php:35
+#: src/connections/DripConnect/ConnectSettingsPage.php:31
 msgid "Enter API Token"
 msgstr ""
 
-#: src/connections/DripConnect/ConnectSettingsPage.php:37
+#: src/connections/DripConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sDrip account%s to get your api token."
 msgstr ""
 
-#: src/connections/DripConnect/ConnectSettingsPage.php:44
+#: src/connections/DripConnect/ConnectSettingsPage.php:40
 msgid "Enter Account ID"
 msgstr ""
 
-#: src/connections/DripConnect/ConnectSettingsPage.php:46
+#: src/connections/DripConnect/ConnectSettingsPage.php:42
 msgid "Log in to your %sDrip account%s to get your \"account id\" at \"General Info\" settings."
 msgstr ""
 
@@ -2254,8 +2206,8 @@ msgstr ""
 #: src/connections/LifterLMSConnect/Connect.php:423
 #: src/connections/UltimateMemberConnect/UMInit.php:504
 #: src/connections/UltimateMemberConnect/UMSettings.php:178
-#: src/connections/WooCommerceConnect/WooInit.php:431
-#: src/connections/WooCommerceConnect/WooSettings.php:250
+#: src/connections/WooCommerceConnect/WooInit.php:433
+#: src/connections/WooCommerceConnect/WooSettings.php:272
 #: src/connections/WooMembershipConnect/OptinSubscription.php:166
 msgid "Double optin requires customers to confirm their email address before they are added or subscribed."
 msgstr ""
@@ -2304,7 +2256,7 @@ msgid "Select the email list, audience or contact list to add customers."
 msgstr ""
 
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:137
-#: src/connections/WooCommerceConnect/WooSettings.php:315
+#: src/connections/WooCommerceConnect/WooSettings.php:337
 msgid "Subscribe Customers"
 msgstr ""
 
@@ -2342,7 +2294,7 @@ msgid "E-Goi API Key not found."
 msgstr ""
 
 #: src/connections/EgoiConnect/Connect.php:86
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:66
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:61
 msgid "E-Goi"
 msgstr ""
 
@@ -2361,29 +2313,29 @@ msgstr ""
 msgid "%sMailOptin Premium%s allows you to enable double-optin and apply tags to subscribers."
 msgstr ""
 
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:67
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:62
 msgid "E-Goi Connection"
 msgstr ""
 
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:72
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:38
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:120
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:35
-#: src/connections/SendyConnect/ConnectSettingsPage.php:83
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:46
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:68
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:34
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:116
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:31
+#: src/connections/SendyConnect/ConnectSettingsPage.php:79
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:42
 msgid "API Key"
 msgstr ""
 
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:74
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:70
 msgid "Log in to your %sE-Goi account%s to generate or get your API key."
 msgstr ""
 
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:81
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:129
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:77
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:125
 msgid "Verified Sender"
 msgstr ""
 
-#: src/connections/EgoiConnect/ConnectSettingsPage.php:83
+#: src/connections/EgoiConnect/ConnectSettingsPage.php:79
 msgid "Select a verified sender that will be used for sending emails to your E-Goi contacts."
 msgstr ""
 
@@ -2392,15 +2344,15 @@ msgid "Elastic Email API Key not found."
 msgstr ""
 
 #: src/connections/ElasticEmailConnect/Connect.php:33
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:29
+#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:24
 msgid "Elastic Email"
 msgstr ""
 
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:30
+#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:25
 msgid "Elastic Email Connection"
 msgstr ""
 
-#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:37
+#: src/connections/ElasticEmailConnect/ConnectSettingsPage.php:33
 msgid "Login to your %1$sElastic Email account%3$s and visit the %2$sAPI keys%3$s page to get an API Key."
 msgstr ""
 
@@ -2462,15 +2414,15 @@ msgid "EmailOctopus API key not found."
 msgstr ""
 
 #: src/connections/EmailOctopusConnect/Connect.php:92
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:30
+#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:25
 msgid "EmailOctopus"
 msgstr ""
 
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:31
+#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:26
 msgid "EmailOctopus Connection"
 msgstr ""
 
-#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:38
+#: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:34
 msgid "Log in to your %1$sEmailOctopus account%3$s and visit the %2$sAPI%3$s page to get your API Key."
 msgstr ""
 
@@ -2516,36 +2468,36 @@ msgid "Upgrade to %sMailOptin Premium%s to disable email confirmation and assign
 msgstr ""
 
 #: src/connections/EmmaConnect/Connect.php:141
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:29
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:24
 msgid "Emma"
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:30
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:25
 msgid "Emma Connection"
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:35
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:31
 msgid "Public Key"
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:37
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sEmma account%s and go to the \"API KEY\" section in Profile settings for your Public key."
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:45
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:41
 msgid "Private Key"
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:47
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:43
 msgid "Log in to your %sEmma account%s and go to the \"API KEY\" section in Profile settings for your Private key."
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:54
-#: src/connections/IContactConnect/ConnectSettingsPage.php:61
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:50
+#: src/connections/IContactConnect/ConnectSettingsPage.php:57
 msgid "Account ID"
 msgstr ""
 
-#: src/connections/EmmaConnect/ConnectSettingsPage.php:56
+#: src/connections/EmmaConnect/ConnectSettingsPage.php:52
 msgid "Log in to your %sEmma account%s and go to the \"API KEY\" section in Profile settings for your Account ID."
 msgstr ""
 
@@ -2554,7 +2506,7 @@ msgid "Encharge API key not found."
 msgstr ""
 
 #: src/connections/EnchargeConnect/Connect.php:33
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:29
+#: src/connections/EnchargeConnect/ConnectSettingsPage.php:24
 msgid "Encharge"
 msgstr ""
 
@@ -2564,11 +2516,11 @@ msgstr ""
 msgid "%sMailOptin Premium%s allows you to apply tags to subscribers."
 msgstr ""
 
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:30
+#: src/connections/EnchargeConnect/ConnectSettingsPage.php:25
 msgid "Encharge Connection"
 msgstr ""
 
-#: src/connections/EnchargeConnect/ConnectSettingsPage.php:37
+#: src/connections/EnchargeConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sEncharge account%s to get your api key."
 msgstr ""
 
@@ -2594,8 +2546,8 @@ msgstr ""
 
 #: src/connections/FacebookCustomAudienceConnect/Connect.php:49
 #: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:21
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:52
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:53
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:48
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:49
 #: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:196
 msgid "Facebook Custom Audience"
 msgstr ""
@@ -2608,55 +2560,55 @@ msgstr ""
 msgid "Facebook app access token for custom audience has expired. %sLearn how to generate a new one%s"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:27
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:28
 msgid "This integration saves your leads to a Facebook custom audience so you can retarget them later."
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:29
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:30
 msgid "Upgrade to MailOptin Premium to Get It!"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:57
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:54
 msgid "Facebook App ID"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:59
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:56
 msgid "Enter your Facebook application ID. %sLearn more%s"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:66
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:63
 msgid "Facebook App Secret"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:68
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:65
 msgid "Enter your Facebook application secret. %sLearn more%s"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:75
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:72
 msgid "Facebook App Access Token"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:77
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:74
 msgid "Enter your Facebook application access token. %sLearn more%s"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:83
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:80
 msgid "Ad Account ID"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:85
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:82
 msgid "Enter your Facebook Ad account ID. %sLearn more%s"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:91
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:88
 msgid "API Version"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:104
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:101
 msgid "Create new Facebook Custom Audience"
 msgstr ""
 
-#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:105
+#: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:102
 msgid "Anytime you want to create a new custom audience in your Facebook ad account, Use the button above."
 msgstr ""
 
@@ -2704,7 +2656,7 @@ msgid "Flodesk API Key not found."
 msgstr ""
 
 #: src/connections/FlodeskConnect/Connect.php:43
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:29
+#: src/connections/FlodeskConnect/ConnectSettingsPage.php:24
 msgid "Flodesk"
 msgstr ""
 
@@ -2712,11 +2664,11 @@ msgstr ""
 msgid "%sMailOptin Premium%s allows you enable double-optin."
 msgstr ""
 
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:30
+#: src/connections/FlodeskConnect/ConnectSettingsPage.php:25
 msgid "Flodesk Connection"
 msgstr ""
 
-#: src/connections/FlodeskConnect/ConnectSettingsPage.php:37
+#: src/connections/FlodeskConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sFlodesk account%s to get your api key."
 msgstr ""
 
@@ -2942,7 +2894,7 @@ msgid "Back"
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:441
-#: src/core/src/AjaxHandler.php:1221
+#: src/core/src/AjaxHandler.php:1223
 msgid "Save"
 msgstr ""
 
@@ -2979,7 +2931,7 @@ msgid "GetResponse API key not found."
 msgstr ""
 
 #: src/connections/GetResponseConnect/Connect.php:44
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:52
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:47
 msgid "GetResponse"
 msgstr ""
 
@@ -2991,45 +2943,45 @@ msgstr ""
 msgid "To apply tags to subscribers, upgrade to %sMailOptin Premium%s "
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:53
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:48
 msgid "GetResponse Connection"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:60
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:56
 msgid "Log in to your %sGetResponse account%s to get your API Key."
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:67
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:63
 msgid "GetResponse MAX Account"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:68
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:64
 msgid "Check this only if you are a GetResponse MAX customer."
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:72
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:68
 msgid "GetResponse MAX Domain"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:73
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:69
 msgid "Enter your GetResponse MAX account registered domain."
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:77
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:73
 msgid "GetResponse MAX Country"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:80
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:76
 #: src/core/src/Functions/countries.php:190
 #: src/core/src/Functions/countries.php:444
 msgid "Poland"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:81
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:77
 msgid "Others"
 msgstr ""
 
-#: src/connections/GetResponseConnect/ConnectSettingsPage.php:83
+#: src/connections/GetResponseConnect/ConnectSettingsPage.php:79
 msgid "Select country your GetResponse MAX account is associated with."
 msgstr ""
 
@@ -3137,14 +3089,14 @@ msgstr ""
 msgid "Google Analytics"
 msgstr ""
 
-#: src/connections/GoogleAnalytics.php:32
+#: src/connections/GoogleAnalytics.php:33
 msgid "Google Analytics integration is not available on your plan. Upgrade to any of our premium offering to get it."
 msgstr ""
 
-#: src/connections/GoogleAnalytics.php:34
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:45
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:39
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:38
+#: src/connections/GoogleAnalytics.php:35
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:46
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:40
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:39
 msgid "Upgrade Now!"
 msgstr ""
 
@@ -3158,49 +3110,49 @@ msgstr ""
 
 #: src/connections/GoogleSheetConnect/Connect.php:70
 #: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:37
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:79
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:80
 msgid "Google Sheets"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/Connect.php:336
+#: src/connections/GoogleSheetConnect/Connect.php:345
 msgid "Select Sheet"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:43
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:44
 msgid "Google Sheets integration is not available on your plan. Upgrade to any of our premium offering to get it."
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:72
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:73
 msgid "Create a Google API project in %1$sGoogle console%2$s."
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:73
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:74
 msgid "Copy the %1$sproject keys%2$s and include them below."
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:74
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:75
 msgid "Use %1$s as the Authorized Redirect URI."
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:75
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:76
 msgid "Click the Authorize button to complete the connection. %sLearn more%s"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:80
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:81
 msgid "Google Sheets Connection"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:92
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:90
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:94
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:92
 msgid "Client ID"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:97
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:95
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:99
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:97
 msgid "Client Secret"
 msgstr ""
 
-#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:117
+#: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:119
 #: src/core/src/Admin/SettingsPage/Settings.php:115
 #: src/core/src/Admin/SettingsPage/Settings.php:116
 msgid "Clear Cache"
@@ -3343,11 +3295,11 @@ msgstr ""
 msgid "HubSpot Connection"
 msgstr ""
 
-#: src/connections/HubspotConnect/ConnectSettingsPage.php:75
+#: src/connections/HubspotConnect/ConnectSettingsPage.php:76
 msgid "Clear HubSpot Cache"
 msgstr ""
 
-#: src/connections/HubspotConnect/ConnectSettingsPage.php:79
+#: src/connections/HubspotConnect/ConnectSettingsPage.php:80
 msgid "Due to HubSpot's API usage limits, MailOptin stores HubSpot data for a maximum period of one hour. If you added a new list, custom properties or made any changes to them, you might not see it reflected immediately due to this data caching. To manually clear the cache, click the button above."
 msgstr ""
 
@@ -3372,7 +3324,7 @@ msgid "iContact client folder ID not found."
 msgstr ""
 
 #: src/connections/IContactConnect/Connect.php:39
-#: src/connections/IContactConnect/ConnectSettingsPage.php:32
+#: src/connections/IContactConnect/ConnectSettingsPage.php:27
 msgid "iContact"
 msgstr ""
 
@@ -3402,43 +3354,43 @@ msgstr ""
 msgid "Business Phone Number"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:33
+#: src/connections/IContactConnect/ConnectSettingsPage.php:28
 msgid "iContact Connection"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:37
+#: src/connections/IContactConnect/ConnectSettingsPage.php:33
 msgid "Application ID"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:39
+#: src/connections/IContactConnect/ConnectSettingsPage.php:35
 msgid "Log in to your %siContact account%s to generate or get your application ID."
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:46
+#: src/connections/IContactConnect/ConnectSettingsPage.php:42
 msgid "Username / Email Address"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:47
+#: src/connections/IContactConnect/ConnectSettingsPage.php:43
 msgid "Enter the provided application email address or username here. "
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:52
+#: src/connections/IContactConnect/ConnectSettingsPage.php:48
 msgid "Application Password"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:54
+#: src/connections/IContactConnect/ConnectSettingsPage.php:50
 msgid "Log in to your %siContact account%s to generate or get your application password."
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:62
+#: src/connections/IContactConnect/ConnectSettingsPage.php:58
 msgid "Enter your iContact account ID here."
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:66
+#: src/connections/IContactConnect/ConnectSettingsPage.php:62
 msgid "Client Folder ID"
 msgstr ""
 
-#: src/connections/IContactConnect/ConnectSettingsPage.php:67
+#: src/connections/IContactConnect/ConnectSettingsPage.php:63
 msgid "Enter the provided client folder ID here."
 msgstr ""
 
@@ -3707,7 +3659,7 @@ msgid "Klaviyo API Key not found."
 msgstr ""
 
 #: src/connections/KlaviyoConnect/Connect.php:46
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:29
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:24
 msgid "Klaviyo"
 msgstr ""
 
@@ -3735,11 +3687,11 @@ msgstr ""
 msgid "You can only map to Klaviyo special identify properties. Custom fields not mapped will be added as custom properties. <a target=\"_blank\" href=\"%s\">Learn more</a>"
 msgstr ""
 
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:30
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:25
 msgid "Klaviyo Connection"
 msgstr ""
 
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:37
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sKlaviyo account%s to get your api key."
 msgstr ""
 
@@ -3956,7 +3908,7 @@ msgid "This is only used if Subscription Method is set to \"Ask for permission\"
 msgstr ""
 
 #: src/connections/LifterLMSConnect/MOLifterLMS.php:490
-#: src/connections/WooCommerceConnect/WooSettings.php:184
+#: src/connections/WooCommerceConnect/WooSettings.php:206
 msgid "Upgrade to %sMailOptin Premium%s to add all WooCommerce customers and customers that purchase products belonging to a specific category or tag to your email marketing list."
 msgstr ""
 
@@ -3982,7 +3934,7 @@ msgid "If subscribers last names are missing, change this to the correct merge t
 msgstr ""
 
 #: src/connections/MailChimpConnect/Connect.php:128
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:82
+#: src/connections/MailChimpConnect/ConnectSettingsPage.php:77
 msgid "Mailchimp"
 msgstr ""
 
@@ -4124,11 +4076,11 @@ msgstr ""
 msgid "Select a list tag or segment to send to. Leave empty to send to all list subscribers."
 msgstr ""
 
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:83
+#: src/connections/MailChimpConnect/ConnectSettingsPage.php:78
 msgid "Mailchimp Connection"
 msgstr ""
 
-#: src/connections/MailChimpConnect/ConnectSettingsPage.php:90
+#: src/connections/MailChimpConnect/ConnectSettingsPage.php:86
 msgid "Log in to your %sMailChimp account%s to get your API Key."
 msgstr ""
 
@@ -4137,7 +4089,7 @@ msgid "MailerLite Classic API key not found."
 msgstr ""
 
 #: src/connections/MailerliteConnect/Connect.php:41
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:30
+#: src/connections/MailerliteConnect/ConnectSettingsPage.php:25
 msgid "MailerLite Classic"
 msgstr ""
 
@@ -4145,11 +4097,11 @@ msgstr ""
 msgid "ZIP"
 msgstr ""
 
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:31
+#: src/connections/MailerliteConnect/ConnectSettingsPage.php:26
 msgid "MailerLite Classic Connection"
 msgstr ""
 
-#: src/connections/MailerliteConnect/ConnectSettingsPage.php:38
+#: src/connections/MailerliteConnect/ConnectSettingsPage.php:34
 msgid "Log in to your %sMailerLite Classic account%s to get your API Key."
 msgstr ""
 
@@ -4158,15 +4110,15 @@ msgid "MailerLiteV2 API key not found."
 msgstr ""
 
 #: src/connections/Mailerlitev2Connect/Connect.php:41
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:30
+#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:25
 msgid "MailerLite"
 msgstr ""
 
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:31
+#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:26
 msgid "MailerLite Connection"
 msgstr ""
 
-#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:38
+#: src/connections/Mailerlitev2Connect/ConnectSettingsPage.php:34
 msgid "Log in to your %sMailerLite account%s to get your API Key."
 msgstr ""
 
@@ -4175,27 +4127,27 @@ msgid "Mailgun API Key not found."
 msgstr ""
 
 #: src/connections/MailgunConnect/Connect.php:38
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:32
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:27
 msgid "Mailgun"
 msgstr ""
 
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:33
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:28
 msgid "Mailgun Connection"
 msgstr ""
 
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:40
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:36
 msgid "Log in to your %sMailgun account%s to generate or get your API key."
 msgstr ""
 
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:47
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:43
 msgid "Domain Name"
 msgstr ""
 
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:49
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:45
 msgid "Enter your Mailgun domain name."
 msgstr ""
 
-#: src/connections/MailgunConnect/ConnectSettingsPage.php:53
+#: src/connections/MailgunConnect/ConnectSettingsPage.php:49
 msgid "Domain Region"
 msgstr ""
 
@@ -4220,7 +4172,7 @@ msgid "You have specified an incorrect API Key / API Secret Key pair. You may be
 msgstr ""
 
 #: src/connections/MailjetConnect/Connect.php:55
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:29
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:24
 msgid "Mailjet"
 msgstr ""
 
@@ -4253,15 +4205,15 @@ msgstr ""
 msgid "If subscribers last names are missing, change this to the correct attribute name. %sLearn more%s"
 msgstr ""
 
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:30
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:25
 msgid "Mailjet Connection"
 msgstr ""
 
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:37
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:33
 msgid "%sRetrieve your API and Secret keys%s"
 msgstr ""
 
-#: src/connections/MailjetConnect/ConnectSettingsPage.php:45
+#: src/connections/MailjetConnect/ConnectSettingsPage.php:41
 msgid "Enter Secret Key"
 msgstr ""
 
@@ -4398,7 +4350,7 @@ msgstr ""
 
 #: src/connections/MemberPressConnect/MemberPressSettings.php:223
 #: src/connections/UltimateMemberConnect/UMSettings.php:255
-#: src/connections/WooCommerceConnect/WooSettings.php:327
+#: src/connections/WooCommerceConnect/WooSettings.php:349
 msgid "Customize the label displayed next to the opt-in checkbox."
 msgstr ""
 
@@ -4408,19 +4360,19 @@ msgstr ""
 
 #: src/connections/MemberPressConnect/MemberPressSettings.php:237
 #: src/connections/UltimateMemberConnect/UMSettings.php:264
-#: src/connections/WooCommerceConnect/WooSettings.php:336
+#: src/connections/WooCommerceConnect/WooSettings.php:358
 msgid "Unchecked"
 msgstr ""
 
 #: src/connections/MemberPressConnect/MemberPressSettings.php:238
 #: src/connections/UltimateMemberConnect/UMSettings.php:265
-#: src/connections/WooCommerceConnect/WooSettings.php:337
+#: src/connections/WooCommerceConnect/WooSettings.php:359
 msgid "Checked"
 msgstr ""
 
 #: src/connections/MemberPressConnect/MemberPressSettings.php:240
 #: src/connections/UltimateMemberConnect/UMSettings.php:262
-#: src/connections/WooCommerceConnect/WooSettings.php:334
+#: src/connections/WooCommerceConnect/WooSettings.php:356
 msgid "The default state of the opt-in checkbox."
 msgstr ""
 
@@ -4439,47 +4391,47 @@ msgstr ""
 
 #: src/connections/MicrosoftDynamic365Connect/Connect.php:40
 #: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:31
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:75
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:76
 msgid "Microsoft Dynamics 365"
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:37
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:38
 msgid "Microsoft Dynamics 365 integration is not available on your plan. Upgrade to any of our premium offerings to get it."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:64
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:65
 msgid "An application must be created with Microsoft Dynamics 365 to get your Client ID and Client Secret. %sLearn more%s"
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:66
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:67
 msgid "Login to %1$sMicrosoft Azure Portal%2$s, go to %3$sApp Registration%2$s and click on \"New Registration\"."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:67
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:68
 msgid "Enter a name, select \"Accounts in any organizational directory and personal Microsoft accounts\" as Supported account types."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:68
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:69
 msgid "Under \"Redirect URI\", select \"Web\" as platform, enter %s as the URL and click the Register button to create the app."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:69
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:70
 msgid "Go to \"Certificates & secrets\", click on \"New secret\". Enter a description and expiry duration and save to generate your app secret value."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:70
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:71
 msgid "Go to \"API permissions\", click on \"Add a permission\". Select \"Dynamics CRM\", check \"user_impersonation\" and save."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:71
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:72
 msgid "Copy the Application (client) ID and Secret value of the app and save them here together with your Dynamic CRM URL."
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:76
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:77
 msgid "Microsoft Dynamics 365 Connection"
 msgstr ""
 
-#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:85
+#: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:87
 msgid "Dynamics 365 URL"
 msgstr ""
 
@@ -4488,15 +4440,15 @@ msgid "Moosend API Key not found."
 msgstr ""
 
 #: src/connections/MoosendConnect/Connect.php:77
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:79
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:74
 msgid "Moosend"
 msgstr ""
 
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:80
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:75
 msgid "Moosend Connection"
 msgstr ""
 
-#: src/connections/MoosendConnect/ConnectSettingsPage.php:87
+#: src/connections/MoosendConnect/ConnectSettingsPage.php:83
 msgid "%sHere's how to find your api key%s"
 msgstr ""
 
@@ -4634,7 +4586,7 @@ msgid "Omnisend API Key not found."
 msgstr ""
 
 #: src/connections/OmnisendConnect/Connect.php:44
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:30
+#: src/connections/OmnisendConnect/ConnectSettingsPage.php:25
 msgid "Omnisend"
 msgstr ""
 
@@ -4668,7 +4620,7 @@ msgstr ""
 msgid "Birthdate"
 msgstr ""
 
-#: src/connections/OmnisendConnect/ConnectSettingsPage.php:31
+#: src/connections/OmnisendConnect/ConnectSettingsPage.php:26
 msgid "Omnisend Connection"
 msgstr ""
 
@@ -4689,7 +4641,7 @@ msgid "Ontraport APP ID not found."
 msgstr ""
 
 #: src/connections/OntraportConnect/Connect.php:44
-#: src/connections/OntraportConnect/ConnectSettingsPage.php:25
+#: src/connections/OntraportConnect/ConnectSettingsPage.php:24
 msgid "Ontraport"
 msgstr ""
 
@@ -4697,7 +4649,7 @@ msgstr ""
 msgid "Select Ontraport tags that will be assigned to subscribers."
 msgstr ""
 
-#: src/connections/OntraportConnect/ConnectSettingsPage.php:26
+#: src/connections/OntraportConnect/ConnectSettingsPage.php:25
 msgid "Ontraport Connection"
 msgstr ""
 
@@ -4877,7 +4829,7 @@ msgstr ""
 
 #: src/connections/SalesforceConnect/Connect.php:47
 #: src/connections/SalesforceConnect/ConnectSettingsPage.php:30
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:73
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:74
 msgid "Salesforce"
 msgstr ""
 
@@ -4911,43 +4863,43 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:36
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:37
 msgid "Salesforce integration is not available on your plan. Upgrade to any of our premium offerings to get it."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:63
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:64
 msgid "An application must be created with Salesforce to get your API Key and App Secret. %sLearn more%s"
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:65
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:66
 msgid "In Salesforce, go to Setup -> App -> App Manager and click on \"New Connected App\"."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:66
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:67
 msgid "Enter Application Name(eg. My App), email address then check \"Enable OAuth Settings\" checkbox."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:67
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:68
 msgid "Enter %s as the Callback URL."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:68
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:69
 msgid "Select %s and %s as OAuth Scopes then Save to create the application."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:69
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:70
 msgid "Copy the Consumer Key and Secret of the app and save them here."
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:74
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:75
 msgid "Salesforce Connection"
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:83
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:85
 msgid "Consumer Key"
 msgstr ""
 
-#: src/connections/SalesforceConnect/ConnectSettingsPage.php:88
+#: src/connections/SalesforceConnect/ConnectSettingsPage.php:90
 msgid "Consumer Secret"
 msgstr ""
 
@@ -4956,8 +4908,8 @@ msgid "SendFox API Key not found."
 msgstr ""
 
 #: src/connections/SendFoxConnect/Connect.php:37
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:56
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:57
+#: src/connections/SendFoxConnect/ConnectSettingsPage.php:51
+#: src/connections/SendFoxConnect/ConnectSettingsPage.php:52
 msgid "SendFox"
 msgstr ""
 
@@ -4965,11 +4917,11 @@ msgstr ""
 msgid "Your Account..."
 msgstr ""
 
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:62
+#: src/connections/SendFoxConnect/ConnectSettingsPage.php:58
 msgid "Personal Access Token"
 msgstr ""
 
-#: src/connections/SendFoxConnect/ConnectSettingsPage.php:64
+#: src/connections/SendFoxConnect/ConnectSettingsPage.php:60
 msgid "Log in to your %sSendFox account%s to create or get your personal access token."
 msgstr ""
 
@@ -4978,7 +4930,7 @@ msgid "SendGrid API Key not found."
 msgstr ""
 
 #: src/connections/SendGridConnect/Connect.php:39
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:114
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:109
 msgid "SendGrid Email Marketing"
 msgstr ""
 
@@ -4990,15 +4942,15 @@ msgstr ""
 msgid "Select a Suppression Group to allow recipients to unsubscribe."
 msgstr ""
 
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:115
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:110
 msgid "SendGrid Email Marketing Connection"
 msgstr ""
 
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:122
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:118
 msgid "Log in to your %sSendGrid account%s to generate or get your API key."
 msgstr ""
 
-#: src/connections/SendGridConnect/ConnectSettingsPage.php:131
+#: src/connections/SendGridConnect/ConnectSettingsPage.php:127
 msgid "Select a verified sender that will be used for sending email automation and newsletters to your SendGrid Email Marketing contacts."
 msgstr ""
 
@@ -5019,39 +4971,39 @@ msgid "Last Name Attribute"
 msgstr ""
 
 #: src/connections/SendinblueConnect/Connect.php:143
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:29
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:24
 msgid "Brevo (Sendinblue)"
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:30
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:25
 msgid "Brevo (Sendinblue) Connection"
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:37
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sBrevo account%s to get your API v3 key."
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:51
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:47
 msgid "Double Optin Template"
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:53
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:49
 msgid "No double optin templates found."
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:55
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:51
 msgid "Select a double optin template to use. %sLearn more%s"
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:62
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:58
 msgid "Redirection URL"
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:63
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:59
 msgid "The URL that user will be redirected to after clicking on the double optin confirmation link."
 msgstr ""
 
-#: src/connections/SendinblueConnect/ConnectSettingsPage.php:73
+#: src/connections/SendinblueConnect/ConnectSettingsPage.php:69
 msgid "Don't have a Brevo (Sendinblue) account? Create one"
 msgstr ""
 
@@ -5085,31 +5037,31 @@ msgid "Upgrade to %sMailOptin Premium%s to apply tags to subscribers and get loa
 msgstr ""
 
 #: src/connections/SendlaneConnect/Connect.php:93
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:29
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:24
 msgid "Sendlane"
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:30
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:25
 msgid "Sendlane Connection"
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:37
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:33
 msgid "Log in to your %sSendlane account%s, go to \"Account Settings\" to get your API key."
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:45
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:41
 msgid "Enter Hash Key"
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:47
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:43
 msgid "Log in to your %sSendlane account%s, go to \"Account Settings\" to get your hash key."
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:54
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:50
 msgid "Enter Sendlane Domain"
 msgstr ""
 
-#: src/connections/SendlaneConnect/ConnectSettingsPage.php:56
+#: src/connections/SendlaneConnect/ConnectSettingsPage.php:52
 msgid "Log in to your %sSendlane account%s, go to \"Account Settings\" to get your sendlane domain."
 msgstr ""
 
@@ -5122,7 +5074,7 @@ msgid "Provide a valid list id"
 msgstr ""
 
 #: src/connections/SendyConnect/Connect.php:51
-#: src/connections/SendyConnect/ConnectSettingsPage.php:77
+#: src/connections/SendyConnect/ConnectSettingsPage.php:72
 msgid "Sendy"
 msgstr ""
 
@@ -5142,37 +5094,37 @@ msgstr ""
 msgid "Query string to append to all links in newsletter sent to Sendy email service. E.g Google Analytics tracking. Don't include '?' in your query string."
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:78
+#: src/connections/SendyConnect/ConnectSettingsPage.php:73
 msgid "Sendy Connection"
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:84
+#: src/connections/SendyConnect/ConnectSettingsPage.php:80
 msgid "Enter your Sendy API key."
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:88
+#: src/connections/SendyConnect/ConnectSettingsPage.php:84
 msgid "Installation URL"
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:89
+#: src/connections/SendyConnect/ConnectSettingsPage.php:85
 msgid "Enter your Sendy installation URL."
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:93
+#: src/connections/SendyConnect/ConnectSettingsPage.php:89
 msgid "Email List"
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:98
-#: src/connections/SendyConnect/ConnectSettingsPage.php:99
+#: src/connections/SendyConnect/ConnectSettingsPage.php:94
+#: src/connections/SendyConnect/ConnectSettingsPage.php:95
 msgid "List Name"
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:106
-#: src/connections/SendyConnect/ConnectSettingsPage.php:107
+#: src/connections/SendyConnect/ConnectSettingsPage.php:102
+#: src/connections/SendyConnect/ConnectSettingsPage.php:103
 msgid "List ID"
 msgstr ""
 
-#: src/connections/SendyConnect/ConnectSettingsPage.php:111
+#: src/connections/SendyConnect/ConnectSettingsPage.php:107
 msgid "Enter the names and IDs of your Sendy email list"
 msgstr ""
 
@@ -5217,7 +5169,7 @@ msgid "The Ultimate Member integration subscribes customers to your email market
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:159
-#: src/connections/WooCommerceConnect/WooSettings.php:232
+#: src/connections/WooCommerceConnect/WooSettings.php:254
 msgid "Select the email list, audience or contact list to add customers to."
 msgstr ""
 
@@ -5228,30 +5180,30 @@ msgid "Disable"
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:222
-#: src/connections/WooCommerceConnect/WooInit.php:496
-#: src/connections/WooCommerceConnect/WooSettings.php:294
+#: src/connections/WooCommerceConnect/WooInit.php:500
+#: src/connections/WooCommerceConnect/WooSettings.php:316
 #: src/connections/WooMembershipConnect/OptinSubscription.php:226
 msgid "Select tags to assign to buyers or customers."
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:230
-#: src/connections/WooCommerceConnect/WooSettings.php:302
+#: src/connections/WooCommerceConnect/WooSettings.php:324
 #: src/connections/WooMembershipConnect/OptinSubscription.php:251
 msgid "Enter a comma-separated list of tags to assign to buyers or customers."
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:244
-#: src/connections/WooCommerceConnect/WooSettings.php:316
+#: src/connections/WooCommerceConnect/WooSettings.php:338
 msgid "Choose \"Ask for permission\" to show an opt-in checkbox during checkout. Customers will only be subscribed to the email marketing list above if they check the checkbox. Choose Automatically to subscribe customers silently upon checkout. Caution, this is without the customer's consent."
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:254
-#: src/connections/WooCommerceConnect/WooSettings.php:326
+#: src/connections/WooCommerceConnect/WooSettings.php:348
 msgid "Opt-In Field Label"
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:261
-#: src/connections/WooCommerceConnect/WooSettings.php:333
+#: src/connections/WooCommerceConnect/WooSettings.php:355
 msgid "Opt-In Checkbox Default"
 msgstr ""
 
@@ -5390,6 +5342,7 @@ msgid "Cache-Control"
 msgstr ""
 
 #: src/connections/WebHookConnect/Connect.php:131
+#: src/core/src/Admin/SettingsPage/Connections.php:273
 msgid "Connection"
 msgstr ""
 
@@ -5519,8 +5472,8 @@ msgid "Upgrade to %sMailOptin Premium%s to add custom fields and apply tags to s
 msgstr ""
 
 #: src/connections/WeMailConnect/Connect.php:94
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:40
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:41
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:35
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:36
 msgid "weMail"
 msgstr ""
 
@@ -5532,11 +5485,11 @@ msgstr ""
 msgid "Zip Code"
 msgstr ""
 
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:32
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:27
 msgid "To find your API key go to <code>weMail > Settings > API Keys</code> on your WordPress dashboard."
 msgstr ""
 
-#: src/connections/WeMailConnect/ConnectSettingsPage.php:34
+#: src/connections/WeMailConnect/ConnectSettingsPage.php:29
 msgid "weMail Plugin is not activated, please install %sweMail%s and activate to get your API keys."
 msgstr ""
 
@@ -5590,93 +5543,101 @@ msgstr ""
 msgid "Add buyers or customers that purchase products with this tag to your email marketing or CRM list."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:245
-#: src/connections/WooCommerceConnect/WooInit.php:280
+#: src/connections/WooCommerceConnect/WooInit.php:247
+#: src/connections/WooCommerceConnect/WooInit.php:282
 #: src/connections/WooMembershipConnect/OptinSubscription.php:372
 msgid "Select the email list, audience or segment to add customers to."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:448
+#: src/connections/WooCommerceConnect/WooInit.php:450
 msgid "Select one"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:457
+#: src/connections/WooCommerceConnect/WooInit.php:459
 msgid "Last Order Product Names"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:458
+#: src/connections/WooCommerceConnect/WooInit.php:460
 msgid "Last Order Total"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:459
-msgid "Last Order Date"
+#: src/connections/WooCommerceConnect/WooInit.php:461
+msgid "Last Order Created Date"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:460
+#: src/connections/WooCommerceConnect/WooInit.php:462
+msgid "Last Order Completed Date"
+msgstr ""
+
+#: src/connections/WooCommerceConnect/WooInit.php:463
+msgid "Last Order Paid Date"
+msgstr ""
+
+#: src/connections/WooCommerceConnect/WooInit.php:464
 msgid "Last Order Payment Method"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooInit.php:521
+#: src/connections/WooCommerceConnect/WooInit.php:525
 msgid "Enter a comma-separated list of tags to assign to buyers or customers."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:177
+#: src/connections/WooCommerceConnect/WooSettings.php:199
 msgid "WooCommerce Integration Settings"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:214
+#: src/connections/WooCommerceConnect/WooSettings.php:236
 msgid "The WooCommerce integration subscribes customers to your email marketing software and CRM upon order completion. You can also set this up on a per product, category and tag level. %sLearn more%s"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:343
+#: src/connections/WooCommerceConnect/WooSettings.php:365
 msgid "Opt-In Checkbox Location"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:344
+#: src/connections/WooCommerceConnect/WooSettings.php:366
 msgid "Where to display the opt-in checkbox on the checkout page."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:346
+#: src/connections/WooCommerceConnect/WooSettings.php:368
 msgid "Order review above submit"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:347
+#: src/connections/WooCommerceConnect/WooSettings.php:369
 msgid "Order review below submit"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:348
+#: src/connections/WooCommerceConnect/WooSettings.php:370
 msgid "Above customer details"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:349
+#: src/connections/WooCommerceConnect/WooSettings.php:371
 msgid "Below customer details"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:350
+#: src/connections/WooCommerceConnect/WooSettings.php:372
 msgid "Order review above cart/product table."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:351
+#: src/connections/WooCommerceConnect/WooSettings.php:373
 msgid "Above billing details"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:352
+#: src/connections/WooCommerceConnect/WooSettings.php:374
 msgid "Above shipping details"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:353
+#: src/connections/WooCommerceConnect/WooSettings.php:375
 msgid "Below Checkout billing form"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:354
+#: src/connections/WooCommerceConnect/WooSettings.php:376
 msgid "Above Checkout Terms and Conditions"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:355
+#: src/connections/WooCommerceConnect/WooSettings.php:377
 msgid "Below Checkout Terms and Conditions"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/WooSettings.php:362
+#: src/connections/WooCommerceConnect/WooSettings.php:384
 msgid "WooCommerce Integration"
 msgstr ""
 
@@ -6917,7 +6878,7 @@ msgid "reCAPTCHA v3"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:617
-#: src/core/src/RegisterScripts.php:203
+#: src/core/src/RegisterScripts.php:206
 msgid "Field %s"
 msgstr ""
 
@@ -7043,7 +7004,7 @@ msgid "Close content editor"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomizerTrait.php:15
-#: src/core/src/Functions/custom-settings-api.php:1012
+#: src/core/src/Functions/custom-settings-api.php:1025
 msgid "Save Changes"
 msgstr ""
 
@@ -7778,7 +7739,7 @@ msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/Customizer.php:754
 #: src/core/src/Admin/SettingsPage/Connections.php:49
-#: src/core/src/Admin/SettingsPage/Connections.php:224
+#: src/core/src/Admin/SettingsPage/Connections.php:223
 msgid "Integrations"
 msgstr ""
 
@@ -8891,6 +8852,10 @@ msgstr ""
 msgid "Analytics"
 msgstr ""
 
+#: src/core/src/Admin/SettingsPage/Connections.php:274
+msgid "Configure"
+msgstr ""
+
 #: src/core/src/Admin/SettingsPage/ConversionExport.php:44
 msgid "Subscriber Name"
 msgstr ""
@@ -8908,7 +8873,7 @@ msgid "User Agent"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/ConversionExport.php:48
-#: src/core/src/Functions/functions.php:521
+#: src/core/src/Functions/functions.php:555
 msgid "Conversion Page"
 msgstr ""
 
@@ -9145,12 +9110,12 @@ msgid "Upgrade to %s for %s support"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:387
-#: src/core/src/RegisterScripts.php:199
+#: src/core/src/RegisterScripts.php:202
 msgid "Pause Test"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:390
-#: src/core/src/RegisterScripts.php:198
+#: src/core/src/RegisterScripts.php:201
 msgid "Start Test"
 msgstr ""
 
@@ -9442,81 +9407,81 @@ msgstr ""
 msgid "Email campaign with similar name exist already."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:730
+#: src/core/src/AjaxHandler.php:729
 msgid "No email provider or list has been set for this optin. %sSee fix here%s"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:766
-#: src/core/src/AjaxHandler.php:788
+#: src/core/src/AjaxHandler.php:765
+#: src/core/src/AjaxHandler.php:787
 #: src/core/src/OptinForms/AbstractOptinForm.php:1277
 msgid "Your submission has been flagged as potential spam."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:776
+#: src/core/src/AjaxHandler.php:775
 msgid "Email address is invalid. Try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:970
+#: src/core/src/AjaxHandler.php:972
 msgid "Email address is not valid. Please try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1045
+#: src/core/src/AjaxHandler.php:1047
 msgid "Error log successfully deleted"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1050
+#: src/core/src/AjaxHandler.php:1052
 msgid "This will delete the error log forever. Press OK to confirm"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1051
+#: src/core/src/AjaxHandler.php:1053
 msgid "Delete Error Log"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1181
+#: src/core/src/AjaxHandler.php:1183
 msgid "Error: No integration field found. Select a list first if you haven't and try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1186
+#: src/core/src/AjaxHandler.php:1188
 msgid "Map integration fields to form custom fields"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:195
+#: src/core/src/Connections/AbstractConnect.php:199
 msgid "The email campaign \"%s\" had the following error \"%s\"."
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:203
+#: src/core/src/Connections/AbstractConnect.php:207
 msgid "Warning! \"%s\" Email Campaign Is Not Working"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:254
+#: src/core/src/Connections/AbstractConnect.php:258
 msgid "%sView Error Log%s"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:315
+#: src/core/src/Connections/AbstractConnect.php:319
 msgid "Use the coupon %s on checkout to save 20%% off MailOptin premium (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:317
+#: src/core/src/Connections/AbstractConnect.php:321
 msgid "Get 20%% Discount Now (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:340
+#: src/core/src/Connections/AbstractConnect.php:344
 msgid "Warning! \"%s\" Optin Campaign Is Not Working"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:350
+#: src/core/src/Connections/AbstractConnect.php:354
 msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\"."
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:357
+#: src/core/src/Connections/AbstractConnect.php:361
 msgid "This e-mail was sent by %s plugin on %s (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:381
+#: src/core/src/Connections/AbstractConnect.php:385
 msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\". %6$s -- %6$sThis e-mail was sent by %s plugin on %s (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:516
+#: src/core/src/Connections/AbstractConnect.php:520
 msgid "rate limit exceeded"
 msgstr ""
 
@@ -10777,23 +10742,23 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr ""
 
-#: src/core/src/Functions/custom-settings-api.php:525
+#: src/core/src/Functions/custom-settings-api.php:538
 msgid "Add New Email List"
 msgstr ""
 
-#: src/core/src/Functions/custom-settings-api.php:942
+#: src/core/src/Functions/custom-settings-api.php:955
 msgid "Activate"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:518
+#: src/core/src/Functions/functions.php:552
 msgid "IP Address"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:519
+#: src/core/src/Functions/functions.php:553
 msgid "Optin Campaign Name"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:520
+#: src/core/src/Functions/functions.php:554
 msgid "Referrer URL"
 msgstr ""
 
@@ -11003,23 +10968,23 @@ msgstr ""
 msgid "Not Activated"
 msgstr ""
 
-#: src/core/src/RegisterScripts.php:200
+#: src/core/src/RegisterScripts.php:203
 msgid "Type to search"
 msgstr ""
 
-#: src/core/src/RegisterScripts.php:201
+#: src/core/src/RegisterScripts.php:204
 msgid "Are you sure you?"
 msgstr ""
 
-#: src/core/src/RegisterScripts.php:202
+#: src/core/src/RegisterScripts.php:205
 msgid "Are you sure you want to do this? Clicking OK will delete all your optin analytics records."
 msgstr ""
 
-#: src/core/src/RegisterScripts.php:205
+#: src/core/src/RegisterScripts.php:208
 msgid "Title is required."
 msgstr ""
 
-#: src/core/src/RegisterScripts.php:227
+#: src/core/src/RegisterScripts.php:230
 msgid "Disable MailOptin new post notification for this post."
 msgstr ""
 

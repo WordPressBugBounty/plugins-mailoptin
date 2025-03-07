@@ -26,7 +26,7 @@ class ConnectSettingsPage extends AbstractCtctv3Connect
         if (self::is_connected()) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
         } else {
-            $status = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status = '';
         }
 
         $disconnect_integration = sprintf(
@@ -53,6 +53,7 @@ class ConnectSettingsPage extends AbstractCtctv3Connect
             'section_title_without_status' => __('Constant Contact', 'mailoptin'),
             'section_title'                => __('Constant Contact Connection', 'mailoptin') . " $status",
             'type'                         => self::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/constantcontact-integration.png',
             'ctctv3_auth'                  => array(
                 'type' => 'arbitrary',
                 'data' => '<p class="description" style="text-align:center">' . esc_html__('The major improvement in this new Constant Contact integration is the support for custom fields.', 'mailoptin') . '</p>'

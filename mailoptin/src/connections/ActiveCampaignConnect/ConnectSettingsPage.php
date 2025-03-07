@@ -15,21 +15,17 @@ class ConnectSettingsPage
     public function connection_settings($arg)
     {
 
-        $connected = AbstractActiveCampaignConnect::is_connected(true);
+        $connected = AbstractActiveCampaignConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settingsArg[] = array(
             'section_title_without_status' => __('ActiveCampaign', 'mailoptin'),
             'section_title'                => __('ActiveCampaign Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/activecampaign-integration.png',
             'activecampaign_api_url'       => array(
                 'type'        => 'text',
                 'label'       => __('Enter API URL', 'mailoptin'),

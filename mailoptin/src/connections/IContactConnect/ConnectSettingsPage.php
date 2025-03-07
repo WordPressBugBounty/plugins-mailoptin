@@ -16,15 +16,10 @@ class ConnectSettingsPage extends AbstractIContactConnect
 
     public function connection_settings($arg)
     {
-        $connected = AbstractIContactConnect::is_connected(true);
+        $connected = AbstractIContactConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settings = [
@@ -32,6 +27,7 @@ class ConnectSettingsPage extends AbstractIContactConnect
                 'section_title_without_status' => __('iContact', 'mailoptin'),
                 'section_title'                => __('iContact Connection', 'mailoptin') . " $status",
                 'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+                'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/icontact-integration.png',
                 'icontact_app_id'              => [
                     'type'        => 'text',
                     'label'       => __('Application ID', 'mailoptin'),

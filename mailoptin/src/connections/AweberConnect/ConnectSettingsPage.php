@@ -42,17 +42,18 @@ class ConnectSettingsPage extends AbstractAweberConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your AWeber account.', 'mailoptin'), 'MailOptin');
         }
 
-        $settingsArg[] = array(
+        $settingsArg[] = [
             'section_title_without_status' => __('AWeber', 'mailoptin'),
             'section_title'                => __('AWeber Connection', 'mailoptin') . " $status",
             'type'                         => self::EMAIL_MARKETING_TYPE,
-            'aweber_auth'                  => array(
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/aweber-integration.svg',
+            'aweber_auth'                  => [
                 'type'        => 'arbitrary',
                 'data'        => sprintf(
                     '<div class="moBtncontainer"><a href="%s" class="mobutton mobtnPush %s">%s</a></div>%s',
@@ -62,9 +63,9 @@ class ConnectSettingsPage extends AbstractAweberConnect
                     $disconnect_integration
                 ),
                 'description' => '<p class="description" style="text-align:center">' . $description . '</p>',
-            ),
+            ],
             'disable_submit_button'        => true,
-        );
+        ];
 
         return array_merge($arg, $settingsArg);
     }

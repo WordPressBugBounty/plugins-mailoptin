@@ -20,6 +20,7 @@ class ConnectSettingsPage
             $settingsArg[] = [
                 'section_title'         => __('Facebook Custom Audience', 'mailoptin'),
                 'type'                  => AbstractConnect::SOCIAL_TYPE,
+                'logo_url'              => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/facebook-integration.png',
                 'fbca_app_id'           => [
                     'type' => 'arbitrary',
                     'data' => sprintf(
@@ -35,15 +36,10 @@ class ConnectSettingsPage
             return array_merge($arg, $settingsArg);
         }
 
-        $connected = AbstractFacebookCustomAudienceConnect::is_connected(true);
+        $connected = AbstractFacebookCustomAudienceConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-
-            if (is_string($connected)) $msg = esc_html(" &mdash; $connected");
-
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $learn_more_link = 'https://mailoptin.io/article/connect-mailoptin-facebook-custom-audience/';
@@ -52,6 +48,7 @@ class ConnectSettingsPage
             'section_title_without_status' => __('Facebook Custom Audience', 'mailoptin'),
             'section_title'                => __('Facebook Custom Audience', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::SOCIAL_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/facebook-integration.png',
             'fbca_app_id'                  => [
                 'type'        => 'text',
                 'label'       => __('Facebook App ID', 'mailoptin'),

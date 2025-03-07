@@ -44,7 +44,7 @@ class ConnectSettingsPage extends AbstractHighLevelConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your HighLevel account.', 'mailoptin'), 'MailOptin');
@@ -55,6 +55,7 @@ class ConnectSettingsPage extends AbstractHighLevelConnect
                 'section_title_without_status' => __('HighLevel', 'mailoptin'),
                 'section_title'                => __('HighLevel Connection', 'mailoptin') . " $status",
                 'type'                         => self::CRM_TYPE,
+                'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/highlevel-integration.png',
                 'highlevel_auth'               => [
                     'type'        => 'arbitrary',
                     'data'        => sprintf(

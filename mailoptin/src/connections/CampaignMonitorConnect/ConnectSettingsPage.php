@@ -42,7 +42,7 @@ class ConnectSettingsPage extends AbstractCampaignMonitorConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your Campaign Monitor account.', 'mailoptin'), 'MailOptin');
@@ -73,6 +73,7 @@ class ConnectSettingsPage extends AbstractCampaignMonitorConnect
             'section_title_without_status' => __('Campaign Monitor', 'mailoptin'),
             'section_title'                => __('CampaignMonitor Connection', 'mailoptin') . " $status",
             'type'                         => self::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/campaignmonitor-integration.svg',
             'campaignmonitor_auth'         => array(
                 'type'        => 'arbitrary',
                 'data'        => sprintf(
@@ -148,9 +149,9 @@ class ConnectSettingsPage extends AbstractCampaignMonitorConnect
 
             check_admin_referer('mo_save_oauth_credentials', 'moconnect_nonce');
 
-            $old_data = get_option($option_name, []);
+            $old_data   = get_option($option_name, []);
             $expires_at = $this->oauth_expires_at_transform($_GET['expires_at']);
-            $new_data = array_map('rawurldecode', [
+            $new_data   = array_map('rawurldecode', [
                 'campaignmonitor_access_token'  => $_GET['access_token'],
                 'campaignmonitor_refresh_token' => $_GET['refresh_token'],
                 'campaignmonitor_expires_at'    => $expires_at

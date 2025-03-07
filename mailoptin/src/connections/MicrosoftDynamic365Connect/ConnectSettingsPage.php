@@ -30,6 +30,7 @@ class ConnectSettingsPage extends AbstractMicrosoftDynamic365Connect
             $settingsArg[] = [
                 'section_title'                   => __('Microsoft Dynamics 365', 'mailoptin'),
                 'type'                            => self::CRM_TYPE,
+                'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/dynamics365-integration.svg',
                 'microsoftdynamic365_instruction' => [
                     'type' => 'arbitrary',
                     'data' => sprintf(
@@ -48,7 +49,7 @@ class ConnectSettingsPage extends AbstractMicrosoftDynamic365Connect
         if (self::is_connected()) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
         } else {
-            $status = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status = '';
         }
 
         $disconnect_integration = sprintf(
@@ -75,6 +76,7 @@ class ConnectSettingsPage extends AbstractMicrosoftDynamic365Connect
             'section_title_without_status'        => __('Microsoft Dynamics 365', 'mailoptin'),
             'section_title'                       => __('Microsoft Dynamics 365 Connection', 'mailoptin') . " $status",
             'type'                                => self::CRM_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/dynamics365-integration.svg',
             'microsoftdynamic365_instruction'     => array(
                 'type' => 'arbitrary',
                 'data' => $html

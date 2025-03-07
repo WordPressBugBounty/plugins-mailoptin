@@ -14,21 +14,17 @@ class ConnectSettingsPage
 
     public function connection_settings($arg)
     {
-        $connected = AbstractSendinblueConnect::is_connected(true);
+        $connected = AbstractSendinblueConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settingsArg = array(
             'section_title_without_status'     => __('Brevo (Sendinblue)', 'mailoptin'),
             'section_title'                    => __('Brevo (Sendinblue) Connection', 'mailoptin') . " $status",
             'type'                             => AbstractConnect::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/brevo-integration.svg',
             'sendinblue_api_key'               => array(
                 'type'          => 'text',
                 'obfuscate_val' => true,

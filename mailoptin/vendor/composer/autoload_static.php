@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
+class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -832,7 +832,6 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
         'League\\Csv\\Info' => __DIR__ . '/..' . '/league/csv/src/Info.php',
         'League\\Csv\\InvalidArgument' => __DIR__ . '/..' . '/league/csv/src/InvalidArgument.php',
         'League\\Csv\\MapIterator' => __DIR__ . '/..' . '/league/csv/src/MapIterator.php',
-        'League\\Csv\\Polyfill\\EmptyEscapeParser' => __DIR__ . '/..' . '/league/csv/src/Polyfill/EmptyEscapeParser.php',
         'League\\Csv\\RFC4180Field' => __DIR__ . '/..' . '/league/csv/src/RFC4180Field.php',
         'League\\Csv\\Reader' => __DIR__ . '/..' . '/league/csv/src/Reader.php',
         'League\\Csv\\ResultSet' => __DIR__ . '/..' . '/league/csv/src/ResultSet.php',
@@ -1613,9 +1612,9 @@ class ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit56034eb05ddc9e8c71d81dac6c69ed68::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d::$classMap;
 
         }, null, ClassLoader::class);
     }

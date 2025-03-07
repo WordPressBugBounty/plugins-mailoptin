@@ -25,6 +25,7 @@ class GoogleAnalytics extends AbstractSettingsPage
             $settingsArg[] = apply_filters('mailoptin_google_analytics_settings_page', [
                 'section_title'         => __('Google Analytics', 'mailoptin'),
                 'type'                  => AbstractConnect::ANALYTICS_TYPE,
+                'logo_url'              => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/google-analytics.png',
                 'activate_ga'           => [
                     'type' => 'arbitrary',
                     'data' => sprintf(

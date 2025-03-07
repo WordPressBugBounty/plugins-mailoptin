@@ -1677,3 +1677,76 @@ form.mo-inline {
     font-weight: bold;
     color: #00a32a;
 }
+
+.mailoptin-admin .mailoptin-settings-wrap-grid.mailoptin_connections {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.mailoptin-admin .mailoptin-settings-wrap-grid.mailoptin_connections .mailoptin-integration-tile-wrapper {
+    flex: 0 1 20%;
+    max-width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4px;
+}
+
+.mailoptin-admin .mailoptin-settings-wrap-grid.mailoptin_connections .mailoptin-integration-tile-wrapper > div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px 16px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+}
+
+.mailoptin-admin .mailoptin-settings-wrap-grid.mailoptin_connections .mailoptin-integration-upper {
+    min-height: 150px;
+}
+
+.mailoptin-admin .mailoptin-settings-wrap-grid.mailoptin_connections .mailoptin-integration-tile-wrapper .button {
+    width: 100%;
+}
+
+.mailoptin-admin .mailoptin-integration-modal {
+    max-width: 800px;
+}
+
+.mailoptin-admin .mailoptin-integration-modal .postbox {
+    border: 0;
+    box-shadow:none;
+}
+
+.mailoptin-admin .mailoptin-integration-modal {
+    padding: 20px;
+}
+
+.mailoptin-admin .mailoptin-integration-title span {
+    display: block;
+    margin-top: 8px;
+    color: #FF0000;
+}
+
+.mailoptin-admin .mailoptin-integration-logo {
+    text-align: center;
+    margin-bottom: 8px;
+    height: 55px;
+}
+
+.mailoptin-admin .mailoptin-integration-logo img {
+    max-width: 100px;
+    max-height: 55px;
+    display: inline-block;
+}
+
+.mailoptin-admin .mailoptin-integration-modal {
+    display: none;
+}
+
+.mailoptin-admin .mailoptin-integration-modal .postbox {
+    padding: 15px;
+}

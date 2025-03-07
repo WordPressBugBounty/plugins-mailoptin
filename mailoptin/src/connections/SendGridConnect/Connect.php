@@ -102,7 +102,7 @@ class Connect extends AbstractSendGridConnect implements ConnectionInterface
 
             $custom_fields_array = [];
 
-            if (isset($response['body']['reserved_fields']) && ! empty($response['body']['reserved_fields'])) {
+            if ( ! empty($response['body']['reserved_fields'])) {
 
                 foreach ($response['body']['reserved_fields'] as $customField) {
 
@@ -114,7 +114,7 @@ class Connect extends AbstractSendGridConnect implements ConnectionInterface
                 }
             }
 
-            if (isset($response['body']['custom_fields']) && ! empty($response['body']['custom_fields'])) {
+            if ( ! empty($response['body']['custom_fields'])) {
                 foreach ($response['body']['custom_fields'] as $customField) {
                     // sgcf_ to identify custom fields from reserved fields
                     // https://github.com/sendgrid/sendgrid-nodejs/issues/953

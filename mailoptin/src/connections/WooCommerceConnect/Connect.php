@@ -35,7 +35,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
             add_action('init', [$this, 'unsubscribe_handler']);
             add_action('init', [$this, 'view_online_version']);
-        });
+        }, 1);
     }
 
     public function declare_hpos_compat()
@@ -297,7 +297,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
     public function unsubscribe_handler()
     {
-        if ( ! isset($_GET['mo_woo_unsubscribe']) || empty($_GET['mo_woo_unsubscribe'])) return;
+        if (empty($_GET['mo_woo_unsubscribe'])) return;
 
         $email = sanitize_text_field($_GET['mo_woo_unsubscribe']);
 

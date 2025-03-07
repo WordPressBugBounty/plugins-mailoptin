@@ -29,9 +29,9 @@ class AbstractActiveCampaignConnect extends AbstractConnect
      */
     public static function is_connected($return_error = false)
     {
-        $db_options = $db_options = isset($_POST['mailoptin_connections']) ? $_POST['mailoptin_connections'] : get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
-        $api_url    = isset($db_options['activecampaign_api_url']) ? $db_options['activecampaign_api_url'] : '';
-        $api_key    = isset($db_options['activecampaign_api_key']) ? $db_options['activecampaign_api_key'] : '';
+        $db_options = $_POST['mailoptin_connections'] ?? get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
+        $api_url    = $db_options['activecampaign_api_url'] ?? '';
+        $api_key    = $db_options['activecampaign_api_key'] ?? '';
 
         if (empty($api_key)) {
             delete_transient('_mo_activecampaign_is_connected');

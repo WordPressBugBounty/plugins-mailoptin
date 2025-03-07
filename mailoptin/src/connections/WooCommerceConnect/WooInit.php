@@ -3,12 +3,14 @@
 namespace MailOptin\WooCommerceConnect;
 
 
+use Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFields;
+use Automattic\WooCommerce\Blocks\Package;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 
-define('MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
+define('MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
 class WooInit
 {
@@ -456,7 +458,9 @@ class WooInit
 
         $fields['mowoo_product_names']        = esc_html__('Last Order Product Names', 'mailoptin');
         $fields['mowoo_order_total']          = esc_html__('Last Order Total', 'mailoptin');
-        $fields['mowoo_order_date']           = esc_html__('Last Order Date', 'mailoptin');
+        $fields['mowoo_order_created_date']   = esc_html__('Last Order Created Date', 'mailoptin');
+        $fields['mowoo_order_completed_date'] = esc_html__('Last Order Completed Date', 'mailoptin');
+        $fields['mowoo_order_date']           = esc_html__('Last Order Paid Date', 'mailoptin');
         $fields['mowoo_order_payment_method'] = esc_html__('Last Order Payment Method', 'mailoptin');
 
         return apply_filters('mailoptin_woocommerce_mapping_checkout_fields', $fields, $this);
@@ -636,7 +640,7 @@ class WooInit
     /**
      * @param \WC_Order $order
      *
-     * @return array
+     * @return string
      */
     private function get_product_names_from_order($order)
     {
@@ -656,15 +660,12 @@ class WooInit
     }
 
     /**
-     * @param \WC_Order $order
-     *
+     * @param \WC_DateTime $date
      *
      * @return string
      */
-    private function get_order_paid_date($order)
+    private function stringify_wc_datetime($date)
     {
-        $date = $order->get_date_paid();
-
         if (is_object($date)) {
             return $date->date('Y-m-d');
         }
@@ -688,7 +689,9 @@ class WooInit
             'account_password'           => '',
             'mowoo_product_names'        => $this->get_product_names_from_order($order),
             'mowoo_order_total'          => $order->get_total(),
-            'mowoo_order_date'           => $this->get_order_paid_date($order),
+            'mowoo_order_created_date'   => $this->stringify_wc_datetime($order->get_date_created()),
+            'mowoo_order_completed_date' => $this->stringify_wc_datetime($order->get_date_completed()),
+            'mowoo_order_date'           => $this->stringify_wc_datetime($order->get_date_paid()),
             'mowoo_order_payment_method' => $order->get_payment_method_title()
         ], $field_id, $order);
 
@@ -723,8 +726,16 @@ class WooInit
             if (self::is_use_post_meta_storage()) {
                 $subscribe_customer = get_post_meta($order_id, 'mailoptin_woocommerce_optin_checkbox', true);
             } else {
-                $subscribe_customer = $order->get_meta('mailoptin_woocommerce_optin_checkbox', true);
+                $subscribe_customer = $order->get_meta('mailoptin_woocommerce_optin_checkbox');
             }
+
+            $block_subscribe_customer = Package::container()->get(CheckoutFields::class)->get_field_from_object(
+                'mailoptin/woocommerce_optin_checkbox',
+                $order,
+                "other"
+            );
+
+            if (empty($subscribe_customer) && $block_subscribe_customer === false) return;
 
             //don't add customer if the customer did not tick the checkbox
             if ('no' === $subscribe_customer) return;

@@ -14,17 +14,17 @@ class ConnectSettingsPage
 
     public function connection_settings($arg)
     {
-        $connected = AbstractOntraportConnect::is_connected(true);
+        $connected = AbstractOntraportConnect::is_connected();
+        $status    = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $status = sprintf("<span style='color:#FF0000'>(%s) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settingsArg[] = array(
             'section_title_without_status' => __('Ontraport', 'mailoptin'),
             'section_title'                => __('Ontraport Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::CRM_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/ontraport-integration.png',
             'ontraport_api_key'            => array(
                 'type'          => 'text',
                 'obfuscate_val' => true,

@@ -36,6 +36,7 @@ class ConnectSettingsPage extends AbstractGoogleSheetConnect
             $settingsArg[] = [
                 'section_title'         => __('Google Sheets', 'mailoptin'),
                 'type'                  => AbstractConnect::OTHER_TYPE,
+                'logo_url'              => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/google-sheets.png',
                 'gsheet_instruction'    => [
                     'type' => 'arbitrary',
                     'data' => sprintf(
@@ -54,7 +55,7 @@ class ConnectSettingsPage extends AbstractGoogleSheetConnect
         if (self::is_connected()) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
         } else {
-            $status = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status = '';
         }
 
         $disconnect_integration = sprintf(
@@ -79,6 +80,7 @@ class ConnectSettingsPage extends AbstractGoogleSheetConnect
             'section_title_without_status' => __('Google Sheets', 'mailoptin'),
             'section_title'                => __('Google Sheets Connection', 'mailoptin') . " $status",
             'type'                         => self::OTHER_TYPE,
+            'logo_url'              => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/google-sheets.png',
             'gsheet_info'                  => [
                 'type' => 'arbitrary',
                 'data' => ''

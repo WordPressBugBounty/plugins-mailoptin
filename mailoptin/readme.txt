@@ -3,9 +3,9 @@ Contributors: properfraction, collizo4sky
 Donate link: https://mailoptin.io/pricing/
 Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 5.8
-Requires PHP: 7.3
+Requires PHP: 7.4
 Tested up to: 6.7
-Stable tag: 1.2.73.0
+Stable tag: 1.2.73.1
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -55,7 +55,7 @@ Our popup optin forms are GDPR compliant.
 
 = Integrates with All Email Marketing Platforms =
 
-MailOptin popup maker works with all popular email marketing software and CRM, including Mailchimp, AWeber, Constant Contact, Campaign Monitor, Salesforce, Sendy, Mailerlite, MailPoet, Kit (ConvertKit), ActiveCampaign, Infusionsoft by Keap, Drip, Brevo (Sendinblue), EmailOctopus, HubSpot, Ontraport CRM, Microsoft Dynamics 365, Mailjet, Klaviyo, Sendlane, Mailster, Moosend, Gist, VerticalResponse, Zoho CRM, Zoho Campaigns, Emma, SendFox, SendGrid Email Marketing, GoDaddy Email Marketing, CleverReach, Omnisend, GetResponse, iContact, E-goi, Mailgun, Flodesk, Beehiiv, Elastic Email, HighLevel, weMail, FluentCRM, Benchmark Email, and NewsMAN.
+MailOptin popup maker works with all popular email marketing software and CRM, including Mailchimp, AWeber, Constant Contact, Campaign Monitor, Salesforce, Sendy, Mailerlite, MailPoet, Kit (ConvertKit), ActiveCampaign, Infusionsoft by Keap, Drip, Brevo (Sendinblue), EmailOctopus, HubSpot, Ontraport CRM, Microsoft Dynamics 365, Mailjet, Klaviyo, Sendlane, Mailster, Moosend, Gist, VerticalResponse, Zoho CRM, Zoho Campaigns, Emma, SendFox, SendGrid Email Marketing, GoDaddy Email Marketing, CleverReach, Omnisend, [Google Sheets](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), GetResponse, iContact, E-goi, Mailgun, Flodesk, Beehiiv, Elastic Email, Encharge, HighLevel, weMail, FluentCRM, Benchmark Email, and NewsMAN.
 
 = User Registration Forms =
 
@@ -183,6 +183,13 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 10. Elementor form integration with MailOptin
 
 == Changelog ==
+
+= 1.2.73.1 =
+* Added WooCommerce block checkout support for optin checkbox.
+* Added more Woo order data for optin field mapping.
+* Redesigned integrations page.
+* Added mo_email_campaign_ensure_valid_html filter to fix invalid email HTML.
+* Fixed bug where user deletion did not work in wp-admin.
 
 = 1.2.73.0 =
 * Pro: [Google Sheets integration](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?ref=changelog).

@@ -42,7 +42,7 @@ class ConnectSettingsPage extends AbstractCtctConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your Constant Contact account.', 'mailoptin'), 'MailOptin');
@@ -52,6 +52,7 @@ class ConnectSettingsPage extends AbstractCtctConnect
             'section_title_without_status' => __('Constant Contact (Legacy)', 'mailoptin'),
             'section_title'                => __('Constant Contact (Legacy)', 'mailoptin') . " $status",
             'type'                         => self::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/constantcontact-integration.png',
             'ctct_auth'                    => array(
                 'type'        => 'arbitrary',
                 'data'        => sprintf(

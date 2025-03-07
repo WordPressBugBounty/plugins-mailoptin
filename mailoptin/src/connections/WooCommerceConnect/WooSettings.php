@@ -26,11 +26,33 @@ class WooSettings
         }
 
         add_action($woocommerce_opt_in_display_location, [$this, 'add_checkout_fields']);
+        add_action('woocommerce_init', [$this, 'add_block_checkout_fields']);
 
         add_action('woocommerce_checkout_update_order_meta', [$this, 'save_checkout_fields']);
         add_action('woocommerce_before_pay_action', function ($order) {
             $this->save_checkout_fields($order->get_id());
         });
+    }
+
+    // https://developer.woocommerce.com/docs/cart-and-checkout-additional-checkout-fields/
+    public function add_block_checkout_fields()
+    {
+        $display_opt_in = Settings::instance()->mailoptin_woocommerce_subscribe_customers();
+
+        if ('yes' === $display_opt_in) {
+
+            // setting the checkbox field as checked as default state not currently supported
+            // not even via the "attributes" param.
+            $checkbox_label = Settings::instance()->mailoptin_woocommerce_field_label();
+
+            woocommerce_register_additional_checkout_field([
+                'id'       => 'mailoptin/woocommerce_optin_checkbox',
+                'label'    => $checkbox_label,
+                'location' => 'order',
+                'required' => false,
+                'type'     => 'checkbox'
+            ]);
+        }
     }
 
     public function add_checkout_fields()

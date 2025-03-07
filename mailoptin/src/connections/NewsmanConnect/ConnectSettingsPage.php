@@ -42,7 +42,7 @@ class ConnectSettingsPage extends AbstractNewsmanConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your Newsman account.', 'mailoptin'), 'MailOptin');
@@ -52,6 +52,7 @@ class ConnectSettingsPage extends AbstractNewsmanConnect
             'section_title_without_status' => __('Newsman', 'mailoptin'),
             'section_title'                => __('Newsman Connection', 'mailoptin') . " $status",
             'type'                         => self::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/newsman-integration.jpeg',
             'newsman_auth'                 => array(
                 'type'        => 'arbitrary',
                 'data'        => sprintf(

@@ -1,5 +1,12 @@
 ﻿== Changelog ==
 
+= 1.2.73.1 =
+* Added WooCommerce block checkout support for optin checkbox.
+* Added more Woo order data for optin field mapping.
+* Redesigned integrations page.
+* Added mo_email_campaign_ensure_valid_html filter to fix invalid email HTML.
+* Fixed bug where user deletion did not work in wp-admin.
+
 = 1.2.73.0 =
 * Pro: [Google Sheets integration](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?ref=changelog).
 * Added [Encharge integration](https://mailoptin.io/article/connect-wordpress-encharge/?ref=changelog).

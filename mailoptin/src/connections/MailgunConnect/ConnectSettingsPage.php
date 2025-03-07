@@ -16,15 +16,10 @@ class ConnectSettingsPage extends AbstractMailgunConnect
 
     public function connection_settings($arg)
     {
-        $connected = AbstractMailgunConnect::is_connected(true);
+        $connected = AbstractMailgunConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settings = [
@@ -32,6 +27,7 @@ class ConnectSettingsPage extends AbstractMailgunConnect
                 'section_title_without_status' => __('Mailgun', 'mailoptin'),
                 'section_title'                => __('Mailgun Connection', 'mailoptin') . " $status",
                 'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+                'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/mailgun-integration.png',
                 'mailgun_api_key'              => [
                     'type'          => 'text',
                     'obfuscate_val' => true,

@@ -4,6 +4,8 @@ namespace MailOptin\Connections;
 
 use MailOptin\Core\Connections\ConnectionFactory;
 
+define('MAILOPTIN_CONNECTION_ASSETS_URL', plugins_url('assets/', __FILE__));
+
 class Init
 {
     public static function select2_tag_connections()

@@ -5,6 +5,7 @@ namespace MailOptin\ConvertKitConnect;
 use MailOptin\Core\Admin\Customizer\CustomControls\WP_Customize_Chosen_Select_Control;
 use MailOptin\Core\Admin\Customizer\CustomControls\WP_Customize_Toggle_Control;
 use MailOptin\Core\Connections\ConnectionInterface;
+
 use function MailOptin\Core\moVar;
 
 class Connect extends AbstractConvertKitConnect implements ConnectionInterface
@@ -63,7 +64,7 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
 
             $sequence_array = [];
 
-            if (empty($result) || false === $result) {
+            if (empty($result)) {
 
                 $response = parent::convertkit_instance()->get_sequences();
 
@@ -72,10 +73,13 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
 
                 }
 
-                $sequences = $response['body']->courses;
+                if (isset($response['body']->courses)) {
 
-                foreach ($sequences as $sequence) {
-                    $sequence_array[$sequence->id] = $sequence->name;
+                    $sequences = $response['body']->courses;
+
+                    foreach ($sequences as $sequence) {
+                        $sequence_array[$sequence->id] = $sequence->name;
+                    }
                 }
             }
 
@@ -113,15 +117,18 @@ class Connect extends AbstractConvertKitConnect implements ConnectionInterface
                     return $default;
                 }
 
-                $tags = $response['body']->tags;
+                if (isset($response['body']->tags)) {
 
-                $tag_array = [];
+                    $tags = $response['body']->tags;
 
-                foreach ($tags as $tag) {
-                    $tag_array[$tag->id] = $tag->name;
+                    $tag_array = [];
+
+                    foreach ($tags as $tag) {
+                        $tag_array[$tag->id] = $tag->name;
+                    }
+
+                    set_transient($cache_key, $tag_array, 10 * MINUTE_IN_SECONDS);
                 }
-
-                set_transient($cache_key, $tag_array, 10 * MINUTE_IN_SECONDS);
             }
 
             return $tag_array;

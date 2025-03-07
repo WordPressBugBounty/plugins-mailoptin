@@ -267,9 +267,18 @@ class Connect extends AbstractGoogleSheetConnect implements ConnectionInterface
 
     public function get_sheet_header_columns($sheet_file, $sheet_name)
     {
-        if (empty($sheet_file) || empty($sheet_name)) return [];
+        if (empty($sheet_file)) return [];
 
         try {
+
+            if (empty($sheet_name)) {
+                $sheets = $this->get_spreadsheet_sheets($sheet_file);
+                if (is_array($sheets) && ! empty($sheets)) {
+                    $sheet_name = array_shift($sheets);
+                }
+            }
+
+            if (empty($sheet_name)) return [];
 
             $cache_key = sprintf('%s_%s', $sheet_file, $sheet_name);
 

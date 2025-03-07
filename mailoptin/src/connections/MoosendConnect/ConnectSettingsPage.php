@@ -64,21 +64,17 @@ class ConnectSettingsPage
 
     public function connection_settings($arg)
     {
-        $connected = AbstractMoosendConnect::is_connected(true);
+        $connected = AbstractMoosendConnect::is_connected();
+        $status = '';
         if (true === $connected) {
             $status = sprintf('<span style="color:#008000">(%s)</span>', __('Connected', 'mailoptin'));
-        } else {
-            $msg = '';
-            if (is_string($connected)) {
-                $msg = esc_html(" &mdash; $connected");
-            }
-            $status = sprintf("<span style='color:#FF0000'>(%s$msg) </span>", __('Not Connected', 'mailoptin'));
         }
 
         $settingsArg[] = [
             'section_title_without_status' => __('Moosend', 'mailoptin'),
             'section_title'                => __('Moosend Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/moosend-integration.png',
             'moosend_api_key'              => [
                 'type'          => 'text',
                 'obfuscate_val' => true,

@@ -42,7 +42,7 @@ class ConnectSettingsPage extends AbstractInfusionsoftConnect
                 __('Disconnect Integration', 'mailoptin')
             );
         } else {
-            $status       = sprintf('<span style="color:#FF0000">(%s)</span>', __('Not Connected', 'mailoptin'));
+            $status       = '';
             $button_text  = __('AUTHORIZE', 'mailoptin');
             $button_color = 'mobtnPurple';
             $description  = sprintf(__('Authorization is required to grant <strong>%s</strong> access to interact with your Infusionsoft (Keap) account.', 'mailoptin'), 'MailOptin');
@@ -52,6 +52,7 @@ class ConnectSettingsPage extends AbstractInfusionsoftConnect
             'section_title_without_status' => __('Infusionsoft (Keap)', 'mailoptin'),
             'section_title'                => __('Infusionsoft (Keap) Connection', 'mailoptin') . " $status",
             'type'                         => self::CRM_TYPE,
+            'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/keap-integration.png',
             'infusionsoft_auth'            => array(
                 'type'        => 'arbitrary',
                 'data'        => sprintf(
