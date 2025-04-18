@@ -166,6 +166,7 @@ class Connect extends AbstractActiveCampaignConnect implements ConnectionInterfa
     public function get_email_list()
     {
         try {
+
             $response = $this->activecampaign_instance()->api('list/list?ids=all');
 
             if (is_object($response)) {
@@ -236,9 +237,10 @@ class Connect extends AbstractActiveCampaignConnect implements ConnectionInterfa
     public function get_forms()
     {
         try {
+
             $forms_array = get_transient('mo_activecampaign_forms');
 
-            if (empty($forms_array) || false === $forms_array) {
+            if (empty($forms_array)) {
 
                 $forms = parent::activecampaign_instance()->api('form/getforms');
 
@@ -261,6 +263,7 @@ class Connect extends AbstractActiveCampaignConnect implements ConnectionInterfa
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getMessage(), 'activecampaign');
+            return [];
         }
     }
 

@@ -83,7 +83,7 @@ class Subscription extends AbstractBeehiivConnect
 
             $response = $this->beehiiv_instance()->make_request("publications/{publicationId}/subscriptions", $lead_data, 'post');
 
-            if (isset($response['body']->data->id)) {
+            if (isset($response['body']->data->id, $response['body']->data->status) && $response['body']->data->status != 'invalid') {
 
                 if ( ! empty($tags)) {
 

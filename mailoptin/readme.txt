@@ -4,8 +4,8 @@ Donate link: https://mailoptin.io/pricing/
 Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 5.8
 Requires PHP: 7.4
-Tested up to: 6.7
-Stable tag: 1.2.73.1
+Tested up to: 6.8
+Stable tag: 1.2.73.2
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -184,6 +184,15 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.73.2 =
+* Display active integrations first.
+* Added option to prevent ESC key from closing a popup.
+* Added setting to disable opt-in error emails.
+* Added link to send draft broadcasts from the listing page.
+* Added caching to Highlevel api calls.
+* Excluded all api keys not found errors from logging.
+* Fixed bug where invalid beehiiv subscription could be considered valid.
+
 = 1.2.73.1 =
 * Added WooCommerce block checkout support for optin checkbox.
 * Added more Woo order data for optin field mapping.
@@ -198,16 +207,5 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 * Fixed fatal error in Forminator integration.
 * Fixed bug with email digest formatting in email campaign.
 * Fixed bug with Leads exporting not working.
-
-= 1.2.72.2 =
-* Added filter to email campaign email subject.
-* Added safemode customizer feature.
-* Removed Godaddy email marketing integration.
-* Fixed PHP warnings and notices.
-
-= 1.2.72.1 =
-* Added tagging support to Zoho Campaigns
-* Updated Campaign Monitor API to 3.3.
-* Fixed bug with incorrect insertion of ob_start().
 
 See the [changelog file](https://plugins.svn.wordpress.org/mailoptin/trunk/changelog.txt) for complete change log information.

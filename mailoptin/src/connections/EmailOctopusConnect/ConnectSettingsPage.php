@@ -31,9 +31,9 @@ class ConnectSettingsPage
                 'obfuscate_val' => true,
                 'label'         => __('Enter API Key', 'mailoptin'),
                 'description'   => sprintf(
-                    __('Log in to your %1$sEmailOctopus account%3$s and visit the %2$sAPI%3$s page to get your API Key.', 'mailoptin'),
+                    __('Log in to your %1$sEmailOctopus account%3$s and visit the %2$sAPI Keys%3$s page to get your API Key.', 'mailoptin'),
                     '<a target="_blank" href="https://emailoctopus.com/account/sign-in">',
-                    '<a target="_blank" href="https://emailoctopus.com/api-documentation/">',
+                    '<a target="_blank" href="https://emailoctopus.com/developer/api-keys">',
                     '</a>'
                 ),
             )

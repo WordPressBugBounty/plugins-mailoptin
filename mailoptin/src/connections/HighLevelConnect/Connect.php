@@ -60,28 +60,36 @@ class Connect extends AbstractHighLevelConnect implements ConnectionInterface
 
     public function get_workflows()
     {
-        try {
+        $cache_key = 'mailoptin_ghl_workflows';
 
-            $response = $this->make_request('workflows/?locationId={locationId}');
+        $workflows = get_transient($cache_key);
 
-            $options = [];
+        if (false === $workflows) {
 
-            if (isset($response->workflows)) {
+            try {
 
-                $options = array_reduce($response->workflows, function ($carry, $item) {
-                    $carry[$item->id] = $item->name;
+                $response = $this->make_request('workflows/?locationId={locationId}');
 
-                    return $carry;
-                }, []);
+                $workflows = [];
+
+                if (isset($response->workflows)) {
+
+                    $workflows = array_reduce($response->workflows, function ($carry, $item) {
+                        $carry[$item->id] = $item->name;
+
+                        return $carry;
+                    }, []);
+                }
+
+                set_transient($cache_key, $workflows, DAY_IN_SECONDS);
+
+            } catch (\Exception $e) {
+                self::save_optin_error_log($e->getMessage(), 'highlevel');
+                return [];
             }
-
-            return $options;
-
-        } catch (\Exception $e) {
-            self::save_optin_error_log($e->getMessage(), 'highlevel');
-
-            return [];
         }
+
+        return $workflows;
     }
 
     /**
@@ -158,33 +166,42 @@ class Connect extends AbstractHighLevelConnect implements ConnectionInterface
      */
     public function get_optin_fields($list_id = '')
     {
-        $fields = [
-            'gender'      => 'Gender',
-            'phone'       => 'Phone',
-            'address1'    => 'Street Address',
-            'city'        => 'City',
-            'state'       => 'State',
-            'country'     => 'Country',
-            'postalCode'  => 'Postal Code',
-            'website'     => 'Website',
-            'dateOfBirth' => 'Date of Birth',
-            'companyName' => 'Company Name',
-            'timezone'    => 'Time Zone',
-            'source'      => 'Source',
-        ];
+        $cache_key = 'mailoptin_ghl_optin_fields';
 
-        try {
+        $fields = get_transient($cache_key);
 
-            $custom_fields = $this->make_request('locations/{locationId}/customFields');
+        if (false === $fields) {
 
-            if (isset($custom_fields->customFields)) {
-                foreach ($custom_fields->customFields as $custom_field) {
-                    $fields['ghl_custom_' . $custom_field->id] = $custom_field->name;
+            $fields = [
+                'gender'      => 'Gender',
+                'phone'       => 'Phone',
+                'address1'    => 'Street Address',
+                'city'        => 'City',
+                'state'       => 'State',
+                'country'     => 'Country',
+                'postalCode'  => 'Postal Code',
+                'website'     => 'Website',
+                'dateOfBirth' => 'Date of Birth',
+                'companyName' => 'Company Name',
+                'timezone'    => 'Time Zone',
+                'source'      => 'Source',
+            ];
+
+            try {
+
+                $custom_fields = $this->make_request('locations/{locationId}/customFields');
+
+                if (isset($custom_fields->customFields)) {
+                    foreach ($custom_fields->customFields as $custom_field) {
+                        $fields['ghl_custom_' . $custom_field->id] = $custom_field->name;
+                    }
                 }
+
+            } catch (\Exception $e) {
+                self::save_optin_error_log($e->getMessage(), 'highlevel');
             }
 
-        } catch (\Exception $e) {
-            self::save_optin_error_log($e->getMessage(), 'highlevel');
+            set_transient($cache_key, $fields, HOUR_IN_SECONDS);
         }
 
         return $fields;

@@ -131,10 +131,13 @@ class Subscription extends AbstractHighLevelConnect
     {
         try {
 
-            $this->make_request(
-                "contacts/{$contact_id}/workflow/{$workflow_id}",
-                'POST'
-            );
+            if ( ! empty($workflow_id)) {
+
+                $this->make_request(
+                    "contacts/{$contact_id}/workflow/{$workflow_id}",
+                    'POST'
+                );
+            }
 
         } catch (\Exception $e) {
 

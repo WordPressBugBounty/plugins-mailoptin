@@ -1,5 +1,14 @@
 ﻿== Changelog ==
 
+= 1.2.73.2 =
+* Display active integrations first.
+* Added option to prevent ESC key from closing a popup.
+* Added setting to disable opt-in error emails.
+* Added link to send draft broadcasts from the listing page.
+* Added caching to Highlevel api calls.
+* Excluded all api keys not found errors from logging.
+* Fixed bug where invalid beehiiv subscription could be considered valid.
+
 = 1.2.73.1 =
 * Added WooCommerce block checkout support for optin checkbox.
 * Added more Woo order data for optin field mapping.

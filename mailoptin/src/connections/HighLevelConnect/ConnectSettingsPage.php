@@ -2,8 +2,6 @@
 
 namespace MailOptin\HighLevelConnect;
 
-use function MailOptin\Core\moVar;
-
 class ConnectSettingsPage extends AbstractHighLevelConnect
 {
     public function __construct()

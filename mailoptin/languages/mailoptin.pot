@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.73.1\n"
+"Project-Id-Version: MailOptin - Lite 1.2.73.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-07T09:32:02+00:00\n"
+"POT-Creation-Date: 2025-04-18T10:10:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: mailoptin\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "ActiveCampaign"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/Connect.php:203
+#: src/connections/ActiveCampaignConnect/Connect.php:204
 #: src/connections/Ctctv3Connect/Connect.php:163
 #: src/connections/IContactConnect/Connect.php:98
 #: src/connections/KlaviyoConnect/Connect.php:97
@@ -86,12 +86,12 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/Connect.php:204
+#: src/connections/ActiveCampaignConnect/Connect.php:205
 #: src/connections/KlaviyoConnect/Connect.php:99
 msgid "Organization Name"
 msgstr ""
 
-#: src/connections/ActiveCampaignConnect/Connect.php:248
+#: src/connections/ActiveCampaignConnect/Connect.php:250
 #: src/connections/CampaignMonitorConnect/Connect.php:111
 #: src/connections/CleverReachConnect/Connect.php:196
 #: src/connections/ContactForm7Connect/CF7.php:144
@@ -165,7 +165,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/FFMailOptin.php:144
 #: src/connections/GetResponseConnect/ConnectSettingsPage.php:43
 #: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:56
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:33
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:31
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:35
 #: src/connections/IContactConnect/ConnectSettingsPage.php:22
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:31
@@ -381,7 +381,7 @@ msgstr ""
 #: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:32
 #: src/connections/CleverReachConnect/ConnectSettingsPage.php:32
 #: src/connections/CtctConnect/ConnectSettingsPage.php:32
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:34
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:32
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:36
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:32
 #: src/connections/NewsmanConnect/ConnectSettingsPage.php:32
@@ -401,7 +401,7 @@ msgstr ""
 #: src/connections/CtctConnect/ConnectSettingsPage.php:37
 #: src/connections/Ctctv3Connect/ConnectSettingsPage.php:34
 #: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:63
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:39
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:37
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:41
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:37
 #: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:57
@@ -419,7 +419,7 @@ msgstr ""
 #: src/connections/CtctConnect/ConnectSettingsPage.php:42
 #: src/connections/Ctctv3Connect/ConnectSettingsPage.php:39
 #: src/connections/GoogleSheetConnect/ConnectSettingsPage.php:68
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:44
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:42
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:46
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:42
 #: src/connections/MicrosoftDynamic365Connect/ConnectSettingsPage.php:62
@@ -435,7 +435,7 @@ msgstr ""
 #: src/connections/CampaignMonitorConnect/ConnectSettingsPage.php:46
 #: src/connections/CleverReachConnect/ConnectSettingsPage.php:46
 #: src/connections/CtctConnect/ConnectSettingsPage.php:46
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:48
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:46
 #: src/connections/HubspotConnect/ConnectSettingsPage.php:50
 #: src/connections/InfusionsoftConnect/ConnectSettingsPage.php:46
 #: src/connections/NewsmanConnect/ConnectSettingsPage.php:46
@@ -490,7 +490,7 @@ msgstr ""
 #: src/connections/GiveWPConnect/Settings.php:262
 #: src/connections/GravityFormsConnect/GFMailOptin.php:381
 #: src/connections/GravityFormsConnect/GFMailOptin.php:395
-#: src/connections/HighLevelConnect/Connect.php:107
+#: src/connections/HighLevelConnect/Connect.php:115
 #: src/connections/LearnDashConnect/LearnDashInit.php:286
 #: src/connections/LearnDashConnect/LearnDashInit.php:312
 #: src/connections/LearnDashConnect/LearnDashSettings.php:136
@@ -1795,7 +1795,7 @@ msgstr ""
 
 #: src/connections/ConvertFoxConnect/Connect.php:112
 #: src/connections/EnchargeConnect/Connect.php:45
-#: src/connections/HighLevelConnect/Connect.php:151
+#: src/connections/HighLevelConnect/Connect.php:159
 #: src/connections/HubspotConnect/Connect.php:204
 #: src/connections/InfusionsoftConnect/Connect.php:249
 #: src/connections/OmnisendConnect/Connect.php:125
@@ -2423,7 +2423,7 @@ msgid "EmailOctopus Connection"
 msgstr ""
 
 #: src/connections/EmailOctopusConnect/ConnectSettingsPage.php:34
-msgid "Log in to your %1$sEmailOctopus account%3$s and visit the %2$sAPI%3$s page to get your API Key."
+msgid "Log in to your %1$sEmailOctopus account%3$s and visit the %2$sAPI Keys%3$s page to get your API Key."
 msgstr ""
 
 #: src/connections/EmmaConnect/AbstractEmmaConnect.php:47
@@ -2632,7 +2632,7 @@ msgstr ""
 
 #: src/connections/FacebookCustomAudienceConnect/create-audience-tmpl.php:13
 #: src/connections/ZohoCRMConnect/Connect.php:199
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:714
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:715
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:384
 msgid "Description"
 msgstr ""
@@ -2702,7 +2702,7 @@ msgstr ""
 #: src/connections/OmnisendConnect/Connect.php:134
 #: src/connections/VerticalResponseConnect/Connect.php:107
 #: src/connections/WeMailConnect/Connect.php:151
-#: src/core/src/Admin/SettingsPage/Settings.php:223
+#: src/core/src/Admin/SettingsPage/Settings.php:229
 msgid "City"
 msgstr ""
 
@@ -2722,7 +2722,7 @@ msgstr ""
 #: src/connections/VerticalResponseConnect/Connect.php:110
 #: src/connections/WeMailConnect/Connect.php:153
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:614
-#: src/core/src/Admin/SettingsPage/Settings.php:235
+#: src/core/src/Admin/SettingsPage/Settings.php:241
 msgid "Country"
 msgstr ""
 
@@ -2922,7 +2922,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:17
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:40
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Divider.php:53
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:954
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:967
 msgid "None"
 msgstr ""
 
@@ -3212,36 +3212,36 @@ msgid "HighLevel access token not found."
 msgstr ""
 
 #: src/connections/HighLevelConnect/Connect.php:43
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:55
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:53
 msgid "HighLevel"
 msgstr ""
 
-#: src/connections/HighLevelConnect/Connect.php:99
+#: src/connections/HighLevelConnect/Connect.php:107
 #: src/connections/ZohoCRMConnect/Connect.php:207
 msgid "Workflow"
 msgstr ""
 
-#: src/connections/HighLevelConnect/Connect.php:101
+#: src/connections/HighLevelConnect/Connect.php:109
 msgid "Select workflow to add contacts to."
 msgstr ""
 
-#: src/connections/HighLevelConnect/Connect.php:109
+#: src/connections/HighLevelConnect/Connect.php:117
 msgid "Comma-separated list of tags to assign to a new contacts in HighLevel"
 msgstr ""
 
-#: src/connections/HighLevelConnect/Connect.php:115
+#: src/connections/HighLevelConnect/Connect.php:123
 msgid "Upgrade to %sMailOptin Premium%s to map custom fields, assign tags and add leads to workflows."
 msgstr ""
 
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:36
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:34
 msgid "Only re-authorize if you want to connect another HighLevel account."
 msgstr ""
 
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:50
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:48
 msgid "Authorization is required to grant <strong>%s</strong> access to interact with your HighLevel account."
 msgstr ""
 
-#: src/connections/HighLevelConnect/ConnectSettingsPage.php:56
+#: src/connections/HighLevelConnect/ConnectSettingsPage.php:54
 msgid "HighLevel Connection"
 msgstr ""
 
@@ -3341,7 +3341,7 @@ msgid "Address 1"
 msgstr ""
 
 #: src/connections/IContactConnect/Connect.php:94
-#: src/core/src/Admin/SettingsPage/Settings.php:219
+#: src/core/src/Admin/SettingsPage/Settings.php:225
 msgid "Address 2"
 msgstr ""
 
@@ -4603,7 +4603,7 @@ msgid "Country Code"
 msgstr ""
 
 #: src/connections/OmnisendConnect/Connect.php:135
-#: src/core/src/Admin/SettingsPage/Settings.php:215
+#: src/core/src/Admin/SettingsPage/Settings.php:221
 msgid "Address"
 msgstr ""
 
@@ -4803,7 +4803,7 @@ msgid "WordPress Registered Users"
 msgstr ""
 
 #: src/connections/RegisteredUsersConnect/Connect.php:98
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1565
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1578
 msgid "Restrict to User Role"
 msgstr ""
 
@@ -5176,6 +5176,7 @@ msgstr ""
 #: src/connections/UltimateMemberConnect/UMSettings.php:177
 #: src/core/src/Admin/SettingsPage/Settings.php:160
 #: src/core/src/Admin/SettingsPage/Settings.php:165
+#: src/core/src/Admin/SettingsPage/Settings.php:171
 msgid "Disable"
 msgstr ""
 
@@ -5342,7 +5343,7 @@ msgid "Cache-Control"
 msgstr ""
 
 #: src/connections/WebHookConnect/Connect.php:131
-#: src/core/src/Admin/SettingsPage/Connections.php:273
+#: src/core/src/Admin/SettingsPage/Connections.php:290
 msgid "Connection"
 msgstr ""
 
@@ -6072,9 +6073,9 @@ msgstr ""
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:221
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:257
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:334
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:75
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:111
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:143
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:82
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:129
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:161
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:480
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:579
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:682
@@ -6956,8 +6957,8 @@ msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:712
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:222
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1231
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1419
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1244
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1432
 msgid "Premium Version Available"
 msgstr ""
 
@@ -7077,10 +7078,12 @@ msgid "unsubscribe"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:165
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:86
 msgid "Are you sure you want to send this newsletter now?"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:167
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:92
 msgid "Send Broadcast"
 msgstr ""
 
@@ -7124,14 +7127,14 @@ msgid "The customizer allows you to design, preview and set up to email campaign
 msgstr ""
 
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:558
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:683
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:684
 msgid "Check out MailOptin Premium!"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/EmailCampaign/Customizer.php:569
 #: src/core/src/Admin/SettingsPage/ProUpgrade.php:71
 #: src/core/src/Admin/SettingsPage/Settings.php:36
-#: src/core/src/Admin/SettingsPage/Settings.php:248
+#: src/core/src/Admin/SettingsPage/Settings.php:254
 msgid "Settings"
 msgstr ""
 
@@ -7666,7 +7669,7 @@ msgstr ""
 msgid "Take Action Now!"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/AbstractCustomizer.php:131
+#: src/core/src/Admin/Customizer/OptinForm/AbstractCustomizer.php:132
 msgid "Thanks for subscribing!"
 msgstr ""
 
@@ -7706,60 +7709,60 @@ msgstr ""
 msgid "Optin Form"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:661
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:816
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:662
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:817
 msgid "Display Rules"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:662
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:663
 msgid "Configure how this optin campaign will be shown to visitors or users."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:695
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:696
 msgid "Design"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:705
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:706
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:279
 msgid "Headline"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:724
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:725
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:487
 msgid "Note"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:734
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:735
 msgid "Fields"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:744
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:745
 msgid "Configuration"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:754
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:755
 #: src/core/src/Admin/SettingsPage/Connections.php:49
-#: src/core/src/Admin/SettingsPage/Connections.php:223
+#: src/core/src/Admin/SettingsPage/Connections.php:240
 msgid "Integrations"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:762
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:763
 msgid "After Conversion"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:774
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:775
 msgid "Embed & Shortcode"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:795
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:796
 msgid "Page Targeting"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:801
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:802
 msgid "Query String Targeting"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:808
+#: src/core/src/Admin/Customizer/OptinForm/Customizer.php:809
 msgid "User Targeting"
 msgstr ""
 
@@ -7840,12 +7843,12 @@ msgid "Navigate to URL"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:621
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1181
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1194
 msgid "Close optin"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:622
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1182
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1195
 msgid "Close optin and reload page"
 msgstr ""
 
@@ -8003,290 +8006,298 @@ msgid "Hide Close Button"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:939
-msgid "Close on Overlay Click"
+msgid "Disable ESC Key"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:949
-msgid "Sound Effect"
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:944
+msgid "Prevent ESC key from closing a pop-up campaign."
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:952
-msgid "Select sound to play when optin is displayed."
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:955
-msgid "Pop"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:956
-msgid "Beep"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:957
-msgid "Beep Up"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:958
-msgid "Beep Down"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:959
-msgid "Clong"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:960
-msgid "Pong"
-msgstr ""
-
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:961
-msgid "Snare Flam"
+msgid "Close on Overlay Click"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:962
-msgid "Custom"
+msgid "Sound Effect"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:965
+msgid "Select sound to play when optin is displayed."
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:968
+msgid "Pop"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:969
-msgid "Custom Sound URL"
+msgid "Beep"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:970
+msgid "Beep Up"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:971
+msgid "Beep Down"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:972
+msgid "Clong"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:973
+msgid "Pong"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:974
+msgid "Snare Flam"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:975
+msgid "Custom"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:982
+msgid "Custom Sound URL"
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:986
 msgid "Add a URL to an mp3/wav audio file to play."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:978
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:991
 msgid "Cookie Duration"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:983
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:996
 msgid "The length of time before this optin will display again to the user once they exit or close this campaign (defaults to 30 days). %sSet to 0 to prevent cookies from being set.%s"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:990
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1003
 msgid "Success Cookie Duration"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:995
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1008
 msgid "The length of time before the optin will display again to the user once they successfully opt in to this campaign (defaults to value of exit cookie above). %sSet to 0 to prevent cookies from being set.%s"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1004
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1017
 msgid "Remove MailOptin Branding"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1006
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1019
 msgid "%sSet your affiliate link%s and make money with branding."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1042
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1055
 msgid "Want to play or trigger a beep, pop or custom sound when an optin is displayed, %sUpgrade to premium%s now."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1122
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1135
 msgid "To store subscribers in MailOptin without requiring an email marketing software like Mailchimp and gain access to premium integrations such as Webhook, %sUpgrade to premium%s now."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1142
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1155
 msgid "No integration or email provider has been connected to MailOptin. %sClick here%s to do that now."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1180
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1193
 msgid "Display success message."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1183
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1196
 msgid "Redirect to URL"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1197
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1210
 msgid "Success Action"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1200
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1213
 msgid "What to do after users subscribe."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1207
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1220
 msgid "Optin Success Message"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1215
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1228
 msgid "Redirect URL"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1219
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1232
 msgid "Specify a URL to redirect users to after opt-in. Must begin with http or https."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1234
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1247
 msgid "Upgrade to %sMailOptin Premium%s for autoresponder, pass lead data to redirect URL, send email notification and trigger success script after conversion."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1276
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1289
 msgid "Globally show optin"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1280
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1293
 msgid "The optin will be shown on all pages of your website if activated. %sDo not activate%s if you want to show optin on specific areas of your site using the settings below."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1293
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1306
 msgid "Show optin specifically on:"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1296
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1309
 msgid "Display the optin only on the selected posts and/or pages."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1310
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1323
 msgid "Front Page, Archive and Search Pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1313
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1326
 msgid "Display the optin on home front page, archive and search pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1326
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1339
 msgid "Display the optin on posts that are in any of the selected categories."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1340
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1353
 msgid "Display the optin on posts that are in any of the selected tags."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1351
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1364
 msgid "Show optin on post types:"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1354
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1367
 msgid "Display the optin only on the selected post types."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1367
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1380
 msgid "Select the posts this optin should never be loaded on."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1381
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1394
 msgid "Hide the optin on posts that are in any of the selected categories."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1395
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1408
 msgid "Select the pages this optin should never be loaded on."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1409
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1422
 msgid "Select \"custom post type\" posts this optin should never be loaded on."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1423
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1436
 msgid "Upgrade to %sMailOptin Premium%s to embed with shortcodes, get optin triggers such as %3$sExit Intent%4$s, %3$sPage views%4$s, %3$sTime on Site%4$s, %3$sAdBlock detection%4$s, %3$sReferral Detection%4$s, %3$sScroll trigger%4$s, powerful page-level targeting and display rules proven to boost conversions."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1481
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1494
 msgid "Query String"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1486
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1499
 msgid "Select Action"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1487
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1500
 msgid "Only show on matching pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1488
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1501
 msgid "Hide on matching pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1490
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1503
 msgid "Specify whether to display or hide the opt-in if the conditions below are met."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1496
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1509
 msgid "Query String Name"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1500
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1513
 msgid "Specify the query string where this opt-in should show/hide."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1506
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1519
 msgid "Query String Value"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1510
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1523
 msgid "Leave blank if you want to match the query string irrespective of its value."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1548
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1561
 msgid "Who should see this optin?"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1551
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1564
 msgid "Decide who are able to see this optin."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1553
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1566
 msgid "Show to all visitors and users"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1554
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1567
 msgid "Show to only logged-in users"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1555
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1568
 msgid "Show to only users not logged-in"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1556
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1569
 msgid "Show to specific user roles"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1568
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1581
 msgid "The opt-in form will only be shown to users with any of the roles you select here."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1578
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1591
 msgid "Prefill Form with User Data"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1581
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1594
 msgid "Enable to prefill form with the name and email address of logged in users."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1622
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1635
 msgid "In-post optins are automatically added before or after your post/page content. Only use the embed feature if you want to show your optin in a specific area of your site."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1627
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1640
 msgid "Widget"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1631
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1644
 msgid "Use the MailOptin widget to embed optin to your website sidebar and other widget area. %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1639
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1652
 msgid "Shortcode"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1642
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1655
 msgid "Use the shortcode below to embed this opt-in form anywhere in your WordPress posts or pages. All page, query string and user targeting rules are ignored when you use shortcode."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1648
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1661
 msgid "Template Tag"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1651
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1664
 msgid "Use the template tag below to embed this opt-in form anywhere in your theme. All page, query string and user targeting rules are ignored when you use shortcode."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1656
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1669
 msgid "Editor Block"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1659
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1672
 msgid "You can also use the MailOptin block in the new WordPress block editor to embed your optins. All page, query string and user targeting rules are ignored when you use MailOptin's block."
 msgstr ""
 
@@ -8852,7 +8863,7 @@ msgstr ""
 msgid "Analytics"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Connections.php:274
+#: src/core/src/Admin/SettingsPage/Connections.php:291
 msgid "Configure"
 msgstr ""
 
@@ -8873,7 +8884,7 @@ msgid "User Agent"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/ConversionExport.php:48
-#: src/core/src/Functions/functions.php:555
+#: src/core/src/Functions/functions.php:557
 msgid "Conversion Page"
 msgstr ""
 
@@ -8922,13 +8933,13 @@ msgid "No email automation is currently available. %sConsider creating one%s"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:245
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:99
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:117
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:572
 msgid "Customize"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:251
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:105
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:123
 msgid "Clone"
 msgstr ""
 
@@ -9055,11 +9066,15 @@ msgstr ""
 msgid "Date Sent"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:125
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:91
+msgid "Resend Broadcast"
+msgstr ""
+
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:143
 msgid "Draft"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Newsletter_List.php:129
+#: src/core/src/Admin/SettingsPage/Newsletter_List.php:147
 msgid "Failed"
 msgstr ""
 
@@ -9298,76 +9313,84 @@ msgstr ""
 msgid "Check to stop us from loading Google Fonts on your site."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:171
-msgid "Global Interaction Cookie"
+#: src/core/src/Admin/SettingsPage/Settings.php:170
+msgid "Disable Optin Error Emails"
 msgstr ""
 
 #: src/core/src/Admin/SettingsPage/Settings.php:172
+msgid "Check to disable sending optin error notification emails."
+msgstr ""
+
+#: src/core/src/Admin/SettingsPage/Settings.php:177
+msgid "Global Interaction Cookie"
+msgstr ""
+
+#: src/core/src/Admin/SettingsPage/Settings.php:178
 msgid ""
 "Entering a number of days (e.g. 30) will set a global cookie once any optin is closed by a user or visitor.\n"
 "                            This global cookie will prevent any other optins from loading on your site for that visitor until the cookie expires. Defaults to 0 (no global interaction cookie)."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:181
+#: src/core/src/Admin/SettingsPage/Settings.php:187
 msgid "Global Success Cookie"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:182
+#: src/core/src/Admin/SettingsPage/Settings.php:188
 msgid "Entering a number of days (e.g. 30) will set a global cookie once any optin has resulted in a successful conversion. This global cookie will prevent any other optins from loading on your site for that visitor until the cookie expires. Defaults to 0 (no global success cookie)."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:191
+#: src/core/src/Admin/SettingsPage/Settings.php:197
 msgid "Email Campaign"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:192
+#: src/core/src/Admin/SettingsPage/Settings.php:198
 msgid "Email Campaign Settings"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:195
+#: src/core/src/Admin/SettingsPage/Settings.php:201
 msgid "From Name"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:196
+#: src/core/src/Admin/SettingsPage/Settings.php:202
 msgid "Enter the sender name to be used as the \"From Name\"."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:200
+#: src/core/src/Admin/SettingsPage/Settings.php:206
 msgid "From Email"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:201
+#: src/core/src/Admin/SettingsPage/Settings.php:207
 msgid "Enter the email address to be used as the \"From Email\""
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:205
+#: src/core/src/Admin/SettingsPage/Settings.php:211
 msgid "Reply To"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:206
+#: src/core/src/Admin/SettingsPage/Settings.php:212
 msgid "Enter the email address to be used as the \"Reply To\""
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:210
+#: src/core/src/Admin/SettingsPage/Settings.php:216
 msgid "Company / Organization"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:211
+#: src/core/src/Admin/SettingsPage/Settings.php:217
 msgid "Enter the name of your company or organization."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:227
+#: src/core/src/Admin/SettingsPage/Settings.php:233
 msgid "State / Province / Region"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/Settings.php:231
+#: src/core/src/Admin/SettingsPage/Settings.php:237
 msgid "Zip / Postal code"
 msgstr ""
 
 #: src/core/src/AjaxHandler.php:287
 #: src/core/src/AjaxHandler.php:485
 #: src/core/src/AjaxHandler.php:523
-#: src/core/src/OptinForms/AbstractOptinForm.php:1272
+#: src/core/src/OptinForms/AbstractOptinForm.php:1287
 msgid "Unexpected error. Please try again."
 msgstr ""
 
@@ -9413,7 +9436,7 @@ msgstr ""
 
 #: src/core/src/AjaxHandler.php:765
 #: src/core/src/AjaxHandler.php:787
-#: src/core/src/OptinForms/AbstractOptinForm.php:1277
+#: src/core/src/OptinForms/AbstractOptinForm.php:1292
 msgid "Your submission has been flagged as potential spam."
 msgstr ""
 
@@ -9445,43 +9468,43 @@ msgstr ""
 msgid "Map integration fields to form custom fields"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:199
+#: src/core/src/Connections/AbstractConnect.php:200
 msgid "The email campaign \"%s\" had the following error \"%s\"."
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:207
+#: src/core/src/Connections/AbstractConnect.php:208
 msgid "Warning! \"%s\" Email Campaign Is Not Working"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:258
+#: src/core/src/Connections/AbstractConnect.php:259
 msgid "%sView Error Log%s"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:319
+#: src/core/src/Connections/AbstractConnect.php:323
 msgid "Use the coupon %s on checkout to save 20%% off MailOptin premium (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:321
+#: src/core/src/Connections/AbstractConnect.php:325
 msgid "Get 20%% Discount Now (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:344
+#: src/core/src/Connections/AbstractConnect.php:350
 msgid "Warning! \"%s\" Optin Campaign Is Not Working"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:354
+#: src/core/src/Connections/AbstractConnect.php:360
 msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\"."
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:361
+#: src/core/src/Connections/AbstractConnect.php:367
 msgid "This e-mail was sent by %s plugin on %s (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:385
+#: src/core/src/Connections/AbstractConnect.php:391
 msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\". %6$s -- %6$sThis e-mail was sent by %s plugin on %s (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:520
+#: src/core/src/Connections/AbstractConnect.php:526
 msgid "rate limit exceeded"
 msgstr ""
 
@@ -10750,15 +10773,15 @@ msgstr ""
 msgid "Activate"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:552
+#: src/core/src/Functions/functions.php:554
 msgid "IP Address"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:553
+#: src/core/src/Functions/functions.php:555
 msgid "Optin Campaign Name"
 msgstr ""
 
-#: src/core/src/Functions/functions.php:554
+#: src/core/src/Functions/functions.php:556
 msgid "Referrer URL"
 msgstr ""
 
@@ -10787,15 +10810,15 @@ msgstr ""
 msgid "Save 40% Now!"
 msgstr ""
 
-#: src/core/src/OptinForms/AbstractOptinForm.php:1273
+#: src/core/src/OptinForms/AbstractOptinForm.php:1288
 msgid "Please enter a valid email."
 msgstr ""
 
-#: src/core/src/OptinForms/AbstractOptinForm.php:1274
+#: src/core/src/OptinForms/AbstractOptinForm.php:1289
 msgid "Please enter a name."
 msgstr ""
 
-#: src/core/src/OptinForms/AbstractOptinForm.php:1275
+#: src/core/src/OptinForms/AbstractOptinForm.php:1290
 msgid "A required field is empty."
 msgstr ""
 
