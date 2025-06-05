@@ -64,6 +64,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\RCPConnect\\' => 21,
             'MailOptin\\PolylangConnect\\' => 26,
             'MailOptin\\PmProConnect\\' => 23,
+            'MailOptin\\OrttoCRMConnect\\' => 26,
             'MailOptin\\OntraportConnect\\' => 27,
             'MailOptin\\OmnisendConnect\\' => 26,
             'MailOptin\\NinjaFormsConnect\\' => 28,
@@ -288,6 +289,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\PmProConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/PmProConnect',
+        ),
+        'MailOptin\\OrttoCRMConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect',
         ),
         'MailOptin\\OntraportConnect\\' => 
         array (
@@ -1258,10 +1263,12 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\NinjaFormsConnect\\Integrations\\ElasticEmailConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/ElasticEmailConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\EmailOctopusConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/EmailOctopusConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\EmmaConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/EmmaConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\EnchargeConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/EnchargeConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\FacebookCustomAudienceConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FacebookCustomAudienceConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\FlodeskConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FlodeskConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\FluentCRMConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FluentCRMConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\GetResponseConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GetResponseConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\GoogleSheetConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GoogleSheetConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HighLevelConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HighLevelConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HubspotConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HubspotConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\IContactConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/IContactConnect.php',
@@ -1279,6 +1286,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\NinjaFormsConnect\\Integrations\\NewsmanConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/NewsmanConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\OmnisendConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/OmnisendConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\OntraportConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/OntraportConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\OrttoCRMConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/OrttoCRMConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\RegisteredUsersConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/RegisteredUsersConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SalesforceConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SalesforceConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendFoxConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendFoxConnect.php',
@@ -1301,6 +1309,11 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\OntraportConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/OntraportConnect/Connect.php',
         'MailOptin\\OntraportConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/OntraportConnect/ConnectSettingsPage.php',
         'MailOptin\\OntraportConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/OntraportConnect/Subscription.php',
+        'MailOptin\\OrttoCRMConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect/APIClass.php',
+        'MailOptin\\OrttoCRMConnect\\AbstractOrttoCRMConnect' => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect/AbstractOrttoCRMConnect.php',
+        'MailOptin\\OrttoCRMConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect/Connect.php',
+        'MailOptin\\OrttoCRMConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect/ConnectSettingsPage.php',
+        'MailOptin\\OrttoCRMConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect/Subscription.php',
         'MailOptin\\PmProConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/PmProConnect/Connect.php',
         'MailOptin\\PmProConnect\\Mail_BG_Process' => __DIR__ . '/../..' . '/src/connections/PmProConnect/Mail_BG_Process.php',
         'MailOptin\\PmProConnect\\Membership' => __DIR__ . '/../..' . '/src/connections/PmProConnect/Membership.php',

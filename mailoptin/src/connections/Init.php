@@ -38,7 +38,8 @@ class Init
             'EmailOctopusConnect',
             'HighLevelConnect',
             'BeehiivConnect',
-            'EnchargeConnect'
+            'EnchargeConnect',
+            'OrttoCRMConnect'
         ];
     }
 
@@ -51,7 +52,6 @@ class Init
     {
         //True means double optin is enabled, and false means double optin is disabled by default
         $double_optin_connections = [
-            'DripConnect'       => false,
             'FluentCRMConnect'  => true,
             'MailChimpConnect'  => true,
             'MailjetConnect'    => false,
@@ -253,6 +253,7 @@ class Init
         \MailOptin\FluentFormConnect\Connect::get_instance();
         \MailOptin\WSFormConnect\Connect::get_instance();
         \MailOptin\EnchargeConnect\Connect::get_instance();
+        \MailOptin\OrttoCRMConnect\Connect::get_instance();
         GoogleAnalytics::get_instance();
         \MailOptin\GoogleSheetConnect\Connect::get_instance();
     }

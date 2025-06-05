@@ -8,11 +8,11 @@ use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use function MailOptin\Core\moVar;
 
-class ElasticEmailConnect extends \NF_Abstracts_ActionNewsletter
+class EnchargeConnect extends \NF_Abstracts_ActionNewsletter
 {
-    public $connection_name = 'Elastic Email';
+    public $connection_name = 'Encharge';
 
-    public $connection = 'ElasticEmailConnect';
+    public $connection = 'EnchargeConnect';
 
     protected $_timing = 'late';
     protected $_priority = '9';

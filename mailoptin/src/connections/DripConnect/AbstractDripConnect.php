@@ -31,9 +31,9 @@ class AbstractDripConnect extends AbstractConnect
      */
     public static function is_connected($return_error = false)
     {
-        $db_options = isset($_POST['mailoptin_connections']) ? $_POST['mailoptin_connections'] : get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
-        $api_token  = isset($db_options['drip_api_token']) ? $db_options['drip_api_token'] : '';
-        $account_id = isset($db_options['drip_account_id']) ? $db_options['drip_account_id'] : '';
+        $db_options = $_POST['mailoptin_connections'] ?? get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
+        $api_token  = $db_options['drip_api_token'] ?? '';
+        $account_id = $db_options['drip_account_id'] ?? '';
 
         if (empty($api_token)) {
             delete_transient('_mo_drip_is_connected');
@@ -67,7 +67,24 @@ class AbstractDripConnect extends AbstractConnect
 
             return $return_error === true ? $e->getMessage() : false;
         }
+    }
 
+    public static function get_core_custom_fields()
+    {
+        return [
+            'address1'        => 'Address 1',
+            'address2'        => 'Address 2',
+            'city'            => 'City',
+            'state'           => 'State',
+            'zip'             => 'Zip',
+            'country'         => 'Country',
+            'phone'           => 'Phone',
+            'sms_number'      => 'SMS Number',
+            'user_id'         => 'User ID',
+            'time_zone'       => 'Time Zone',
+            'lifetime_value'  => 'Lifetime Value',
+            'base_lead_score' => 'Base Lead Score',
+        ];
     }
 
     public function get_integration_data($data_key, $integration_data = [], $default = '')
@@ -85,36 +102,12 @@ class AbstractDripConnect extends AbstractConnect
         return parent::get_integration_data($data_key, $integration_data, $default);
     }
 
-    public function get_first_name_custom_field()
-    {
-        $firstname_key    = 'first_name';
-        $db_firstname_key = $this->get_integration_data('DripConnect_first_name_field_key');
-
-        if ( ! empty($db_firstname_key) && $db_firstname_key !== $firstname_key) {
-            $firstname_key = $db_firstname_key;
-        }
-
-        return apply_filters('mo_connections_drip_firstname_key', $firstname_key);
-    }
-
-    public function get_last_name_custom_field()
-    {
-        $lastname_key    = 'last_name';
-        $db_lastname_key = $this->get_integration_data('DripConnect_last_name_field_key');
-
-        if ( ! empty($db_lastname_key) && $db_lastname_key !== $lastname_key) {
-            $lastname_key = $db_lastname_key;
-        }
-
-        return apply_filters('mo_connections_drip_lastname_key', $lastname_key);
-    }
-
     /**
      * Returns instance of API class.
      *
+     * @return Drip
      * @throws \Exception
      *
-     * @return Drip
      */
     public function drip_instance()
     {

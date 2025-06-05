@@ -6,6 +6,7 @@ use Authifly\Provider\Salesforce;
 use Authifly\Storage\OAuthCredentialStorage;
 use MailOptin\Core\Connections\ConnectionInterface;
 use MailOptin\Core\PluginSettings\Connections;
+
 use function MailOptin\Core\current_user_has_privilege;
 use function MailOptin\Core\moVar;
 
@@ -168,7 +169,7 @@ class Connect extends AbstractSalesforceConnect implements ConnectionInterface
 
                 foreach ($response->fields as $field) {
                     // Skip fields with those parameters (they are not available for filling).
-                    if ( ! $field->createable || $field->deprecatedAndHidden || $field->type == 'boolean') continue;
+                    if ( ! $field->createable || $field->deprecatedAndHidden) continue;
 
                     if ($allFields === false && in_array($field->name, ['FirstName', 'LastName', 'Email'])) continue;
 

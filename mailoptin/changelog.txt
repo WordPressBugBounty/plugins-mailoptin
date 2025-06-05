@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 1.2.74.0 =
+* Added [Ortto integration](https://mailoptin.io/article/connect-wordpress-ortto/).
+* Improved [Drip integration](https://mailoptin.io/article/connect-wordpress-drip/) to latest platform update.
+* Fixed: Function _load_textdomain_just_in_time was called incorrectly.
+
 = 1.2.73.2 =
 * Display active integrations first.
 * Added option to prevent ESC key from closing a popup.

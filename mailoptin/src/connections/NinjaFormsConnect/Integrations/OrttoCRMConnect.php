@@ -8,11 +8,11 @@ use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use function MailOptin\Core\moVar;
 
-class ElasticEmailConnect extends \NF_Abstracts_ActionNewsletter
+class OrttoCRMConnect extends \NF_Abstracts_ActionNewsletter
 {
-    public $connection_name = 'Elastic Email';
+    public $connection_name = 'Ortto';
 
-    public $connection = 'ElasticEmailConnect';
+    public $connection = 'OrttoCRMConnect';
 
     protected $_timing = 'late';
     protected $_priority = '9';

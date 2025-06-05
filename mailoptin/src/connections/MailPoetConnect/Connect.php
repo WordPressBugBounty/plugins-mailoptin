@@ -76,7 +76,7 @@ class Connect extends AbstractConnect implements ConnectionInterface
             if (self::is_connected()) {
                 $response = \MailPoet\API\API::MP('v1')->getLists();
 
-                if (is_array($response) && ! empty($response)) {
+                if ( ! empty($response)) {
                     foreach ($response as $list) {
                         // remove trash list.
                         if ( ! empty($list['deleted_at'])) continue;

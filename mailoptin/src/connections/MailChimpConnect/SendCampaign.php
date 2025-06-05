@@ -112,7 +112,7 @@ class SendCampaign extends AbstractMailChimpConnect
 
                         self::save_campaign_error_log(json_encode($errors), $this->campaign_log_id, $this->email_campaign_id);
 
-                        return parent::ajax_failure();
+                        return parent::ajax_failure('', true);
                     }
 
                     $this->mc_campaign_instance()->send($campaign_id);

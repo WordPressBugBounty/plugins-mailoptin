@@ -23,41 +23,24 @@ class Subscription extends AbstractDripConnect
     }
 
     /**
-     * True if optin type is double optin is not disabled.
-     *
-     * @return bool
-     */
-    public function is_double_optin()
-    {
-        $optin_campaign_id = absint($this->extras['optin_campaign_id']);
-
-        $setting = $this->get_integration_data('DripConnect_enable_double_optin');
-
-        //external forms
-        if ($optin_campaign_id == 0) {
-            $setting = $this->extras['is_double_optin'];
-        }
-
-        $val = ($setting === true);
-
-        return apply_filters('mo_connections_drip_is_double_optin', $val, $optin_campaign_id);
-    }
-
-    /**
      * @return mixed
      */
     public function subscribe()
     {
         try {
+
             $name_split = self::get_first_last_names($this->name);
+
+            $lead_data = [
+                'email'      => $this->email,
+                'first_name' => $name_split[0],
+                'last_name'  => $name_split[1],
+                'ip_address' => \MailOptin\Core\get_ip_address()
+            ];
 
             $lead_tags = $this->get_integration_tags('DripConnect_lead_tags');
 
-            $firstname_key = $this->get_first_name_custom_field();
-            $lastname_key  = $this->get_last_name_custom_field();
-            $name_key      = apply_filters('mo_connections_drip_name_key', 'name');
-
-            $custom_field_data = [$name_key => $this->name, $firstname_key => $name_split[0], $lastname_key => $name_split[1]];
+            $custom_field_data = [];
 
             $custom_field_mappings = $this->form_custom_field_mappings();
 
@@ -68,22 +51,19 @@ class Subscription extends AbstractDripConnect
                     // selected for it, the default "Select..." value is empty ("")
                     if ( ! empty($customFieldKey) && ! empty($this->extras[$customFieldKey])) {
                         $value = $this->extras[$customFieldKey];
-                        if (is_array($value)) {
-                            $value = implode(', ', $value);
+                        if (is_array($value)) $value = implode(', ', $value);
+                        if ($dripKey == 'sms_number' && (empty($value) || strpos(trim($value), '+') !== 0)) continue;
+
+                        if (in_array($dripKey, array_keys(self::get_core_custom_fields()))) {
+                            $lead_data[$dripKey] = esc_attr($value);
+                        } else {
+                            $custom_field_data[$dripKey] = esc_attr($value);
                         }
-                        $custom_field_data[$dripKey] = esc_attr($value);
                     }
                 }
             }
 
-            $custom_field_data = array_filter($custom_field_data, [$this, 'data_filter']);
-
-            $lead_data = [
-                'email'         => $this->email,
-                'custom_fields' => $custom_field_data,
-                'ip_address'    => \MailOptin\Core\get_ip_address(),
-                'double_optin'  => $this->is_double_optin()
-            ];
+            $lead_data['custom_fields'] = array_filter($custom_field_data, [$this, 'data_filter']);
 
             if (isset($this->extras['mo-acceptance']) && $this->extras['mo-acceptance'] == 'yes') {
                 $lead_data['eu_consent']         = 'granted';
@@ -98,7 +78,7 @@ class Subscription extends AbstractDripConnect
 
             $data = new Dataset('subscribers', $lead_data);
 
-            $response = $this->drip_instance()->post("campaigns/{$this->list_id}/subscribers", $data);
+            $response = $this->drip_instance()->post("subscribers", $data);
 
             if ($response->status >= 200 && $response->status <= 299) {
                 return parent::ajax_success();
@@ -112,12 +92,12 @@ class Subscription extends AbstractDripConnect
 
             self::save_optin_error_log($response->error . ': ' . $response->message, 'drip', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'drip', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 }

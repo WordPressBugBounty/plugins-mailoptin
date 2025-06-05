@@ -8,11 +8,11 @@ use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use function MailOptin\Core\moVar;
 
-class ElasticEmailConnect extends \NF_Abstracts_ActionNewsletter
+class GoogleSheetConnect extends \NF_Abstracts_ActionNewsletter
 {
-    public $connection_name = 'Elastic Email';
+    public $connection_name = 'Google Sheets';
 
-    public $connection = 'ElasticEmailConnect';
+    public $connection = 'GoogleSheetConnect';
 
     protected $_timing = 'late';
     protected $_priority = '9';

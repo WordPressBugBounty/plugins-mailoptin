@@ -31,7 +31,7 @@ class ConnectSettingsPage
                 'label'         => __('Enter API Key', 'mailoptin'),
                 'description'   => sprintf(
                     __('Log in to your %sBeehiiv account%s to get your api key.', 'mailoptin'),
-                    '<a target="_blank" href="https://app.beehiiv.com/settings/integrations/api">',
+                    '<a target="_blank" href="https://app.beehiiv.com/settings/workspace/api">',
                     '</a>'
                 ),
             ],
@@ -40,7 +40,7 @@ class ConnectSettingsPage
                 'label'       => __('Enter Publication ID', 'mailoptin'),
                 'description' => sprintf(
                     __('Log in to your %sBeehiiv account%s to get your publication ID.', 'mailoptin'),
-                    '<a target="_blank" href="https://app.beehiiv.com/settings/integrations/api">',
+                    '<a target="_blank" href="https://app.beehiiv.com/settings/workspace/api">',
                     '</a>'
                 ),
             ]

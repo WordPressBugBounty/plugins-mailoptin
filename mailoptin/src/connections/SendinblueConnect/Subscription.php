@@ -65,7 +65,7 @@ class Subscription extends AbstractSendinblueConnect
             $redirection_url        = PluginSettings\Connections::instance()->sendinblue_redirection_url();
 
             if ($this->check_double_optin_fields($double_optin_templates, $redirection_url)) {
-                return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+                return parent::ajax_failure();
             }
 
             $lead_data['templateId']     = absint($double_optin_templates);
@@ -175,12 +175,12 @@ class Subscription extends AbstractSendinblueConnect
 
             self::save_optin_error_log($response['body']->code . ': ' . $response['body']->message, 'sendinblue', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'sendinblue', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 

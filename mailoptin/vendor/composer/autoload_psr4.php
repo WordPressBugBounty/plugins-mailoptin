@@ -41,6 +41,7 @@ return array(
     'MailOptin\\RCPConnect\\' => array($baseDir . '/src/connections/RCPConnect'),
     'MailOptin\\PolylangConnect\\' => array($baseDir . '/src/connections/PolylangConnect'),
     'MailOptin\\PmProConnect\\' => array($baseDir . '/src/connections/PmProConnect'),
+    'MailOptin\\OrttoCRMConnect\\' => array($baseDir . '/src/connections/OrttoCRMConnect'),
     'MailOptin\\OntraportConnect\\' => array($baseDir . '/src/connections/OntraportConnect'),
     'MailOptin\\OmnisendConnect\\' => array($baseDir . '/src/connections/OmnisendConnect'),
     'MailOptin\\NinjaFormsConnect\\' => array($baseDir . '/src/connections/NinjaFormsConnect'),

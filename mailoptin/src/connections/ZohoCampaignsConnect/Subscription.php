@@ -108,12 +108,12 @@ class Subscription extends AbstractZohoCampaignsConnect
 
             self::save_optin_error_log(wp_json_encode($response), 'zohocampaigns', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'zohocampaigns', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 

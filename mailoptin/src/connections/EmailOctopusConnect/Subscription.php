@@ -87,12 +87,12 @@ class Subscription extends AbstractEmailOctopusConnect
 
             self::save_optin_error_log($error_code . ': ' . $error_message, 'emailoctopus', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'emailoctopus', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 }

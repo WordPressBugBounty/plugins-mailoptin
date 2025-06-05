@@ -118,12 +118,12 @@ class Subscription extends AbstractCtctv3Connect
 
             self::save_optin_error_log(is_string($response) ? $response : wp_json_encode($response), 'constantcontactv3', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'constantcontactv3', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 }

@@ -97,13 +97,13 @@ class Subscription extends AbstractHighLevelConnect
                 return parent::ajax_success();
             }
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
 
         } catch (\Exception $e) {
 
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'highlevel', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
 
-            return parent::ajax_failure(__('There was an error saving your contact. Please try again.', 'mailoptin'));
+            return parent::ajax_failure();
         }
     }
 
