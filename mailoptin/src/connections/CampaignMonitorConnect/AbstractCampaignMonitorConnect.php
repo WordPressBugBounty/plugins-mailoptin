@@ -61,7 +61,7 @@ class AbstractCampaignMonitorConnect extends AbstractConnect
         $access_token = $this->access_token;
 
         if (empty($access_token)) {
-            throw new \Exception(__('CampaignMonitor access token not found.', 'mailoptin'));
+            throw new \Exception('CampaignMonitor access token not found.');
         }
 
         $config = [

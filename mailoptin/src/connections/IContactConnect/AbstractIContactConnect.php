@@ -83,23 +83,23 @@ class AbstractIContactConnect extends AbstractConnect
         $client_folder_id = $this->connections_settings->icontact_client_folder_id();
 
         if (empty($app_id)) {
-            throw new \Exception(__('iContact API ID not found.', 'mailoptin'));
+            throw new \Exception('iContact API ID not found.');
         }
 
         if (empty($username)) {
-            throw new \Exception(__('iContact API username not found.', 'mailoptin'));
+            throw new \Exception('iContact API username not found.');
         }
 
         if (empty($password)) {
-            throw new \Exception(__('iContact API password not found.', 'mailoptin'));
+            throw new \Exception('iContact API password not found.');
         }
 
         if (empty($account_id)) {
-            throw new \Exception(__('iContact account ID not found.', 'mailoptin'));
+            throw new \Exception('iContact account ID not found.');
         }
 
         if (empty($client_folder_id)) {
-            throw new \Exception(__('iContact client folder ID not found.', 'mailoptin'));
+            throw new \Exception('iContact client folder ID not found.');
         }
 
         return new APIClass($app_id, $username, $password, $account_id, $client_folder_id);

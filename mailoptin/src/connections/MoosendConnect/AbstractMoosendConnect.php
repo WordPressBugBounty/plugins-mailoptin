@@ -78,7 +78,7 @@ class AbstractMoosendConnect extends AbstractConnect
         $api_key = $this->connections_settings->moosend_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Moosend API Key not found.', 'mailoptin'));
+            throw new \Exception('Moosend API Key not found.');
         }
 
         return new APIClass($api_key);

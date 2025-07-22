@@ -81,11 +81,11 @@ class AbstractBeehiivConnect extends AbstractConnect
         $publication_id = $this->connections_settings->beehiiv_publication_id();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Beehiiv API Key not found.', 'mailoptin'));
+            throw new \Exception('Beehiiv API Key not found.');
         }
 
         if (empty($publication_id)) {
-            throw new \Exception(__('Beehiiv publication ID not found.', 'mailoptin'));
+            throw new \Exception('Beehiiv publication ID not found.');
         }
 
         return new APIClass($api_key, $publication_id);

@@ -129,11 +129,11 @@ class AbstractMailjetConnect extends AbstractConnect
         $secret_key = $this->connections_settings->mailjet_secret_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Mailjet API Key not found.', 'mailoptin'));
+            throw new \Exception('Mailjet API Key not found.');
         }
 
         if (empty($secret_key)) {
-            throw new \Exception(__('Mailjet secret key not found.', 'mailoptin'));
+            throw new \Exception('Mailjet secret key not found.');
         }
 
         return new APIClass($api_key, $secret_key);

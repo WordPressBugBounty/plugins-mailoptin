@@ -511,11 +511,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1749115172",
-            "version_normalized": "0.2.1749115172.0",
+            "version": "0.2.1753181750",
+            "version_normalized": "0.2.1753181750.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_2aFEoY/mailoptinauthifly-0-2-1749115172.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1nvqoC/mailoptinauthifly-0-2-1753181750.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -568,11 +568,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1749115257",
-            "version_normalized": "0.2.1749115257.0",
+            "version": "0.2.1753181788",
+            "version_normalized": "0.2.1753181788.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1ukPUN/mailoptinconnections-0-2-1749115257.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_5j11O/mailoptinconnections-0-2-1753181788.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -665,7 +665,9 @@
                     "MailOptin\\WSFormConnect\\": "WSFormConnect/",
                     "MailOptin\\GoogleSheetConnect\\": "GoogleSheetConnect/",
                     "MailOptin\\EnchargeConnect\\": "EnchargeConnect/",
+                    "MailOptin\\SenderConnect\\": "SenderConnect/",
                     "MailOptin\\OrttoCRMConnect\\": "OrttoCRMConnect/",
+                    "MailOptin\\GroundhoggConnect\\": "GroundhoggConnect/",
                     "MailOptin\\Connections\\": "./"
                 },
                 "classmap": [
@@ -677,17 +679,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1749115249",
-            "version_normalized": "0.1.0.0-alpha1749115249",
+            "version": "0.1.0-alpha.1753181783",
+            "version_normalized": "0.1.0.0-alpha1753181783",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "d985019c562c66af57d5ef1ebdee62e0cba878e9"
+                "reference": "553aa9aa2669b8d6af8ca2138438074a44704a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/d985019c562c66af57d5ef1ebdee62e0cba878e9",
-                "reference": "d985019c562c66af57d5ef1ebdee62e0cba878e9",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/553aa9aa2669b8d6af8ca2138438074a44704a48",
+                "reference": "553aa9aa2669b8d6af8ca2138438074a44704a48",
                 "shasum": ""
             },
             "require": {
@@ -698,7 +700,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2025-05-28T11:06:20+00:00",
+            "time": "2025-07-21T13:38:03+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -718,7 +720,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1749115249"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1753181783"
             },
             "install-path": "../../src/core"
         },
@@ -1015,17 +1017,17 @@
         },
         {
             "name": "sabberworm/php-css-parser",
-            "version": "v8.8.0",
-            "version_normalized": "8.8.0.0",
+            "version": "v8.9.0",
+            "version_normalized": "8.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MyIntervals/PHP-CSS-Parser.git",
-                "reference": "3de493bdddfd1f051249af725c7e0d2c38fed740"
+                "reference": "d8e916507b88e389e26d4ab03c904a082aa66bb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/3de493bdddfd1f051249af725c7e0d2c38fed740",
-                "reference": "3de493bdddfd1f051249af725c7e0d2c38fed740",
+                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/d8e916507b88e389e26d4ab03c904a082aa66bb9",
+                "reference": "d8e916507b88e389e26d4ab03c904a082aa66bb9",
                 "shasum": ""
             },
             "require": {
@@ -1033,12 +1035,13 @@
                 "php": "^5.6.20 || ^7.0.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.7.27 || 6.5.14 || 7.5.20 || 8.5.41"
+                "phpunit/phpunit": "5.7.27 || 6.5.14 || 7.5.20 || 8.5.41",
+                "rawr/cross-data-providers": "^2.0.0"
             },
             "suggest": {
                 "ext-mbstring": "for parsing UTF-8 CSS"
             },
-            "time": "2025-03-23T17:59:05+00:00",
+            "time": "2025-07-11T13:20:48+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1077,7 +1080,7 @@
             ],
             "support": {
                 "issues": "https://github.com/MyIntervals/PHP-CSS-Parser/issues",
-                "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.8.0"
+                "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.9.0"
             },
             "install-path": "../sabberworm/php-css-parser"
         },

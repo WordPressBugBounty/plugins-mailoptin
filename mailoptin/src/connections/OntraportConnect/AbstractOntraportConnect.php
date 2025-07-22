@@ -99,11 +99,11 @@ class AbstractOntraportConnect extends AbstractConnect
         $app_id  = $this->connections_settings->ontraport_app_id();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Ontraport API Key not found.', 'mailoptin'));
+            throw new \Exception('Ontraport API Key not found.');
         }
 
         if (empty($app_id)) {
-            throw new \Exception(__('Ontraport APP ID not found.', 'mailoptin'));
+            throw new \Exception('Ontraport APP ID not found.');
         }
 
         return new APIClass($api_key, $app_id);

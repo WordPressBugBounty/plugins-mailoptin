@@ -58,9 +58,9 @@ class AbstractSalesforceConnect extends AbstractConnect
         $refresh_token        = $connections_settings->salesforce_refresh_token();
         $instance_url         = $connections_settings->salesforce_instance_url();
 
-        if (empty($access_token)) throw new \Exception(__('Salesforce access token not found.', 'mailoptin'));
+        if (empty($access_token)) throw new \Exception('Salesforce access token not found.');
 
-        if (empty($refresh_token)) throw new \Exception(__('Salesforce refresh token not found.', 'mailoptin'));
+        if (empty($refresh_token)) throw new \Exception('Salesforce refresh token not found.');
 
         $api_version = apply_filters('mailoptin_salesforce_rest_api_version', '58.0');
 

@@ -36,7 +36,7 @@ class AbstractInfusionsoftConnect extends AbstractConnect
         $expires_at           = $connections_settings->infusionsoft_expires_at();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Infusionsoft access token not found.', 'mailoptin'));
+            throw new \Exception('Infusionsoft access token not found.');
         }
 
         $config = [

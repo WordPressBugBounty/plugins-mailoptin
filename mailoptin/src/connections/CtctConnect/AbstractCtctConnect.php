@@ -41,7 +41,7 @@ class AbstractCtctConnect extends AbstractConnect
         $access_token = Connections::instance()->ctct_access_token();
 
         if (empty($access_token)) {
-            throw new \Exception(__('ConstantContact (Legacy) access token not found.', 'mailoptin'));
+            throw new \Exception('ConstantContact (Legacy) access token not found.');
         }
 
         $config = [

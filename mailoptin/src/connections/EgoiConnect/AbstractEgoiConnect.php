@@ -75,7 +75,7 @@ class AbstractEgoiConnect extends AbstractConnect
         $api_key = $this->connections_settings->egoi_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('E-Goi API Key not found.', 'mailoptin'));
+            throw new \Exception('E-Goi API Key not found.');
         }
 
         return new APIClass($api_key);

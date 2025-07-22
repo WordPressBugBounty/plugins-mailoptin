@@ -82,7 +82,9 @@
       "MailOptin\\WSFormConnect\\": "WSFormConnect/",
       "MailOptin\\GoogleSheetConnect\\": "GoogleSheetConnect/",
       "MailOptin\\EnchargeConnect\\": "EnchargeConnect/",
+      "MailOptin\\SenderConnect\\": "SenderConnect/",
       "MailOptin\\OrttoCRMConnect\\": "OrttoCRMConnect/",
+      "MailOptin\\GroundhoggConnect\\": "GroundhoggConnect/",
       "MailOptin\\Connections\\": "./"
     },
     "classmap": [

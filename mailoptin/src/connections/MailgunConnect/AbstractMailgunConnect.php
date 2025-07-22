@@ -79,7 +79,7 @@ class AbstractMailgunConnect extends AbstractConnect
     public function mailgun_instance()
     {
         if (empty($this->api_key)) {
-            throw new \Exception(__('Mailgun API Key not found.', 'mailoptin'));
+            throw new \Exception('Mailgun API Key not found.');
         }
 
         return new APIClass($this->api_key, $this->domain_region);

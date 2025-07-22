@@ -115,11 +115,11 @@ class AbstractDripConnect extends AbstractConnect
         $account_id = $this->connections_settings->drip_account_id();
 
         if (empty($api_token)) {
-            throw new \Exception(__('Drip API Token not found.', 'mailoptin'));
+            throw new \Exception('Drip API Token not found.');
         }
 
         if (empty($account_id)) {
-            throw new \Exception(__('Drip Account ID not found.', 'mailoptin'));
+            throw new \Exception('Drip Account ID not found.');
         }
 
         return new Drip($api_token, $account_id);

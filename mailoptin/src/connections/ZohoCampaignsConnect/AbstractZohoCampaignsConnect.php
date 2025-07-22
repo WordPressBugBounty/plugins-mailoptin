@@ -68,7 +68,7 @@ class AbstractZohoCampaignsConnect extends AbstractConnect
         $api_domain           = $connections_settings->zohocampaigns_api_domain();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Zoho Campaigns access token not found.', 'mailoptin'));
+            throw new \Exception('Zoho Campaigns access token not found.');
         }
 
         $config = [

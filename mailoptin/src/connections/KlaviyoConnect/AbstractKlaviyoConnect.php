@@ -79,7 +79,7 @@ class AbstractKlaviyoConnect extends AbstractConnect
         $api_key = $this->connections_settings->klaviyo_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Klaviyo API Key not found.', 'mailoptin'));
+            throw new \Exception('Klaviyo API Key not found.');
         }
 
         return new APIClass($api_key);

@@ -79,7 +79,7 @@ class AbstractFlodeskConnect extends AbstractConnect
         $api_key = $this->connections_settings->flodesk_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Flodesk API Key not found.', 'mailoptin'));
+            throw new \Exception('Flodesk API Key not found.');
         }
 
         return new APIClass($api_key);

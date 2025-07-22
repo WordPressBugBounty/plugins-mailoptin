@@ -57,6 +57,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\SendyConnect\\' => 23,
             'MailOptin\\SendlaneConnect\\' => 26,
             'MailOptin\\SendinblueConnect\\' => 28,
+            'MailOptin\\SenderConnect\\' => 24,
             'MailOptin\\SendGridConnect\\' => 26,
             'MailOptin\\SendFoxConnect\\' => 25,
             'MailOptin\\SalesforceConnect\\' => 28,
@@ -88,6 +89,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\IContactConnect\\' => 26,
             'MailOptin\\HubspotConnect\\' => 25,
             'MailOptin\\HighLevelConnect\\' => 27,
+            'MailOptin\\GroundhoggConnect\\' => 28,
             'MailOptin\\GravityFormsConnect\\' => 30,
             'MailOptin\\GoogleSheetConnect\\' => 29,
             'MailOptin\\GiveWPConnect\\' => 24,
@@ -262,6 +264,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendinblueConnect',
         ),
+        'MailOptin\\SenderConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/SenderConnect',
+        ),
         'MailOptin\\SendGridConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendGridConnect',
@@ -385,6 +391,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\HighLevelConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/HighLevelConnect',
+        ),
+        'MailOptin\\GroundhoggConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/GroundhoggConnect',
         ),
         'MailOptin\\GravityFormsConnect\\' => 
         array (
@@ -886,6 +896,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\Connections\\ForminatorFormConnect\\ModuleSettingsPageTrait' => __DIR__ . '/../..' . '/src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php',
         'MailOptin\\Connections\\GoogleAnalytics' => __DIR__ . '/../..' . '/src/connections/GoogleAnalytics.php',
         'MailOptin\\Connections\\Init' => __DIR__ . '/../..' . '/src/connections/Init.php',
+        'MailOptin\\Connections\\SenderConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/SenderConnect/SendCampaign.php',
         'MailOptin\\Connections\\UltimateMemberConnect\\UMSettings' => __DIR__ . '/../..' . '/src/connections/UltimateMemberConnect/UMSettings.php',
         'MailOptin\\ContactForm7Connect\\CF7' => __DIR__ . '/../..' . '/src/connections/ContactForm7Connect/CF7.php',
         'MailOptin\\ContactForm7Connect\\Connect' => __DIR__ . '/../..' . '/src/connections/ContactForm7Connect/Connect.php',
@@ -1146,6 +1157,8 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\GoogleSheetConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect/Subscription.php',
         'MailOptin\\GravityFormsConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect/Connect.php',
         'MailOptin\\GravityFormsConnect\\GFMailOptin' => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect/GFMailOptin.php',
+        'MailOptin\\GroundhoggConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/GroundhoggConnect/Connect.php',
+        'MailOptin\\GroundhoggConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/GroundhoggConnect/Subscription.php',
         'MailOptin\\HighLevelConnect\\AbstractHighLevelConnect' => __DIR__ . '/../..' . '/src/connections/HighLevelConnect/AbstractHighLevelConnect.php',
         'MailOptin\\HighLevelConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/HighLevelConnect/Connect.php',
         'MailOptin\\HighLevelConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/HighLevelConnect/ConnectSettingsPage.php',
@@ -1269,6 +1282,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\NinjaFormsConnect\\Integrations\\FluentCRMConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/FluentCRMConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\GetResponseConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GetResponseConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\GoogleSheetConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GoogleSheetConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\GroundhoggConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/GroundhoggConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HighLevelConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HighLevelConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\HubspotConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/HubspotConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\IContactConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/IContactConnect.php',
@@ -1291,6 +1305,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\NinjaFormsConnect\\Integrations\\SalesforceConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SalesforceConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendFoxConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendFoxConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendGridConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendGridConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\SenderConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SenderConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendinblueConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendinblueConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendlaneConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendlaneConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\SendyConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/SendyConnect.php',
@@ -1341,6 +1356,11 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\SendGridConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/SendGridConnect/ConnectSettingsPage.php',
         'MailOptin\\SendGridConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/SendGridConnect/SendCampaign.php',
         'MailOptin\\SendGridConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/SendGridConnect/Subscription.php',
+        'MailOptin\\SenderConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/SenderConnect/APIClass.php',
+        'MailOptin\\SenderConnect\\AbstractSenderConnect' => __DIR__ . '/../..' . '/src/connections/SenderConnect/AbstractSenderConnect.php',
+        'MailOptin\\SenderConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/SenderConnect/Connect.php',
+        'MailOptin\\SenderConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/SenderConnect/ConnectSettingsPage.php',
+        'MailOptin\\SenderConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/SenderConnect/Subscription.php',
         'MailOptin\\SendinblueConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/SendinblueConnect/APIClass.php',
         'MailOptin\\SendinblueConnect\\AbstractSendinblueConnect' => __DIR__ . '/../..' . '/src/connections/SendinblueConnect/AbstractSendinblueConnect.php',
         'MailOptin\\SendinblueConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/SendinblueConnect/Connect.php',
@@ -1434,6 +1454,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Psr\\Clock\\ClockInterface' => __DIR__ . '/..' . '/psr/clock/src/ClockInterface.php',
         'RequestException' => __DIR__ . '/../..' . '/src/connections/ActiveCampaignConnect/APIClass/includes/exceptions/RequestException.php',
+        'Sabberworm\\CSS\\CSSElement' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSElement.php',
         'Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
         'Sabberworm\\CSS\\CSSList\\CSSBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php',
         'Sabberworm\\CSS\\CSSList\\CSSList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSList.php',
@@ -1450,6 +1471,8 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'Sabberworm\\CSS\\Parsing\\SourceException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/SourceException.php',
         'Sabberworm\\CSS\\Parsing\\UnexpectedEOFException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php',
         'Sabberworm\\CSS\\Parsing\\UnexpectedTokenException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php',
+        'Sabberworm\\CSS\\Position\\Position' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Position/Position.php',
+        'Sabberworm\\CSS\\Position\\Positionable' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Position/Positionable.php',
         'Sabberworm\\CSS\\Property\\AtRule' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/AtRule.php',
         'Sabberworm\\CSS\\Property\\CSSNamespace' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/CSSNamespace.php',
         'Sabberworm\\CSS\\Property\\Charset' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/Charset.php',

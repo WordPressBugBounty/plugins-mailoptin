@@ -18,7 +18,9 @@ class Init
             'FluentCRMConnect',
             'Ctctv3Connect',
             'EgoiConnect',
-            'ZohoCampaignsConnect'
+            'SenderConnect',
+            'ZohoCampaignsConnect',
+            'GroundhoggConnect'
         ];
     }
 
@@ -206,6 +208,7 @@ class Init
         \MailOptin\Mailerlitev2Connect\Connect::get_instance();
         \MailOptin\EmailOctopusConnect\Connect::get_instance();
         \MailOptin\FluentCRMConnect\Connect::get_instance();
+        \MailOptin\GroundhoggConnect\Connect::get_instance();
         \MailOptin\WebHookConnect\Connect::get_instance();
         \MailOptin\SendinblueConnect\Connect::get_instance();
         \MailOptin\SendGridConnect\Connect::get_instance();
@@ -253,6 +256,7 @@ class Init
         \MailOptin\FluentFormConnect\Connect::get_instance();
         \MailOptin\WSFormConnect\Connect::get_instance();
         \MailOptin\EnchargeConnect\Connect::get_instance();
+        \MailOptin\SenderConnect\Connect::get_instance();
         \MailOptin\OrttoCRMConnect\Connect::get_instance();
         GoogleAnalytics::get_instance();
         \MailOptin\GoogleSheetConnect\Connect::get_instance();

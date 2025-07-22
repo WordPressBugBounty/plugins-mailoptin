@@ -77,7 +77,7 @@ class AbstractEmailOctopusConnect extends AbstractConnect
         $api_key = $this->connections_settings->emailoctopus_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('EmailOctopus API key not found.', 'mailoptin'));
+            throw new \Exception('EmailOctopus API key not found.');
         }
 
         return new APIClass($api_key);

@@ -36,7 +36,7 @@ class AbstractHubspotConnect extends AbstractConnect
         $expires_at           = $connections_settings->hubspot_expires_at();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Hubspot access token not found.', 'mailoptin'));
+            throw new \Exception('Hubspot access token not found.');
         }
 
         $config = [

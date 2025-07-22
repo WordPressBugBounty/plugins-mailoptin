@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 1.2.75.0 =
+* Added [Sender.net integration](https://mailoptin.io/article/connect-wordpress-sender/).
+* Added [Groundhogg integration](https://mailoptin.io/article/create-groundhogg-forms-wordpress/).
+* added mo_email_campaign_shortcode_post_meta filter.
+
 = 1.2.74.0 =
 * Added [Ortto integration](https://mailoptin.io/article/connect-wordpress-ortto/).
 * Improved [Drip integration](https://mailoptin.io/article/connect-wordpress-drip/) to latest platform update.

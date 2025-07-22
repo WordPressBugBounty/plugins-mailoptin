@@ -109,15 +109,15 @@ class AbstractEmmaConnect extends AbstractConnect
         $emma_account_id      = $this->connections_settings->emma_account_id();
 
         if (empty($emma_public_api_key)) {
-            throw new \Exception(__('Emma public key not found.', 'mailoptin'));
+            throw new \Exception('Emma public key not found.');
         }
 
         if (empty($emma_private_api_key)) {
-            throw new \Exception(__('Emma private key not found.', 'mailoptin'));
+            throw new \Exception('Emma private key not found.');
         }
 
         if (empty($emma_account_id)) {
-            throw new \Exception(__('Emma account ID not found.', 'mailoptin'));
+            throw new \Exception('Emma account ID not found.');
         }
 
         return new APIClass($emma_public_api_key, $emma_private_api_key, $emma_account_id);

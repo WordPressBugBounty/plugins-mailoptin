@@ -61,11 +61,11 @@ class AbstractCtctv3Connect extends AbstractConnect
         $expires_at           = $connections_settings->ctctv3_expires_at();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Constant Contact (v3) access token not found.', 'mailoptin'));
+            throw new \Exception('Constant Contact (v3) access token not found.');
         }
 
         if (empty($refresh_token)) {
-            throw new \Exception(__('Constant Contact (v3) refresh token not found.', 'mailoptin'));
+            throw new \Exception('Constant Contact (v3) refresh token not found.');
         }
 
         $config = [

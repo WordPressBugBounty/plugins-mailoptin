@@ -88,7 +88,7 @@ class AbstractConvertFoxConnect extends AbstractConnect
         $api_key = $this->connections_settings->convertfox_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Gist API Key not found.', 'mailoptin'));
+            throw new \Exception('Gist API Key not found.');
         }
 
         return new APIClass($api_key);

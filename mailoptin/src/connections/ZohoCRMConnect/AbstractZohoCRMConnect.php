@@ -39,7 +39,7 @@ class AbstractZohoCRMConnect extends AbstractConnect
         $accounts_server      = $connections_settings->zohocrm_accounts_server();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Zoho CRM access token not found.', 'mailoptin'));
+            throw new \Exception('Zoho CRM access token not found.');
         }
 
         $config = [

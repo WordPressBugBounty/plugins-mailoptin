@@ -39,7 +39,7 @@ class AbstractHighLevelConnect extends AbstractConnect
         $this->locationId     = $connections_settings->highlevel_locationId();
 
         if (empty($access_token)) {
-            throw new \Exception(__('HighLevel access token not found.', 'mailoptin'));
+            throw new \Exception('HighLevel access token not found.');
         }
 
         $config = [

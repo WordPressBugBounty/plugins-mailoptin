@@ -93,7 +93,7 @@ class AbstractGetResponseConnect extends AbstractConnect
         $getresponse360_country           = $this->connections_settings->getresponse360_country();
 
         if (empty($api_key)) {
-            throw new \Exception(__('GetResponse API key not found.', 'mailoptin'));
+            throw new \Exception('GetResponse API key not found.');
         }
 
         $getresponse = new GetResponseAPI3($api_key);

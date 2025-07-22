@@ -123,7 +123,7 @@ class AbstractMailChimpConnect extends AbstractConnect
         $api_key = $this->connections_settings->mailchimp_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('MailChimp API key not found.', 'mailoptin'));
+            throw new \Exception('MailChimp API key not found.');
         }
 
         $client = new MailchimpCurlHttpClient(['timeout' => 10]);
@@ -143,7 +143,7 @@ class AbstractMailChimpConnect extends AbstractConnect
         $api_key = $this->connections_settings->mailchimp_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('MailChimp API key not found.', 'mailoptin'));
+            throw new \Exception('MailChimp API key not found.');
         }
 
         $client = new MailchimpCurlHttpClient(['timeout' => 10]);

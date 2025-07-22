@@ -169,21 +169,39 @@ class Connect extends AbstractConnect implements ConnectionInterface
      */
     public function integration_customizer_controls($controls)
     {
-        // always prefix with the name of the connect/connection service.
-        $controls[] = [
-            'field'       => 'chosen_select',
-            'name'        => 'FluentCRMConnect_lead_tags',
-            'choices'     => $this->get_tags(),
-            'label'       => __('Tags', 'mailoptin'),
-            'description' => __('Select tags to assign to leads.', 'mailoptin')
-        ];
 
-        $controls[] = [
-            'field'       => 'toggle',
-            'name'        => 'FluentCRMConnect_disable_double_optin',
-            'label'       => __('Disable Double Optin', 'mailoptin'),
-            'description' => __("Double optin requires users to confirm their email address before they are added or subscribed.", 'mailoptin'),
-        ];
+        if (defined('MAILOPTIN_DETACH_LIBSODIUM') === true) {
+            // always prefix with the name of the connect/connection service.
+            $controls[] = [
+                'field'       => 'chosen_select',
+                'name'        => 'FluentCRMConnect_lead_tags',
+                'choices'     => $this->get_tags(),
+                'label'       => __('Tags', 'mailoptin'),
+                'description' => __('Select tags to assign to leads.', 'mailoptin')
+            ];
+
+            $controls[] = [
+                'field'       => 'toggle',
+                'name'        => 'FluentCRMConnect_disable_double_optin',
+                'label'       => __('Disable Double Optin', 'mailoptin'),
+                'description' => __("Double optin requires users to confirm their email address before they are added or subscribed.", 'mailoptin'),
+            ];
+        } else {
+
+            $content = sprintf(
+                __("%sMailOptin Premium%s allows you assign tags to leads and disable double optin.", 'mailoptin'),
+                '<a target="_blank" href="https://mailoptin.io/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=fluentcrm_connection">',
+                '</a>',
+                '<strong>',
+                '</strong>'
+            );
+
+            $controls[] = [
+                'name'    => 'FluentCRMConnect_upgrade_notice',
+                'field'   => 'custom_content',
+                'content' => $content
+            ];
+        }
 
         return $controls;
     }

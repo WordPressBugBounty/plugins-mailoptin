@@ -37,11 +37,11 @@ class AbstractNewsmanConnect extends AbstractConnect
         $user_id      = Connections::instance()->newsman_user_id();
 
         if (empty($access_token)) {
-            throw new \Exception(__('Newsman access token not found.', 'mailoptin'));
+            throw new \Exception('Newsman access token not found.');
         }
 
         if (empty($user_id)) {
-            throw new \Exception(__('Newsman user ID not found.', 'mailoptin'));
+            throw new \Exception('Newsman user ID not found.');
         }
 
         $config = [

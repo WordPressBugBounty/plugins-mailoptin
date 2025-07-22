@@ -115,19 +115,19 @@ class AbstractFacebookCustomAudienceConnect extends AbstractConnect
         }
 
         if (empty($fbca_app_id)) {
-            throw new \Exception(__('Facebook App ID not found.', 'mailoptin'));
+            throw new \Exception('Facebook App ID not found.');
         }
 
         if (empty($fbca_app_secret)) {
-            throw new \Exception(__('Facebook App secret not found.', 'mailoptin'));
+            throw new \Exception('Facebook App secret not found.');
         }
 
         if (empty($fbca_app_access_token)) {
-            throw new \Exception(__('Facebook App access token not found.', 'mailoptin'));
+            throw new \Exception('Facebook App access token not found.');
         }
 
         if (empty($fbca_adaccount_id)) {
-            throw new \Exception(__('Facebook Ad account ID not found.', 'mailoptin'));
+            throw new \Exception('Facebook Ad account ID not found.');
         }
 
         if ( ! $this->is_access_token_expired()) {

@@ -78,7 +78,7 @@ class AbstractSendGridConnect extends AbstractConnect
         $api_key = $this->connections_settings->sendgrid_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('SendGrid API Key not found.', 'mailoptin'));
+            throw new \Exception('SendGrid API Key not found.');
         }
 
         return new APIClass($api_key);

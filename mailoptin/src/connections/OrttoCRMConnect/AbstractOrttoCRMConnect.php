@@ -69,7 +69,7 @@ class AbstractOrttoCRMConnect extends AbstractConnect
         $region  = $this->connections_settings->orttocrm_region();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Ortto API Key not found.', 'mailoptin'));
+            throw new \Exception('Ortto API Key not found.');
         }
 
         return new APIClass($api_key, $region);

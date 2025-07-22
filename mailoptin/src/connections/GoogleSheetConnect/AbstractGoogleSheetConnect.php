@@ -61,11 +61,11 @@ class AbstractGoogleSheetConnect extends AbstractConnect
         $expires_at           = $connections_settings->gsheet_expires_at();
 
         if (empty($access_token)) {
-            throw new Exception(__('Google access token not found.', 'mailoptin'));
+            throw new Exception('Google access token not found.');
         }
 
         if (empty($refresh_token)) {
-            throw new Exception(__('Google refresh token not found.', 'mailoptin'));
+            throw new Exception('Google refresh token not found.');
         }
 
         $config = [

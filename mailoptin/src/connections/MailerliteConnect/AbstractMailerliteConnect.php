@@ -81,7 +81,7 @@ class AbstractMailerliteConnect extends AbstractConnect
         $api_key = $this->connections_settings->mailerlite_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('MailerLite Classic API key not found.', 'mailoptin'));
+            throw new \Exception('MailerLite Classic API key not found.');
         }
 
         return new MailerLite($api_key);

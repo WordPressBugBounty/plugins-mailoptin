@@ -120,15 +120,15 @@ class AbstractSendlaneConnect extends AbstractConnect
         $sendlane_domain   = $this->connections_settings->sendlane_domain();
 
         if (empty($sendlane_api_key)) {
-            throw new \Exception(__('Sendlane API Key not found.', 'mailoptin'));
+            throw new \Exception('Sendlane API Key not found.');
         }
 
         if (empty($sendlane_hash_key)) {
-            throw new \Exception(__('Sendlane Hash Key not found.', 'mailoptin'));
+            throw new \Exception('Sendlane Hash Key not found.');
         }
 
         if (empty($sendlane_domain)) {
-            throw new \Exception(__('Sendlane Domain not found.', 'mailoptin'));
+            throw new \Exception('Sendlane Domain not found.');
         }
 
         return new APIClass($sendlane_api_key, $sendlane_hash_key, $sendlane_domain);

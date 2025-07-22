@@ -40,7 +40,7 @@ class AbstractOmnisendConnect extends AbstractConnect
         $api_key = $this->connections_settings->omnisend_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Omnisend API Key not found.', 'mailoptin'));
+            throw new \Exception('Omnisend API Key not found.');
         }
 
         return new APIClass($api_key);

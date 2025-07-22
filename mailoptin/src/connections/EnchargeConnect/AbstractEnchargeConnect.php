@@ -68,7 +68,7 @@ class AbstractEnchargeConnect extends AbstractConnect
         $api_key = $this->connections_settings->encharge_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Encharge API key not found.', 'mailoptin'));
+            throw new \Exception('Encharge API key not found.');
         }
 
         return new APIClass($api_key);

@@ -124,7 +124,7 @@ class AbstractSendinblueConnect extends AbstractConnect
         $api_key = $this->connections_settings->sendinblue_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Brevo (Sendinblue) API Key not found.', 'mailoptin'));
+            throw new \Exception('Brevo (Sendinblue) API Key not found.');
         }
 
         return new APIClass($api_key);

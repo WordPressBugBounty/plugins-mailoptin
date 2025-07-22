@@ -61,7 +61,7 @@ class AbstractCleverReachConnect extends AbstractConnect
         $expires_at           = $connections_settings->cleverreach_expires_at();
 
         if (empty($access_token)) {
-            throw new \Exception(__('CleverReach access token not found.', 'mailoptin'));
+            throw new \Exception('CleverReach access token not found.');
         }
 
         $config = [

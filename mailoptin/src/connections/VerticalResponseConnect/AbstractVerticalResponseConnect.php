@@ -53,7 +53,7 @@ class AbstractVerticalResponseConnect extends AbstractConnect
         $access_token = $this->access_token;
 
         if (empty($access_token)) {
-            throw new \Exception(__('VerticalResponse access token not found.', 'mailoptin'));
+            throw new \Exception('VerticalResponse access token not found.');
         }
 
         $config = [

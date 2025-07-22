@@ -83,11 +83,11 @@ class AbstractActiveCampaignConnect extends AbstractConnect
         $api_key = $this->connections_settings->activecampaign_api_key();
 
         if (empty($api_url)) {
-            throw new \Exception(__('ActiveCampaign API URL not found.', 'mailoptin'));
+            throw new \Exception('ActiveCampaign API URL not found.');
         }
 
         if (empty($api_key)) {
-            throw new \Exception(__('ActiveCampaign API key not found.', 'mailoptin'));
+            throw new \Exception('ActiveCampaign API key not found.');
         }
 
         return new \ActiveCampaign($api_url, $api_key);

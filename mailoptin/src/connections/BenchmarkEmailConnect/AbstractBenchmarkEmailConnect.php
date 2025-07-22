@@ -73,7 +73,7 @@ class AbstractBenchmarkEmailConnect extends AbstractConnect
         $api_key = $this->connections_settings->benchmarkemail_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('Benchmark Email API Key not found.', 'mailoptin'));
+            throw new \Exception('Benchmark Email API Key not found.');
         }
 
         return new APIClass($api_key);

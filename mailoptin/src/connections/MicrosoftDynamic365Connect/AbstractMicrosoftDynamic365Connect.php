@@ -69,9 +69,9 @@ class AbstractMicrosoftDynamic365Connect extends AbstractConnect
         $expires_at           = $connections_settings->microsoftdynamic365_expires_at();
         $org_url              = $connections_settings->microsoftdynamic365_org_url();
 
-        if (empty($access_token)) throw new \Exception(__('Microsoft Dynamics 365 access token not found.', 'mailoptin'));
+        if (empty($access_token)) throw new \Exception('Microsoft Dynamics 365 access token not found.');
 
-        if (empty($refresh_token)) throw new \Exception(__('Microsoft Dynamics 365 refresh token not found.', 'mailoptin'));
+        if (empty($refresh_token)) throw new \Exception('Microsoft Dynamics 365 refresh token not found.');
 
         $api_version = apply_filters('mailoptin_microsoftdynamic365_rest_api_version', '9.2');
 

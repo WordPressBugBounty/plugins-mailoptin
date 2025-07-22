@@ -56,7 +56,7 @@ class AbstractAweberConnect extends AbstractConnect
         $access_token_secret = $this->connections_settings->aweber_access_token_secret();
 
         if (empty($access_token) || empty($access_token_secret)) {
-            throw new \Exception(__('AWeber access_token and/or access token secret not found.', 'mailoptin'));
+            throw new \Exception('AWeber access_token and/or access token secret not found.');
         }
 
         if(get_option('mailoptin_aweber_connection_401_block') == 'true') {

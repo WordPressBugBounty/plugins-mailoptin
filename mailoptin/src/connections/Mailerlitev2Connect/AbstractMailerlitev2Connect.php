@@ -80,7 +80,7 @@ class AbstractMailerlitev2Connect extends AbstractConnect
         $api_key = $this->connections_settings->mailerlitev2_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception(__('MailerLiteV2 API key not found.', 'mailoptin'));
+            throw new \Exception('MailerLiteV2 API key not found.');
         }
 
         return new APIClass($api_key);
