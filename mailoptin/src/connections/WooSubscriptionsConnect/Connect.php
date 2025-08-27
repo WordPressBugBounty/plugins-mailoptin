@@ -315,7 +315,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
             $page  = 1;
             $loop  = true;
-            $limit = 2000;
+            $limit = 1000;
 
             while ($loop === true) {
 
@@ -334,7 +334,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                         $item->email_campaign_id = $email_campaign_id;
                         $item->campaign_log_id   = $campaign_log_id;
 
-                        $this->wc_sub_bg_process_instance->push_to_queue($item);
+                        $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                         ->mo_save($campaign_log_id, $email_campaign_id)
+                                                         ->mo_dispatch($campaign_log_id, $email_campaign_id);
                     }
                 }
 
@@ -353,7 +355,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 1000;
 
                     while ($_loop === true) {
 
@@ -372,7 +374,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_sub_bg_process_instance->push_to_queue($item);
+                                $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                                 ->mo_save($campaign_log_id, $email_campaign_id)
+                                                                 ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
@@ -391,7 +395,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 1000;
 
                     while ($_loop === true) {
 
@@ -410,7 +414,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_sub_bg_process_instance->push_to_queue($item);
+                                $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                                 ->mo_save($campaign_log_id, $email_campaign_id)
+                                                                 ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
@@ -429,7 +435,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 1000;
 
                     while ($_loop === true) {
 
@@ -448,7 +454,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_sub_bg_process_instance->push_to_queue($item);
+                                $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                                 ->mo_save($campaign_log_id, $email_campaign_id)
+                                                                 ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
@@ -467,7 +475,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 1000;
 
                     while ($_loop === true) {
 
@@ -486,7 +494,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_sub_bg_process_instance->push_to_queue($item);
+                                $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                                 ->mo_save($campaign_log_id, $email_campaign_id)
+                                                                 ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
@@ -505,7 +515,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 1000;
 
                     while ($_loop === true) {
 
@@ -524,7 +534,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_sub_bg_process_instance->push_to_queue($item);
+                                $this->wc_sub_bg_process_instance->push_to_queue($item)
+                                                                 ->mo_save($campaign_log_id, $email_campaign_id)
+                                                                 ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 

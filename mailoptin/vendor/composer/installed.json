@@ -511,11 +511,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1753181750",
-            "version_normalized": "0.2.1753181750.0",
+            "version": "0.2.1756288509",
+            "version_normalized": "0.2.1756288509.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1nvqoC/mailoptinauthifly-0-2-1753181750.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_11R3FS/mailoptinauthifly-0-2-1756288509.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -568,11 +568,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1753181788",
-            "version_normalized": "0.2.1753181788.0",
+            "version": "0.2.1756288546",
+            "version_normalized": "0.2.1756288546.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_5j11O/mailoptinconnections-0-2-1753181788.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_28RlWu/mailoptinconnections-0-2-1756288546.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -679,17 +679,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1753181783",
-            "version_normalized": "0.1.0.0-alpha1753181783",
+            "version": "0.1.0-alpha.1756288541",
+            "version_normalized": "0.1.0.0-alpha1756288541",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "553aa9aa2669b8d6af8ca2138438074a44704a48"
+                "reference": "50e86551592f000e053a52cbee89543460d384e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/553aa9aa2669b8d6af8ca2138438074a44704a48",
-                "reference": "553aa9aa2669b8d6af8ca2138438074a44704a48",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/50e86551592f000e053a52cbee89543460d384e8",
+                "reference": "50e86551592f000e053a52cbee89543460d384e8",
                 "shasum": ""
             },
             "require": {
@@ -700,7 +700,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2025-07-21T13:38:03+00:00",
+            "time": "2025-08-19T10:05:05+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -720,7 +720,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1753181783"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1756288541"
             },
             "install-path": "../../src/core"
         },
@@ -1283,8 +1283,8 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.32.0",
-            "version_normalized": "1.32.0.0",
+            "version": "v1.33.0",
+            "version_normalized": "1.33.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1347,7 +1347,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -1359,6 +1359,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -1367,8 +1371,8 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.32.0",
-            "version_normalized": "1.32.0.0",
+            "version": "v1.33.0",
+            "version_normalized": "1.33.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -1430,7 +1434,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -1439,6 +1443,10 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {

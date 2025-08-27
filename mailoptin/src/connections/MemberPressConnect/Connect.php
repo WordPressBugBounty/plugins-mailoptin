@@ -255,7 +255,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
             while ($loop === true) {
 
-                $users = \MeprUser::list_table('', '', $page, '', 'any', '2000');
+                $users = \MeprUser::list_table('', '', $page, '', 'any', '1000');
 
                 if ( ! empty($users['results'])) {
 
@@ -270,11 +270,13 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                         $item->email_campaign_id = $email_campaign_id;
                         $item->campaign_log_id   = $campaign_log_id;
 
-                        $this->mp_bg_process_instance->push_to_queue($item);
+                        $this->mp_bg_process_instance->push_to_queue($item)
+                                                     ->mo_save($campaign_log_id, $email_campaign_id)
+                                                     ->mo_dispatch($campaign_log_id, $email_campaign_id);
                     }
                 }
 
-                if (count($users['results']) < 2000) {
+                if (count($users['results']) < 1000) {
                     $loop = false;
                 }
 
@@ -292,7 +294,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     while ($_loop === true) {
 
-                        $_users = \MeprUser::list_table('', '', $_page, '', 'any', '2000', ['membership' => absint($membership), 'status' => 'active']);
+                        $_users = \MeprUser::list_table('', '', $_page, '', 'any', '1000', ['membership' => absint($membership), 'status' => 'active']);
 
                         if ( ! empty($_users['results'])) {
 
@@ -307,11 +309,13 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $_item->email_campaign_id = $email_campaign_id;
                                 $_item->campaign_log_id   = $campaign_log_id;
 
-                                $this->mp_bg_process_instance->push_to_queue($_item);
+                                $this->mp_bg_process_instance->push_to_queue($_item)
+                                                             ->mo_save($campaign_log_id, $email_campaign_id)
+                                                             ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
-                        if (count($_users['results']) < 2000) {
+                        if (count($_users['results']) < 1000) {
                             $_loop = false;
                         }
 
@@ -329,7 +333,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     while ($__loop === true) {
 
-                        $_users = \MeprUser::list_table('', '', $__page, '', 'any', '2000', ['membership' => absint($inactive_membership), 'status' => 'inactive']);
+                        $_users = \MeprUser::list_table('', '', $__page, '', 'any', '1000', ['membership' => absint($inactive_membership), 'status' => 'inactive']);
 
                         if ( ! empty($_users['results'])) {
 
@@ -344,11 +348,13 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $_item->email_campaign_id = $email_campaign_id;
                                 $_item->campaign_log_id   = $campaign_log_id;
 
-                                $this->mp_bg_process_instance->push_to_queue($_item);
+                                $this->mp_bg_process_instance->push_to_queue($_item)
+                                                             ->mo_save($campaign_log_id, $email_campaign_id)
+                                                             ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
-                        if (count($_users['results']) < 2000) {
+                        if (count($_users['results']) < 1000) {
                             $__loop = false;
                         }
 
@@ -361,7 +367,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     while ($__2loop === true) {
 
-                        $_users = \MeprUser::list_table('', '', $__2page, '', 'any', '2000', ['membership' => absint($inactive_membership), 'status' => 'expired']);
+                        $_users = \MeprUser::list_table('', '', $__2page, '', 'any', '1000', ['membership' => absint($inactive_membership), 'status' => 'expired']);
 
                         if ( ! empty($_users['results'])) {
 
@@ -376,11 +382,13 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $_item->email_campaign_id = $email_campaign_id;
                                 $_item->campaign_log_id   = $campaign_log_id;
 
-                                $this->mp_bg_process_instance->push_to_queue($_item);
+                                $this->mp_bg_process_instance->push_to_queue($_item)
+                                                             ->mo_save($campaign_log_id, $email_campaign_id)
+                                                             ->mo_dispatch($campaign_log_id, $email_campaign_id);
                             }
                         }
 
-                        if (count($_users['results']) < 2000) {
+                        if (count($_users['results']) < 1000) {
                             $__2loop = false;
                         }
 

@@ -27,14 +27,17 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
         add_action('woocommerce_init', function () {
             WooInit::get_instance();
 
-            add_filter('mailoptin_registered_connections', array($this, 'register_connection'));
-            add_filter('mailoptin_email_campaign_customizer_page_settings', array($this, 'integration_customizer_settings'), 10, 2);
-            add_filter('mailoptin_email_campaign_customizer_settings_controls', array($this, 'integration_customizer_controls'), 10, 4);
+            add_filter('mailoptin_registered_connections', [$this, 'register_connection']);
+            add_filter('mailoptin_email_campaign_customizer_page_settings', [$this, 'integration_customizer_settings'], 10, 2);
+            add_filter('mailoptin_email_campaign_customizer_settings_controls', [$this, 'integration_customizer_controls'], 10, 4);
 
             $this->woo_bg_process_instance = new WoocommerceMailBGProcess();
 
             add_action('init', [$this, 'unsubscribe_handler']);
             add_action('init', [$this, 'view_online_version']);
+
+            add_filter('mo_page_targeting_search_response', [$this, 'select2_search'], 10, 3);
+
         }, 1);
     }
 
@@ -127,16 +130,12 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
         if (is_null($cache)) {
 
-            $all_users = get_users([
-                'number' => 200,
-                'role'   => 'customer',
-                'fields' => ['ID', 'user_email', 'display_name']
-            ]);
+            $all_users = $this->get_all_customer_emails(200, 0, ['user_id', 'email', 'first_name', 'last_name']);
 
             $result = [];
 
             foreach ($all_users as $user) {
-                $result[$user->ID] = sprintf('%s (%s)', $user->display_name, $user->user_email);
+                $result[$user->email] = sprintf('%s %s (%s)', $user->first_name, $user->last_name, $user->email);
             }
 
             $cache = $result;
@@ -176,6 +175,46 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
         return $wpdb->get_col($wpdb->prepare($sql, $replacements));
     }
 
+    public function get_all_customer_emails($limit = 0, $page = 0, $fields = 'email', $q = '')
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'wc_customer_lookup';
+
+        $sql = "SELECT email FROM {$table_name} WHERE 1 = %d";
+
+        $replacements = [1];
+
+        if ('email' != $fields) {
+            $sql = "SELECT " . implode(", ", $fields) . " FROM {$table_name} WHERE 1 = %d";
+        }
+
+        if ( ! empty($q)) {
+            $sql .= ' AND (email LIKE %s OR first_name LIKE %s OR last_name LIKE %s)';
+
+            $search = '%' . $wpdb->esc_like(sanitize_text_field($q)) . '%';
+
+            $replacements[] = $search;
+            $replacements[] = $search;
+            $replacements[] = $search;
+        }
+
+        if ($limit > 0) {
+            $replacements[] = $limit;
+            $sql            .= " LIMIT %d";
+        }
+
+        if ($limit > 0 && $page > 0) {
+            $replacements[] = ($page - 1) * $limit;
+            $sql            .= " OFFSET %d";
+        }
+
+        if ('email' != $fields) {
+            return $wpdb->get_results($wpdb->prepare($sql, $replacements));
+        }
+
+        return $wpdb->get_col($wpdb->prepare($sql, $replacements));
+    }
+
     /**
      * @param int $email_campaign_id
      * @param int $campaign_log_id
@@ -201,28 +240,25 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
             while ($loop === true) {
 
-                $users = get_users([
-                    'number' => 2000,
-                    'paged'  => $page,
-                    'role'   => 'customer',
-                    'fields' => ['user_email']
-                ]);
+                $users = $this->get_all_customer_emails(500, $page);
 
-                foreach ($users as $user) {
+                foreach ($users as $user_email) {
 
-                    if (in_array($user->user_email, $bucket)) continue;
+                    if (in_array($user_email, $bucket)) continue;
 
                     $item             = new \stdClass();
-                    $item->user_email = $user->user_email;
-                    $bucket[]         = $user->user_email;
+                    $item->user_email = $user_email;
+                    $bucket[]         = $user_email;
 
                     $item->email_campaign_id = $email_campaign_id;
                     $item->campaign_log_id   = $campaign_log_id;
 
-                    $this->woo_bg_process_instance->push_to_queue($item);
+                    $this->woo_bg_process_instance->push_to_queue($item)
+                                                  ->mo_save($campaign_log_id, $email_campaign_id)
+                                                  ->mo_dispatch($campaign_log_id, $email_campaign_id);
                 }
 
-                if (count($users) < 2000) {
+                if (count($users) < 500) {
                     $loop = false;
                 }
 
@@ -237,7 +273,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                     $_page  = 1;
                     $_loop  = true;
-                    $_limit = 2000;
+                    $_limit = 500;
 
                     while ($_loop === true) {
 
@@ -256,7 +292,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->woo_bg_process_instance->push_to_queue($item);
+                                $this->woo_bg_process_instance->push_to_queue($item)
+                                                              ->mo_save($campaign_log_id, $email_campaign_id)
+                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);;
                             }
                         }
 
@@ -271,15 +309,13 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
             if ( ! empty($customers)) {
 
-                foreach ($customers as $user_id) {
+                foreach ($customers as $email) {
 
-                    $user = get_userdata(absint($user_id));
-
-                    if (in_array($user->user_email, $bucket)) continue;
+                    if (in_array($email, $bucket)) continue;
 
                     $item             = new \stdClass();
-                    $item->user_email = $user->user_email;
-                    $bucket[]         = $user->user_email;
+                    $item->user_email = $email;
+                    $bucket[]         = $email;
 
                     $item->email_campaign_id = $email_campaign_id;
                     $item->campaign_log_id   = $campaign_log_id;
@@ -293,6 +329,22 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                       ->mo_dispatch($campaign_log_id, $email_campaign_id);
 
         return ['success' => true];
+    }
+
+    public function select2_search($response, $search_type, $q)
+    {
+        if ($search_type == 'woocommerce_customers') {
+            $users = $this->get_all_customer_emails(500, 0, ['user_id', 'email', 'first_name', 'last_name'], $q);
+
+            if (is_array($users) && ! empty($users)) {
+                $response = [];
+                foreach ($users as $user) {
+                    $response[$user->email] = sprintf('%s %s (%s)', $user->first_name, $user->last_name, $user->email);
+                }
+            }
+        }
+
+        return $response;
     }
 
     public function unsubscribe_handler()

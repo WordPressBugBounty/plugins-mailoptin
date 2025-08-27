@@ -225,7 +225,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                     $item->email_campaign_id = $email_campaign_id;
                     $item->campaign_log_id   = $campaign_log_id;
 
-                    $this->gwp_bg_process_instance->push_to_queue($item);
+                    $this->gwp_bg_process_instance->push_to_queue($item)
+                                                  ->mo_save($campaign_log_id, $email_campaign_id)
+                                                  ->mo_dispatch($campaign_log_id, $email_campaign_id);
                 }
             }
 
@@ -250,7 +252,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                             $item->email_campaign_id = $email_campaign_id;
                             $item->campaign_log_id   = $campaign_log_id;
 
-                            $this->gwp_bg_process_instance->push_to_queue($item);
+                            $this->gwp_bg_process_instance->push_to_queue($item)
+                                                          ->mo_save($campaign_log_id, $email_campaign_id)
+                                                          ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
                     }
                 }

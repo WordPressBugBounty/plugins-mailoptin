@@ -612,7 +612,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                 $_offset = 0;
                 $_loop   = true;
-                $_limit  = 2000;
+                $_limit  = 1000;
 
                 while ($_loop === true) {
 
@@ -635,7 +635,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                             $_item->email_campaign_id = $email_campaign_id;
                             $_item->campaign_log_id   = $campaign_log_id;
 
-                            $this->llms_bg_process_instance->push_to_queue($_item);
+                            $this->llms_bg_process_instance->push_to_queue($_item)
+                                                           ->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($_users) < $_limit) $_loop = false;
@@ -655,7 +657,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                 $_offset = 0;
                 $_loop   = true;
-                $_limit  = 2000;
+                $_limit  = 1000;
 
                 while ($_loop === true) {
 
@@ -678,7 +680,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                             $_item->email_campaign_id = $email_campaign_id;
                             $_item->campaign_log_id   = $campaign_log_id;
 
-                            $this->llms_bg_process_instance->push_to_queue($_item);
+                            $this->llms_bg_process_instance->push_to_queue($_item)
+                                                           ->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($_users) < $_limit) $_loop = false;
@@ -698,7 +702,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
 
                 $_offset = 0;
                 $_loop   = true;
-                $_limit  = 2000;
+                $_limit  = 1000;
 
                 while ($_loop === true) {
 
@@ -721,7 +725,9 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                             $_item->email_campaign_id = $email_campaign_id;
                             $_item->campaign_log_id   = $campaign_log_id;
 
-                            $this->llms_bg_process_instance->push_to_queue($_item);
+                            $this->llms_bg_process_instance->push_to_queue($_item)
+                                                           ->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($_users) < $_limit) $_loop = false;

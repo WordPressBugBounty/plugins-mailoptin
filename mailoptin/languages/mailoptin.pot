@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.75.0\n"
+"Project-Id-Version: MailOptin - Lite 1.2.75.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-22T11:06:48+00:00\n"
+"POT-Creation-Date: 2025-08-27T10:05:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: mailoptin\n"
@@ -1989,7 +1989,7 @@ msgid "Easy Digital Downloads"
 msgstr ""
 
 #: src/connections/EasyDigitalDownloadsConnect/Connect.php:100
-#: src/connections/WooCommerceConnect/Connect.php:111
+#: src/connections/WooCommerceConnect/Connect.php:114
 msgid "Restrict to Selected Customers"
 msgstr ""
 
@@ -1998,7 +1998,7 @@ msgid "Select the customers that emails will only be delivered to."
 msgstr ""
 
 #: src/connections/EasyDigitalDownloadsConnect/Connect.php:114
-#: src/connections/WooCommerceConnect/Connect.php:97
+#: src/connections/WooCommerceConnect/Connect.php:100
 msgid "Restrict to Products"
 msgstr ""
 
@@ -2048,16 +2048,16 @@ msgstr ""
 #: src/connections/EasyDigitalDownloadsConnect/Connect.php:294
 #: src/connections/GiveWPConnect/Connect.php:188
 #: src/connections/LeadBankConnect/Connect.php:108
-#: src/connections/LearnDashConnect/Connect.php:260
-#: src/connections/LifterLMSConnect/Connect.php:759
-#: src/connections/MemberPressConnect/Connect.php:433
+#: src/connections/LearnDashConnect/Connect.php:262
+#: src/connections/LifterLMSConnect/Connect.php:765
+#: src/connections/MemberPressConnect/Connect.php:441
 #: src/connections/PmProConnect/Connect.php:371
 #: src/connections/RCPConnect/Connect.php:366
 #: src/connections/RegisteredUsersConnect/Connect.php:194
-#: src/connections/TutorLMSConnect/Connect.php:195
-#: src/connections/WooCommerceConnect/Connect.php:313
-#: src/connections/WooMembershipConnect/Connect.php:508
-#: src/connections/WooSubscriptionsConnect/Connect.php:581
+#: src/connections/TutorLMSConnect/Connect.php:197
+#: src/connections/WooCommerceConnect/Connect.php:365
+#: src/connections/WooMembershipConnect/Connect.php:518
+#: src/connections/WooSubscriptionsConnect/Connect.php:593
 msgid "You've successfully been unsubscribed."
 msgstr ""
 
@@ -5333,15 +5333,15 @@ msgstr ""
 msgid "Save Settings"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Connect.php:55
+#: src/connections/WooCommerceConnect/Connect.php:58
 msgid "WooCommerce"
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Connect.php:100
+#: src/connections/WooCommerceConnect/Connect.php:103
 msgid "Select the products whose customers will receive emails from this campaign. Leave this and \"Restrict to Selected Customers\" empty to send to all customers."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Connect.php:114
+#: src/connections/WooCommerceConnect/Connect.php:117
 msgid "Select the customers that emails will only be delivered to. Leave this and \"Restrict to Products\" empty to send to all customers."
 msgstr ""
 
