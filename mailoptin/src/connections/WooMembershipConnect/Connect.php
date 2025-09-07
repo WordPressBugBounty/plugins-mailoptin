@@ -299,10 +299,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                         $item->email_campaign_id = $email_campaign_id;
                         $item->campaign_log_id   = $campaign_log_id;
 
-                        $this->wc_ms_bg_process_instance->push_to_queue($item)
-                                                        ->mo_save($campaign_log_id, $email_campaign_id)
-                                                        ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                        $this->wc_ms_bg_process_instance->push_to_queue($item);
                     }
+
+                    $this->wc_ms_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                    ->mo_dispatch($campaign_log_id, $email_campaign_id);
                 }
 
                 if (count($_users) < $limit) {
@@ -339,10 +340,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_ms_bg_process_instance->push_to_queue($item)
-                                                                ->mo_save($campaign_log_id, $email_campaign_id)
-                                                                ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->wc_ms_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->wc_ms_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                            ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($users) < $_limit) {
@@ -379,10 +381,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_ms_bg_process_instance->push_to_queue($item)
-                                                                ->mo_save($campaign_log_id, $email_campaign_id)
-                                                                ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->wc_ms_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->wc_ms_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                            ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($users) < $_limit) {
@@ -419,10 +422,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_ms_bg_process_instance->push_to_queue($item)
-                                                                ->mo_save($campaign_log_id, $email_campaign_id)
-                                                                ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->wc_ms_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->wc_ms_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                            ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($users) < $_limit) {
@@ -459,10 +463,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->wc_ms_bg_process_instance->push_to_queue($item)
-                                                                ->mo_save($campaign_log_id, $email_campaign_id)
-                                                                ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->wc_ms_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->wc_ms_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                            ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($users) < $_limit) {

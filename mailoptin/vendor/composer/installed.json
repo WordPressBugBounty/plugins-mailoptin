@@ -511,11 +511,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1756288509",
-            "version_normalized": "0.2.1756288509.0",
+            "version": "0.2.1757248738",
+            "version_normalized": "0.2.1757248738.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_11R3FS/mailoptinauthifly-0-2-1756288509.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1NTbUr/mailoptinauthifly-0-2-1757248738.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -568,11 +568,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1756288546",
-            "version_normalized": "0.2.1756288546.0",
+            "version": "0.2.1757248774",
+            "version_normalized": "0.2.1757248774.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_28RlWu/mailoptinconnections-0-2-1756288546.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1az1xX/mailoptinconnections-0-2-1757248774.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -679,8 +679,8 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1756288541",
-            "version_normalized": "0.1.0.0-alpha1756288541",
+            "version": "0.1.0-alpha.1757248770",
+            "version_normalized": "0.1.0.0-alpha1757248770",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
@@ -720,7 +720,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1756288541"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1757248770"
             },
             "install-path": "../../src/core"
         },

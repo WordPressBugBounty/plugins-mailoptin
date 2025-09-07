@@ -180,7 +180,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
         global $wpdb;
         $table_name = $wpdb->prefix . 'wc_customer_lookup';
 
-        $sql = "SELECT email FROM {$table_name} WHERE 1 = %d";
+        $sql = "SELECT DISTINCT email FROM {$table_name} WHERE 1 = %d";
 
         $replacements = [1];
 
@@ -253,10 +253,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                     $item->email_campaign_id = $email_campaign_id;
                     $item->campaign_log_id   = $campaign_log_id;
 
-                    $this->woo_bg_process_instance->push_to_queue($item)
-                                                  ->mo_save($campaign_log_id, $email_campaign_id)
-                                                  ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                    $this->woo_bg_process_instance->push_to_queue($item);
                 }
+
+                $this->woo_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
 
                 if (count($users) < 500) {
                     $loop = false;
@@ -292,10 +293,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->woo_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);;
+                                $this->woo_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->woo_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                          ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($_users) < $_limit) {

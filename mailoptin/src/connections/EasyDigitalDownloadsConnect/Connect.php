@@ -342,10 +342,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                         $item->email_campaign_id = $email_campaign_id;
                         $item->campaign_log_id   = $campaign_log_id;
 
-                        $this->edd_bg_process_instance->push_to_queue($item)
-                                                      ->mo_save($campaign_log_id, $email_campaign_id)
-                                                      ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                        $this->edd_bg_process_instance->push_to_queue($item);
                     }
+
+                    $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                   ->mo_dispatch($campaign_log_id, $email_campaign_id);
                 }
 
                 if (count($users) < $limit) {
@@ -382,10 +383,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->edd_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->edd_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
 
                         if (count($_users) < $_limit) {
@@ -410,10 +412,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                     $item->email_campaign_id = $email_campaign_id;
                     $item->campaign_log_id   = $campaign_log_id;
 
-                    $this->edd_bg_process_instance->push_to_queue($item)
-                                                  ->mo_save($campaign_log_id, $email_campaign_id)
-                                                  ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                    $this->edd_bg_process_instance->push_to_queue($item);
                 }
+
+                $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                               ->mo_dispatch($campaign_log_id, $email_campaign_id);
             }
 
 
@@ -438,10 +441,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->edd_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->edd_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
                     }
                 }
@@ -465,10 +469,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->edd_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->edd_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
                     }
                 }
@@ -492,10 +497,11 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->edd_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->edd_bg_process_instance->push_to_queue($item);
                             }
+
+                            $this->edd_bg_process_instance->mo_save($campaign_log_id, $email_campaign_id)
+                                                           ->mo_dispatch($campaign_log_id, $email_campaign_id);
                         }
                     }
                 }
@@ -519,9 +525,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
                                 $item->email_campaign_id = $email_campaign_id;
                                 $item->campaign_log_id   = $campaign_log_id;
 
-                                $this->edd_bg_process_instance->push_to_queue($item)
-                                                              ->mo_save($campaign_log_id, $email_campaign_id)
-                                                              ->mo_dispatch($campaign_log_id, $email_campaign_id);
+                                $this->edd_bg_process_instance->push_to_queue($item);
                             }
                         }
                     }

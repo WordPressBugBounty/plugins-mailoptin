@@ -1,5 +1,9 @@
 ﻿== Changelog ==
 
+= 1.2.75.2 =
+* Improved background processing of email campaigns.
+* Fixed bug where users can receive email campaigns multiple times.
+
 = 1.2.75.1 =
 * Improved background processing queue by splitting into chunks.
 * Fixed XSS in optin campaign.

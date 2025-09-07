@@ -212,7 +212,7 @@ class WP_Mail_BG_Process extends WP_Background_Process
         $this->wp_mail_error_log($email_address, $campaign_log_id, $email_campaign_id);
 
         $response = wp_mail($email_address, $subject, $content_html); // send the newsletter.
-        
+
         $this->remove_html_content_type();
 
         if ( ! $response) {
@@ -239,6 +239,7 @@ class WP_Mail_BG_Process extends WP_Background_Process
         $key = $this->generate_key();
 
         if ( ! empty($this->data)) {
+
             $update = update_site_option($key, $this->data);
 
             if ( ! $update) {
@@ -249,6 +250,9 @@ class WP_Mail_BG_Process extends WP_Background_Process
                 );
             }
         }
+
+        // Clean out data so that new data isn't prepended with closed session's data.
+        $this->data = array();
 
         return $this;
     }
