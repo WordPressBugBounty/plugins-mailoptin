@@ -67,7 +67,7 @@ class Connect extends AbstractHubspotConnect implements ConnectionInterface
 
             $options = get_transient($cache_key);
 
-            if (empty($options) || false === $options) {
+            if (empty($options)) {
 
                 $response = $this->hubspotInstance()->apiRequest(
                     sprintf('crm/v3/properties/contacts/%s', $property)
@@ -200,17 +200,15 @@ class Connect extends AbstractHubspotConnect implements ConnectionInterface
      */
     public function get_email_list()
     {
-        $default = [
-            'all' => __('All Contacts', 'mailoptin'),
-        ];
+        $default = ['all' => __('All Contacts', 'mailoptin')];
 
         try {
 
-            $lists = get_transient('mo_hubspot_get_email_list');
+            $lists = get_transient('mo_hubspot_get_v3api_email_list');
 
-            if (empty($lists) || false === $lists) {
-                $lists = $this->hubspotInstance()->getEmailList();
-                set_transient('mo_hubspot_get_email_list', $lists, HOUR_IN_SECONDS);
+            if (empty($lists)) {
+                $lists = $this->hubspotInstance()->getEmailList(500, 'v3_');
+                set_transient('mo_hubspot_get_v3api_email_list', $lists, HOUR_IN_SECONDS);
             }
 
             return array_replace($default, $lists);
@@ -235,7 +233,7 @@ class Connect extends AbstractHubspotConnect implements ConnectionInterface
 
             $fields = get_transient($cache_key);
 
-            if (empty($fields) || false === $fields) {
+            if (empty($fields)) {
                 $fields = $this->hubspotInstance()->getListCustomFields();
                 set_transient($cache_key, $fields, DAY_IN_SECONDS);
             }

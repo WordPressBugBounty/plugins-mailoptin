@@ -98,7 +98,7 @@ class ConnectSettingsPage extends AbstractHubspotConnect
 
         check_admin_referer('mo-connection-clear-hubspot-cache');
 
-        delete_transient('mo_hubspot_get_email_list');
+        delete_transient('mo_hubspot_get_v3api_email_list');
         delete_transient('mo_hubspot_get_owners');
         delete_transient('mo_hubspot_get_optin_fields_');
         delete_transient('mo_hubspot_get_property_options_hs_lead_status');

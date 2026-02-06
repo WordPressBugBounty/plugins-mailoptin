@@ -1,5 +1,24 @@
 ﻿== Changelog ==
 
+= 1.2.76.0 =
+* Added Mailercloud email marketing integration.
+* Improved admin UI.
+* Added Cloudflare Turnstile integration
+* Added Background processing of external optin.
+* Fixed fatal error with cloning optin.
+* Fixed fatal error with optin titles containing % in charts.
+* Fixed bug where Sender integration did not fetch all lists.
+* Fixed bug where Flodesk integration didn't return all segments.
+
+= 1.2.75.4 =
+* Upgraded HubSpot integration fully to v3 API.
+* Added safeguards to prevent multiple error emails.
+* Improved performance.
+* Fixed a couple of PHP errors.
+
+= 1.2.75.3 =
+* Fixed email campaign errors getting duplicated.
+
 = 1.2.75.2 =
 * Improved background processing of email campaigns.
 * Fixed bug where users can receive email campaigns multiple times.

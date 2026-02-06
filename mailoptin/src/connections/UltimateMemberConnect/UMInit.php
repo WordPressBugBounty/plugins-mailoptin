@@ -3,10 +3,13 @@
 namespace MailOptin\UltimateMemberConnect;
 
 use MailOptin\Connections\UltimateMemberConnect\UMSettings;
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
 use MailOptin\Core\PluginSettings\Settings;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 use function MailOptin\Core\moVar;
 
 define('MAILOPTIN_UM_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
@@ -27,7 +30,10 @@ class UMInit
 
         add_action('um_after_form_fields', [$this, 'add_optin_field']);
 
-        add_action('um_registration_complete', [$this, 'process_optin'], 20, 2);
+        add_action('um_registration_complete', [$this, 'hook_callback'], 20, 2);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('um_process_optin' === $action) call_user_func_array([$this, 'process_optin'], $item);
+        }, 10, 2);
     }
 
     /**
@@ -179,6 +185,26 @@ class UMInit
             <?php
             echo apply_filters('mailoptin_ultimatemember_opt_in_checkbox', ob_get_clean());
         }
+    }
+
+
+    /**
+     * Handles a callback for the opt-in process, either queueing it for background processing
+     * or processing it immediately, based on the configuration.
+     *
+     * @param int $user_id The ID of the user associated with the opt-in process.
+     * @param array $args Additional arguments required for processing the opt-in.
+     *
+     * @return void|bool Returns false if background processing is enabled and the task
+     *                   is successfully queued, otherwise void.
+     */
+    public function hook_callback($user_id, $args)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('um_process_optin', func_get_args());
+        }
+
+        $this->process_optin($user_id, $args);
     }
 
     public function process_optin($user_id, $args)

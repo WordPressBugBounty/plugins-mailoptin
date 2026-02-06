@@ -5,10 +5,14 @@ namespace MailOptin\WooCommerceConnect;
 
 use Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFields;
 use Automattic\WooCommerce\Blocks\Package;
+use MailOptin\Core\AsyncHandler\AsyncHandler;
+use MailOptin\Core\Connections\AbstractConnect;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 
 define('MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
@@ -22,7 +26,11 @@ class WooInit
         add_action('wp_ajax_mo_woocommerce_fetch_lists', [$this, 'fetch_lists']);
         add_action('wp_ajax_mo_woocommerce_fetch_custom_fields', [$this, 'fetch_custom_fields']);
 
-        add_action('woocommerce_order_status_changed', [$this, 'process_optin'], 20, 3);
+        add_action('woocommerce_order_status_changed', [$this, 'hook_callback'], 20, 3);
+
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('woo_process_optin' === $action) call_user_func_array([$this, 'process_optin'], $item);
+        }, 10, 2);
 
         Product::get_instance();
         Category::get_instance();
@@ -45,26 +53,32 @@ class WooInit
         }
 
         if (in_array($page, ['product_tag', 'product_cat', 'product'])) {
-            wp_enqueue_script('mailoptin-woocommerce', MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL . 'woocommerce.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
+            wp_enqueue_script('mailoptin-woocommerce', MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL . 'woocommerce.js', [
+                    'jquery',
+                    'underscore'
+            ], MAILOPTIN_VERSION_NUMBER, true);
 
             wp_localize_script('mailoptin-woocommerce', 'moWooCommerce', [
-                'fields'                  => [],
-                'ajax_url'                => admin_url('admin-ajax.php'),
-                'nonce'                   => wp_create_nonce('mailoptin-woocommerce'),
-                'select2_tag_connections' => Init::select2_tag_connections(),
-                'text_tag_connections'    => Init::text_tag_connections()
+                    'fields'                  => [],
+                    'ajax_url'                => admin_url('admin-ajax.php'),
+                    'nonce'                   => wp_create_nonce('mailoptin-woocommerce'),
+                    'select2_tag_connections' => Init::select2_tag_connections(),
+                    'text_tag_connections'    => Init::text_tag_connections()
             ]);
         }
 
         $screen = get_current_screen();
         if ( ! empty($screen->id) && strpos($screen->id, MAILOPTIN_SETTINGS_SETTINGS_SLUG) !== false) {
-            wp_enqueue_script('mailoptin-woocommerce-settings', MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL . 'settings.js', ['jquery', 'underscore'], MAILOPTIN_VERSION_NUMBER, true);
+            wp_enqueue_script('mailoptin-woocommerce-settings', MAILOPTIN_WOOCOMMERCE_CONNECT_ASSETS_URL . 'settings.js', [
+                    'jquery',
+                    'underscore'
+            ], MAILOPTIN_VERSION_NUMBER, true);
             wp_localize_script('mailoptin-woocommerce-settings', 'moWooCommerce', [
-                'fields'                  => [],
-                'ajax_url'                => admin_url('admin-ajax.php'),
-                'nonce'                   => wp_create_nonce('mailoptin-woocommerce'),
-                'select2_tag_connections' => Init::select2_tag_connections(),
-                'text_tag_connections'    => Init::text_tag_connections()
+                    'fields'                  => [],
+                    'ajax_url'                => admin_url('admin-ajax.php'),
+                    'nonce'                   => wp_create_nonce('mailoptin-woocommerce'),
+                    'select2_tag_connections' => Init::select2_tag_connections(),
+                    'text_tag_connections'    => Init::text_tag_connections()
             ]);
         }
     }
@@ -239,13 +253,13 @@ class WooInit
             if (empty($lists)) wp_send_json_error([]);
 
             woocommerce_wp_select(
-                [
-                    'id'          => 'mailoptinWooCommerceSelectList',
-                    'label'       => esc_html__('Select List', 'mailoptin'),
-                    'value'       => $saved_lists,
-                    'options'     => $lists,
-                    'description' => __('Select the email list, audience or segment to add customers to.', 'mailoptin'),
-                ]
+                    [
+                            'id'          => 'mailoptinWooCommerceSelectList',
+                            'label'       => esc_html__('Select List', 'mailoptin'),
+                            'value'       => $saved_lists,
+                            'options'     => $lists,
+                            'description' => __('Select the email list, audience or segment to add customers to.', 'mailoptin'),
+                    ]
             );
 
             if ( ! empty($double_optin_settings)) {
@@ -295,7 +309,7 @@ class WooInit
         }
 
         $response = [
-            'lists' => ob_get_clean()
+                'lists' => ob_get_clean()
         ];
 
         wp_send_json_success($response);
@@ -337,15 +351,15 @@ class WooInit
                 }
 
                 woocommerce_wp_select(
-                    [
-                        'id'                => $mapped_key,
-                        'label'             => $value,
-                        'value'             => $saved_mapped_field,
-                        'options'           => $this->woo_checkout_fields(),
-                        'custom_attributes' => [
-                            'data-type' => 'product'
+                        [
+                                'id'                => $mapped_key,
+                                'label'             => $value,
+                                'value'             => $saved_mapped_field,
+                                'options'           => $this->woo_checkout_fields(),
+                                'custom_attributes' => [
+                                        'data-type' => 'product'
+                                ]
                         ]
-                    ]
                 );
             }
 
@@ -405,7 +419,7 @@ class WooInit
         }
 
         $response = [
-            'fields' => ob_get_clean()
+                'fields' => ob_get_clean()
         ];
 
         wp_send_json_success($response);
@@ -428,10 +442,10 @@ class WooInit
 
         if (in_array($saved_integration, Init::double_optin_support_connections(true))) {
             return [
-                'id'          => 'mailoptinWooCommerceDoubleOptin',
-                'label'       => ($is_double_optin === false) ? esc_html__('Enable Double Optin', 'mailoptin') : esc_html__('Disable Double Optin', 'mailoptin'),
-                'description' => esc_html__('Double optin requires customers to confirm their email address before they are added or subscribed.', 'mailoptin'),
-                'value'       => wc_bool_to_string($saved_double_optin),
+                    'id'          => 'mailoptinWooCommerceDoubleOptin',
+                    'label'       => ($is_double_optin === false) ? esc_html__('Enable Double Optin', 'mailoptin') : esc_html__('Disable Double Optin', 'mailoptin'),
+                    'description' => esc_html__('Double optin requires customers to confirm their email address before they are added or subscribed.', 'mailoptin'),
+                    'value'       => wc_bool_to_string($saved_double_optin),
             ];
         }
 
@@ -490,18 +504,18 @@ class WooInit
             }
 
             woocommerce_wp_select(
-                [
-                    'id'                => 'mailoptinWooCommerceSelectTags',
-                    'name'              => 'mailoptinWooCommerceSelectTags[]',
-                    'label'             => esc_html__('Tags', 'mailoptin'),
-                    'value'             => $saved_tags,
-                    'options'           => $options,
-                    'class'             => 'mowoo_select2',
-                    'description'       => esc_html__('Select tags to assign to buyers or customers.', 'mailoptin'),
-                    'custom_attributes' => [
-                        'multiple' => 'multiple'
+                    [
+                            'id'                => 'mailoptinWooCommerceSelectTags',
+                            'name'              => 'mailoptinWooCommerceSelectTags[]',
+                            'label'             => esc_html__('Tags', 'mailoptin'),
+                            'value'             => $saved_tags,
+                            'options'           => $options,
+                            'class'             => 'mowoo_select2',
+                            'description'       => esc_html__('Select tags to assign to buyers or customers.', 'mailoptin'),
+                            'custom_attributes' => [
+                                    'multiple' => 'multiple'
+                            ]
                     ]
-                ]
             );
             ?>
             <script type="text/javascript">
@@ -518,12 +532,12 @@ class WooInit
         } elseif (in_array($saved_integration, Init::text_tag_connections())) {
 
             woocommerce_wp_text_input(
-                [
-                    'id'          => 'mailoptinWooCommerceTextTags',
-                    'value'       => $saved_tags,
-                    'label'       => esc_html__('Tags', 'mailoptin'),
-                    'description' => esc_html__('Enter a comma-separated list of tags to assign to buyers or customers.', 'mailoptin'),
-                ]
+                    [
+                            'id'          => 'mailoptinWooCommerceTextTags',
+                            'value'       => $saved_tags,
+                            'label'       => esc_html__('Tags', 'mailoptin'),
+                            'description' => esc_html__('Enter a comma-separated list of tags to assign to buyers or customers.', 'mailoptin'),
+                    ]
             );
         }
     }
@@ -684,15 +698,15 @@ class WooInit
         $user = $order->get_user();
 
         $hashmap = apply_filters('mailoptin_woocommerce_mapping_field_hashmap_value', [
-            'order_comments'             => $order->get_customer_note(),
-            'account_username'           => $user ? $user->user_login : '',
-            'account_password'           => '',
-            'mowoo_product_names'        => $this->get_product_names_from_order($order),
-            'mowoo_order_total'          => $order->get_total(),
-            'mowoo_order_created_date'   => $this->stringify_wc_datetime($order->get_date_created()),
-            'mowoo_order_completed_date' => $this->stringify_wc_datetime($order->get_date_completed()),
-            'mowoo_order_date'           => $this->stringify_wc_datetime($order->get_date_paid()),
-            'mowoo_order_payment_method' => $order->get_payment_method_title()
+                'order_comments'             => $order->get_customer_note(),
+                'account_username'           => $user ? $user->user_login : '',
+                'account_password'           => '',
+                'mowoo_product_names'        => $this->get_product_names_from_order($order),
+                'mowoo_order_total'          => $order->get_total(),
+                'mowoo_order_created_date'   => $this->stringify_wc_datetime($order->get_date_created()),
+                'mowoo_order_completed_date' => $this->stringify_wc_datetime($order->get_date_completed()),
+                'mowoo_order_date'           => $this->stringify_wc_datetime($order->get_date_paid()),
+                'mowoo_order_payment_method' => $order->get_payment_method_title()
         ], $field_id, $order);
 
         if (isset($hashmap[$field_id])) return $hashmap[$field_id];
@@ -714,70 +728,100 @@ class WooInit
      * @param $order_id
      * @param $old_status
      * @param $new_status
+     *
+     * @return bool|void
+     */
+    public function hook_callback($order_id, $old_status, $new_status)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('woo_process_optin', func_get_args());
+        }
+
+        $this->process_optin($order_id, $old_status, $new_status);
+    }
+
+    /**
+     *
+     * @param $order_id
+     * @param $old_status
+     * @param $new_status
+     *
+     * @return void
+     * @throws \Exception
      */
     public function process_optin($order_id, $old_status, $new_status)
     {
-        $order = wc_get_order($order_id);
+        try {
+            $order = wc_get_order($order_id);
 
-        $subscription_type = Settings::instance()->mailoptin_woocommerce_subscribe_customers();
+            $subscription_type = Settings::instance()->mailoptin_woocommerce_subscribe_customers();
 
-        if ($subscription_type == 'yes') {
+            if ($subscription_type == 'yes') {
 
-            if (self::is_use_post_meta_storage()) {
-                $subscribe_customer = get_post_meta($order_id, 'mailoptin_woocommerce_optin_checkbox', true);
-            } else {
-                $subscribe_customer = $order->get_meta('mailoptin_woocommerce_optin_checkbox');
+                if (self::is_use_post_meta_storage()) {
+                    $subscribe_customer = get_post_meta($order_id, 'mailoptin_woocommerce_optin_checkbox', true);
+                } else {
+                    $subscribe_customer = $order->get_meta('mailoptin_woocommerce_optin_checkbox');
+                }
+
+                $block_subscribe_customer = Package::container()->get(CheckoutFields::class)->get_field_from_object(
+                        'mailoptin/woocommerce_optin_checkbox',
+                        $order,
+                        "other"
+                );
+
+                if (empty($subscribe_customer) && $block_subscribe_customer === false) return;
+
+                //don't add customer if the customer did not tick the checkbox
+                if ('no' === $subscribe_customer) return;
             }
 
-            $block_subscribe_customer = Package::container()->get(CheckoutFields::class)->get_field_from_object(
-                'mailoptin/woocommerce_optin_checkbox',
-                $order,
-                "other"
-            );
+            // check if mailoptin is connected in the settings
+            if ( ! empty(Settings::instance()->mailoptin_woocommerce_integration_connections())) {
+                WooSettings::get_instance()->process_submission($order);
+            }
 
-            if (empty($subscribe_customer) && $block_subscribe_customer === false) return;
+            if (apply_filters('mailoptin_woocommerce_optin_enable_short_circuit', false)) return;
 
-            //don't add customer if the customer did not tick the checkbox
-            if ('no' === $subscribe_customer) return;
-        }
+            $product_items = $order->get_items();
 
-        $product_items = $order->get_items();
+            foreach ($product_items as $product_item) {
 
-        foreach ($product_items as $product_item) {
-            $product_id = $product_item->get_product_id();
+                $product_id = $product_item->get_product_id();
 
-            $order_statuses = apply_filters('mailoptin_woocommerce_valid_product_order_status', ['processing', 'completed']);
+                $order_statuses = apply_filters(
+                        'mailoptin_woocommerce_valid_product_order_status',
+                        ['processing', 'completed']
+                );
 
-            $product_object  = wc_get_product($product_id);
-            $product_tag_ids = wc_get_product_term_ids($product_id, 'product_tag');
-            $product_cat_ids = wc_get_product_term_ids($product_id, 'product_cat');
+                $product_object  = wc_get_product($product_id);
+                $product_tag_ids = wc_get_product_term_ids($product_id, 'product_tag');
+                $product_cat_ids = wc_get_product_term_ids($product_id, 'product_cat');
 
-            if (in_array($new_status, $order_statuses) && ! in_array($old_status, $order_statuses)) {
+                if (in_array($new_status, $order_statuses) && ! in_array($old_status, $order_statuses)) {
 
-                //check if the product has an existing connected integration
-                if (is_object($product_object) && method_exists($product_object, 'get_meta') && ! empty($product_object->get_meta('mailoptinWooCommerceSelectIntegration'))) {
-                    Product::get_instance()->process_submission($product_object, $order);
-                }
-
-                // loop through each category and check if any on these categories has an existing connected integration
-                foreach ($product_cat_ids as $product_cat_id) {
-                    if ( ! empty(get_term_meta($product_cat_id, 'mailoptinWooCommerceSelectIntegration', true))) {
-                        Category::get_instance()->process_submission($product_cat_id, $order);
+                    //check if the product has an existing connected integration
+                    if (is_object($product_object) && method_exists($product_object, 'get_meta') && ! empty($product_object->get_meta('mailoptinWooCommerceSelectIntegration'))) {
+                        Product::get_instance()->process_submission($product_object, $order);
                     }
-                }
 
-                // loop through each tag and check if any on these tags has an existing connected integration
-                foreach ($product_tag_ids as $product_tag_id) {
-                    if ( ! empty(get_term_meta($product_tag_id, 'mailoptinWooCommerceSelectIntegration', true))) {
-                        Tags::get_instance()->process_submission($product_tag_id, $order);
+                    // loop through each category and check if any on these categories has an existing connected integration
+                    foreach ($product_cat_ids as $product_cat_id) {
+                        if ( ! empty(get_term_meta($product_cat_id, 'mailoptinWooCommerceSelectIntegration', true))) {
+                            Category::get_instance()->process_submission($product_cat_id, $order);
+                        }
                     }
-                }
 
-                // check if mailoptin is connected in the settings
-                if ( ! empty(Settings::instance()->mailoptin_woocommerce_integration_connections())) {
-                    WooSettings::get_instance()->process_submission($order);
+                    // loop through each tag and check if any on these tags has an existing connected integration
+                    foreach ($product_tag_ids as $product_tag_id) {
+                        if ( ! empty(get_term_meta($product_tag_id, 'mailoptinWooCommerceSelectIntegration', true))) {
+                            Tags::get_instance()->process_submission($product_tag_id, $order);
+                        }
+                    }
                 }
             }
+        } catch (\Exception $e) {
+            AbstractConnect::save_optin_error_log($e->getMessage(), 'woocommerce', 'WooCommerce');
         }
     }
 

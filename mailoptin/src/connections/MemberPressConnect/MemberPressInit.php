@@ -2,9 +2,12 @@
 
 namespace MailOptin\MemberPressConnect;
 
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
 use MailOptin\Core\Repositories\ConnectionsRepository;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 
 define('MAILOPTIN_MEMBERPRESS_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
@@ -20,7 +23,11 @@ class MemberPressInit
         add_action('wp_ajax_mo_memberpress_fetch_lists', [$this, 'fetch_lists']);
         add_action('wp_ajax_mo_memberpress_fetch_custom_fields', [$this, 'fetch_custom_fields']);
         add_action('mepr-user-signup-fields', [$this, 'display_signup_field']);
-        add_action('mepr-signup-user-loaded', [$this, 'process_signup']);
+
+        add_action('mepr-signup-user-loaded', [$this, 'hook_callback']);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('mepr_process_signup' === $action) call_user_func_array([$this, 'process_signup'], $item);
+        }, 10, 2);
     }
 
     public function enqueue_scripts()
@@ -154,6 +161,19 @@ class MemberPressInit
         }
     }
 
+    /**
+     * @param $user
+     *
+     * @return true|void
+     */
+    public function hook_callback($user)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('mepr_process_signup', func_get_args());
+        }
+
+        $this->process_signup($user);
+    }
 
     public function process_signup($user)
     {

@@ -21,6 +21,8 @@ class WP_MemberPress_Mail_BG_Process extends WP_Mail_BG_Process
     {
         $email_address = $user_data->user_email;
 
+        if (empty($email_address)) return false;
+
         $unsubscribed_contacts = get_option('mo_memberpress_unsubscribers', []);
 
         if ( ! empty($unsubscribed_contacts)) {

@@ -2,8 +2,11 @@
 
 namespace MailOptin\PmProConnect;
 
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 use function MailOptin\Core\moVarGET;
 use function MailOptin\Core\moVarPOST;
 
@@ -18,7 +21,11 @@ class PMPROInit
         add_action('pmpro_checkout_before_submit_button', [$this, 'display_signup_field']);
 
         add_action('pmpro_checkout_before_change_membership_level', [$this, 'save_optin_checkbox_state'], 10, 2);
-        add_action('pmpro_after_checkout', [$this, 'process_signup'], 1, 2);
+
+        add_action('pmpro_after_checkout', [$this, 'hook_callback'], 1, 2);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('pmpro_process_signup' === $action) call_user_func_array([$this, 'process_signup'], $item);
+        }, 10, 2);
     }
 
     public function enqueue_scripts()
@@ -70,6 +77,21 @@ class PMPROInit
         }
     }
 
+
+    /**
+     * @param $user_id
+     * @param $morder
+     *
+     * @return true|void
+     */
+    public function hook_callback($user_id, $morder)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('pmpro_process_signup', func_get_args());
+        }
+
+        $this->process_signup($user_id, $morder);
+    }
 
     public function process_signup($user_id, $morder)
     {

@@ -2,8 +2,11 @@
 
 namespace MailOptin\RCPConnect;
 
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 use function MailOptin\Core\moVar;
 use function MailOptin\Core\moVarGET;
 
@@ -17,10 +20,12 @@ class RCPInit
 
         add_action('rcp_before_registration_submit_field', [$this, 'display_signup_field'], 99);
 
-
         add_action('rcp_form_processing', [$this, 'save_optin_checkbox_state'], 10, 6);
 
-        add_action('rcp_successful_registration', array($this, 'process_signup'), 10, 3);
+        add_action('rcp_successful_registration', array($this, 'hook_callback'), 10, 3);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('rcp_process_signup' === $action) call_user_func_array([$this, 'process_signup'], $item);
+        }, 10, 2);
     }
 
     public function enqueue_scripts()
@@ -68,6 +73,22 @@ class RCPInit
         if ( ! $this->is_auto_subscribe_enabled() && moVar($postedData, 'morcp_opt_in') == '1') {
             update_option(sprintf('mo_rcp_subscribed_checked_%s', $membership_id), 'yes');
         }
+    }
+
+    /**
+     * @param $member
+     * @param $customer
+     * @param $membership
+     *
+     * @return true|void
+     */
+    public function hook_callback($member, $customer = false, $membership = false)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('rcp_process_signup', func_get_args());
+        }
+
+        $this->process_signup($member, $customer, $membership);
     }
 
     public function process_signup($member, $customer = false, $membership = false)

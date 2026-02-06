@@ -61,12 +61,13 @@ class Connect extends AbstractSenderConnect implements ConnectionInterface
 
     public function get_email_list()
     {
-        $lists = get_transient('mo_sender_get_email_list');
+        $lists = get_transient('mo_sender_get_email_lists');
 
         try {
 
             if (empty($lists)) {
-                $response = $this->sender_instance()->make_request('groups');
+
+                $response = $this->sender_instance()->make_request('groups', ['limit' => 1000]);
 
                 $lists = [];
 
@@ -76,7 +77,7 @@ class Connect extends AbstractSenderConnect implements ConnectionInterface
                     }
                 }
 
-                set_transient('mo_sender_get_email_list', $lists, HOUR_IN_SECONDS);
+                set_transient('mo_sender_get_email_lists', $lists, HOUR_IN_SECONDS);
             }
 
         } catch (\Exception $e) {

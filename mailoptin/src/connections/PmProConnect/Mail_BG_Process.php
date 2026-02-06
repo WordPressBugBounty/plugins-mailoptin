@@ -21,6 +21,8 @@ class Mail_BG_Process extends WP_Mail_BG_Process
     {
         $email_address = $user_data->user_email;
 
+        if (empty($email_address)) return false;
+
         $unsubscribed_contacts = get_option('mo_pmpro_unsubscribers', []);
 
         if ( ! empty($unsubscribed_contacts)) {

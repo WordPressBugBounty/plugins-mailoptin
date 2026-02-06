@@ -59,7 +59,7 @@ $mofm_custom_fields         = $this->get_field_name('mofm_custom_fields');
                     <select class="moFmSelect2 frm_multiselect" name="<?php echo $tag_field_name; ?>[]" id="mofmSelectTags" multiple>
                         <?php if (is_array($tags) && ! empty($tags)) : ?>
                             <?php foreach ($tags as $key => $value) : ?>
-                                <option value="<?= $key ?>" <?= @in_array($key, $saved_tags) ? 'selected="selected"' : ''; ?>><?= $value ?></option>
+                                <option value="<?= $key ?>" <?= in_array($key, (array)$saved_tags) ? 'selected="selected"' : ''; ?>><?= $value ?></option>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </select>

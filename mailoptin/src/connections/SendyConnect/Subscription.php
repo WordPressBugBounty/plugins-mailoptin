@@ -2,6 +2,8 @@
 
 namespace MailOptin\SendyConnect;
 
+use function MailOptin\Core\get_ip_address;
+
 class Subscription extends AbstractSendyConnect
 {
     public $email;
@@ -39,7 +41,7 @@ class Subscription extends AbstractSendyConnect
             $lead_data = array(
                 'name'      => $this->name,
                 'email'     => $this->email,
-                'ipaddress' => \MailOptin\Core\get_ip_address(),
+                'ipaddress' => get_ip_address(),
                 'referrer'  => $this->extras['conversion_page'],
             );
 

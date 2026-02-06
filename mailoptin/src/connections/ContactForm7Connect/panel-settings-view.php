@@ -74,7 +74,7 @@ use function MailOptin\Core\moVar;
                     <td>
                         <select class="mocf7Tags" id="mocf7Tags" name="mocf7_settings[tags][]" multiple style="width: 25em;">
                             <?php foreach ($tags as $key => $value) : ?>
-                                <option value="<?= $key ?>" <?= @in_array($key, $saved_tags) ? 'selected="selected"' : ''; ?>><?= $value ?></option>
+                                <option value="<?= $key ?>" <?= in_array($key, (array)$saved_tags) ? 'selected="selected"' : ''; ?>><?= $value ?></option>
                             <?php endforeach; ?>
                         </select>
                         <p class="description"><?= esc_html__('Select tags to assign to subscribers.', 'mailoptin') ?></p>

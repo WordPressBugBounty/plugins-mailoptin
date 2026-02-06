@@ -2,9 +2,12 @@
 
 namespace MailOptin\EasyDigitalDownloadsConnect;
 
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 
 define('MAILOPTIN_EDD_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
@@ -25,7 +28,11 @@ class EDDInit
 
         add_action('edd_checkout_before_gateway', array($this, 'checkout_signup'));
         add_action('edd_complete_purchase', array($this, 'store_payment_meta'), 10, 1);
-        add_action('edd_complete_purchase', [$this, 'subscribe_customer'], 10, 2);
+
+        add_action('edd_complete_purchase', [$this, 'hook_callback'], 10, 2);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('edd_subscribe_customer' === $action) call_user_func_array([$this, 'subscribe_customer'], $item);
+        }, 10, 2);
 
     }
 
@@ -241,6 +248,21 @@ class EDDInit
         if ( ! empty($opt_in_status)) {
             edd_update_payment_meta($payment_id, '_moedd_subscribed', 1);
         }
+    }
+
+    /**
+     * @param $payment_id
+     * @param $payment
+     *
+     * @return true|void
+     */
+    public function hook_callback($payment_id, $payment = null)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('edd_subscribe_customer', func_get_args());
+        }
+
+        $this->subscribe_customer($payment_id, $payment);
     }
 
     public function subscribe_customer($payment_id, $payment = null)

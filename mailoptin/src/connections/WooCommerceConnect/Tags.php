@@ -256,7 +256,6 @@ class Tags
             $double_optin = get_term_meta($product_tag_id, $connection_service . '[mailoptinWooCommerceDoubleOptin]', true) === "1";
         }
 
-
         $form_tags = '';
         if (in_array($connection_service, Init::text_tag_connections())) {
             $tags_key  = $connection_service . '[mailoptinWooCommerceTextTags]';

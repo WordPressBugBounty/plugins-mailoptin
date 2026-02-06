@@ -319,59 +319,6 @@
             "install-path": "./installers"
         },
         {
-            "name": "deliciousbrains/wp-background-processing",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deliciousbrains/wp-background-processing.git",
-                "reference": "7ca7cc3504333db3a291bbab7f1917124fba4816"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deliciousbrains/wp-background-processing/zipball/7ca7cc3504333db3a291bbab7f1917124fba4816",
-                "reference": "7ca7cc3504333db3a291bbab7f1917124fba4816",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpunit/phpunit": "^8.0",
-                "spryker/code-sniffer": "^0.17.18",
-                "wp-coding-standards/wpcs": "^2.3",
-                "yoast/phpunit-polyfills": "^1.0"
-            },
-            "suggest": {
-                "coenjacobs/mozart": "Easily wrap this library with your own prefix, to prevent collisions when multiple plugins use this library"
-            },
-            "time": "2024-12-17T14:04:30+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "classes/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Delicious Brains",
-                    "email": "nom@deliciousbrains.com"
-                }
-            ],
-            "description": "WP Background Processing can be used to fire off non-blocking asynchronous requests or as a background processing tool, allowing you to queue tasks.",
-            "support": {
-                "issues": "https://github.com/deliciousbrains/wp-background-processing/issues",
-                "source": "https://github.com/deliciousbrains/wp-background-processing/tree/1.4.0"
-            },
-            "install-path": "../deliciousbrains/wp-background-processing"
-        },
-        {
             "name": "drewm/drip",
             "version": "v0.9",
             "version_normalized": "0.9.0.0",
@@ -511,11 +458,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1757248738",
-            "version_normalized": "0.2.1757248738.0",
+            "version": "0.2.1769088395",
+            "version_normalized": "0.2.1769088395.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1NTbUr/mailoptinauthifly-0-2-1757248738.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_gPh6b/mailoptinauthifly-0-2-1769088395.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -568,15 +515,14 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1757248774",
-            "version_normalized": "0.2.1757248774.0",
+            "version": "0.2.1769088493",
+            "version_normalized": "0.2.1769088493.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1az1xX/mailoptinconnections-0-2-1757248774.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1mgsY9/mailoptinconnections-0-2-1769088493.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
-                "deliciousbrains/wp-background-processing": "^1.0",
                 "drewm/drip": "^0.9",
                 "mailoptin/mailchimp-api-php": "^2.0"
             },
@@ -606,6 +552,7 @@
                     "MailOptin\\AweberConnect\\": "AweberConnect/",
                     "MailOptin\\SendyConnect\\": "SendyConnect/",
                     "MailOptin\\MailerliteConnect\\": "MailerliteConnect/",
+                    "MailOptin\\MailercloudConnect\\": "MailercloudConnect/",
                     "MailOptin\\Mailerlitev2Connect\\": "Mailerlitev2Connect/",
                     "MailOptin\\HubspotConnect\\": "HubspotConnect/",
                     "MailOptin\\InfusionsoftConnect\\": "InfusionsoftConnect/",
@@ -679,17 +626,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1757248770",
-            "version_normalized": "0.1.0.0-alpha1757248770",
+            "version": "0.1.0-alpha.1769158756",
+            "version_normalized": "0.1.0.0-alpha1769158756",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "50e86551592f000e053a52cbee89543460d384e8"
+                "reference": "a8960eff60116c187e3d7e757363d2f0b5df5796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/50e86551592f000e053a52cbee89543460d384e8",
-                "reference": "50e86551592f000e053a52cbee89543460d384e8",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/a8960eff60116c187e3d7e757363d2f0b5df5796",
+                "reference": "a8960eff60116c187e3d7e757363d2f0b5df5796",
                 "shasum": ""
             },
             "require": {
@@ -700,7 +647,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2025-08-19T10:05:05+00:00",
+            "time": "2026-01-23T08:57:44+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -708,19 +655,21 @@
                     "src/Functions/custom-settings-api.php",
                     "src/Functions/functions.php",
                     "src/Functions/php-html-css-js-minifier.php",
-                    "src/Functions/FuseWPAdminNotice.php",
                     "src/Functions/MoBFnote.php",
                     "src/Functions/Shogun.php"
                 ],
                 "psr-4": {
                     "MailOptin\\Core\\": "src/"
-                }
+                },
+                "classmap": [
+                    "src/Libs/WPBGProcessing"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1757248770"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1769158756"
             },
             "install-path": "../../src/core"
         },

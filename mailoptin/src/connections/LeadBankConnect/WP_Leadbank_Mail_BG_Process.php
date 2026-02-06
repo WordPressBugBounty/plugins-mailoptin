@@ -21,6 +21,8 @@ class WP_Leadbank_Mail_BG_Process extends WP_Mail_BG_Process
     {
         $email_address = $user_data['email_address'];
 
+        if (empty($email_address)) return false;
+
         $unsubscribed_contacts = get_option('mo_leadbank_unsubscribers', []);
 
         if ( ! empty($unsubscribed_contacts)) {

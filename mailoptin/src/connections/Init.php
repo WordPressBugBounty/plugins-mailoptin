@@ -20,7 +20,8 @@ class Init
             'EgoiConnect',
             'SenderConnect',
             'ZohoCampaignsConnect',
-            'GroundhoggConnect'
+            'GroundhoggConnect',
+            'MailercloudConnect'
         ];
     }
 
@@ -206,6 +207,7 @@ class Init
         \MailOptin\CleverReachConnect\Connect::get_instance();
         \MailOptin\MailerliteConnect\Connect::get_instance();
         \MailOptin\Mailerlitev2Connect\Connect::get_instance();
+        \MailOptin\MailercloudConnect\Connect::get_instance();
         \MailOptin\EmailOctopusConnect\Connect::get_instance();
         \MailOptin\FluentCRMConnect\Connect::get_instance();
         \MailOptin\GroundhoggConnect\Connect::get_instance();

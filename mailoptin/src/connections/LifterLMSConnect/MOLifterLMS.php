@@ -366,7 +366,7 @@ class MOLifterLMS extends \LLMS_Abstract_Integration
 
             if ( ! empty($saved_connection)) {
 
-                $lists = Connect::email_list_options($saved_connection);
+                $lists = Init::mo_select_list_options($saved_connection);
 
                 $content[] = [
                     'title'   => __('Select List', 'mailoptin'),

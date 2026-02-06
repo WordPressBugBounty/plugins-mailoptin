@@ -167,7 +167,7 @@ class Connect extends AbstractConnect implements ConnectionInterface
 
     public function view_online_version()
     {
-        if ( ! isset($_GET['mo_view_web_version']) || empty($_GET['mo_view_web_version'])) return;
+        if (empty($_GET['mo_view_web_version'])) return;
 
         $campaign_log_id = sanitize_text_field($_GET['mo_view_web_version']);
 
@@ -178,7 +178,7 @@ class Connect extends AbstractConnect implements ConnectionInterface
 
     public function unsubscribe_handler()
     {
-        if ( ! isset($_GET['mo_wp_user_unsubscribe']) || empty($_GET['mo_wp_user_unsubscribe'])) return;
+        if (empty($_GET['mo_wp_user_unsubscribe'])) return;
 
         $email = sanitize_text_field($_GET['mo_wp_user_unsubscribe']);
 

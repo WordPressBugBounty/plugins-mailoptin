@@ -3,6 +3,8 @@
 namespace MailOptin\HubspotConnect;
 
 use MailOptin\Core\Repositories\OptinCampaignsRepository as OCR;
+
+use function MailOptin\Core\is_valid_data;
 use function MailOptin\Core\strtotime_utc;
 
 class Subscription extends AbstractHubspotConnect
@@ -114,24 +116,26 @@ class Subscription extends AbstractHubspotConnect
             $properties = apply_filters('mo_connections_hubspot_optin_properties', $properties, $this);
 
             //Create the contact
-            $contact_data = [
-                'properties' => [],
-            ];
+            $contact_data = ['properties' => []];
 
+            $validProperties = array_keys($this->connectInstance->get_optin_fields());
             foreach ($properties as $property => $value) {
-                if ( ! empty($value)) {
-                    $contact_data['properties'][] = [
-                        'property' => $property,
-                        'value'    => $value
-                    ];
+                if (in_array($property, $validProperties) && is_valid_data($value)) {
+                    $contact_data['properties'][$property] = $value;
                 }
             }
 
             $payload = apply_filters('mo_connections_hubspot_optin_payload', array_filter($contact_data, [$this, 'data_filter']), $this);
 
+            if (strstr($this->list_id, 'v3_') === false) {
+                $this->list_id = $this->get_listid_from_legacy_id($this->list_id);
+            } else {
+                $this->list_id = str_replace('v3_', '', $this->list_id);
+            }
+
             $response = $this->hubspotInstance()->addSubscriber($this->list_id, $this->email, $payload);
 
-            if (isset($response->vid)) {
+            if (isset($response->id)) {
                 return parent::ajax_success();
             }
 
@@ -142,5 +146,24 @@ class Subscription extends AbstractHubspotConnect
 
             return parent::ajax_failure();
         }
+    }
+
+    private function get_listid_from_legacy_id($list_id)
+    {
+        $cache_key = 'mo_hubspot_listid_from_legacy_id_' . $list_id;
+
+        $v3_list_id = get_transient($cache_key);
+
+        if (empty($v3_list_id)) {
+
+            $response = $this->hubspotInstance()->apiRequest('crm/v3/lists/idmapping?legacyListId=' . $list_id);
+
+            if (isset($response->listId)) {
+                $v3_list_id = $response->listId;
+                set_transient($cache_key, $v3_list_id, MONTH_IN_SECONDS);
+            }
+        }
+
+        return $v3_list_id ?: $list_id;
     }
 }

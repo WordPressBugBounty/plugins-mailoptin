@@ -15,7 +15,6 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         '1d70241e5fa15180bf0b547b18160633' => __DIR__ . '/../..' . '/src/core/src/Functions/custom-settings-api.php',
         '541054f7d83801e360f0f9cfeb6e7da9' => __DIR__ . '/../..' . '/src/core/src/Functions/functions.php',
         '1064428a5c96d5b26937d911d5bd0e95' => __DIR__ . '/../..' . '/src/core/src/Functions/php-html-css-js-minifier.php',
-        '0a894b0fefb3ff1b2043ad324a2d5cfd' => __DIR__ . '/../..' . '/src/core/src/Functions/FuseWPAdminNotice.php',
         'e180ca08fee0de2c7165b35361a1b492' => __DIR__ . '/../..' . '/src/core/src/Functions/MoBFnote.php',
         '325caeca09e74529119168f79f75095a' => __DIR__ . '/../..' . '/src/core/src/Functions/Shogun.php',
     );
@@ -78,6 +77,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\MailgunConnect\\' => 25,
             'MailOptin\\Mailerlitev2Connect\\' => 30,
             'MailOptin\\MailerliteConnect\\' => 28,
+            'MailOptin\\MailercloudConnect\\' => 29,
             'MailOptin\\MailPoetConnect\\' => 26,
             'MailOptin\\MailChimpConnect\\' => 27,
             'MailOptin\\LifterLMSConnect\\' => 27,
@@ -347,6 +347,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\MailerliteConnect\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailerliteConnect',
+        ),
+        'MailOptin\\MailercloudConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/MailercloudConnect',
         ),
         'MailOptin\\MailPoetConnect\\' => 
         array (
@@ -972,7 +976,6 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\Core\\Admin\\Customizer\\OptinForm\\OptinFormFactory' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/OptinForm/OptinFormFactory.php',
         'MailOptin\\Core\\Admin\\Customizer\\SafeModeMUInstaller' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/SafeModeMUInstaller.php',
         'MailOptin\\Core\\Admin\\Customizer\\UpsellCustomizerSection' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/UpsellCustomizerSection.php',
-        'MailOptin\\Core\\Admin\\FuseWP' => __DIR__ . '/../..' . '/src/core/src/Admin/FuseWP.php',
         'MailOptin\\Core\\Admin\\Installer\\MailOptin_Install_Skin' => __DIR__ . '/../..' . '/src/core/src/Admin/Installer/MailOptin_Install_Skin.php',
         'MailOptin\\Core\\Admin\\Installer\\PluginSilentUpgrader' => __DIR__ . '/../..' . '/src/core/src/Admin/Installer/PluginSilentUpgrader.php',
         'MailOptin\\Core\\Admin\\Installer\\PluginSilentUpgraderSkin' => __DIR__ . '/../..' . '/src/core/src/Admin/Installer/PluginSilentUpgraderSkin.php',
@@ -1003,6 +1006,8 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\Core\\Admin\\SettingsPage\\Settings' => __DIR__ . '/../..' . '/src/core/src/Admin/SettingsPage/Settings.php',
         'MailOptin\\Core\\Admin\\SettingsPage\\SplitTestOptinCampaign' => __DIR__ . '/../..' . '/src/core/src/Admin/SettingsPage/SplitTestOptinCampaign.php',
         'MailOptin\\Core\\AjaxHandler' => __DIR__ . '/../..' . '/src/core/src/AjaxHandler.php',
+        'MailOptin\\Core\\AsyncHandler\\AsyncHandler' => __DIR__ . '/../..' . '/src/core/src/AsyncHandler/AsyncHandler.php',
+        'MailOptin\\Core\\AsyncHandler\\BGProcess' => __DIR__ . '/../..' . '/src/core/src/AsyncHandler/BGProcess.php',
         'MailOptin\\Core\\Base' => __DIR__ . '/../..' . '/src/core/src/Base.php',
         'MailOptin\\Core\\BlockEditor\\Init' => __DIR__ . '/../..' . '/src/core/src/BlockEditor/Init.php',
         'MailOptin\\Core\\Connections\\AbstractConnect' => __DIR__ . '/../..' . '/src/core/src/Connections/AbstractConnect.php',
@@ -1031,6 +1036,8 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\Core\\EmailCampaigns\\TemplatifyInterface' => __DIR__ . '/../..' . '/src/core/src/EmailCampaigns/TemplatifyInterface.php',
         'MailOptin\\Core\\EmailCampaigns\\TriggerInterface' => __DIR__ . '/../..' . '/src/core/src/EmailCampaigns/TriggerInterface.php',
         'MailOptin\\Core\\EmailCampaigns\\VideoToImageLink' => __DIR__ . '/../..' . '/src/core/src/EmailCampaigns/VideoToImageLink.php',
+        'MailOptin\\Core\\Libs\\WPBGProcessing\\WP_Async_Request' => __DIR__ . '/../..' . '/src/core/src/Libs/WPBGProcessing/wp-async-request.php',
+        'MailOptin\\Core\\Libs\\WPBGProcessing\\WP_Background_Process' => __DIR__ . '/../..' . '/src/core/src/Libs/WPBGProcessing/wp-background-process.php',
         'MailOptin\\Core\\Logging\\CampaignLog' => __DIR__ . '/../..' . '/src/core/src/Logging/CampaignLog.php',
         'MailOptin\\Core\\Logging\\CampaignLogInterface' => __DIR__ . '/../..' . '/src/core/src/Logging/CampaignLogInterface.php',
         'MailOptin\\Core\\Logging\\CampaignLogPersistence' => __DIR__ . '/../..' . '/src/core/src/Logging/CampaignLogPersistence.php',
@@ -1054,6 +1061,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\Core\\OptinForms\\SidebarWidgets' => __DIR__ . '/../..' . '/src/core/src/OptinForms/SidebarWidgets.php',
         'MailOptin\\Core\\OptinForms\\Sidebar\\Gridgum' => __DIR__ . '/../..' . '/src/core/src/OptinForms/Sidebar/Gridgum.php',
         'MailOptin\\Core\\OptinForms\\Sidebar\\Lupin' => __DIR__ . '/../..' . '/src/core/src/OptinForms/Sidebar/Lupin.php',
+        'MailOptin\\Core\\OptinForms\\Turnstile' => __DIR__ . '/../..' . '/src/core/src/OptinForms/Turnstile.php',
         'MailOptin\\Core\\OptinForms\\UserTargetingRuleTrait' => __DIR__ . '/../..' . '/src/core/src/OptinForms/UserTargetingRuleTrait.php',
         'MailOptin\\Core\\PluginSettings\\Connections' => __DIR__ . '/../..' . '/src/core/src/PluginSettings/Connections.php',
         'MailOptin\\Core\\PluginSettings\\Settings' => __DIR__ . '/../..' . '/src/core/src/PluginSettings/Settings.php',
@@ -1203,6 +1211,12 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\MailChimpConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/MailChimpConnect/Subscription.php',
         'MailOptin\\MailPoetConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/MailPoetConnect/Connect.php',
         'MailOptin\\MailPoetConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/MailPoetConnect/Subscription.php',
+        'MailOptin\\MailercloudConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/APIClass.php',
+        'MailOptin\\MailercloudConnect\\AbstractMailercloudConnect' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/AbstractMailercloudConnect.php',
+        'MailOptin\\MailercloudConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/Connect.php',
+        'MailOptin\\MailercloudConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/ConnectSettingsPage.php',
+        'MailOptin\\MailercloudConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/SendCampaign.php',
+        'MailOptin\\MailercloudConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/MailercloudConnect/Subscription.php',
         'MailOptin\\MailerliteConnect\\APIClass\\Api\\Campaigns' => __DIR__ . '/../..' . '/src/connections/MailerliteConnect/APIClass/Api/Campaigns.php',
         'MailOptin\\MailerliteConnect\\APIClass\\Api\\Fields' => __DIR__ . '/../..' . '/src/connections/MailerliteConnect/APIClass/Api/Fields.php',
         'MailOptin\\MailerliteConnect\\APIClass\\Api\\Groups' => __DIR__ . '/../..' . '/src/connections/MailerliteConnect/APIClass/Api/Groups.php',
@@ -1290,6 +1304,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\NinjaFormsConnect\\Integrations\\KlaviyoConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/KlaviyoConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\MailChimpConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/MailChimpConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\MailPoetConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/MailPoetConnect.php',
+        'MailOptin\\NinjaFormsConnect\\Integrations\\MailercloudConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/MailercloudConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\MailerliteConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/MailerliteConnect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\Mailerlitev2Connect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/Mailerlitev2Connect.php',
         'MailOptin\\NinjaFormsConnect\\Integrations\\MailgunConnect' => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect/Integrations/MailgunConnect.php',
@@ -1641,8 +1656,6 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
-        'WP_Async_Request' => __DIR__ . '/..' . '/deliciousbrains/wp-background-processing/classes/wp-async-request.php',
-        'WP_Background_Process' => __DIR__ . '/..' . '/deliciousbrains/wp-background-processing/classes/wp-background-process.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -23,6 +23,7 @@
       "MailOptin\\AweberConnect\\": "AweberConnect/",
       "MailOptin\\SendyConnect\\": "SendyConnect/",
       "MailOptin\\MailerliteConnect\\": "MailerliteConnect/",
+      "MailOptin\\MailercloudConnect\\": "MailercloudConnect/",
       "MailOptin\\Mailerlitev2Connect\\": "Mailerlitev2Connect/",
       "MailOptin\\HubspotConnect\\": "HubspotConnect/",
       "MailOptin\\InfusionsoftConnect\\": "InfusionsoftConnect/",
@@ -94,7 +95,6 @@
   "require": {
     "composer/installers": "~1.0",
     "mailoptin/mailchimp-api-php": "^2.0",
-    "deliciousbrains/wp-background-processing": "^1.0",
     "drewm/drip": "^0.9"
   },
   "_comment": "doing this to remove guzzle dependency declared by thinkshout/mailchimp-api-php because we are explicitly using the curl adpater",

@@ -3,11 +3,14 @@
 namespace MailOptin\GiveWPConnect;
 
 use MailOptin\Core\AjaxHandler;
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\Connections\AbstractConnect;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Connections\Init;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 
 define('MAILOPTIN_GWP_CONNECT_ASSETS_URL', plugins_url('assets/',__FILE__));
 
@@ -30,8 +33,12 @@ class GWPInit
         add_action('give_insert_payment', array($this, 'save_optin_checkbox_state'), 10, 2);
         add_action('give_update_payment_status', function ($ID, $status) {
             if ('publish' == $status) {
-                $this->subscribe_customer(give_get_payment_by('id', $ID));
+                $this->hook_callback(give_get_payment_by('id', $ID));
             }
+        }, 10, 2);
+
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('gwp_subscribe_customer' === $action) call_user_func_array([$this, 'subscribe_customer'], $item);
         }, 10, 2);
     }
 
@@ -215,9 +222,23 @@ class GWPInit
     }
 
     /**
+     * @param $payment
+     *
+     * @return true|void
+     */
+    public function hook_callback($payment)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('gwp_subscribe_customer', func_get_args());
+        }
+
+        $this->subscribe_customer($payment);
+    }
+
+    /**
      * @param \Give_Payment $payment
      *
-     * @return false|void
+     * @return void
      */
     public function subscribe_customer($payment)
     {

@@ -3,11 +3,14 @@
 namespace MailOptin\UserRegistrationOptinConnect;
 
 use MailOptin\Core\AjaxHandler;
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\Connections\AbstractConnect;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\ConnectionsRepository;
 use MailOptin\Connections\Init;
+
+use function MailOptin\Core\is_optin_bg_processing_enabled;
 
 define('MAILOPTIN_USER_REGISTER_CONNECT_ASSETS_URL', plugins_url('assets/', __FILE__));
 
@@ -19,10 +22,13 @@ class UserRegisterInit
         add_action('admin_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('register_form', [$this, 'add_subscription_checkbox'], PHP_INT_MAX - 5);
         add_action('user_new_form', [$this, 'add_subscription_checkbox_to_admin']);
-        add_action('user_register', [$this, 'subscribe_user']);
         add_action('edit_user_created_user', [$this, 'admin_subscribe_user']);
-    }
 
+        add_action('user_register', [$this, 'hook_callback']);
+        add_action('mailoptin_async_handler_job', function ($action, $item) {
+            if ('wpur_subscribe_user' === $action) call_user_func_array([$this, 'subscribe_user'], $item);
+        }, 10, 2);
+    }
 
     public function enqueue_scripts()
     {
@@ -33,6 +39,24 @@ class UserRegisterInit
                 'underscore'
             ], MAILOPTIN_VERSION_NUMBER, true);
         }
+    }
+
+    /**
+     * Handles the user subscription process, either asynchronously or directly,
+     * based on the background processing setting.
+     *
+     * @param int|string $user_id The unique identifier of the user to be subscribed.
+     *
+     * @return bool|void Returns true if the async process is successfully queued,
+     *                   otherwise executes the subscription process directly.
+     */
+    public function hook_callback($user_id)
+    {
+        if (is_optin_bg_processing_enabled()) {
+            return AsyncHandler::push_to_queue('wpur_subscribe_user', func_get_args());
+        }
+
+        $this->subscribe_user($user_id);
     }
 
     public function subscribe_user($user_id)

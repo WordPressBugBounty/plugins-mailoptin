@@ -70,7 +70,6 @@ class SendCampaign extends AbstractSendinblueConnect
             $response = $this->sendinblue_instance()->make_request(
                 'emailCampaigns',
                 apply_filters('mailoptin_sendinblue_campaign_settings', [
-                    'tag' => 'MailOptin',
                     'sender' => [
                         'name' => Settings::instance()->from_name(),
                         'email' => Settings::instance()->from_email()

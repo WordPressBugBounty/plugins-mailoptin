@@ -168,6 +168,8 @@ class Connect extends AbstractAweberConnect implements ConnectionInterface
 
             self::save_optin_error_log($e->getMessage(), 'aweber');
         }
+
+        return [];
     }
 
     public function get_optin_fields($list_id = '')

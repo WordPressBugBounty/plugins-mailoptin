@@ -55,6 +55,7 @@ return array(
     'MailOptin\\MailgunConnect\\' => array($baseDir . '/src/connections/MailgunConnect'),
     'MailOptin\\Mailerlitev2Connect\\' => array($baseDir . '/src/connections/Mailerlitev2Connect'),
     'MailOptin\\MailerliteConnect\\' => array($baseDir . '/src/connections/MailerliteConnect'),
+    'MailOptin\\MailercloudConnect\\' => array($baseDir . '/src/connections/MailercloudConnect'),
     'MailOptin\\MailPoetConnect\\' => array($baseDir . '/src/connections/MailPoetConnect'),
     'MailOptin\\MailChimpConnect\\' => array($baseDir . '/src/connections/MailChimpConnect'),
     'MailOptin\\LifterLMSConnect\\' => array($baseDir . '/src/connections/LifterLMSConnect'),

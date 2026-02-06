@@ -69,7 +69,7 @@ class Connect
 
         $db_saved_state = StateRepository::get_instance()->get('mo_ninjaforms_action_state');
 
-        $filename = dirname(__FILE__) . "/integrations/$key.php";
+        $filename = dirname(__FILE__) . "/Integrations/$key.php";
 
         if ($db_saved_state < $this->state_version) {
             $this->setup_file_system()->delete($filename);

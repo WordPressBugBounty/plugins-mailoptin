@@ -8,11 +8,11 @@ if ( ! defined('ABSPATH')) {
 
 use MailOptin\Core\Admin\AdminNotices;
 use MailOptin\Core\Admin\Customizer\SafeModeMUInstaller;
-use MailOptin\Core\Admin\FuseWP;
 use MailOptin\Core\Admin\SettingsPage\ConversionExport;
 use MailOptin\Core\Admin\SettingsPage\PreviewCampaignLog;
 use MailOptin\Core\Admin\SettingsPage\ProUpgrade;
 use MailOptin\Core\Admin\SettingsPage\LicenseUpgrader;
+use MailOptin\Core\AsyncHandler\AsyncHandler;
 use MailOptin\Core\EmailCampaigns\Misc;
 use MailOptin\Core\EmailCampaigns\NewPublishPost\NewPublishPost;
 use MailOptin\Core\EmailCampaigns\Newsletter\Newsletter;
@@ -21,6 +21,7 @@ use MailOptin\Core\OptinForms\FrontEndOutput;
 use MailOptin\Core\OptinForms\InPost;
 use MailOptin\Core\OptinForms\Recaptcha;
 use MailOptin\Core\OptinForms\Shortcodes;
+use MailOptin\Core\OptinForms\Turnstile;
 use MailOptin\Libsodium\LibsodiumSettingsPage;
 
 define('MAILOPTIN_OAUTH_URL', 'https://auth.mailoptin.io');
@@ -105,6 +106,7 @@ class Base
         RegisterScripts::get_instance();
         AjaxHandler::get_instance();
         Cron::get_instance();
+        AsyncHandler::get_instance();
 
         $this->admin_hooks();
         Admin\Customizer\EmailCampaign\Customizer::instance();
@@ -120,16 +122,14 @@ class Base
         InPost::get_instance();
         Shortcodes::get_instance();
         Recaptcha::get_instance();
+        //Turnstile initialization
+        Turnstile::get_instance();
 
         BlockEditor\Init::get_instance();
 
         new SafeModeMUInstaller();
 
         \ProperP_Shogun::get_instance();
-
-        add_action('plugins_loaded', function () {
-            FuseWP::get_instance();
-        }, 99);
 
         add_action('widgets_init', ['MailOptin\Core\OptinForms\SidebarWidgets', 'widget_registration']);
 

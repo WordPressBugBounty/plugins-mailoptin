@@ -372,36 +372,6 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
         return $connections;
     }
 
-    /**
-     * @return array
-     */
-    public static function email_list_options($saved_integration)
-    {
-        $lists = [];
-        if ( ! empty($saved_integration) && $saved_integration != 'leadbank') {
-            $lists = ConnectionFactory::make($saved_integration)->get_email_list();
-        }
-
-        if ( ! empty($lists)) {
-
-            $options[''] = esc_html__('Select...', 'mailoptin');
-
-            foreach ($lists as $value => $label) {
-
-                if (empty($value)) continue;
-
-                $value = (string)$value;
-
-                // Add list to select options.
-                $options[$value] = $label;
-            }
-
-            return $options;
-        }
-
-        return [];
-    }
-
     public static function double_optin_settings($saved_integration, $field_id = 'mo_llms_doi')
     {
         if (empty($saved_integration)) return false;
@@ -487,7 +457,7 @@ class Connect extends \MailOptin\RegisteredUsersConnect\Connect
         $lists       = [];
         $saved_lists = '';
         if ( ! empty($connection) && $connection != 'leadbank') {
-            $lists       = self::email_list_options($connection);
+            $lists       = Init::mo_select_list_options($connection);
             $saved_lists = get_post_meta($post_id, $connection . '[mailoptinLLMSSelectList]', true);
         }
 

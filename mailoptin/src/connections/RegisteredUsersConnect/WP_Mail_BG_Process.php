@@ -3,14 +3,16 @@
 namespace MailOptin\RegisteredUsersConnect;
 
 use MailOptin\Core\Connections\AbstractConnect;
+use MailOptin\Core\Libs\WPBGProcessing\WP_Background_Process;
 use MailOptin\Core\Logging\CampaignLogRepository;
 use MailOptin\Core\PluginSettings\Settings;
 use MailOptin\Core\Repositories\AbstractCampaignLogMeta;
-use WP_Background_Process;
 
 
 class WP_Mail_BG_Process extends WP_Background_Process
 {
+    static $cache_bucket = [];
+
     /**
      * @var string
      */
@@ -127,12 +129,15 @@ class WP_Mail_BG_Process extends WP_Background_Process
     public function wp_mail_error_log($email_address, $campaign_log_id, $email_campaign_id)
     {
         add_action('wp_mail_failed', function ($wp_error) use ($email_address, $campaign_log_id, $email_campaign_id) {
-            $status = $wp_error->get_error_message();
-            AbstractConnect::save_campaign_error_log(
-                "Email address: $email_address; Note: $status",
-                $campaign_log_id,
-                $email_campaign_id
-            );
+            if ( ! isset(self::$cache_bucket[$email_address])) {
+                self::$cache_bucket[$email_address] = true;
+                $status                             = $wp_error->get_error_message();
+                AbstractConnect::save_campaign_error_log(
+                    "Email address: $email_address; Note: $status",
+                    $campaign_log_id,
+                    $email_campaign_id
+                );
+            }
         });
     }
 
@@ -178,6 +183,8 @@ class WP_Mail_BG_Process extends WP_Background_Process
     protected function task($user_data)
     {
         $email_address = $user_data->user_email;
+
+        if (empty($email_address)) return false;
 
         $unsubscribed_contacts = get_option('mo_wp_user_unsubscribers', []);
         if ( ! empty($unsubscribed_contacts)) {

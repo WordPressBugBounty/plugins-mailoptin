@@ -531,9 +531,9 @@ function cache_transform($cache_key, $callback)
 
     static $mo_cache_transform_bucket = [];
 
-    $result = moVar($mo_cache_transform_bucket, $cache_key, false);
+    $result = moVar($mo_cache_transform_bucket, $cache_key);
 
-    if ( ! $result) {
+    if ( ! isset($mo_cache_transform_bucket[$cache_key])) {
 
         $result = $callback();
 
@@ -706,4 +706,9 @@ function content_http_redirect($myURL)
     Please wait while you are redirected...or
     <a href="<?php echo $myURL; ?>">Click Here</a> if you do not want to wait.
     <?php
+}
+
+function is_optin_bg_processing_enabled()
+{
+    return Settings::instance()->enable_async_optin() === 'true';
 }
