@@ -21,7 +21,8 @@ class Init
             'SenderConnect',
             'ZohoCampaignsConnect',
             'GroundhoggConnect',
-            'MailercloudConnect'
+            'MailercloudConnect',
+            'SendpulseConnect'
         ];
     }
 
@@ -42,7 +43,8 @@ class Init
             'HighLevelConnect',
             'BeehiivConnect',
             'EnchargeConnect',
-            'OrttoCRMConnect'
+            'OrttoCRMConnect',
+            'BentoConnect'
         ];
     }
 
@@ -61,7 +63,8 @@ class Init
             'MailsterConnect'   => true,
             'SendinblueConnect' => false,
             'EgoiConnect'       => false,
-            'FlodeskConnect'    => false
+            'FlodeskConnect'    => false,
+            'SendpulseConnect'  => false
         ];
 
         if ($only_keys) {
@@ -261,6 +264,8 @@ class Init
         \MailOptin\SenderConnect\Connect::get_instance();
         \MailOptin\OrttoCRMConnect\Connect::get_instance();
         GoogleAnalytics::get_instance();
+        \MailOptin\BentoConnect\Connect::get_instance();
         \MailOptin\GoogleSheetConnect\Connect::get_instance();
+        \MailOptin\SendpulseConnect\Connect::get_instance();
     }
 }

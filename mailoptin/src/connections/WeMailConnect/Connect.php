@@ -115,6 +115,8 @@ class Connect extends AbstractWeMailConnect implements ConnectionInterface
      */
     public function get_email_list()
     {
+        $lists_array = [];
+
         try {
 
             $response = $this->wemail_instance()->make_request('lists');
@@ -127,11 +129,11 @@ class Connect extends AbstractWeMailConnect implements ConnectionInterface
                 }
             }
 
-            return $lists_array;
-
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getMessage(), 'wemail');
         }
+
+        return $lists_array;
     }
 
     /**

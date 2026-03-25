@@ -80,7 +80,7 @@ class Subscription extends AbstractSendinblueConnect
 
                 $req = $this->sendinblue_instance()->make_request(sprintf('contacts/%s', urlencode($this->email)));
 
-                $is_exist_list_ids = isset($req['body']->listIds) ? $req['body']->listIds : false;
+                $is_exist_list_ids = $req['body']->listIds ?? false;
 
                 if ( ! empty($is_exist_list_ids)) {
 

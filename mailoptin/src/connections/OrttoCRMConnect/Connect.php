@@ -117,13 +117,13 @@ class Connect extends AbstractOrttoCRMConnect implements ConnectionInterface
 
             $custom_fields = [
                 /** @see https://help.ortto.com/a-257-create-or-update-one-or-more-people-merge#Valid-request-body-elements */
-                'phn::phone'    => esc_html__('Phone number', 'fusewp'),
-                'str::language' => esc_html__('Language', 'fusewp'),
-                'geo::country'  => esc_html__('Country', 'fusewp'),
-                'geo::region'   => esc_html__('Region', 'fusewp'),
-                'geo::city'     => esc_html__('City', 'fusewp'),
-                'str::postal'   => esc_html__('Postal code', 'fusewp'),
-                'dtz::b'        => esc_html__('Birthday', 'fusewp')
+                'phn::phone'    => esc_html__('Phone number', 'mailoptin'),
+                'str::language' => esc_html__('Language', 'mailoptin'),
+                'geo::country'  => esc_html__('Country', 'mailoptin'),
+                'geo::region'   => esc_html__('Region', 'mailoptin'),
+                'geo::city'     => esc_html__('City', 'mailoptin'),
+                'str::postal'   => esc_html__('Postal code', 'mailoptin'),
+                'dtz::b'        => esc_html__('Birthday', 'mailoptin')
             ];
 
             try {

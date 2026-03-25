@@ -782,6 +782,7 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
                            line-height: normal;
                             border: 0;
                             margin: 0 5px;
+                            vertical-align: middle;
         }
         
         div#$optin_campaign_uuid span.mo-mailchimp-choice-label {

@@ -29,9 +29,9 @@ class AbstractBeehiivConnect extends AbstractConnect
      */
     public static function is_connected($return_error = false)
     {
-        $db_options     = isset($_POST['mailoptin_connections']) ? $_POST['mailoptin_connections'] : get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
-        $api_key        = isset($db_options['beehiiv_api_key']) ? $db_options['beehiiv_api_key'] : '';
-        $publication_id = isset($db_options['beehiiv_publication_id']) ? $db_options['beehiiv_publication_id'] : '';
+        $db_options     = $_POST['mailoptin_connections'] ?? get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
+        $api_key        = $db_options['beehiiv_api_key'] ?? '';
+        $publication_id = $db_options['beehiiv_publication_id'] ?? '';
 
         //If the user has not setup beehiiv, abort early
         if (empty($api_key)) {

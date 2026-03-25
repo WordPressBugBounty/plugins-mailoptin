@@ -84,6 +84,8 @@
       "MailOptin\\GoogleSheetConnect\\": "GoogleSheetConnect/",
       "MailOptin\\EnchargeConnect\\": "EnchargeConnect/",
       "MailOptin\\SenderConnect\\": "SenderConnect/",
+      "MailOptin\\BentoConnect\\": "BentoConnect/",
+      "MailOptin\\SendpulseConnect\\": "SendpulseConnect/",
       "MailOptin\\OrttoCRMConnect\\": "OrttoCRMConnect/",
       "MailOptin\\GroundhoggConnect\\": "GroundhoggConnect/",
       "MailOptin\\Connections\\": "./"

@@ -80,7 +80,7 @@ class Subscription extends AbstractKlaviyoConnect
                     $placeholder = $field['placeholder'];
 
                     if ( ! in_array($field_id, $mapped_custom_fields)) {
-                        $properties['extra'][$placeholder] = esc_attr($this->extras[$field_id]);
+                        $properties['extra'][$placeholder] = esc_attr(is_array($this->extras[$field_id]) ? implode(', ', $this->extras[$field_id]) : $this->extras[$field_id]);
                     }
                 }
             }

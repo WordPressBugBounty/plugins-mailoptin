@@ -38,7 +38,7 @@ class Subscription extends AbstractMailgunConnect
                     $field_id    = $field['cid'];
                     $placeholder = $field['placeholder'];
 
-                    $lead_data['vars'][$placeholder] = esc_attr($this->extras[$field_id]);
+                    $lead_data['vars'][$placeholder] = esc_attr(is_array($this->extras[$field_id]) ? implode(', ', $this->extras[$field_id]) : $this->extras[$field_id]);
                 }
             }
 

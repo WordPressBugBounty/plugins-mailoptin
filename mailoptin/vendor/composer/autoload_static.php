@@ -20,7 +20,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'S' =>
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -29,12 +29,12 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'Symfony\\Component\\CssSelector\\' => 30,
             'Sabberworm\\CSS\\' => 15,
         ),
-        'P' => 
+        'P' =>
         array (
             'Psr\\Clock\\' => 10,
             'Pelago\\Emogrifier\\' => 18,
         ),
-        'M' => 
+        'M' =>
         array (
             'Mailchimp\\http\\' => 15,
             'Mailchimp\\' => 10,
@@ -54,6 +54,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\UltimateMemberConnect\\' => 32,
             'MailOptin\\TutorLMSConnect\\' => 26,
             'MailOptin\\SendyConnect\\' => 23,
+            'MailOptin\\SendpulseConnect\\' => 27,
             'MailOptin\\SendlaneConnect\\' => 26,
             'MailOptin\\SendinblueConnect\\' => 28,
             'MailOptin\\SenderConnect\\' => 24,
@@ -118,445 +119,454 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\CommentOptinConnect\\' => 30,
             'MailOptin\\CleverReachConnect\\' => 29,
             'MailOptin\\CampaignMonitorConnect\\' => 33,
+            'MailOptin\\BentoConnect\\' => 23,
             'MailOptin\\BenchmarkEmailConnect\\' => 32,
             'MailOptin\\BeehiivConnect\\' => 25,
             'MailOptin\\AweberConnect\\' => 24,
             'MailOptin\\ActiveCampaignConnect\\' => 32,
         ),
-        'L' => 
+        'L' =>
         array (
             'League\\Csv\\' => 11,
         ),
-        'H' => 
+        'H' =>
         array (
             'Html2Text\\' => 10,
         ),
-        'D' => 
+        'D' =>
         array (
             'DrewM\\Drip\\' => 11,
         ),
-        'C' => 
+        'C' =>
         array (
             'Composer\\Installers\\' => 20,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
-        'B' => 
+        'B' =>
         array (
             'Barryvdh\\Composer\\' => 18,
         ),
-        'A' => 
+        'A' =>
         array (
             'Authifly\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Php80\\' => 
+        'Symfony\\Polyfill\\Php80\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Contracts\\Translation\\' => 
+        'Symfony\\Contracts\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/translation-contracts',
         ),
-        'Symfony\\Component\\Translation\\' => 
+        'Symfony\\Component\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
-        'Symfony\\Component\\CssSelector\\' => 
+        'Symfony\\Component\\CssSelector\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/css-selector',
         ),
-        'Sabberworm\\CSS\\' => 
+        'Sabberworm\\CSS\\' =>
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
-        'Psr\\Clock\\' => 
+        'Psr\\Clock\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
         ),
-        'Pelago\\Emogrifier\\' => 
+        'Pelago\\Emogrifier\\' =>
         array (
             0 => __DIR__ . '/..' . '/pelago/emogrifier/src',
         ),
-        'Mailchimp\\http\\' => 
+        'Mailchimp\\http\\' =>
         array (
             0 => __DIR__ . '/..' . '/mailoptin/mailchimp-api-php/src/http',
         ),
-        'Mailchimp\\' => 
+        'Mailchimp\\' =>
         array (
             0 => __DIR__ . '/..' . '/mailoptin/mailchimp-api-php/src',
         ),
-        'MailOptin\\ZohoCampaignsConnect\\' => 
+        'MailOptin\\ZohoCampaignsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ZohoCampaignsConnect',
         ),
-        'MailOptin\\ZohoCRMConnect\\' => 
+        'MailOptin\\ZohoCRMConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ZohoCRMConnect',
         ),
-        'MailOptin\\WordPressUserRegistrationConnect\\' => 
+        'MailOptin\\WordPressUserRegistrationConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WordPressUserRegistrationConnect',
         ),
-        'MailOptin\\WooSubscriptionsConnect\\' => 
+        'MailOptin\\WooSubscriptionsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WooSubscriptionsConnect',
         ),
-        'MailOptin\\WooMembershipConnect\\' => 
+        'MailOptin\\WooMembershipConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WooMembershipConnect',
         ),
-        'MailOptin\\WooCommerceConnect\\' => 
+        'MailOptin\\WooCommerceConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WooCommerceConnect',
         ),
-        'MailOptin\\WebHookConnect\\' => 
+        'MailOptin\\WebHookConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WebHookConnect',
         ),
-        'MailOptin\\WeMailConnect\\' => 
+        'MailOptin\\WeMailConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WeMailConnect',
         ),
-        'MailOptin\\WSFormConnect\\' => 
+        'MailOptin\\WSFormConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WSFormConnect',
         ),
-        'MailOptin\\WPMLConnect\\' => 
+        'MailOptin\\WPMLConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WPMLConnect',
         ),
-        'MailOptin\\WPFormsConnect\\' => 
+        'MailOptin\\WPFormsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/WPFormsConnect',
         ),
-        'MailOptin\\VerticalResponseConnect\\' => 
+        'MailOptin\\VerticalResponseConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/VerticalResponseConnect',
         ),
-        'MailOptin\\UserRegistrationOptinConnect\\' => 
+        'MailOptin\\UserRegistrationOptinConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/UserRegistrationOptinConnect',
         ),
-        'MailOptin\\UltimateMemberConnect\\' => 
+        'MailOptin\\UltimateMemberConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/UltimateMemberConnect',
         ),
-        'MailOptin\\TutorLMSConnect\\' => 
+        'MailOptin\\TutorLMSConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/TutorLMSConnect',
         ),
-        'MailOptin\\SendyConnect\\' => 
+        'MailOptin\\SendyConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendyConnect',
         ),
-        'MailOptin\\SendlaneConnect\\' => 
+        'MailOptin\\SendpulseConnect\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/SendpulseConnect',
+        ),
+        'MailOptin\\SendlaneConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendlaneConnect',
         ),
-        'MailOptin\\SendinblueConnect\\' => 
+        'MailOptin\\SendinblueConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendinblueConnect',
         ),
-        'MailOptin\\SenderConnect\\' => 
+        'MailOptin\\SenderConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SenderConnect',
         ),
-        'MailOptin\\SendGridConnect\\' => 
+        'MailOptin\\SendGridConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendGridConnect',
         ),
-        'MailOptin\\SendFoxConnect\\' => 
+        'MailOptin\\SendFoxConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SendFoxConnect',
         ),
-        'MailOptin\\SalesforceConnect\\' => 
+        'MailOptin\\SalesforceConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/SalesforceConnect',
         ),
-        'MailOptin\\RegisteredUsersConnect\\' => 
+        'MailOptin\\RegisteredUsersConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/RegisteredUsersConnect',
         ),
-        'MailOptin\\RCPConnect\\' => 
+        'MailOptin\\RCPConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/RCPConnect',
         ),
-        'MailOptin\\PolylangConnect\\' => 
+        'MailOptin\\PolylangConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/PolylangConnect',
         ),
-        'MailOptin\\PmProConnect\\' => 
+        'MailOptin\\PmProConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/PmProConnect',
         ),
-        'MailOptin\\OrttoCRMConnect\\' => 
+        'MailOptin\\OrttoCRMConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/OrttoCRMConnect',
         ),
-        'MailOptin\\OntraportConnect\\' => 
+        'MailOptin\\OntraportConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/OntraportConnect',
         ),
-        'MailOptin\\OmnisendConnect\\' => 
+        'MailOptin\\OmnisendConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/OmnisendConnect',
         ),
-        'MailOptin\\NinjaFormsConnect\\' => 
+        'MailOptin\\NinjaFormsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/NinjaFormsConnect',
         ),
-        'MailOptin\\NewsmanConnect\\' => 
+        'MailOptin\\NewsmanConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/NewsmanConnect',
         ),
-        'MailOptin\\MoosendConnect\\' => 
+        'MailOptin\\MoosendConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MoosendConnect',
         ),
-        'MailOptin\\MicrosoftDynamic365Connect\\' => 
+        'MailOptin\\MicrosoftDynamic365Connect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MicrosoftDynamic365Connect',
         ),
-        'MailOptin\\MemberPressConnect\\' => 
+        'MailOptin\\MemberPressConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MemberPressConnect',
         ),
-        'MailOptin\\MailsterConnect\\' => 
+        'MailOptin\\MailsterConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailsterConnect',
         ),
-        'MailOptin\\MailjetConnect\\' => 
+        'MailOptin\\MailjetConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailjetConnect',
         ),
-        'MailOptin\\MailgunConnect\\' => 
+        'MailOptin\\MailgunConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailgunConnect',
         ),
-        'MailOptin\\Mailerlitev2Connect\\' => 
+        'MailOptin\\Mailerlitev2Connect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/Mailerlitev2Connect',
         ),
-        'MailOptin\\MailerliteConnect\\' => 
+        'MailOptin\\MailerliteConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailerliteConnect',
         ),
-        'MailOptin\\MailercloudConnect\\' => 
+        'MailOptin\\MailercloudConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailercloudConnect',
         ),
-        'MailOptin\\MailPoetConnect\\' => 
+        'MailOptin\\MailPoetConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailPoetConnect',
         ),
-        'MailOptin\\MailChimpConnect\\' => 
+        'MailOptin\\MailChimpConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/MailChimpConnect',
         ),
-        'MailOptin\\LifterLMSConnect\\' => 
+        'MailOptin\\LifterLMSConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/LifterLMSConnect',
         ),
-        'MailOptin\\LearnDashConnect\\' => 
+        'MailOptin\\LearnDashConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/LearnDashConnect',
         ),
-        'MailOptin\\LeadBankConnect\\' => 
+        'MailOptin\\LeadBankConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/LeadBankConnect',
         ),
-        'MailOptin\\KlaviyoConnect\\' => 
+        'MailOptin\\KlaviyoConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/KlaviyoConnect',
         ),
-        'MailOptin\\JiltConnect\\' => 
+        'MailOptin\\JiltConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/JiltConnect',
         ),
-        'MailOptin\\InfusionsoftConnect\\' => 
+        'MailOptin\\InfusionsoftConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/InfusionsoftConnect',
         ),
-        'MailOptin\\IContactConnect\\' => 
+        'MailOptin\\IContactConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/IContactConnect',
         ),
-        'MailOptin\\HubspotConnect\\' => 
+        'MailOptin\\HubspotConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/HubspotConnect',
         ),
-        'MailOptin\\HighLevelConnect\\' => 
+        'MailOptin\\HighLevelConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/HighLevelConnect',
         ),
-        'MailOptin\\GroundhoggConnect\\' => 
+        'MailOptin\\GroundhoggConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GroundhoggConnect',
         ),
-        'MailOptin\\GravityFormsConnect\\' => 
+        'MailOptin\\GravityFormsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GravityFormsConnect',
         ),
-        'MailOptin\\GoogleSheetConnect\\' => 
+        'MailOptin\\GoogleSheetConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GoogleSheetConnect',
         ),
-        'MailOptin\\GiveWPConnect\\' => 
+        'MailOptin\\GiveWPConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GiveWPConnect',
         ),
-        'MailOptin\\GetResponseConnect\\' => 
+        'MailOptin\\GetResponseConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/GetResponseConnect',
         ),
-        'MailOptin\\ForminatorFormConnect\\' => 
+        'MailOptin\\ForminatorFormConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ForminatorFormConnect',
         ),
-        'MailOptin\\FormidableFormConnect\\' => 
+        'MailOptin\\FormidableFormConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FormidableFormConnect',
         ),
-        'MailOptin\\FluentFormConnect\\' => 
+        'MailOptin\\FluentFormConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FluentFormConnect',
         ),
-        'MailOptin\\FluentCRMConnect\\' => 
+        'MailOptin\\FluentCRMConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FluentCRMConnect',
         ),
-        'MailOptin\\FlodeskConnect\\' => 
+        'MailOptin\\FlodeskConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FlodeskConnect',
         ),
-        'MailOptin\\FacebookCustomAudienceConnect\\' => 
+        'MailOptin\\FacebookCustomAudienceConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/FacebookCustomAudienceConnect',
         ),
-        'MailOptin\\EnchargeConnect\\' => 
+        'MailOptin\\EnchargeConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/EnchargeConnect',
         ),
-        'MailOptin\\EmmaConnect\\' => 
+        'MailOptin\\EmmaConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/EmmaConnect',
         ),
-        'MailOptin\\EmailOctopusConnect\\' => 
+        'MailOptin\\EmailOctopusConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/EmailOctopusConnect',
         ),
-        'MailOptin\\ElementorConnect\\' => 
+        'MailOptin\\ElementorConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ElementorConnect',
         ),
-        'MailOptin\\ElasticEmailConnect\\' => 
+        'MailOptin\\ElasticEmailConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ElasticEmailConnect',
         ),
-        'MailOptin\\EgoiConnect\\' => 
+        'MailOptin\\EgoiConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/EgoiConnect',
         ),
-        'MailOptin\\EasyDigitalDownloadsConnect\\' => 
+        'MailOptin\\EasyDigitalDownloadsConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/EasyDigitalDownloadsConnect',
         ),
-        'MailOptin\\DripConnect\\' => 
+        'MailOptin\\DripConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/DripConnect',
         ),
-        'MailOptin\\Ctctv3Connect\\' => 
+        'MailOptin\\Ctctv3Connect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/Ctctv3Connect',
         ),
-        'MailOptin\\CtctConnect\\' => 
+        'MailOptin\\CtctConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/CtctConnect',
         ),
-        'MailOptin\\Core\\' => 
+        'MailOptin\\Core\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/core/src',
         ),
-        'MailOptin\\ConvertKitConnect\\' => 
+        'MailOptin\\ConvertKitConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ConvertKitConnect',
         ),
-        'MailOptin\\ConvertFoxConnect\\' => 
+        'MailOptin\\ConvertFoxConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ConvertFoxConnect',
         ),
-        'MailOptin\\ContactForm7Connect\\' => 
+        'MailOptin\\ContactForm7Connect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ContactForm7Connect',
         ),
-        'MailOptin\\Connections\\' => 
+        'MailOptin\\Connections\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections',
         ),
-        'MailOptin\\CommentOptinConnect\\' => 
+        'MailOptin\\CommentOptinConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/CommentOptinConnect',
         ),
-        'MailOptin\\CleverReachConnect\\' => 
+        'MailOptin\\CleverReachConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/CleverReachConnect',
         ),
-        'MailOptin\\CampaignMonitorConnect\\' => 
+        'MailOptin\\CampaignMonitorConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/CampaignMonitorConnect',
         ),
-        'MailOptin\\BenchmarkEmailConnect\\' => 
+        'MailOptin\\BentoConnect\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/BentoConnect',
+        ),
+        'MailOptin\\BenchmarkEmailConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/BenchmarkEmailConnect',
         ),
-        'MailOptin\\BeehiivConnect\\' => 
+        'MailOptin\\BeehiivConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/BeehiivConnect',
         ),
-        'MailOptin\\AweberConnect\\' => 
+        'MailOptin\\AweberConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/AweberConnect',
         ),
-        'MailOptin\\ActiveCampaignConnect\\' => 
+        'MailOptin\\ActiveCampaignConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ActiveCampaignConnect',
         ),
-        'League\\Csv\\' => 
+        'League\\Csv\\' =>
         array (
             0 => __DIR__ . '/..' . '/league/csv/src',
         ),
-        'Html2Text\\' => 
+        'Html2Text\\' =>
         array (
             0 => __DIR__ . '/..' . '/soundasleep/html2text/src',
         ),
-        'DrewM\\Drip\\' => 
+        'DrewM\\Drip\\' =>
         array (
             0 => __DIR__ . '/..' . '/drewm/drip/src',
         ),
-        'Composer\\Installers\\' => 
+        'Composer\\Installers\\' =>
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
-        'Carbon\\Doctrine\\' => 
+        'Carbon\\Doctrine\\' =>
         array (
             0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
         ),
-        'Carbon\\' => 
+        'Carbon\\' =>
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'Barryvdh\\Composer\\' => 
+        'Barryvdh\\Composer\\' =>
         array (
             0 => __DIR__ . '/..' . '/barryvdh/composer-cleanup-plugin/src',
         ),
-        'Authifly\\' => 
+        'Authifly\\' =>
         array (
             0 => __DIR__ . '/..' . '/mailoptin/authifly/src',
         ),
@@ -620,6 +630,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'Authifly\\Logger\\Psr3LoggerWrapper' => __DIR__ . '/..' . '/mailoptin/authifly/src/Logger/Psr3LoggerWrapper.php',
         'Authifly\\Provider\\Aweber' => __DIR__ . '/..' . '/mailoptin/authifly/Aweber.php',
         'Authifly\\Provider\\Aweber2' => __DIR__ . '/..' . '/mailoptin/authifly/Aweber2.php',
+        'Authifly\\Provider\\Birdsend' => __DIR__ . '/..' . '/mailoptin/authifly/Birdsend.php',
         'Authifly\\Provider\\CampaignMonitor' => __DIR__ . '/..' . '/mailoptin/authifly/CampaignMonitor.php',
         'Authifly\\Provider\\CleverReach' => __DIR__ . '/..' . '/mailoptin/authifly/CleverReach.php',
         'Authifly\\Provider\\ConstantContact' => __DIR__ . '/..' . '/mailoptin/authifly/ConstantContact.php',
@@ -883,6 +894,12 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\BenchmarkEmailConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/BenchmarkEmailConnect/Connect.php',
         'MailOptin\\BenchmarkEmailConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php',
         'MailOptin\\BenchmarkEmailConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/BenchmarkEmailConnect/Subscription.php',
+        'MailOptin\\BentoConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/BentoConnect/APIClass.php',
+        'MailOptin\\BentoConnect\\AbstractBentoConnect' => __DIR__ . '/../..' . '/src/connections/BentoConnect/AbstractBentoConnect.php',
+        'MailOptin\\BentoConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/BentoConnect/Connect.php',
+        'MailOptin\\BentoConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/BentoConnect/ConnectSettingsPage.php',
+        'MailOptin\\BentoConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/BentoConnect/SendCampaign.php',
+        'MailOptin\\BentoConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/BentoConnect/Subscription.php',
         'MailOptin\\CampaignMonitorConnect\\AbstractCampaignMonitorConnect' => __DIR__ . '/../..' . '/src/connections/CampaignMonitorConnect/AbstractCampaignMonitorConnect.php',
         'MailOptin\\CampaignMonitorConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/CampaignMonitorConnect/Connect.php',
         'MailOptin\\CampaignMonitorConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/CampaignMonitorConnect/ConnectSettingsPage.php',
@@ -1387,6 +1404,12 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\SendlaneConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/SendlaneConnect/Connect.php',
         'MailOptin\\SendlaneConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/SendlaneConnect/ConnectSettingsPage.php',
         'MailOptin\\SendlaneConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/SendlaneConnect/Subscription.php',
+        'MailOptin\\SendpulseConnect\\APIClass' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/APIClass.php',
+        'MailOptin\\SendpulseConnect\\AbstractSendpulseConnect' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/AbstractSendpulseConnect.php',
+        'MailOptin\\SendpulseConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/Connect.php',
+        'MailOptin\\SendpulseConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/ConnectSettingsPage.php',
+        'MailOptin\\SendpulseConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/SendCampaign.php',
+        'MailOptin\\SendpulseConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/SendpulseConnect/Subscription.php',
         'MailOptin\\SendyConnect\\AbstractSendyConnect' => __DIR__ . '/../..' . '/src/connections/SendyConnect/AbstractSendyConnect.php',
         'MailOptin\\SendyConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/SendyConnect/Connect.php',
         'MailOptin\\SendyConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/SendyConnect/ConnectSettingsPage.php',

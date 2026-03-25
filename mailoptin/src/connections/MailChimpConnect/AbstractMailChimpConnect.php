@@ -33,8 +33,8 @@ class AbstractMailChimpConnect extends AbstractConnect
      */
     public static function is_connected($return_error = false)
     {
-        $db_options = isset($_POST['mailoptin_connections']) ? $_POST['mailoptin_connections'] : get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
-        $api_key    = isset($db_options['mailchimp_api_key']) ? $db_options['mailchimp_api_key'] : '';
+        $db_options = $_POST['mailoptin_connections'] ?? get_option(MAILOPTIN_CONNECTIONS_DB_OPTION_NAME);
+        $api_key    = $db_options['mailchimp_api_key'] ?? '';
 
         //If the user has not setup MC, abort early
         if (empty($api_key)) {
@@ -54,8 +54,8 @@ class AbstractMailChimpConnect extends AbstractConnect
 
         try {
 
-            $client = new MailchimpCurlHttpClient(['timeout' => 10]);
-            $api    = new MailchimpCampaigns($api_key, 'apikey', ['timeout' => 10], $client);
+            $client = new MailchimpCurlHttpClient(['timeout' => 30]);
+            $api    = new MailchimpCampaigns($api_key, 'apikey', ['timeout' => 30], $client);
             $result = $api->getAccount();
 
             if (isset($result->account_id) && $result->account_id) {
@@ -126,9 +126,9 @@ class AbstractMailChimpConnect extends AbstractConnect
             throw new \Exception('MailChimp API key not found.');
         }
 
-        $client = new MailchimpCurlHttpClient(['timeout' => 10]);
+        $client = new MailchimpCurlHttpClient(['timeout' => 30]);
 
-        return new MailchimpLists($api_key, 'apikey', ['timeout' => 10], $client);
+        return new MailchimpLists($api_key, 'apikey', ['timeout' => 30], $client);
     }
 
     /**
@@ -146,8 +146,8 @@ class AbstractMailChimpConnect extends AbstractConnect
             throw new \Exception('MailChimp API key not found.');
         }
 
-        $client = new MailchimpCurlHttpClient(['timeout' => 10]);
+        $client = new MailchimpCurlHttpClient(['timeout' => 30]);
 
-        return new MailchimpCampaigns($api_key, 'apikey', ['timeout' => 10], $client);
+        return new MailchimpCampaigns($api_key, 'apikey', ['timeout' => 30], $client);
     }
 }

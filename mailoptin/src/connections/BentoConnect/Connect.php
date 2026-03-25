@@ -1,12 +1,14 @@
 <?php
 
-namespace MailOptin\EnchargeConnect;
+namespace MailOptin\BentoConnect;
 
 use MailOptin\Core\Connections\ConnectionInterface;
 
-class Connect extends AbstractEnchargeConnect implements ConnectionInterface
+use function MailOptin\Core\moVar;
+
+class Connect extends AbstractBentoConnect implements ConnectionInterface
 {
-    public static $connectionName = 'EnchargeConnect';
+    public static $connectionName = 'BentoConnect';
 
     public function __construct()
     {
@@ -24,24 +26,58 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
     {
         return [
             self::OPTIN_CAMPAIGN_SUPPORT,
-            self::OPTIN_CUSTOM_FIELD_SUPPORT
+            self::OPTIN_CUSTOM_FIELD_SUPPORT,
+            self::EMAIL_CAMPAIGN_SUPPORT
         ];
     }
 
     public function register_connection($connections)
     {
-        $connections[self::$connectionName] = __('Encharge', 'mailoptin');
+        $connections[self::$connectionName] = __('Bento', 'mailoptin');
 
         return $connections;
     }
 
     public function replace_placeholder_tags($content, $type = 'html')
     {
+        $search = [
+            '{{webversion}}',
+            '{{unsubscribe}}'
+        ];
+
+        $replace = [
+            '{{ browser_url }}',
+            '{{ visitor.unsubscribe_url }}',
+        ];
+
+        $content = str_replace($search, $replace, $content);
+
         return $this->replace_footer_placeholder_tags($content);
     }
 
     public function get_email_list()
     {
+        if ('email' == moVar($_POST, 'ui') || isset($_GET['mailoptin_email_campaign_id'])) {
+
+            $tag_array = [];
+
+            try {
+
+                $response = $this->bento_instance()->make_request('fetch/tags');
+
+                if (isset($response['body']->data) && is_array($response['body']->data)) {
+
+                    foreach ($response['body']->data as $tag) {
+                        $tag_array[$tag->attributes->name] = $tag->attributes->name;
+                    }
+                }
+            } catch (\Exception $e) {
+                self::save_optin_error_log($e->getMessage(), 'bento');
+            }
+
+            return $tag_array;
+        }
+
         return ['all' => __('All Contacts', 'mailoptin')];
     }
 
@@ -55,24 +91,24 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
         $bucket = [];
 
         try {
-            // Fetch custom field metadata for Encharge Contacts
-            $response = $this->encharge_instance()->make_request('/fields');
 
-            if ( ! empty($response['body']->items)) {
-                foreach ($response['body']->items as $field) {
-                    if (
-                        in_array($field->name, ['firstName', 'lastName', 'email', 'name', 'userId']) ||
-                        empty($field->title)
-                    ) {
-                        continue;
-                    }
+            $response = $this->bento_instance()->make_request('fetch/fields');
 
-                    $bucket[$field->name] = $field->title;
+            if ( ! empty($response['body']->data)) {
+
+                foreach ($response['body']->data as $field) {
+
+                    $field_key  = $field->attributes->key ?? '';
+                    $field_name = ! empty($field->attributes->name) ? $field->attributes->name : $field_key;
+
+                    if (empty($field_key) || in_array($field_key, ['first_name', 'last_name'])) continue;
+
+                    $bucket[$field_key] = $field_name;
                 }
             }
 
         } catch (\Exception $e) {
-            self::save_optin_error_log($e->getMessage(), 'encharge');
+            self::save_optin_error_log($e->getMessage(), 'bento');
         }
 
         return $bucket;
@@ -80,7 +116,7 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
 
     public function send_newsletter($email_campaign_id, $campaign_log_id, $subject, $content_html, $content_text)
     {
-        return [];
+        return (new SendCampaign($email_campaign_id, $campaign_log_id, $subject, $content_html, $content_text))->send();
     }
 
     public function subscribe($email, $name, $list_id, $extras = null)
@@ -95,7 +131,7 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
      */
     public function integration_customizer_settings($settings)
     {
-        $settings['EnchargeConnect_lead_tags'] = apply_filters('mailoptin_customizer_optin_campaign_EnchargeConnect_lead_tags', '');
+        $settings['BentoConnect_lead_tags'] = apply_filters('mailoptin_customizer_optin_campaign_BentoConnect_lead_tags', '');
 
         return $settings;
     }
@@ -112,7 +148,7 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
 
             $controls[] = [
                 'field'       => 'text',
-                'name'        => 'EnchargeConnect_lead_tags',
+                'name'        => 'BentoConnect_lead_tags',
                 'label'       => __('Tags', 'mailoptin'),
                 'placeholder' => 'tag1, tag2',
                 'description' => __('Enter comma-separated list of tags to assign to subscribers who opt-in via this campaign.', 'mailoptin'),
@@ -122,7 +158,7 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
 
             $content = sprintf(
                 __("%sMailOptin Premium%s allows you to apply tags to subscribers.", 'mailoptin'),
-                '<a target="_blank" href="https://mailoptin.io/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=encharge_connection">',
+                '<a target="_blank" href="https://mailoptin.io/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=bento_connection">',
                 '</a>',
                 '<strong>',
                 '</strong>'
@@ -130,7 +166,7 @@ class Connect extends AbstractEnchargeConnect implements ConnectionInterface
 
             // always prefix with the name of the connect/connection service.
             $controls[] = [
-                'name'    => 'EnchargeConnect_upgrade_notice',
+                'name'    => 'BentoConnect_upgrade_notice',
                 'field'   => 'custom_content',
                 'content' => $content
             ];
