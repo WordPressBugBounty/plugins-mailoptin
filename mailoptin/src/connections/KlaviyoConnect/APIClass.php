@@ -9,7 +9,7 @@ class APIClass
 {
     protected $api_key;
 
-    protected $revision = '2023-12-15';
+    protected $revision = '2026-04-15';
 
     /**
      * @var string
@@ -47,9 +47,6 @@ class APIClass
         }
 
         switch ($method) {
-            case 'post':
-                $wp_args['body'] = $args;
-                break;
             case 'get':
                 $url = add_query_arg($args, $url);
                 break;

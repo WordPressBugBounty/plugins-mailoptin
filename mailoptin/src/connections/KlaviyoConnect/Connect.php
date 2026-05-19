@@ -2,9 +2,6 @@
 
 namespace MailOptin\KlaviyoConnect;
 
-use MailOptin\Core\Admin\Customizer\CustomControls\WP_Customize_Custom_Content;
-use MailOptin\Core\Admin\Customizer\CustomControls\WP_Customize_Toggle_Control;
-use MailOptin\Core\Admin\Customizer\OptinForm\Customizer;
 use MailOptin\Core\Connections\ConnectionInterface;
 
 class Connect extends AbstractKlaviyoConnect implements ConnectionInterface

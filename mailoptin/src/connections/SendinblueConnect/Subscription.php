@@ -169,7 +169,28 @@ class Subscription extends AbstractSendinblueConnect
             if (isset($response['body']->code, $response['body']->message)) {
 
                 if ('duplicate_parameter' == $response['body']->code) {
-                    return parent::ajax_success();
+                    if (false === $this->is_double_optin()) {
+                        try {
+                            $existing = $this->sendinblue_instance()->make_request(sprintf('contacts/%s', urlencode($this->email)));
+
+                            if (self::is_http_code_success($existing['status_code'])) {
+                                $add_to_list = $this->sendinblue_instance()->make_request(
+                                    sprintf('contacts/lists/%s/contacts/add', absint($this->list_id)),
+                                    ['emails' => [$this->email]],
+                                    'post'
+                                );
+
+                                if (self::is_http_code_success($add_to_list['status_code'])) {
+                                    return parent::ajax_success();
+                                }
+                            }
+                        } catch (\Exception $e) {
+                        }
+                    }
+
+                    self::save_optin_error_log($response['body']->code . ': ' . $response['body']->message, 'sendinblue', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
+
+                    return parent::ajax_failure();
                 }
             }
 

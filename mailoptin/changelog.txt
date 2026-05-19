@@ -1,5 +1,11 @@
 ﻿== Changelog ==
 
+= 1.2.77.1 =
+* Added column support for posts in email template.
+* Updated Klaviyo API to version 2026-04-15
+* Improved email template support for Outlook.
+* Fixed subscription bug in Brevo on duplicate contact.
+
 = 1.2.77.0 =
 * Added SendPulse email marketing integration.
 * Added Bento email marketing integration.

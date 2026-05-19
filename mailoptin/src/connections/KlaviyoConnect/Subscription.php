@@ -104,9 +104,7 @@ class Subscription extends AbstractKlaviyoConnect
                 return parent::ajax_success();
             }
 
-            self::save_optin_error_log($response['body']->error . ': ' . $response['body']->message, 'klaviyo', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);
-
-            return parent::ajax_failure();
+            throw new \Exception($response['body']->errors[0]->detail ?? '');
 
         } catch (\Exception $e) {
             self::save_optin_error_log($e->getCode() . ': ' . $e->getMessage(), 'klaviyo', $this->extras['optin_campaign_id'], $this->extras['optin_campaign_type']);

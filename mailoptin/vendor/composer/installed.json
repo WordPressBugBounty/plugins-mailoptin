@@ -458,11 +458,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1774372608",
-            "version_normalized": "0.2.1774372608.0",
+            "version": "0.2.1779207557",
+            "version_normalized": "0.2.1779207557.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_2hFgW/mailoptinauthifly-0-2-1774372608.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1vgjMw/mailoptinauthifly-0-2-1779207557.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -516,11 +516,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1774372712",
-            "version_normalized": "0.2.1774372712.0",
+            "version": "0.2.1779207666",
+            "version_normalized": "0.2.1779207666.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_2frV6f/mailoptinconnections-0-2-1774372712.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_222gsy/mailoptinconnections-0-2-1779207666.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -629,17 +629,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1774372707",
-            "version_normalized": "0.1.0.0-alpha1774372707",
+            "version": "0.1.0-alpha.1779207660",
+            "version_normalized": "0.1.0.0-alpha1779207660",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "0f64266e693cef0eeb345a2a3071bdffa874161f"
+                "reference": "1a7750d58803947297a2abe0d2f45afee2b3dd52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/0f64266e693cef0eeb345a2a3071bdffa874161f",
-                "reference": "0f64266e693cef0eeb345a2a3071bdffa874161f",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/1a7750d58803947297a2abe0d2f45afee2b3dd52",
+                "reference": "1a7750d58803947297a2abe0d2f45afee2b3dd52",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +650,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2026-03-22T15:02:12+00:00",
+            "time": "2026-05-18T13:44:20+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -672,7 +672,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1774372707"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1779207660"
             },
             "install-path": "../../src/core"
         },
@@ -1235,17 +1235,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.33.0",
-            "version_normalized": "1.33.0.0",
+            "version": "v1.37.0",
+            "version_normalized": "1.37.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
+                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6a21eb99c6973357967f6ce3708cd55a6bec6315",
+                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315",
                 "shasum": ""
             },
             "require": {
@@ -1258,7 +1258,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2024-12-23T08:48:59+00:00",
+            "time": "2026-04-10T17:25:58+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1299,7 +1299,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.37.0"
             },
             "funding": [
                 {
@@ -1323,23 +1323,23 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.33.0",
-            "version_normalized": "1.33.0.0",
+            "version": "v1.37.0",
+            "version_normalized": "1.37.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608"
+                "reference": "dfb55726c3a76ea3b6459fcfda1ec2d80a682411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
-                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dfb55726c3a76ea3b6459fcfda1ec2d80a682411",
+                "reference": "dfb55726c3a76ea3b6459fcfda1ec2d80a682411",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2"
             },
-            "time": "2025-01-02T08:10:11+00:00",
+            "time": "2026-04-10T16:19:22+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1386,7 +1386,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.37.0"
             },
             "funding": [
                 {

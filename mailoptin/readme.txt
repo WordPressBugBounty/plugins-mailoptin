@@ -4,8 +4,8 @@ Donate link: https://mailoptin.io/pricing/
 Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
-Tested up to: 6.9
-Stable tag: 1.2.77.0
+Tested up to: 7.0
+Stable tag: 1.2.77.1
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -186,6 +186,12 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 10. Elementor form integration with MailOptin
 
 == Changelog ==
+
+= 1.2.77.1 =
+* Added column support for posts in email template.
+* Updated Klaviyo API to version 2026-04-15
+* Improved email template support for Outlook.
+* Fixed subscription bug in Brevo on duplicate contact.
 
 = 1.2.77.0 =
 * Added SendPulse email marketing integration.

@@ -90,7 +90,6 @@ class CustomizerControls
                     'header_web_version_link_color',
 
                     'content_alignment',
-                    'content_ellipsis_button_alignment',
                     'content_background_color',
                     'content_text_color',
                     'content_headline_color',
@@ -947,7 +946,7 @@ HTML;
 
     public function preview_control()
     {
-        $choices     = ControlsHelpers::get_post_type_posts('post');
+        $choices     = ControlsHelpers::get_post_type_posts('post', 200, apply_filters('mailoptin_new_publish_post_preview_status', 'publish'));
         $search_type = 'posts_never_load';
         if (defined('MAILOPTIN_DETACH_LIBSODIUM')) {
             $choices     = ControlsHelpers::get_all_post_types_posts();
@@ -1448,18 +1447,6 @@ HTML;
                             'priority' => 120
                         )
                     )
-                ),
-                'content_ellipsis_button_alignment'        => array(
-                    'label'    => __('Read More Button Alignment', 'mailoptin'),
-                    'section'  => $this->customizerClassInstance->campaign_content_section_id,
-                    'settings' => $this->option_prefix . '[content_ellipsis_button_alignment]',
-                    'type'     => 'select',
-                    'choices'  => array(
-                        'left'   => __('Left', 'mailoptin'),
-                        'center' => __('Center', 'mailoptin'),
-                        'right'  => __('Right', 'mailoptin'),
-                    ),
-                    'priority' => 140
                 ),
                 'content_ellipsis_button_background_color' => new \WP_Customize_Color_Control(
                     $this->wp_customize,
