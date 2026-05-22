@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 7.0
-Stable tag: 1.2.77.1
+Stable tag: 1.2.77.2
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -187,6 +187,9 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.77.2 =
+* Fixed more Outlook email template rendering issues.
+
 = 1.2.77.1 =
 * Added column support for posts in email template.
 * Updated Klaviyo API to version 2026-04-15
@@ -211,11 +214,5 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 * Fixed fatal error with optin titles containing % in charts.
 * Fixed bug where Sender integration did not fetch all lists.
 * Fixed bug where Flodesk integration didn't return all segments.
-
-= 1.2.75.4 =
-* Upgraded HubSpot integration fully to v3 API.
-* Added safeguards to prevent multiple error emails.
-* Improved performance.
-* Fixed a couple of PHP errors.
 
 See the [changelog file](https://plugins.svn.wordpress.org/mailoptin/trunk/changelog.txt) for complete change log information.

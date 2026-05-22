@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.77.1\n"
+"Project-Id-Version: MailOptin - Lite 1.2.77.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-19T16:37:26+00:00\n"
+"POT-Creation-Date: 2026-05-21T19:21:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -3637,11 +3637,6 @@ msgstr ""
 msgid "Customer opted-in through MailOptin form"
 msgstr ""
 
-#: src/connections/KlaviyoConnect/Connect.php:43
-#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:24
-msgid "Klaviyo"
-msgstr ""
-
 #: src/connections/KlaviyoConnect/Connect.php:97
 msgid "Street address 1"
 msgstr ""
@@ -3665,6 +3660,10 @@ msgstr ""
 #: src/connections/KlaviyoConnect/Connect.php:112
 #, php-format
 msgid "You can only map to Klaviyo special identify properties. Custom fields not mapped will be added as custom properties. <a target=\"_blank\" href=\"%s\">Learn more</a>"
+msgstr ""
+
+#: src/connections/KlaviyoConnect/ConnectSettingsPage.php:24
+msgid "Klaviyo"
 msgstr ""
 
 #: src/connections/KlaviyoConnect/ConnectSettingsPage.php:25
@@ -6246,13 +6245,13 @@ msgstr ""
 msgid "Embedded list of posts"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:177
-#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:190
+#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:178
+#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:191
 msgid "Go Back"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:193
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:194
+#: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Customizer_Control.php:195
 msgid "Search elements.."
 msgstr ""
 
@@ -6470,22 +6469,22 @@ msgid "Number of words to limit the post content to. Set to \"0\" for full post 
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:80
-#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:136
+#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:142
 msgid "Columns"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:83
-#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:141
+#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:147
 msgid "One"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:84
-#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:142
+#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:148
 msgid "Two"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/Elements/Posts.php:85
-#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:143
+#: src/core/src/EmailCampaigns/PostsEmailDigest/Templates/Lucid.php:149
 msgid "Three"
 msgstr ""
 
@@ -7038,13 +7037,11 @@ msgid "List Selection"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:612
-#: src/core/src/OptinForms/Recaptcha.php:150
-msgid "reCAPTCHA v2"
+msgid "reCAPTCHA Checkbox (v2)"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:613
-#: src/core/src/OptinForms/Recaptcha.php:156
-msgid "reCAPTCHA v3"
+msgid "reCAPTCHA Score-Based (v3)"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:615
@@ -7079,8 +7076,8 @@ msgid "Dropdown (Single Select)"
 msgstr ""
 
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:665
-#: src/core/src/OptinForms/Recaptcha.php:130
-#: src/core/src/OptinForms/Recaptcha.php:178
+#: src/core/src/OptinForms/Recaptcha.php:87
+#: src/core/src/OptinForms/Recaptcha.php:159
 #: src/core/src/OptinForms/Turnstile.php:195
 msgid "Type"
 msgstr ""
@@ -8787,7 +8784,7 @@ msgstr ""
 
 #: src/core/src/Admin/SettingsPage/AdvanceAnalytics.php:80
 #: src/core/src/Admin/SettingsPage/LeadBank.php:107
-#: src/core/src/OptinForms/Recaptcha.php:135
+#: src/core/src/OptinForms/Recaptcha.php:92
 #: src/core/src/OptinForms/Turnstile.php:201
 msgid "Upgrade to Unlock"
 msgstr ""
@@ -10931,55 +10928,93 @@ msgstr ""
 msgid "We promise not to spam you. You can unsubscribe at any time"
 msgstr ""
 
-#: src/core/src/OptinForms/Recaptcha.php:58
+#: src/core/src/OptinForms/Recaptcha.php:66
+msgid "To use reCAPTCHA, you need to add the API Key and complete the setup process in Dashboard > MailOptin > Settings > reCAPTCHA."
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:83
+#: src/core/src/OptinForms/Recaptcha.php:146
+msgid "reCAPTCHA"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:85
+#: src/core/src/OptinForms/Recaptcha.php:148
+msgid "reCAPTCHA Settings"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:90
+msgid "Do you want to stop spam bots from filling out your form? You can add reCAPTCHA to your forms to protects against spam and other types of automated abuse."
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:107
+msgid "Checkbox Challenge (v2)"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:113
+msgid "Score-Based (v3)"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:152
+msgid "reCAPTCHA Enterprise"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:153
+msgid "reCAPTCHA Classic"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:155
+msgid "API Platform"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:156
+msgid "Select the reCAPTCHA API platform to use."
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:165
+msgid "Google Cloud Project ID"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:169
+msgid "Google Cloud API Key"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:170
+#, php-format
+msgid "API key for the reCAPTCHA Enterprise API. Create one in the %sGoogle Cloud Console%s with reCAPTCHA Enterprise API access."
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:174
+msgid "Key ID / Site Key"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:178
+msgid "Secret Key"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:182
+msgid "Score Threshold"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:184
+msgid "The score at which users will fail reCAPTCHA v3 verification. Scores can range from from 0.0 (very likely a bot) to 1.0 (very likely a human). Default is 0.5"
+msgstr ""
+
+#: src/core/src/OptinForms/Recaptcha.php:217
 msgid "reCAPTCHA is required."
 msgstr ""
 
 #. translators: %d: Response code.
-#: src/core/src/OptinForms/Recaptcha.php:74
+#: src/core/src/OptinForms/Recaptcha.php:240
+#: src/core/src/OptinForms/Recaptcha.php:275
 #, php-format
 msgid "Can not connect to the reCAPTCHA server (%d)."
 msgstr ""
 
-#: src/core/src/OptinForms/Recaptcha.php:80
-#: src/core/src/OptinForms/Recaptcha.php:90
+#: src/core/src/OptinForms/Recaptcha.php:246
+#: src/core/src/OptinForms/Recaptcha.php:256
+#: src/core/src/OptinForms/Recaptcha.php:281
+#: src/core/src/OptinForms/Recaptcha.php:290
 msgid "Google reCAPTCHA verification failed, please try again."
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:109
-msgid "To use reCAPTCHA, you need to add the API Key and complete the setup process in Dashboard > MailOptin > Settings > reCAPTCHA."
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:126
-#: src/core/src/OptinForms/Recaptcha.php:174
-msgid "reCAPTCHA"
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:128
-#: src/core/src/OptinForms/Recaptcha.php:176
-msgid "reCAPTCHA Settings"
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:133
-msgid "Do you want to stop spam bots from filling out your form? You can add reCAPTCHA to your forms to protects against spam and other types of automated abuse."
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:184
-#: src/core/src/OptinForms/Turnstile.php:163
-msgid "Site Key"
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:188
-#: src/core/src/OptinForms/Turnstile.php:168
-msgid "Site Secret"
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:192
-msgid "Score Threshold"
-msgstr ""
-
-#: src/core/src/OptinForms/Recaptcha.php:194
-msgid "The score at which users will fail reCAPTCHA v3 verification. Scores can range from from 0.0 (very likely a bot) to 1.0 (very likely a human). Default is 0.5"
 msgstr ""
 
 #: src/core/src/OptinForms/Shortcodes.php:29
@@ -11046,9 +11081,17 @@ msgstr ""
 msgid "To use Cloudflare Turnstile, add the API keys in Dashboard > MailOptin > Settings > Turnstile."
 msgstr ""
 
+#: src/core/src/OptinForms/Turnstile.php:163
+msgid "Site Key"
+msgstr ""
+
 #: src/core/src/OptinForms/Turnstile.php:164
 #, php-format
 msgid "Necessary for displaying Turnstile. Grab it %shere%s"
+msgstr ""
+
+#: src/core/src/OptinForms/Turnstile.php:168
+msgid "Site Secret"
 msgstr ""
 
 #: src/core/src/OptinForms/Turnstile.php:169

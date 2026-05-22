@@ -40,7 +40,7 @@ class Connect extends AbstractKlaviyoConnect implements ConnectionInterface
      */
     public function register_connection($connections)
     {
-        $connections[self::$connectionName] = __('Klaviyo', 'mailoptin');
+        $connections[self::$connectionName] = 'Klaviyo';
 
         return $connections;
     }
