@@ -42,11 +42,11 @@ class Subscription extends AbstractConnect
 
         $user_data = array_filter($user_fields, [$this, 'data_filter']);
 
-        if ( ! isset($user_data['user_login']) || empty($user_data['user_login'])) {
+        if (empty($user_data['user_login'])) {
             $user_data['user_login'] = $this->email;
         }
 
-        if ( ! isset($user_data['user_pass']) || empty($user_data['user_pass'])) {
+        if (empty($user_data['user_pass'])) {
             $password_mapped_flag   = false;
             $user_data['user_pass'] = wp_generate_password(12, false);
         }

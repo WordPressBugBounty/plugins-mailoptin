@@ -1,5 +1,9 @@
 ﻿== Changelog ==
 
+= 1.2.77.3 =
+* Improved PHP 8.5 support.
+* Fixed security issue where optin without the list-selection field behaved as one.
+
 = 1.2.77.2 =
 * Fixed more Outlook email template rendering issues.
 

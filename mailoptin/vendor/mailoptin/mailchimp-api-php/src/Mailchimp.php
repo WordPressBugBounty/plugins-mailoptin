@@ -97,10 +97,10 @@ class Mailchimp {
    *   The Mailchimp API username.
    * @param array $http_options
    *   HTTP client options.
-   * @param MailchimpHttpClientInterface $client
+   * @param MailchimpHttpClientInterface|null $client
    *   Optional custom HTTP client. $http_options are ignored if this is set.
    */
-  public function __construct($api_key, $api_user = 'apikey', $http_options = [], MailchimpHttpClientInterface $client = NULL) {
+  public function __construct($api_key, $api_user = 'apikey', $http_options = [], $client = NULL) {
     $this->api_key = $api_key;
     $this->api_user = $api_user;
 

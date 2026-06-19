@@ -5,7 +5,6 @@ namespace MailOptin\WooCommerceConnect;
 use MailOptin\Connections\Init;
 use MailOptin\Core\AjaxHandler;
 use MailOptin\Core\Connections\AbstractConnect;
-use MailOptin\Core\Connections\ConnectionFactory;
 use MailOptin\Core\OptinForms\ConversionDataBuilder;
 
 class Tags

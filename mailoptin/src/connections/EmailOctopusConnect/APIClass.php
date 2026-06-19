@@ -130,8 +130,6 @@ class APIClass
             return ! empty($value);
         });
 
-        $response = $this->make_request("lists/{$list_id}/contacts", $payload, 'post');
-
-        return $response;
+        return $this->make_request("lists/{$list_id}/contacts", $payload, 'post');
     }
 }

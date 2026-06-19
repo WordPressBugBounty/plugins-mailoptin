@@ -536,7 +536,7 @@ class WooInit
                             'id'          => 'mailoptinWooCommerceTextTags',
                             'value'       => $saved_tags,
                             'label'       => esc_html__('Tags', 'mailoptin'),
-                            'description' => esc_html__('Enter a comma-separated list of tags to assign to buyers or customers.', 'mailoptin'),
+                            'description' => esc_html__('Enter a comma-separated list of tags to assign to buyers or customers.', 'mailoptin'),
                     ]
             );
         }

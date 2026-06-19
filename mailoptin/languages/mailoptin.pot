@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.77.2\n"
+"Project-Id-Version: MailOptin - Lite 1.2.77.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-21T19:21:41+00:00\n"
+"POT-Creation-Date: 2026-06-19T13:06:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -132,7 +132,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:956
 #: src/core/src/Admin/SettingsPage/AddEmailCampaign.php:77
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:382
-#: src/core/src/AjaxHandler.php:1195
+#: src/core/src/AjaxHandler.php:1208
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1160
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1191
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1204
@@ -192,7 +192,7 @@ msgstr ""
 #: src/connections/VerticalResponseConnect/ConnectSettingsPage.php:31
 #: src/connections/WeMailConnect/ConnectSettingsPage.php:22
 #: src/connections/WooCommerceConnect/Category.php:47
-#: src/connections/WooCommerceConnect/Tags.php:46
+#: src/connections/WooCommerceConnect/Tags.php:45
 #: src/connections/ZohoCampaignsConnect/ConnectSettingsPage.php:31
 #: src/connections/ZohoCRMConnect/ConnectSettingsPage.php:31
 msgid "Connected"
@@ -787,7 +787,7 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:34
 #: src/connections/WooCommerceConnect/Category.php:70
 #: src/connections/WooCommerceConnect/Product.php:76
-#: src/connections/WooCommerceConnect/Tags.php:69
+#: src/connections/WooCommerceConnect/Tags.php:68
 #: src/connections/WooCommerceConnect/WooSettings.php:214
 #: src/connections/WooMembershipConnect/OptinSubscription.php:304
 #: src/connections/WPFormsConnect/MailOptin.php:563
@@ -817,7 +817,7 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:37
 #: src/connections/WooCommerceConnect/Category.php:73
 #: src/connections/WooCommerceConnect/Product.php:79
-#: src/connections/WooCommerceConnect/Tags.php:71
+#: src/connections/WooCommerceConnect/Tags.php:70
 #: src/connections/WooCommerceConnect/WooSettings.php:217
 #: src/connections/WooMembershipConnect/OptinSubscription.php:307
 #: src/core/src/Cron.php:61
@@ -856,7 +856,7 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:63
 #: src/connections/WooCommerceConnect/Category.php:93
 #: src/connections/WooCommerceConnect/Product.php:89
-#: src/connections/WooCommerceConnect/Tags.php:89
+#: src/connections/WooCommerceConnect/Tags.php:88
 #: src/connections/WooCommerceConnect/WooSettings.php:243
 #: src/connections/WooMembershipConnect/OptinSubscription.php:317
 #: src/connections/WPFormsConnect/MailOptin.php:334
@@ -888,7 +888,7 @@ msgstr ""
 #: src/connections/UserRegistrationOptinConnect/UserRegisterSettings.php:64
 #: src/connections/WooCommerceConnect/Category.php:103
 #: src/connections/WooCommerceConnect/Product.php:92
-#: src/connections/WooCommerceConnect/Tags.php:99
+#: src/connections/WooCommerceConnect/Tags.php:98
 #: src/connections/WooCommerceConnect/WooSettings.php:244
 #: src/connections/WooMembershipConnect/OptinSubscription.php:321
 msgid "Select your email marketing software or CRM."
@@ -1410,7 +1410,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
-#: src/core/src/AjaxHandler.php:1186
+#: src/core/src/AjaxHandler.php:1199
 msgid "First Name"
 msgstr ""
 
@@ -1486,7 +1486,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
-#: src/core/src/AjaxHandler.php:1187
+#: src/core/src/AjaxHandler.php:1200
 msgid "Last Name"
 msgstr ""
 
@@ -1535,7 +1535,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
-#: src/core/src/AjaxHandler.php:1188
+#: src/core/src/AjaxHandler.php:1201
 msgid "Email Address"
 msgstr ""
 
@@ -1602,7 +1602,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
-#: src/core/src/AjaxHandler.php:1185
+#: src/core/src/AjaxHandler.php:1198
 msgid "Full Name"
 msgstr ""
 
@@ -2857,7 +2857,7 @@ msgid "Back"
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:441
-#: src/core/src/AjaxHandler.php:1214
+#: src/core/src/AjaxHandler.php:1227
 msgid "Save"
 msgstr ""
 
@@ -5312,6 +5312,7 @@ msgid "Select tags to assign to buyers or customers."
 msgstr ""
 
 #: src/connections/UltimateMemberConnect/UMSettings.php:230
+#: src/connections/WooCommerceConnect/WooInit.php:539
 #: src/connections/WooCommerceConnect/WooSettings.php:324
 #: src/connections/WooMembershipConnect/OptinSubscription.php:251
 msgid "Enter a comma-separated list of tags to assign to buyers or customers."
@@ -5627,9 +5628,9 @@ msgstr ""
 
 #: src/connections/WooCommerceConnect/Category.php:62
 #: src/connections/WooCommerceConnect/Category.php:86
-#: src/connections/WooCommerceConnect/Tags.php:43
-#: src/connections/WooCommerceConnect/Tags.php:61
-#: src/connections/WooCommerceConnect/Tags.php:84
+#: src/connections/WooCommerceConnect/Tags.php:42
+#: src/connections/WooCommerceConnect/Tags.php:60
+#: src/connections/WooCommerceConnect/Tags.php:83
 msgid "Connect MailOptin"
 msgstr ""
 
@@ -5638,7 +5639,7 @@ msgid "Add buyers or customers that purchase products in this category to your e
 msgstr ""
 
 #: src/connections/WooCommerceConnect/Category.php:111
-#: src/connections/WooCommerceConnect/Tags.php:105
+#: src/connections/WooCommerceConnect/Tags.php:104
 msgid "Save Settings"
 msgstr ""
 
@@ -5659,12 +5660,12 @@ msgstr ""
 msgid "Upgrade to %sMailOptin Premium%s to add customers that purchase this product to a specific email list, assign tags and custom field data to them."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Tags.php:53
+#: src/connections/WooCommerceConnect/Tags.php:52
 #, php-format
 msgid "Upgrade to %sMailOptin Premium%s to add customers that purchase products with this tag to a specific email list, add custom field data and assign tags to them."
 msgstr ""
 
-#: src/connections/WooCommerceConnect/Tags.php:77
+#: src/connections/WooCommerceConnect/Tags.php:76
 msgid "Add buyers or customers that purchase products with this tag to your email marketing or CRM list."
 msgstr ""
 
@@ -5700,10 +5701,6 @@ msgstr ""
 
 #: src/connections/WooCommerceConnect/WooInit.php:478
 msgid "Last Order Payment Method"
-msgstr ""
-
-#: src/connections/WooCommerceConnect/WooInit.php:539
-msgid "Enter a comma-separated list of tags to assign to buyers or customers."
 msgstr ""
 
 #: src/connections/WooCommerceConnect/WooSettings.php:199
@@ -9477,27 +9474,27 @@ msgstr ""
 msgid "Email address is invalid. Try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:963
+#: src/core/src/AjaxHandler.php:976
 msgid "Email address is not valid. Please try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1038
+#: src/core/src/AjaxHandler.php:1051
 msgid "Error log successfully deleted"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1043
+#: src/core/src/AjaxHandler.php:1056
 msgid "This will delete the error log forever. Press OK to confirm"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1044
+#: src/core/src/AjaxHandler.php:1057
 msgid "Delete Error Log"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1174
+#: src/core/src/AjaxHandler.php:1187
 msgid "Error: No integration field found. Select a list first if you haven't and try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1179
+#: src/core/src/AjaxHandler.php:1192
 msgid "Map integration fields to form custom fields"
 msgstr ""
 
