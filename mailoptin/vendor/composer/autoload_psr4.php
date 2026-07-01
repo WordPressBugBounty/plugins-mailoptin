@@ -90,6 +90,7 @@ return array(
     'MailOptin\\Ctctv3Connect\\' => array($baseDir . '/src/connections/Ctctv3Connect'),
     'MailOptin\\CtctConnect\\' => array($baseDir . '/src/connections/CtctConnect'),
     'MailOptin\\Core\\' => array($baseDir . '/src/core/src'),
+    'MailOptin\\CopperConnect\\' => array($baseDir . '/src/connections/CopperConnect'),
     'MailOptin\\ConvertKitConnect\\' => array($baseDir . '/src/connections/ConvertKitConnect'),
     'MailOptin\\ConvertFoxConnect\\' => array($baseDir . '/src/connections/ConvertFoxConnect'),
     'MailOptin\\ContactForm7Connect\\' => array($baseDir . '/src/connections/ContactForm7Connect'),

@@ -88,6 +88,7 @@
       "MailOptin\\SendpulseConnect\\": "SendpulseConnect/",
       "MailOptin\\OrttoCRMConnect\\": "OrttoCRMConnect/",
       "MailOptin\\GroundhoggConnect\\": "GroundhoggConnect/",
+      "MailOptin\\CopperConnect\\": "CopperConnect/",
       "MailOptin\\Connections\\": "./"
     },
     "classmap": [

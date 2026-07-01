@@ -458,11 +458,11 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1781873359",
-            "version_normalized": "0.2.1781873359.0",
+            "version": "0.2.1782903804",
+            "version_normalized": "0.2.1782903804.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_9KF89/mailoptinauthifly-0-2-1781873359.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_KkxR6/mailoptinauthifly-0-2-1782903804.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -497,7 +497,8 @@
                     "Microsoft.php",
                     "HighLevel.php",
                     "Google.php",
-                    "Birdsend.php"
+                    "Birdsend.php",
+                    "Copper.php"
                 ]
             },
             "license": [
@@ -516,11 +517,11 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1781873402",
-            "version_normalized": "0.2.1781873402.0",
+            "version": "0.2.1782903847",
+            "version_normalized": "0.2.1782903847.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_z0B8Z/mailoptinconnections-0-2-1781873402.zip"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1PKEBE/mailoptinconnections-0-2-1782903847.zip"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -618,6 +619,7 @@
                     "MailOptin\\SendpulseConnect\\": "SendpulseConnect/",
                     "MailOptin\\OrttoCRMConnect\\": "OrttoCRMConnect/",
                     "MailOptin\\GroundhoggConnect\\": "GroundhoggConnect/",
+                    "MailOptin\\CopperConnect\\": "CopperConnect/",
                     "MailOptin\\Connections\\": "./"
                 },
                 "classmap": [
@@ -629,17 +631,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1781873397",
-            "version_normalized": "0.1.0.0-alpha1781873397",
+            "version": "0.1.0-alpha.1782903842",
+            "version_normalized": "0.1.0.0-alpha1782903842",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "f1f08d313d10414b4adb65f59e919ac1cd49b774"
+                "reference": "0fef44b70691635fe5521cc2cd32ad9e75591fe3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/f1f08d313d10414b4adb65f59e919ac1cd49b774",
-                "reference": "f1f08d313d10414b4adb65f59e919ac1cd49b774",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/0fef44b70691635fe5521cc2cd32ad9e75591fe3",
+                "reference": "0fef44b70691635fe5521cc2cd32ad9e75591fe3",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +652,7 @@
                 "pelago/emogrifier": "^6.0.0",
                 "soundasleep/html2text": "~0.5"
             },
-            "time": "2026-06-18T16:11:57+00:00",
+            "time": "2026-06-30T12:26:38+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -672,28 +674,28 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1781873397"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1782903842"
             },
             "install-path": "../../src/core"
         },
         {
             "name": "mailoptin/mailchimp-api-php",
-            "version": "2.1.4",
-            "version_normalized": "2.1.4.0",
+            "version": "2.1.5",
+            "version_normalized": "2.1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/mailchimp-api-php.git",
-                "reference": "73dc185ecb759304bfc5be1486d7b48bad61ff9a"
+                "reference": "ade3bac74a26260d400bfaaa619f45d2a1421eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/mailchimp-api-php/zipball/73dc185ecb759304bfc5be1486d7b48bad61ff9a",
-                "reference": "73dc185ecb759304bfc5be1486d7b48bad61ff9a",
+                "url": "https://api.github.com/repos/mailoptin/mailchimp-api-php/zipball/ade3bac74a26260d400bfaaa619f45d2a1421eb8",
+                "reference": "ade3bac74a26260d400bfaaa619f45d2a1421eb8",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2.1|^7.0.0",
-                "php": ">=5.4.0"
+                "php": ">=7.4.0"
             },
             "replace": {
                 "thinkshout/mailchimp-api-php": "^1.0|^2.0"
@@ -701,7 +703,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.2.2"
             },
-            "time": "2026-05-05T11:10:40+00:00",
+            "time": "2026-07-01T10:30:34+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -721,7 +723,7 @@
                 "mailchimp"
             ],
             "support": {
-                "source": "https://github.com/mailoptin/mailchimp-api-php/tree/2.1.4"
+                "source": "https://github.com/mailoptin/mailchimp-api-php/tree/2.1.5"
             },
             "install-path": "../mailoptin/mailchimp-api-php"
         },

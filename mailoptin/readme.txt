@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 7.0
-Stable tag: 1.2.77.3
+Stable tag: 1.2.78.0
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -54,7 +54,7 @@ Our popup optin forms are GDPR-compliant.
 
 = Integrates with All Email Marketing Platforms =
 
-MailOptin popup maker works with all popular email marketing software and CRM, including Mailchimp, AWeber, Constant Contact, Campaign Monitor, Salesforce, Sendy, Mailerlite, MailPoet, Kit (ConvertKit), ActiveCampaign, Infusionsoft by Keap, Drip, Brevo (Sendinblue), EmailOctopus, HubSpot, Ontraport CRM, Microsoft Dynamics 365, Mailjet, Klaviyo, Sendlane, Mailster, Moosend, Gist, VerticalResponse, Zoho CRM, Zoho Campaigns, Emma, SendFox, SendGrid Email Marketing, GoDaddy Email Marketing, CleverReach, Omnisend, [Google Sheets](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), GetResponse, iContact, E-goi, Mailgun, Flodesk, Beehiiv, Elastic Email, Encharge, HighLevel, weMail, FluentCRM, Benchmark Email, Mailercloud, SendPulse, Bento, Groundhogg, Sender.net and NewsMAN.
+MailOptin popup maker works with all popular email marketing software and CRM, including Mailchimp, AWeber, Constant Contact, Campaign Monitor, Salesforce, Sendy, Mailerlite, MailPoet, Kit (ConvertKit), ActiveCampaign, Infusionsoft by Keap, Drip, Brevo (Sendinblue), EmailOctopus, HubSpot, Ontraport CRM, Microsoft Dynamics 365, Mailjet, Klaviyo, Sendlane, Mailster, Moosend, Gist, VerticalResponse, Zoho CRM, Zoho Campaigns, Emma, SendFox, SendGrid Email Marketing, GoDaddy Email Marketing, CleverReach, Omnisend, [Google Sheets](https://mailoptin.io/article/connect-wordpress-with-google-sheet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion), GetResponse, iContact, E-goi, Mailgun, Flodesk, Beehiiv, Elastic Email, Encharge, HighLevel, weMail, FluentCRM, Benchmark Email, Mailercloud, SendPulse, Bento, Groundhogg, Sender.net, Copper CRM and NewsMAN.
 
 = User Registration Forms =
 
@@ -186,6 +186,10 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 10. Elementor form integration with MailOptin
 
 == Changelog ==
+
+= 1.2.78.0 =
+* Added [Copper CRM integration](https://mailoptin.io/article/connect-wordpress-copper-crm/).
+* Fixed security issue where a non-whitelisted option could be used as a list-subscription field value.
 
 = 1.2.77.3 =
 * Improved PHP 8.5 support.

@@ -1,5 +1,9 @@
 ﻿== Changelog ==
 
+= 1.2.78.0 =
+* Added [Copper CRM integration](https://mailoptin.io/article/connect-wordpress-copper-crm/).
+* Fixed security issue where a non-whitelisted option could be used as a list-subscription field value.
+
 = 1.2.77.3 =
 * Improved PHP 8.5 support.
 * Fixed security issue where optin without the list-selection field behaved as one.

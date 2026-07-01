@@ -44,7 +44,8 @@ class Init
             'BeehiivConnect',
             'EnchargeConnect',
             'OrttoCRMConnect',
-            'BentoConnect'
+            'BentoConnect',
+            'CopperConnect'
         ];
     }
 
@@ -267,5 +268,6 @@ class Init
         \MailOptin\BentoConnect\Connect::get_instance();
         \MailOptin\GoogleSheetConnect\Connect::get_instance();
         \MailOptin\SendpulseConnect\Connect::get_instance();
+        \MailOptin\CopperConnect\Connect::get_instance();
     }
 }

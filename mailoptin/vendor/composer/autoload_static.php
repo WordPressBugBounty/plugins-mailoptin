@@ -112,6 +112,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
             'MailOptin\\Ctctv3Connect\\' => 24,
             'MailOptin\\CtctConnect\\' => 22,
             'MailOptin\\Core\\' => 15,
+            'MailOptin\\CopperConnect\\' => 24,
             'MailOptin\\ConvertKitConnect\\' => 28,
             'MailOptin\\ConvertFoxConnect\\' => 28,
             'MailOptin\\ContactForm7Connect\\' => 30,
@@ -490,6 +491,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         array (
             0 => __DIR__ . '/../..' . '/src/core/src',
         ),
+        'MailOptin\\CopperConnect\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/src/connections/CopperConnect',
+        ),
         'MailOptin\\ConvertKitConnect\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src/connections/ConvertKitConnect',
@@ -635,6 +640,7 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'Authifly\\Provider\\CleverReach' => __DIR__ . '/..' . '/mailoptin/authifly/CleverReach.php',
         'Authifly\\Provider\\ConstantContact' => __DIR__ . '/..' . '/mailoptin/authifly/ConstantContact.php',
         'Authifly\\Provider\\ConstantContactV3' => __DIR__ . '/..' . '/mailoptin/authifly/ConstantContactV3.php',
+        'Authifly\\Provider\\Copper' => __DIR__ . '/..' . '/mailoptin/authifly/Copper.php',
         'Authifly\\Provider\\Facebook' => __DIR__ . '/..' . '/mailoptin/authifly/Facebook.php',
         'Authifly\\Provider\\Google' => __DIR__ . '/..' . '/mailoptin/authifly/Google.php',
         'Authifly\\Provider\\HighLevel' => __DIR__ . '/..' . '/mailoptin/authifly/HighLevel.php',
@@ -933,6 +939,10 @@ class ComposerStaticInit2f0dac476a30a56c7e3b36362f699d8d
         'MailOptin\\ConvertKitConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/ConvertKitConnect/ConnectSettingsPage.php',
         'MailOptin\\ConvertKitConnect\\SendCampaign' => __DIR__ . '/../..' . '/src/connections/ConvertKitConnect/SendCampaign.php',
         'MailOptin\\ConvertKitConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/ConvertKitConnect/Subscription.php',
+        'MailOptin\\CopperConnect\\AbstractCopperConnect' => __DIR__ . '/../..' . '/src/connections/CopperConnect/AbstractCopperConnect.php',
+        'MailOptin\\CopperConnect\\Connect' => __DIR__ . '/../..' . '/src/connections/CopperConnect/Connect.php',
+        'MailOptin\\CopperConnect\\ConnectSettingsPage' => __DIR__ . '/../..' . '/src/connections/CopperConnect/ConnectSettingsPage.php',
+        'MailOptin\\CopperConnect\\Subscription' => __DIR__ . '/../..' . '/src/connections/CopperConnect/Subscription.php',
         'MailOptin\\Core\\Admin\\AdminNotices' => __DIR__ . '/../..' . '/src/core/src/Admin/AdminNotices.php',
         'MailOptin\\Core\\Admin\\Customizer\\CustomControls\\ControlsHelpers' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/CustomControls/ControlsHelpers.php',
         'MailOptin\\Core\\Admin\\Customizer\\CustomControls\\EmailContentBuilder\\AbstractElement' => __DIR__ . '/../..' . '/src/core/src/Admin/Customizer/CustomControls/EmailContentBuilder/AbstractElement.php',
