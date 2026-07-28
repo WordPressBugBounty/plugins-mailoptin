@@ -100,10 +100,6 @@
     "mailoptin/mailchimp-api-php": "^2.0",
     "drewm/drip": "^0.9"
   },
-  "_comment": "doing this to remove guzzle dependency declared by thinkshout/mailchimp-api-php because we are explicitly using the curl adpater",
-  "replace": {
-    "guzzlehttp/guzzle": "*"
-  },
   "config": {
     "allow-plugins": {
       "composer/installers": true

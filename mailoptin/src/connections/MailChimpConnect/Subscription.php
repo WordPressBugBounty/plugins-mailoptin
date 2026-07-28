@@ -212,8 +212,13 @@ class Subscription extends AbstractMailChimpConnect
                 'interests'     => $this->interests(),
                 'status_if_new' => $optin_status,
                 'status'        => 'subscribed',
-                'ip_signup'     => parse_url('http://' . get_ip_address(), PHP_URL_HOST) // strip ports and stuff
+                // Strip ports and stuff. does not work with ipv6. see https://stackoverflow.com/a/66805163/2648410
+                'ip_signup'     => parse_url('http://' . get_ip_address(), PHP_URL_HOST)
             ];
+
+            if(filter_var($parameters['ip_signup'], FILTER_VALIDATE_IP) === false) {
+                unset($parameters['ip_signup']);
+            }
 
             $parameters = apply_filters('mo_connections_mailchimp_subscription_parameters', array_filter($parameters, [$this, 'data_filter']), $this);
 

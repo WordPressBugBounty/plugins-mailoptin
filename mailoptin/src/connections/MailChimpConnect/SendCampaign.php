@@ -88,7 +88,7 @@ class SendCampaign extends AbstractMailChimpConnect
             if ( ! empty($response->id)) {
                 $campaign_id = $response->id;
 
-                // save the MailChimp campaign ID against the campaign log.
+                // save the Mailchimp campaign ID against the campaign log.
                 AbstractCampaignLogMeta::add_campaignlog_meta($this->campaign_log_id, 'mailchimp_campaign_id', $campaign_id);
 
                 $parameters = [

@@ -117,7 +117,7 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
     }
 
     /**
-     * Register MailChimp Connection.
+     * Register Mailchimp Connection.
      *
      * @param array $connections
      *
@@ -279,7 +279,7 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
      */
     public function add_reward_merge_tag($footer_description)
     {
-        // do not add MailChimp reward merge tag to customizer preview.
+        // do not add Mailchimp reward merge tag to customizer preview.
         if ( ! is_customize_preview()) {
             $footer_description .= '<br/>' . '*|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*';
         }
@@ -420,7 +420,7 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
             if (empty($interest_groups)) {
                 $controls[] = [
                     'field'   => 'custom_content',
-                    'content' => '<div class="MailChimpConnect_interests mc-group-block" style="background:#000000;color:#fff;margin:5px 0;padding:10px;font-size:14px;">' . __('No MailChimp group found. Try selecting another email list.', 'mailoptin') . '</div>'
+                    'content' => '<div class="MailChimpConnect_interests mc-group-block" style="background:#000000;color:#fff;margin:5px 0;padding:10px;font-size:14px;">' . __('No Mailchimp group found. Try selecting another email list.', 'mailoptin') . '</div>'
                 ];
             } else {
 

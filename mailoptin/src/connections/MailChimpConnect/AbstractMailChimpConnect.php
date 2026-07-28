@@ -27,7 +27,7 @@ class AbstractMailChimpConnect extends AbstractConnect
     }
 
     /**
-     * Is MailChimp successfully connected to?
+     * Is Mailchimp successfully connected to?
      *
      * @return bool
      */
@@ -112,7 +112,7 @@ class AbstractMailChimpConnect extends AbstractConnect
     }
 
     /**
-     * Return instance of MailChimp list class.
+     * Return instance of Mailchimp list class.
      *
      * @throws \Exception
      *
@@ -123,7 +123,7 @@ class AbstractMailChimpConnect extends AbstractConnect
         $api_key = $this->connections_settings->mailchimp_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception('MailChimp API key not found.');
+            throw new \Exception('Mailchimp API key not found.');
         }
 
         $client = new MailchimpCurlHttpClient(['timeout' => 30]);
@@ -132,7 +132,7 @@ class AbstractMailChimpConnect extends AbstractConnect
     }
 
     /**
-     * Return instance of MailChimp campaign class.
+     * Return instance of Mailchimp campaign class.
      *
      * @throws \Exception
      *
@@ -143,7 +143,7 @@ class AbstractMailChimpConnect extends AbstractConnect
         $api_key = $this->connections_settings->mailchimp_api_key();
 
         if (empty($api_key)) {
-            throw new \Exception('MailChimp API key not found.');
+            throw new \Exception('Mailchimp API key not found.');
         }
 
         $client = new MailchimpCurlHttpClient(['timeout' => 30]);

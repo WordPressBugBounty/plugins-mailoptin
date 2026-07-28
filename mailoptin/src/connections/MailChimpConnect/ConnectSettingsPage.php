@@ -83,7 +83,7 @@ class ConnectSettingsPage
                 'obfuscate_val' => true,
                 'label'         => __('Enter API Key', 'mailoptin'),
                 'description'   => sprintf(
-                    __('Log in to your %sMailChimp account%s to get your API Key.', 'mailoptin'),
+                    __('Log in to your %sMailchimp account%s to get your API Key.', 'mailoptin'),
                     '<a target="_blank" href="https://admin.mailchimp.com/account/api-key-popup">',
                     '</a>'
                 ),

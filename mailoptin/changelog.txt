@@ -1,5 +1,9 @@
 ﻿== Changelog ==
 
+= 1.2.78.1 =
+* Fixed XSS in optin block.
+* Fixed Mailchimp lead subscription bug due to an invalid IP address.
+
 = 1.2.78.0 =
 * Added [Copper CRM integration](https://mailoptin.io/article/connect-wordpress-copper-crm/).
 * Fixed security issue where a non-whitelisted option could be used as a list-subscription field value.
