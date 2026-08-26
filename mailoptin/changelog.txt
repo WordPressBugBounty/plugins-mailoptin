@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 1.2.78.2 =
+* Improved security of license upgrader.
+* Upgraded internal PHP dependencies.
+* Added mo_leadbank_lead_data filter to lead bank payload.
+
 = 1.2.78.1 =
 * Fixed XSS in optin block.
 * Fixed Mailchimp lead subscription bug due to an invalid IP address.

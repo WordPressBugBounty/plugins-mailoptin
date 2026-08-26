@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.78.1\n"
+"Project-Id-Version: MailOptin - Lite 1.2.78.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-27T15:50:52+00:00\n"
+"POT-Creation-Date: 2026-08-26T12:25:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -134,7 +134,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:956
 #: src/core/src/Admin/SettingsPage/AddEmailCampaign.php:77
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:382
-#: src/core/src/AjaxHandler.php:1216
+#: src/core/src/AjaxHandler.php:1218
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1160
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1191
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1204
@@ -1418,7 +1418,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
-#: src/core/src/AjaxHandler.php:1207
+#: src/core/src/AjaxHandler.php:1209
 msgid "First Name"
 msgstr ""
 
@@ -1494,7 +1494,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
-#: src/core/src/AjaxHandler.php:1208
+#: src/core/src/AjaxHandler.php:1210
 msgid "Last Name"
 msgstr ""
 
@@ -1543,7 +1543,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
-#: src/core/src/AjaxHandler.php:1209
+#: src/core/src/AjaxHandler.php:1211
 msgid "Email Address"
 msgstr ""
 
@@ -1610,7 +1610,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
-#: src/core/src/AjaxHandler.php:1206
+#: src/core/src/AjaxHandler.php:1208
 msgid "Full Name"
 msgstr ""
 
@@ -2520,7 +2520,7 @@ msgstr ""
 #: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:21
 #: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:48
 #: src/connections/FacebookCustomAudienceConnect/ConnectSettingsPage.php:49
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:196
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:201
 msgid "Facebook Custom Audience"
 msgstr ""
 
@@ -2883,7 +2883,7 @@ msgid "Back"
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:441
-#: src/core/src/AjaxHandler.php:1235
+#: src/core/src/AjaxHandler.php:1237
 msgid "Save"
 msgstr ""
 
@@ -9026,66 +9026,66 @@ msgstr ""
 msgid "Your current plan does not include this feature."
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:134
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:139
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:474
 msgid "Notification Bar"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:140
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:145
 msgid "Slide-In / Scroll-Trigger"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:146
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:151
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:609
 #: src/core/src/Admin/SettingsPage/OptinCampaign_List.php:642
 msgid "A/B Split Test"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:152
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:157
 msgid "Popup User Registration Form"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:158
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:163
 msgid "Advanced Display Rules"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:164
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:169
 msgid "Powerful Content Locking"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:170
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:175
 msgid "Exit-Intent"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:176
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:181
 msgid "WooCommerce Display Rules"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:182
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:187
 msgid "Email List Subscribers"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:188
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:193
 msgid "Advanced Analytics & Reports"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:192
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:197
 msgid "reCAPTCHA Spam Protection"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:200
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:205
 msgid "Form plugins Integration"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:204
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:209
 msgid "Google Analytics Integration"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:209
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:214
 msgid "More Lead Generation Features"
 msgstr ""
 
-#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:215
+#: src/core/src/Admin/SettingsPage/LicenseUpgrader.php:220
 msgid "More Email Automation Features"
 msgstr ""
 
@@ -9504,27 +9504,27 @@ msgstr ""
 msgid "Email address is invalid. Try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:984
+#: src/core/src/AjaxHandler.php:986
 msgid "Email address is not valid. Please try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1059
+#: src/core/src/AjaxHandler.php:1061
 msgid "Error log successfully deleted"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1064
+#: src/core/src/AjaxHandler.php:1066
 msgid "This will delete the error log forever. Press OK to confirm"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1065
+#: src/core/src/AjaxHandler.php:1067
 msgid "Delete Error Log"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1195
+#: src/core/src/AjaxHandler.php:1197
 msgid "Error: No integration field found. Select a list first if you haven't and try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1200
+#: src/core/src/AjaxHandler.php:1202
 msgid "Map integration fields to form custom fields"
 msgstr ""
 

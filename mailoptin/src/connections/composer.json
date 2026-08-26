@@ -96,7 +96,7 @@
     ]
   },
   "require": {
-    "composer/installers": "~1.0",
+    "composer/installers": "~2.0",
     "mailoptin/mailchimp-api-php": "^2.0",
     "drewm/drip": "^0.9"
   },
