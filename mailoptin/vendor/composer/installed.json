@@ -625,17 +625,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1787746876",
-            "version_normalized": "0.1.0.0-alpha1787746876",
+            "version": "0.1.0-alpha.1787916945",
+            "version_normalized": "0.1.0.0-alpha1787916945",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "f2125896a45c662dd56f5f18a6550a4b00aa20be"
+                "reference": "a2e305c66835e019a4f9d06593a6527f07598535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/f2125896a45c662dd56f5f18a6550a4b00aa20be",
-                "reference": "f2125896a45c662dd56f5f18a6550a4b00aa20be",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/a2e305c66835e019a4f9d06593a6527f07598535",
+                "reference": "a2e305c66835e019a4f9d06593a6527f07598535",
                 "shasum": ""
             },
             "require": {
@@ -646,7 +646,7 @@
                 "pelago/emogrifier": "^8.0.0",
                 "soundasleep/html2text": "^2.0"
             },
-            "time": "2026-08-26T11:25:39+00:00",
+            "time": "2026-08-28T11:17:11+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -668,7 +668,7 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1787746876"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1787916945"
             },
             "install-path": "../../src/core"
         },

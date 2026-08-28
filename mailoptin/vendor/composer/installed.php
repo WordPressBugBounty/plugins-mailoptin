@@ -94,9 +94,9 @@
             'dev_requirement' => false,
         ),
         'mailoptin/core' => array(
-            'pretty_version' => '0.1.0-alpha.1787746876',
-            'version' => '0.1.0.0-alpha1787746876',
-            'reference' => 'f2125896a45c662dd56f5f18a6550a4b00aa20be',
+            'pretty_version' => '0.1.0-alpha.1787916945',
+            'version' => '0.1.0.0-alpha1787916945',
+            'reference' => 'a2e305c66835e019a4f9d06593a6527f07598535',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../src/core',
             'aliases' => array(),
