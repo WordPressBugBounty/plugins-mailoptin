@@ -61,22 +61,8 @@ class AtRuleSet extends RuleSet implements AtRule
             $arguments = ' ' . $arguments;
         }
         $result .= "@{$this->type}$arguments{$formatter->spaceBeforeOpeningBrace()}{";
-        $result .= $this->renderDeclarations($outputFormat);
+        $result .= $this->renderRules($outputFormat);
         $result .= '}';
         return $result;
-    }
-
-    /**
-     * @return array<string, bool|int|float|string|array<mixed>|null>
-     *
-     * @internal
-     */
-    public function getArrayRepresentation(): array
-    {
-        $arrayRepresentation = parent::getArrayRepresentation();
-        $arrayRepresentation['atRuleName'] = $this->type;
-        $arrayRepresentation['arguments'] = $this->arguments;
-
-        return $arrayRepresentation;
     }
 }

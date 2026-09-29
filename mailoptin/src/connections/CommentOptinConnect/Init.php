@@ -129,6 +129,8 @@ class Init
 
     public function subscribe_comments($comment_id, $comment_approved, $commentdata)
     {
+        if ( 'spam' === $comment_approved || 'trash' === $comment_approved ) return;
+
         $auto_subscribe = Settings::instance()->mailoptin_comment_optin_subscribe_users();
 
         $user_id = 0;

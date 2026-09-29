@@ -8,7 +8,6 @@ use Sabberworm\CSS\Comment\CommentContainer;
 use Sabberworm\CSS\OutputFormat;
 use Sabberworm\CSS\Position\Position;
 use Sabberworm\CSS\Position\Positionable;
-use Sabberworm\CSS\ShortClassNameProvider;
 use Sabberworm\CSS\Value\CSSString;
 
 /**
@@ -23,7 +22,6 @@ class Charset implements AtRule, Positionable
 {
     use CommentContainer;
     use Position;
-    use ShortClassNameProvider;
 
     /**
      * @var CSSString
@@ -72,18 +70,5 @@ class Charset implements AtRule, Positionable
     public function atRuleArgs(): CSSString
     {
         return $this->charset;
-    }
-
-    /**
-     * @return array<string, bool|int|float|string|array<mixed>|null>
-     *
-     * @internal
-     */
-    public function getArrayRepresentation(): array
-    {
-        return [
-            'class' => $this->getShortClassName(),
-            'charset' => $this->charset->getArrayRepresentation(),
-        ];
     }
 }

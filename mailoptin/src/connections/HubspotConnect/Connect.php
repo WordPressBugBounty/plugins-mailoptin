@@ -70,7 +70,7 @@ class Connect extends AbstractHubspotConnect implements ConnectionInterface
             if (empty($options)) {
 
                 $response = $this->hubspotInstance()->apiRequest(
-                    sprintf('crm/v3/properties/contacts/%s', $property)
+                    sprintf('crm/properties/%s/contacts/%s', $this->hubspotInstance()->apiVersion, $property)
                 );
 
                 $options = [];
@@ -103,7 +103,7 @@ class Connect extends AbstractHubspotConnect implements ConnectionInterface
 
             if (empty($options) || false === $options) {
 
-                $response = $this->hubspotInstance()->apiRequest('crm/v3/owners/');
+                $response = $this->hubspotInstance()->apiRequest(sprintf('crm/owners/%s', $this->hubspotInstance()->apiVersion));
 
                 $options = [];
 

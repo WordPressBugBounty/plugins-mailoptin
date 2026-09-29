@@ -12,7 +12,6 @@ return array(
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Soundasleep\\' => array($vendorDir . '/soundasleep/html2text/src'),
-    'Safe\\' => array($vendorDir . '/thecodingmachine/safe/lib', $vendorDir . '/thecodingmachine/safe/deprecated', $vendorDir . '/thecodingmachine/safe/generated'),
     'Sabberworm\\CSS\\' => array($vendorDir . '/sabberworm/php-css-parser/src'),
     'Psr\\Clock\\' => array($vendorDir . '/psr/clock/src'),
     'Pelago\\Emogrifier\\' => array($vendorDir . '/pelago/emogrifier/src'),

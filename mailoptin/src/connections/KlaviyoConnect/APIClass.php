@@ -1,7 +1,4 @@
 <?php
-/**
- * Copyright (C) 2016  Agbonghama Collins <me@w3guy.com>
- */
 
 namespace MailOptin\KlaviyoConnect;
 
@@ -9,7 +6,7 @@ class APIClass
 {
     protected $api_key;
 
-    protected $revision = '2026-04-15';
+    protected $revision = '2026-07-15';
 
     /**
      * @var string

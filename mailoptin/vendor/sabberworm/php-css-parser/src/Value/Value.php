@@ -11,9 +11,6 @@ use Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use Sabberworm\CSS\Parsing\UnexpectedTokenException;
 use Sabberworm\CSS\Position\Position;
 use Sabberworm\CSS\Position\Positionable;
-use Sabberworm\CSS\ShortClassNameProvider;
-
-use function Safe\preg_match;
 
 /**
  * Abstract base class for specific classes of CSS values: `Size`, `Color`, `CSSString` and `URL`, and another
@@ -22,7 +19,6 @@ use function Safe\preg_match;
 abstract class Value implements CSSElement, Positionable
 {
     use Position;
-    use ShortClassNameProvider;
 
     /**
      * @param int<1, max>|null $lineNumber
@@ -147,6 +143,7 @@ abstract class Value implements CSSElement, Positionable
      */
     public static function parsePrimitiveValue(ParserState $parserState)
     {
+        $value = null;
         $parserState->consumeWhiteSpace();
         if (
             \is_numeric($parserState->peek())
@@ -183,18 +180,6 @@ abstract class Value implements CSSElement, Positionable
     }
 
     /**
-     * @return array<string, bool|int|float|string|array<mixed>|null>
-     *
-     * @internal
-     */
-    public function getArrayRepresentation(): array
-    {
-        return [
-            'class' => $this->getShortClassName(),
-        ];
-    }
-
-    /**
      * @throws UnexpectedEOFException
      * @throws UnexpectedTokenException
      */
@@ -219,9 +204,7 @@ abstract class Value implements CSSElement, Positionable
                 $codepointMaxLength = 13; // Max length is 2 six-digit code points + the dash(-) between them
             }
             $range .= $parserState->consume(1);
-        } while (
-            (\strlen($range) < $codepointMaxLength) && (preg_match('/[A-Fa-f0-9\\?-]/', $parserState->peek()) === 1)
-        );
+        } while (\strlen($range) < $codepointMaxLength && \preg_match('/[A-Fa-f0-9\\?-]/', $parserState->peek()));
 
         return "U+{$range}";
     }

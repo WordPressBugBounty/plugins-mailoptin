@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Sabberworm\CSS\RuleSet;
 
-use Sabberworm\CSS\Comment\Comment;
 use Sabberworm\CSS\Comment\CommentContainer;
 use Sabberworm\CSS\CSSElement;
 use Sabberworm\CSS\CSSList\CSSList;
@@ -17,10 +16,9 @@ use Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use Sabberworm\CSS\Parsing\UnexpectedTokenException;
 use Sabberworm\CSS\Position\Position;
 use Sabberworm\CSS\Position\Positionable;
-use Sabberworm\CSS\Property\Declaration;
 use Sabberworm\CSS\Property\KeyframeSelector;
 use Sabberworm\CSS\Property\Selector;
-use Sabberworm\CSS\Settings;
+use Sabberworm\CSS\Rule\Rule;
 
 /**
  * This class represents a `RuleSet` constrained by a `Selector`.
@@ -32,14 +30,13 @@ use Sabberworm\CSS\Settings;
  *
  * Note that `CSSListItem` extends both `Commentable` and `Renderable`, so those interfaces must also be implemented.
  */
-class DeclarationBlock implements CSSElement, CSSListItem, Positionable, DeclarationList
+class DeclarationBlock implements CSSElement, CSSListItem, Positionable, RuleContainer
 {
     use CommentContainer;
-    use LegacyDeclarationListMethods;
     use Position;
 
     /**
-     * @var list<Selector>
+     * @var array<Selector|string>
      */
     private $selectors = [];
 
@@ -68,15 +65,66 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
         $comments = [];
         $result = new DeclarationBlock($parserState->currentLine());
         try {
-            $selectors = self::parseSelectors($parserState, $list, $comments);
+            $selectors = [];
+            $selectorParts = [];
+            $stringWrapperCharacter = null;
+            $functionNestingLevel = 0;
+            $consumedNextCharacter = false;
+            static $stopCharacters = ['{', '}', '\'', '"', '(', ')', ','];
+            do {
+                if (!$consumedNextCharacter) {
+                    $selectorParts[] = $parserState->consume(1);
+                }
+                $selectorParts[] = $parserState->consumeUntil($stopCharacters, false, false, $comments);
+                $nextCharacter = $parserState->peek();
+                $consumedNextCharacter = false;
+                switch ($nextCharacter) {
+                    case '\'':
+                        // The fallthrough is intentional.
+                    case '"':
+                        if (!\is_string($stringWrapperCharacter)) {
+                            $stringWrapperCharacter = $nextCharacter;
+                        } elseif ($stringWrapperCharacter === $nextCharacter) {
+                            if (\substr(\end($selectorParts), -1) !== '\\') {
+                                $stringWrapperCharacter = null;
+                            }
+                        }
+                        break;
+                    case '(':
+                        if (!\is_string($stringWrapperCharacter)) {
+                            ++$functionNestingLevel;
+                        }
+                        break;
+                    case ')':
+                        if (!\is_string($stringWrapperCharacter)) {
+                            if ($functionNestingLevel <= 0) {
+                                throw new UnexpectedTokenException('anything but', ')');
+                            }
+                            --$functionNestingLevel;
+                        }
+                        break;
+                    case ',':
+                        if (!\is_string($stringWrapperCharacter) && $functionNestingLevel === 0) {
+                            $selectors[] = \implode('', $selectorParts);
+                            $selectorParts = [];
+                            $parserState->consume(1);
+                            $consumedNextCharacter = true;
+                        }
+                        break;
+                }
+            } while (!\in_array($nextCharacter, ['{', '}'], true) || \is_string($stringWrapperCharacter));
+            if ($functionNestingLevel !== 0) {
+                throw new UnexpectedTokenException(')', $nextCharacter);
+            }
+            $selectors[] = \implode('', $selectorParts); // add final or only selector
             $result->setSelectors($selectors, $list);
             if ($parserState->comes('{')) {
                 $parserState->consume(1);
             }
         } catch (UnexpectedTokenException $e) {
             if ($parserState->getSettings()->usesLenientParsing()) {
-                if (!$parserState->consumeIfComes('}')) {
-                    $parserState->consumeUntil(['}', ParserState::EOF], false, true);
+                if (!$parserState->comes('}')) {
+                    $parserState->consumeUntil('}', false, true);
                 }
                 return null;
             } else {
@@ -98,29 +146,11 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
     public function setSelectors($selectors, ?CSSList $list = null): void
     {
         if (\is_array($selectors)) {
-            $selectorsToSet = $selectors;
+            $this->selectors = $selectors;
         } else {
-            // A string of comma-separated selectors requires parsing.
-            try {
-                $parserState = new ParserState($selectors, Settings::create());
-                $selectorsToSet = self::parseSelectors($parserState, $list);
-                if (!$parserState->isEnd()) {
-                    throw new UnexpectedTokenException('EOF', 'more');
-                }
-            } catch (UnexpectedTokenException $exception) {
-                // The exception message from parsing may refer to the faux `{` block start token,
-                // which would be confusing.
-                // Rethrow with a more useful message, that also includes the selector(s) string that was passed.
-                throw new UnexpectedTokenException(
-                    'Selector(s) string is not valid.',
-                    $selectors,
-                    'custom'
-                );
-            }
+            $this->selectors = \explode(',', $selectors);
         }
-
-        // Convert all items to a `Selector` if not already
-        foreach ($selectorsToSet as $key => $selector) {
+        foreach ($this->selectors as $key => $selector) {
             if (!($selector instanceof Selector)) {
                 if ($list === null || !($list instanceof KeyFrame)) {
                     if (!Selector::isValid($selector)) {
@@ -130,7 +160,7 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
                             'custom'
                         );
                     }
-                    $selectorsToSet[$key] = new Selector($selector);
+                    $this->selectors[$key] = new Selector($selector);
                 } else {
                     if (!KeyframeSelector::isValid($selector)) {
                         throw new UnexpectedTokenException(
@@ -139,13 +169,10 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
                             'custom'
                         );
                     }
-                    $selectorsToSet[$key] = new KeyframeSelector($selector);
+                    $this->selectors[$key] = new KeyframeSelector($selector);
                 }
             }
         }
-
-        // Discard the keys and reindex the array
-        $this->selectors = \array_values($selectorsToSet);
     }
 
     /**
@@ -168,7 +195,7 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
     }
 
     /**
-     * @return list<Selector>
+     * @return array<Selector>
      */
     public function getSelectors(): array
     {
@@ -181,65 +208,65 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
     }
 
     /**
-     * @see RuleSet::addDeclaration()
+     * @see RuleSet::addRule()
      */
-    public function addDeclaration(Declaration $declarationToAdd, ?Declaration $sibling = null): void
+    public function addRule(Rule $ruleToAdd, ?Rule $sibling = null): void
     {
-        $this->ruleSet->addDeclaration($declarationToAdd, $sibling);
+        $this->ruleSet->addRule($ruleToAdd, $sibling);
     }
 
     /**
-     * @return array<int<0, max>, Declaration>
+     * @see RuleSet::getRules()
      *
-     * @see RuleSet::getDeclarations()
+     * @return array<int<0, max>, Rule>
      */
-    public function getDeclarations(?string $searchPattern = null): array
+    public function getRules(?string $searchPattern = null): array
     {
-        return $this->ruleSet->getDeclarations($searchPattern);
+        return $this->ruleSet->getRules($searchPattern);
     }
 
     /**
-     * @param array<Declaration> $declarations
+     * @see RuleSet::setRules()
      *
-     * @see RuleSet::setDeclarations()
+     * @param array<Rule> $rules
      */
-    public function setDeclarations(array $declarations): void
+    public function setRules(array $rules): void
     {
-        $this->ruleSet->setDeclarations($declarations);
+        $this->ruleSet->setRules($rules);
     }
 
     /**
-     * @return array<string, Declaration>
+     * @see RuleSet::getRulesAssoc()
      *
-     * @see RuleSet::getDeclarationsAssociative()
+     * @return array<string, Rule>
      */
-    public function getDeclarationsAssociative(?string $searchPattern = null): array
+    public function getRulesAssoc(?string $searchPattern = null): array
     {
-        return $this->ruleSet->getDeclarationsAssociative($searchPattern);
+        return $this->ruleSet->getRulesAssoc($searchPattern);
     }
 
     /**
-     * @see RuleSet::removeDeclaration()
+     * @see RuleSet::removeRule()
      */
-    public function removeDeclaration(Declaration $declarationToRemove): void
+    public function removeRule(Rule $ruleToRemove): void
     {
-        $this->ruleSet->removeDeclaration($declarationToRemove);
+        $this->ruleSet->removeRule($ruleToRemove);
     }
 
     /**
-     * @see RuleSet::removeMatchingDeclarations()
+     * @see RuleSet::removeMatchingRules()
      */
-    public function removeMatchingDeclarations(string $searchPattern): void
+    public function removeMatchingRules(string $searchPattern): void
     {
-        $this->ruleSet->removeMatchingDeclarations($searchPattern);
+        $this->ruleSet->removeMatchingRules($searchPattern);
     }
 
     /**
-     * @see RuleSet::removeAllDeclarations()
+     * @see RuleSet::removeAllRules()
      */
-    public function removeAllDeclarations(): void
+    public function removeAllRules(): void
     {
-        $this->ruleSet->removeAllDeclarations();
+        $this->ruleSet->removeAllRules();
     }
 
     /**
@@ -270,37 +297,5 @@ class DeclarationBlock implements CSSElement, CSSListItem, Positionable, Declara
         $result .= $outputFormat->getContentAfterDeclarationBlock();
 
         return $result;
-    }
-
-    /**
-     * @return array<string, bool|int|float|string|array<mixed>|null>
-     *
-     * @internal
-     */
-    public function getArrayRepresentation(): array
-    {
-        throw new \BadMethodCallException('`getArrayRepresentation` is not yet implemented for `' . self::class . '`');
-    }
-
-    /**
-     * @param list<Comment> $comments
-     *
-     * @return list<Selector>
-     *
-     * @throws UnexpectedTokenException
-     */
-    private static function parseSelectors(ParserState $parserState, ?CSSList $list, array &$comments = []): array
-    {
-        $selectorClass = $list instanceof KeyFrame ? KeyFrameSelector::class : Selector::class;
-        $selectors = [];
-
-        while (true) {
-            $selectors[] = $selectorClass::parse($parserState, $comments);
-            if (!$parserState->consumeIfComes(',')) {
-                break;
-            }
-        }
-
-        return $selectors;
     }
 }

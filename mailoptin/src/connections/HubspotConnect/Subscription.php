@@ -58,23 +58,24 @@ class Subscription extends AbstractHubspotConnect
                 $properties['hubspot_owner_id'] = $owner;
             }
 
+            $gdpr_tag = apply_filters('mo_connections_hubspot_acceptance_tag', 'gdpr');
+
             //GDPR consent
             if (isset($this->extras['mo-acceptance']) && $this->extras['mo-acceptance'] == 'yes') {
-
-                $gdpr_tag = apply_filters('mo_connections_hubspot_acceptance_tag', 'gdpr');
 
                 try {
 
                     $this->hubspotInstance()->apiRequest(
-                        "properties/v1/contacts/properties",
+                        sprintf("crm/properties/%s/contacts", $this->hubspotInstance()->apiVersion),
                         'POST',
                         [
                             'name'      => $gdpr_tag,
                             'label'     => 'GDPR',
                             'type'      => 'string',
                             'groupName' => 'contactinformation',
-                            'fieldType' => 'booleancheckbox'
+                            'fieldType' => 'text'
                         ]);
+
                 } catch (\Exception $e) {
                 }
 
@@ -120,7 +121,7 @@ class Subscription extends AbstractHubspotConnect
 
             $validProperties = array_keys($this->connectInstance->get_optin_fields());
             foreach ($properties as $property => $value) {
-                if (in_array($property, $validProperties) && is_valid_data($value)) {
+                if ($property == $gdpr_tag || in_array($property, $validProperties) && is_valid_data($value)) {
                     $contact_data['properties'][$property] = $value;
                 }
             }
@@ -148,6 +149,9 @@ class Subscription extends AbstractHubspotConnect
         }
     }
 
+    /**
+     * @throws \Exception
+     */
     private function get_listid_from_legacy_id($list_id)
     {
         $cache_key = 'mo_hubspot_listid_from_legacy_id_' . $list_id;
@@ -156,7 +160,9 @@ class Subscription extends AbstractHubspotConnect
 
         if (empty($v3_list_id)) {
 
-            $response = $this->hubspotInstance()->apiRequest('crm/v3/lists/idmapping?legacyListId=' . $list_id);
+            $response = $this->hubspotInstance()->apiRequest(
+                sprintf('crm/lists/%s/idmapping?legacyListId=%s', $this->hubspotInstance()->apiVersion, $list_id)
+            );
 
             if (isset($response->listId)) {
                 $v3_list_id = $response->listId;

@@ -250,7 +250,9 @@ class AC_Connector {
 			return "HTTP code $http_code returned";
 		}
 
-		curl_close($request);
+        if (PHP_VERSION_ID < 80000) {
+            curl_close($request);
+        }
 
 		$object = json_decode($response);
 

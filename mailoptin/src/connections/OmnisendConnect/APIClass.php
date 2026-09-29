@@ -6,7 +6,7 @@ class APIClass
 {
     protected $api_key;
 
-    protected $api_url = "https://api.omnisend.com/v3/";
+    protected $api_url = "https://api.omnisend.com/api/";
 
 
     public function __construct($api_key)
@@ -30,7 +30,10 @@ class APIClass
         $wp_args = [
             'method'  => strtoupper($method),
             'timeout' => 30,
-            "headers" => ['X-API-KEY' => $this->api_key]
+            "headers" => [
+                'Authorization'    => 'Omnisend-API-Key ' . $this->api_key,
+                'Omnisend-Version' => '2026-03-15',
+            ]
         ];
 
         switch ($method) {

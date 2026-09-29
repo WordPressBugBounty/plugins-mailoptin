@@ -26,6 +26,7 @@ final class StyleRule
     private $containingAtRule;
 
     /**
+     * @param DeclarationBlock $declarationBlock
      * @param string $containingAtRule e.g. `@media screen and (max-width: 480px)`
      */
     public function __construct(DeclarationBlock $declarationBlock, string $containingAtRule = '')
@@ -35,16 +36,15 @@ final class StyleRule
     }
 
     /**
-     * @return array<non-empty-string> the selectors, e.g. `["h1", "p"]`
+     * @return array<int, string> the selectors, e.g. `["h1", "p"]`
      */
     public function getSelectors(): array
     {
+        /** @var array<int, Selector> $selectors */
         $selectors = $this->declarationBlock->getSelectors();
         return \array_map(
             static function (Selector $selector): string {
-                $selectorAsString = $selector->getSelector();
-                \assert($selectorAsString !== '');
-                return $selectorAsString;
+                return $selector->getSelector();
             },
             $selectors
         );
@@ -53,7 +53,7 @@ final class StyleRule
     /**
      * @return string the CSS declarations, separated and followed by a semicolon, e.g., `color: red; height: 4px;`
      */
-    public function getDeclarationsAsText(): string
+    public function getDeclarationAsText(): string
     {
         $rules = $this->declarationBlock->getRules();
         $renderedRules = [];
@@ -74,7 +74,7 @@ final class StyleRule
     }
 
     /**
-     * @return string e.g. `@media screen and (max-width: 480px)`, or an empty string
+     * @returns string e.g. `@media screen and (max-width: 480px)`, or an empty string
      */
     public function getContainingAtRule(): string
     {

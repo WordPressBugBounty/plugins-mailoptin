@@ -50,17 +50,17 @@
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
-            "version": "2.1.0",
-            "version_normalized": "2.1.0.0",
+            "version": "2.1.1",
+            "version_normalized": "2.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon-doctrine-types.git",
-                "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb"
+                "reference": "bf72f821b9952722ea9f9c3912f85946e1af9e3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
-                "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/bf72f821b9952722ea9f9c3912f85946e1af9e3d",
+                "reference": "bf72f821b9952722ea9f9c3912f85946e1af9e3d",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "nesbot/carbon": "^2.71.0 || ^3.0.0",
                 "phpunit/phpunit": "^10.3"
             },
-            "time": "2023-12-11T17:09:12+00:00",
+            "time": "2026-09-06T14:11:23+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -102,7 +102,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPHP/carbon-doctrine-types/issues",
-                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/2.1.0"
+                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/2.1.1"
             },
             "funding": [
                 {
@@ -453,12 +453,12 @@
         },
         {
             "name": "mailoptin/authifly",
-            "version": "0.2.1787746837",
-            "version_normalized": "0.2.1787746837.0",
+            "version": "0.2.1790681723",
+            "version_normalized": "0.2.1790681723.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_20E8SY/mailoptinauthifly-0-2-1787746837.zip",
-                "shasum": "fd236336d032f79a477a821814444d41a91b1c26"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1USfmk/mailoptinauthifly-0-2-1790681723.zip",
+                "shasum": "1292903e1e7f4f6c3fb1296f47c574d90156b4e4"
             },
             "require": {
                 "composer/installers": "~2.0",
@@ -513,12 +513,12 @@
         },
         {
             "name": "mailoptin/connections",
-            "version": "0.2.1787746881",
-            "version_normalized": "0.2.1787746881.0",
+            "version": "0.2.1790677617",
+            "version_normalized": "0.2.1790677617.0",
             "dist": {
                 "type": "zip",
-                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1Nl8vq/mailoptinconnections-0-2-1787746881.zip",
-                "shasum": "a61436ec8b2a22c6ab839748fa6930c150ca2fa1"
+                "url": "https://php.fury.io/uDXRvLf8b2ywvgcokC7z/mailoptin/~/up/ver_1bX1ov/mailoptinconnections-0-2-1790677617.zip",
+                "shasum": "0861b959ec874815093295fa59aa81f770cc909c"
             },
             "require": {
                 "composer/installers": "~2.0",
@@ -625,17 +625,17 @@
         },
         {
             "name": "mailoptin/core",
-            "version": "0.1.0-alpha.1787916945",
-            "version_normalized": "0.1.0.0-alpha1787916945",
+            "version": "0.1.0-alpha.1790677611",
+            "version_normalized": "0.1.0.0-alpha1790677611",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/core.git",
-                "reference": "a2e305c66835e019a4f9d06593a6527f07598535"
+                "reference": "9340c3033d39fc10780a422d7f7287c489d7823c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/core/zipball/a2e305c66835e019a4f9d06593a6527f07598535",
-                "reference": "a2e305c66835e019a4f9d06593a6527f07598535",
+                "url": "https://api.github.com/repos/mailoptin/core/zipball/9340c3033d39fc10780a422d7f7287c489d7823c",
+                "reference": "9340c3033d39fc10780a422d7f7287c489d7823c",
                 "shasum": ""
             },
             "require": {
@@ -643,10 +643,11 @@
                 "composer/installers": "~2.0",
                 "league/csv": "^9.0",
                 "nesbot/carbon": "^2.73",
-                "pelago/emogrifier": "^8.0.0",
+                "pelago/emogrifier": "8.0",
+                "sabberworm/php-css-parser": "9.0.0",
                 "soundasleep/html2text": "^2.0"
             },
-            "time": "2026-08-28T11:17:11+00:00",
+            "time": "2026-09-29T10:18:04+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -668,23 +669,23 @@
             "description": "Core lib for MailOptin",
             "support": {
                 "issues": "https://github.com/mailoptin/core/issues",
-                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1787916945"
+                "source": "https://github.com/mailoptin/core/tree/0.1.0-alpha.1790677611"
             },
             "install-path": "../../src/core"
         },
         {
             "name": "mailoptin/mailchimp-api-php",
-            "version": "2.1.7",
-            "version_normalized": "2.1.7.0",
+            "version": "2.1.8",
+            "version_normalized": "2.1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailoptin/mailchimp-api-php.git",
-                "reference": "f39256fd31eb880361fc94c68544aa62b60fab1d"
+                "reference": "f9085289db5f3b42ca0f9892c513f342a959e509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailoptin/mailchimp-api-php/zipball/f39256fd31eb880361fc94c68544aa62b60fab1d",
-                "reference": "f39256fd31eb880361fc94c68544aa62b60fab1d",
+                "url": "https://api.github.com/repos/mailoptin/mailchimp-api-php/zipball/f9085289db5f3b42ca0f9892c513f342a959e509",
+                "reference": "f9085289db5f3b42ca0f9892c513f342a959e509",
                 "shasum": ""
             },
             "require": {
@@ -696,7 +697,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.2.2"
             },
-            "time": "2026-07-27T13:14:23+00:00",
+            "time": "2026-09-10T15:21:17+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -716,7 +717,7 @@
                 "mailchimp"
             ],
             "support": {
-                "source": "https://github.com/mailoptin/mailchimp-api-php/tree/2.1.7"
+                "source": "https://github.com/mailoptin/mailchimp-api-php/tree/2.1.8"
             },
             "install-path": "../mailoptin/mailchimp-api-php"
         },
@@ -832,46 +833,43 @@
         },
         {
             "name": "pelago/emogrifier",
-            "version": "v8.2.0",
-            "version_normalized": "8.2.0.0",
+            "version": "v8.0.0",
+            "version_normalized": "8.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MyIntervals/emogrifier.git",
-                "reference": "3548212a1b4232a4a6ad344992f551725b3de295"
+                "reference": "7fdf4ee46fe57bd017b92640bca1ec42d124440a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/3548212a1b4232a4a6ad344992f551725b3de295",
-                "reference": "3548212a1b4232a4a6ad344992f551725b3de295",
+                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/7fdf4ee46fe57bd017b92640bca1ec42d124440a",
+                "reference": "7fdf4ee46fe57bd017b92640bca1ec42d124440a",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "php": "~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
-                "sabberworm/php-css-parser": "^9.1.0",
-                "symfony/css-selector": "^5.4.35 || ~6.3.12 || ^6.4.3 || ^7.0.3 || ^8.0.0",
-                "thecodingmachine/safe": "^1.3 || ^2.5 || ^3.3"
+                "php": "~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+                "sabberworm/php-css-parser": "^9.0.0",
+                "symfony/css-selector": "^5.4.35 || ~6.3.12 || ^6.4.3 || ^7.0.3"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "1.4.0",
                 "phpmd/phpmd": "2.15.0",
                 "phpstan/extension-installer": "1.4.3",
-                "phpstan/phpstan": "1.12.32 || 2.1.31",
+                "phpstan/phpstan": "1.12.28 || 2.1.20",
                 "phpstan/phpstan-phpunit": "1.4.2 || 2.0.7",
-                "phpstan/phpstan-strict-rules": "1.6.2 || 2.0.7",
-                "phpunit/phpunit": "9.6.29",
+                "phpstan/phpstan-strict-rules": "1.6.2 || 2.0.6",
+                "phpunit/phpunit": "9.6.23",
                 "rawr/phpunit-data-provider": "3.3.1",
-                "rector/rector": "1.2.10 || 2.2.2",
-                "rector/type-perfect": "1.0.0 || 2.1.0",
-                "squizlabs/php_codesniffer": "4.0.1",
-                "thecodingmachine/phpstan-safe-rule": "1.2.0 || 1.4.3"
+                "rector/rector": "1.2.10 || 2.1.2",
+                "rector/type-perfect": "1.0.0 || 2.1.0"
             },
-            "time": "2025-11-27T21:56:48+00:00",
+            "time": "2025-07-27T17:45:42+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.3.x-dev"
+                    "dev-main": "8.1.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -974,53 +972,46 @@
         },
         {
             "name": "sabberworm/php-css-parser",
-            "version": "v9.4.0",
-            "version_normalized": "9.4.0.0",
+            "version": "v9.0.0",
+            "version_normalized": "9.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MyIntervals/PHP-CSS-Parser.git",
-                "reference": "fd3bf9fb173e0df649bc4e3e0d088a1b2417c08f"
+                "reference": "54574e3de2f8cdc91175ffd2337e5c6804a7d729"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/fd3bf9fb173e0df649bc4e3e0d088a1b2417c08f",
-                "reference": "fd3bf9fb173e0df649bc4e3e0d088a1b2417c08f",
+                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/54574e3de2f8cdc91175ffd2337e5c6804a7d729",
+                "reference": "54574e3de2f8cdc91175ffd2337e5c6804a7d729",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
-                "php": "^7.2.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
-                "thecodingmachine/safe": "^1.3 || ^2.5 || ^3.4"
+                "php": "^7.2.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "1.4.0",
                 "phpstan/extension-installer": "1.4.3",
-                "phpstan/phpstan": "1.12.33 || 2.2.2",
-                "phpstan/phpstan-phpunit": "1.4.2 || 2.0.16",
-                "phpstan/phpstan-strict-rules": "1.6.2 || 2.0.11",
-                "phpunit/phpunit": "8.5.52",
+                "phpstan/phpstan": "1.12.28 || 2.1.19",
+                "phpstan/phpstan-phpunit": "1.4.2 || 2.0.7",
+                "phpstan/phpstan-strict-rules": "1.6.2 || 2.0.6",
+                "phpunit/phpunit": "8.5.42",
                 "rawr/phpunit-data-provider": "3.3.1",
-                "rector/rector": "1.2.10 || 2.4.6",
-                "rector/type-perfect": "1.0.0 || 2.1.3",
-                "squizlabs/php_codesniffer": "4.0.1",
-                "thecodingmachine/phpstan-safe-rule": "1.2.0 || 1.4.3"
+                "rector/rector": "1.2.10 || 2.1.2",
+                "rector/type-perfect": "1.0.0 || 2.1.0"
             },
             "suggest": {
                 "ext-mbstring": "for parsing UTF-8 CSS"
             },
-            "time": "2026-06-18T15:10:53+00:00",
+            "time": "2025-07-27T07:24:01+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "9.5.x-dev"
+                    "dev-main": "9.1.x-dev"
                 }
             },
             "installation-source": "dist",
             "autoload": {
-                "files": [
-                    "src/Rule/Rule.php",
-                    "src/RuleSet/RuleContainer.php"
-                ],
                 "psr-4": {
                     "Sabberworm\\CSS\\": "src/"
                 }
@@ -1051,7 +1042,7 @@
             ],
             "support": {
                 "issues": "https://github.com/MyIntervals/PHP-CSS-Parser/issues",
-                "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v9.4.0"
+                "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v9.0.0"
             },
             "install-path": "../sabberworm/php-css-parser"
         },
@@ -1607,148 +1598,6 @@
                 }
             ],
             "install-path": "../symfony/translation-contracts"
-        },
-        {
-            "name": "thecodingmachine/safe",
-            "version": "v1.3.3",
-            "version_normalized": "1.3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thecodingmachine/safe.git",
-                "reference": "a8ab0876305a4cdaef31b2350fcb9811b5608dbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/a8ab0876305a4cdaef31b2350fcb9811b5608dbc",
-                "reference": "a8ab0876305a4cdaef31b2350fcb9811b5608dbc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12",
-                "squizlabs/php_codesniffer": "^3.2",
-                "thecodingmachine/phpstan-strict-rules": "^0.12"
-            },
-            "time": "2020-10-28T17:51:34+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "deprecated/apc.php",
-                    "deprecated/libevent.php",
-                    "deprecated/mssql.php",
-                    "deprecated/stats.php",
-                    "lib/special_cases.php",
-                    "generated/apache.php",
-                    "generated/apcu.php",
-                    "generated/array.php",
-                    "generated/bzip2.php",
-                    "generated/calendar.php",
-                    "generated/classobj.php",
-                    "generated/com.php",
-                    "generated/cubrid.php",
-                    "generated/curl.php",
-                    "generated/datetime.php",
-                    "generated/dir.php",
-                    "generated/eio.php",
-                    "generated/errorfunc.php",
-                    "generated/exec.php",
-                    "generated/fileinfo.php",
-                    "generated/filesystem.php",
-                    "generated/filter.php",
-                    "generated/fpm.php",
-                    "generated/ftp.php",
-                    "generated/funchand.php",
-                    "generated/gmp.php",
-                    "generated/gnupg.php",
-                    "generated/hash.php",
-                    "generated/ibase.php",
-                    "generated/ibmDb2.php",
-                    "generated/iconv.php",
-                    "generated/image.php",
-                    "generated/imap.php",
-                    "generated/info.php",
-                    "generated/ingres-ii.php",
-                    "generated/inotify.php",
-                    "generated/json.php",
-                    "generated/ldap.php",
-                    "generated/libxml.php",
-                    "generated/lzf.php",
-                    "generated/mailparse.php",
-                    "generated/mbstring.php",
-                    "generated/misc.php",
-                    "generated/msql.php",
-                    "generated/mysql.php",
-                    "generated/mysqli.php",
-                    "generated/mysqlndMs.php",
-                    "generated/mysqlndQc.php",
-                    "generated/network.php",
-                    "generated/oci8.php",
-                    "generated/opcache.php",
-                    "generated/openssl.php",
-                    "generated/outcontrol.php",
-                    "generated/password.php",
-                    "generated/pcntl.php",
-                    "generated/pcre.php",
-                    "generated/pdf.php",
-                    "generated/pgsql.php",
-                    "generated/posix.php",
-                    "generated/ps.php",
-                    "generated/pspell.php",
-                    "generated/readline.php",
-                    "generated/rpminfo.php",
-                    "generated/rrd.php",
-                    "generated/sem.php",
-                    "generated/session.php",
-                    "generated/shmop.php",
-                    "generated/simplexml.php",
-                    "generated/sockets.php",
-                    "generated/sodium.php",
-                    "generated/solr.php",
-                    "generated/spl.php",
-                    "generated/sqlsrv.php",
-                    "generated/ssdeep.php",
-                    "generated/ssh2.php",
-                    "generated/stream.php",
-                    "generated/strings.php",
-                    "generated/swoole.php",
-                    "generated/uodbc.php",
-                    "generated/uopz.php",
-                    "generated/url.php",
-                    "generated/var.php",
-                    "generated/xdiff.php",
-                    "generated/xml.php",
-                    "generated/xmlrpc.php",
-                    "generated/yaml.php",
-                    "generated/yaz.php",
-                    "generated/zip.php",
-                    "generated/zlib.php"
-                ],
-                "psr-4": {
-                    "Safe\\": [
-                        "lib/",
-                        "deprecated/",
-                        "generated/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
-            "support": {
-                "issues": "https://github.com/thecodingmachine/safe/issues",
-                "source": "https://github.com/thecodingmachine/safe/tree/v1.3.3"
-            },
-            "install-path": "../thecodingmachine/safe"
         }
     ],
     "dev": false,

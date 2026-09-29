@@ -417,7 +417,9 @@ class GetResponseAPI3
 
         $this->http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-        curl_close($curl);
+        if (PHP_VERSION_ID < 80000) {
+            curl_close($curl);
+        }
         return (object)$response;
     }
 

@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.78.3\n"
+"Project-Id-Version: MailOptin - Lite 1.2.78.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-28T11:41:45+00:00\n"
+"POT-Creation-Date: 2026-09-29T11:38:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -1237,23 +1237,23 @@ msgstr ""
 msgid "Subscribe to our newsletter"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:197
+#: src/connections/CommentOptinConnect/Init.php:199
 msgid "Comment Author Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:198
+#: src/connections/CommentOptinConnect/Init.php:200
 msgid "Comment Author Email"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:199
+#: src/connections/CommentOptinConnect/Init.php:201
 msgid "Comment Author Website"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:200
+#: src/connections/CommentOptinConnect/Init.php:202
 msgid "Comment Content"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:212
+#: src/connections/CommentOptinConnect/Init.php:214
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:623
 #: src/connections/GiveWPConnect/GWPInit.php:617
 #: src/connections/LearnDashConnect/LearnDashInit.php:709
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "User ID"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:213
+#: src/connections/CommentOptinConnect/Init.php:215
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:624
 #: src/connections/GiveWPConnect/GWPInit.php:618
 #: src/connections/LearnDashConnect/LearnDashInit.php:710
@@ -1280,7 +1280,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:214
+#: src/connections/CommentOptinConnect/Init.php:216
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:625
 #: src/connections/GiveWPConnect/GWPInit.php:619
 #: src/connections/LearnDashConnect/LearnDashInit.php:711
@@ -1293,7 +1293,7 @@ msgstr ""
 msgid "User Nicename"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:215
+#: src/connections/CommentOptinConnect/Init.php:217
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:626
 #: src/connections/GiveWPConnect/GWPInit.php:620
 #: src/connections/LearnDashConnect/LearnDashInit.php:712
@@ -1306,7 +1306,7 @@ msgstr ""
 msgid "Website URL"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:216
+#: src/connections/CommentOptinConnect/Init.php:218
 #: src/connections/LearnDashConnect/LearnDashInit.php:713
 #: src/connections/MemberPressConnect/MemberPressInit.php:423
 #: src/connections/PmProConnect/PMPROInit.php:116
@@ -1317,7 +1317,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:217
+#: src/connections/CommentOptinConnect/Init.php:219
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:627
 #: src/connections/GiveWPConnect/GWPInit.php:621
 #: src/connections/LearnDashConnect/LearnDashInit.php:714
@@ -1331,7 +1331,7 @@ msgstr ""
 msgid "Display Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:218
+#: src/connections/CommentOptinConnect/Init.php:220
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:628
 #: src/connections/GiveWPConnect/GWPInit.php:622
 #: src/connections/InfusionsoftConnect/Connect.php:269
@@ -1346,7 +1346,7 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:219
+#: src/connections/CommentOptinConnect/Init.php:221
 #: src/connections/ContactForm7Connect/CF7.php:181
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:629
 #: src/connections/FluentFormConnect/FluentForms.php:154
@@ -1422,7 +1422,7 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:220
+#: src/connections/CommentOptinConnect/Init.php:222
 #: src/connections/ContactForm7Connect/CF7.php:182
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:630
 #: src/connections/FluentFormConnect/FluentForms.php:159
@@ -1498,7 +1498,7 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:221
+#: src/connections/CommentOptinConnect/Init.php:223
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:631
 #: src/connections/GiveWPConnect/GWPInit.php:623
 #: src/connections/LearnDashConnect/LearnDashInit.php:718
@@ -1511,7 +1511,7 @@ msgstr ""
 msgid "Biographical Info "
 msgstr ""
 
-#: src/connections/CommentOptinConnect/Init.php:235
+#: src/connections/CommentOptinConnect/Init.php:237
 #: src/connections/ContactForm7Connect/CF7.php:126
 #: src/connections/EasyDigitalDownloadsConnect/EDDInit.php:646
 #: src/connections/EasyDigitalDownloadsConnect/Settings.php:265

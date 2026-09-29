@@ -104,7 +104,9 @@ class MailchimpCurlHttpClient implements MailchimpHttpClientInterface {
     }
 
     // Close cURL connection.
-    curl_close($ch);
+    if (PHP_VERSION_ID < 80000) {
+        curl_close($ch);
+    }
 
     if (!empty($error)) {
       throw new \Exception($error, $http_code);

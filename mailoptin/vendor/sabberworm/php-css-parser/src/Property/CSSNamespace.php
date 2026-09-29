@@ -8,7 +8,6 @@ use Sabberworm\CSS\Comment\CommentContainer;
 use Sabberworm\CSS\OutputFormat;
 use Sabberworm\CSS\Position\Position;
 use Sabberworm\CSS\Position\Positionable;
-use Sabberworm\CSS\ShortClassNameProvider;
 use Sabberworm\CSS\Value\CSSString;
 use Sabberworm\CSS\Value\URL;
 
@@ -19,7 +18,6 @@ class CSSNamespace implements AtRule, Positionable
 {
     use CommentContainer;
     use Position;
-    use ShortClassNameProvider;
 
     /**
      * @var CSSString|URL
@@ -95,20 +93,5 @@ class CSSNamespace implements AtRule, Positionable
             \array_unshift($result, $this->prefix);
         }
         return $result;
-    }
-
-    /**
-     * @return array<string, bool|int|float|string|array<mixed>|null>
-     *
-     * @internal
-     */
-    public function getArrayRepresentation(): array
-    {
-        return [
-            'class' => $this->getShortClassName(),
-            // We're using `uri` here instead of `url` to better match the spec.
-            'uri' => $this->url->getArrayRepresentation(),
-            'prefix' => $this->prefix,
-        ];
     }
 }
