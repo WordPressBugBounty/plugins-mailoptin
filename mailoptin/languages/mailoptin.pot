@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.78.4\n"
+"Project-Id-Version: MailOptin - Lite 1.2.78.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-29T11:38:04+00:00\n"
+"POT-Creation-Date: 2026-10-05T13:30:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -134,7 +134,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:956
 #: src/core/src/Admin/SettingsPage/AddEmailCampaign.php:77
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:382
-#: src/core/src/AjaxHandler.php:1218
+#: src/core/src/AjaxHandler.php:1297
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1160
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1191
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1204
@@ -1418,7 +1418,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
-#: src/core/src/AjaxHandler.php:1209
+#: src/core/src/AjaxHandler.php:1288
 msgid "First Name"
 msgstr ""
 
@@ -1494,7 +1494,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
-#: src/core/src/AjaxHandler.php:1210
+#: src/core/src/AjaxHandler.php:1289
 msgid "Last Name"
 msgstr ""
 
@@ -1543,7 +1543,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
-#: src/core/src/AjaxHandler.php:1211
+#: src/core/src/AjaxHandler.php:1290
 msgid "Email Address"
 msgstr ""
 
@@ -1610,7 +1610,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
-#: src/core/src/AjaxHandler.php:1208
+#: src/core/src/AjaxHandler.php:1287
 msgid "Full Name"
 msgstr ""
 
@@ -2883,7 +2883,7 @@ msgid "Back"
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:441
-#: src/core/src/AjaxHandler.php:1237
+#: src/core/src/AjaxHandler.php:1316
 msgid "Save"
 msgstr ""
 
@@ -4003,7 +4003,7 @@ msgid "Choose how users will select groups to subscribe to."
 msgstr ""
 
 #: src/connections/MailChimpConnect/Connect.php:423
-#: src/connections/MailChimpConnect/Connect.php:818
+#: src/connections/MailChimpConnect/Connect.php:820
 msgid "No Mailchimp group found. Try selecting another email list."
 msgstr ""
 
@@ -9489,42 +9489,46 @@ msgstr ""
 msgid "Email campaign with similar name exist already."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:720
+#: src/core/src/AjaxHandler.php:707
+msgid "Too many subscription attempts. Please try again later."
+msgstr ""
+
+#: src/core/src/AjaxHandler.php:785
 #, php-format
 msgid "No email provider or list has been set for this optin. %sSee fix here%s"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:756
-#: src/core/src/AjaxHandler.php:778
+#: src/core/src/AjaxHandler.php:821
+#: src/core/src/AjaxHandler.php:843
 #: src/core/src/OptinForms/AbstractOptinForm.php:1297
 msgid "Your submission has been flagged as potential spam."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:766
+#: src/core/src/AjaxHandler.php:831
 msgid "Email address is invalid. Try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:986
+#: src/core/src/AjaxHandler.php:1051
 msgid "Email address is not valid. Please try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1061
+#: src/core/src/AjaxHandler.php:1140
 msgid "Error log successfully deleted"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1066
+#: src/core/src/AjaxHandler.php:1145
 msgid "This will delete the error log forever. Press OK to confirm"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1067
+#: src/core/src/AjaxHandler.php:1146
 msgid "Delete Error Log"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1197
+#: src/core/src/AjaxHandler.php:1276
 msgid "Error: No integration field found. Select a list first if you haven't and try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1202
+#: src/core/src/AjaxHandler.php:1281
 msgid "Map integration fields to form custom fields"
 msgstr ""
 
@@ -9553,27 +9557,31 @@ msgstr ""
 msgid "Get 20%% Discount Now (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:362
-#, php-format
-msgid "Warning! \"%s\" Optin Campaign Is Not Working"
-msgstr ""
-
-#: src/core/src/Connections/AbstractConnect.php:372
-#, php-format
-msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\"."
+#: src/core/src/Connections/AbstractConnect.php:374
+msgid "Unknown optin campaign"
 msgstr ""
 
 #: src/core/src/Connections/AbstractConnect.php:379
 #, php-format
+msgid "Warning! \"%s\" Optin Campaign Is Not Working"
+msgstr ""
+
+#: src/core/src/Connections/AbstractConnect.php:389
+#, php-format
+msgid "The optin campaign \"%s\" is failing to convert leads due to the following error \"%s\"."
+msgstr ""
+
+#: src/core/src/Connections/AbstractConnect.php:396
+#, php-format
 msgid "This e-mail was sent by %s plugin on %s (%s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:403
+#: src/core/src/Connections/AbstractConnect.php:420
 #, php-format
 msgid "The optin campaign \"%1$s\" is failing to convert leads due to the following error \"%2$s\". %6$s -- %6$sThis e-mail was sent by %3$s plugin on %4$s (%5$s)"
 msgstr ""
 
-#: src/core/src/Connections/AbstractConnect.php:538
+#: src/core/src/Connections/AbstractConnect.php:555
 msgid "rate limit exceeded"
 msgstr ""
 

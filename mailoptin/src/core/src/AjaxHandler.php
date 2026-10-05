@@ -696,22 +696,87 @@ class AjaxHandler
      */
     public function subscribe_to_email_list()
     {
-        if ( ! isset($_REQUEST['optin_data'])) wp_send_json_error();
+        if ( ! isset($_REQUEST['optin_data']) || ! is_array($_REQUEST['optin_data'])) wp_send_json_error();
 
-        $builder             = new ConversionDataBuilder();
-        $builder->payload    = $payload = apply_filters('mailoptin_optin_subscription_request_body', sanitize_data($_REQUEST['optin_data']));
-        $builder->optin_uuid = $optin_uuid = $payload['optin_uuid'];
+        $payload = apply_filters('mailoptin_optin_subscription_request_body', sanitize_data($_REQUEST['optin_data']));
+        $optin_campaign_id = self::get_valid_optin_subscription_campaign_id($payload);
 
-        $builder->optin_campaign_id = ! empty($payload['optin_campaign_id']) ? absint($payload['optin_campaign_id']) : absint(OptinCampaignsRepository::get_optin_campaign_id_by_uuid($optin_uuid));
+        if ($optin_campaign_id === 0) wp_send_json_error();
+
+        if (self::is_optin_subscription_rate_limited()) {
+            wp_send_json_error(__('Too many subscription attempts. Please try again later.', 'mailoptin'), 429);
+        }
+
+        $builder                    = new ConversionDataBuilder();
+        $builder->payload           = $payload;
+        $builder->optin_uuid        = $payload['optin_uuid'] ?? '';
+        $builder->optin_campaign_id = $optin_campaign_id;
         $builder->email             = $payload['email'];
         $builder->name              = $payload['name'] ?? '';
-        $builder->user_agent        = $payload['user_agent'];
-        $builder->conversion_page   = $payload['conversion_page'];
-        $builder->referrer          = $payload['referrer'];
+        $builder->user_agent        = $payload['user_agent'] ?? '';
+        $builder->conversion_page   = $payload['conversion_page'] ?? '';
+        $builder->referrer          = $payload['referrer'] ?? '';
 
         $response = self::do_optin_conversion($builder);
 
         wp_send_json($response);
+    }
+
+    public static function get_valid_optin_subscription_campaign_id($payload)
+    {
+        if ( ! is_array($payload) || ! isset($payload['email']) || ! is_string($payload['email']) || ! is_email($payload['email'])) {
+            return 0;
+        }
+
+        $optin_campaign_id = 0;
+        $optin_campaign    = null;
+
+        if (isset($payload['optin_campaign_id']) && is_scalar($payload['optin_campaign_id']) && is_numeric($payload['optin_campaign_id'])) {
+            $optin_campaign_id = absint($payload['optin_campaign_id']);
+            $optin_campaign    = OptinCampaignsRepository::get_optin_campaign_by_id($optin_campaign_id);
+        }
+
+        if ( ! is_array($optin_campaign) && ! empty($payload['optin_uuid']) && is_string($payload['optin_uuid'])) {
+            $optin_campaign = OptinCampaignsRepository::get_optin_campaign_by_uuid($payload['optin_uuid']);
+            $optin_campaign_id = is_array($optin_campaign) ? absint($optin_campaign['id']) : 0;
+        }
+
+        if ( ! is_array($optin_campaign) || $optin_campaign_id === 0) return 0;
+
+        return $optin_campaign_id;
+    }
+
+    public static function is_optin_subscription_rate_limited($ip_address = null)
+    {
+        if ( ! is_string($ip_address)) {
+            $ip_address = isset($_SERVER['REMOTE_ADDR']) && is_string($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+        }
+
+        if (filter_var($ip_address, FILTER_VALIDATE_IP) === false) return false;
+
+        $limit  = apply_filters('mailoptin_optin_subscription_rate_limit', 10);
+        $window = apply_filters('mailoptin_optin_subscription_rate_limit_window', MINUTE_IN_SECONDS);
+
+        $limit  = is_numeric($limit) ? absint($limit) : 10;
+        $window = is_numeric($window) ? absint($window) : MINUTE_IN_SECONDS;
+
+        if ($limit === 0 || $window === 0) return false;
+
+        $transient_key = 'mailoptin_subscription_rate_limit_' . md5($ip_address);
+        $attempts      = get_transient($transient_key);
+        $attempts      = is_array($attempts) ? $attempts : [];
+        $now           = time();
+
+        $attempts = array_filter($attempts, function ($attempt_time) use ($now, $window) {
+            return is_numeric($attempt_time) && (int) $attempt_time > $now - $window;
+        });
+
+        if (count($attempts) >= $limit) return true;
+
+        $attempts[] = $now;
+        set_transient($transient_key, array_values($attempts), $window);
+
+        return false;
     }
 
     public static function no_email_provider_or_list_error()
@@ -1030,13 +1095,27 @@ class AjaxHandler
             return;
         }
 
-        $payload           = sanitize_data(moVar($_REQUEST, 'stat_data', []));
-        $optin_uuid        = moVar($payload, 'optin_uuid', '');
-        $optin_campaign_id = OptinCampaignsRepository::get_optin_campaign_id_by_uuid($optin_uuid);
+        if ( ! isset($_REQUEST['stat_data']) || ! is_array($_REQUEST['stat_data'])) return;
+
+        $payload           = sanitize_data($_REQUEST['stat_data']);
+        $optin_campaign_id = self::get_valid_optin_impression_campaign_id($payload);
+
+        if ($optin_campaign_id === 0) return;
+
+        $optin_uuid        = $payload['optin_uuid'];
         $stat_type         = 'impression';
         (new OptinCampaignStat($optin_campaign_id))->save($stat_type);
 
         do_action('mailoptin_track_impressions', $payload, $optin_campaign_id, $optin_uuid);
+    }
+
+    public static function get_valid_optin_impression_campaign_id($payload)
+    {
+        if ( ! is_array($payload) || ! isset($payload['optin_uuid']) || ! is_string($payload['optin_uuid']) || $payload['optin_uuid'] === '') {
+            return 0;
+        }
+
+        return absint(OptinCampaignsRepository::get_optin_campaign_id_by_uuid($payload['optin_uuid']));
     }
 
     /**

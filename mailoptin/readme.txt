@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.2.78.4
+Stable tag: 1.2.78.5
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -187,6 +187,12 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.78.5 =
+* Added rate limiting to the public subscribe_to_email_list handler to curb repeated subscription attempts.
+* Fixed the Mailchimp opt-in fatal error caused when integrations are already a PHP array instead of JSON text.
+* Blocked unrecognized public subscription requests early to prevent MailOptin conversion handling or campaign error emails.
+* Hardened public impression tracking so invalid requests cannot increment campaign stats or trigger tracking hooks.
+
 = 1.2.78.4 =
 * Updated HubSpot api version to 2026-09.
 * Updated Klaviyo api version to 2026-07-15.
@@ -209,37 +215,5 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 = 1.2.78.0 =
 * Added [Copper CRM integration](https://mailoptin.io/article/connect-wordpress-copper-crm/).
 * Fixed security issue where a non-whitelisted option could be used as a list-subscription field value.
-
-= 1.2.77.3 =
-* Improved PHP 8.5 support.
-* Fixed security issue where optin without the list-selection field behaved as one.
-
-= 1.2.77.2 =
-* Fixed more Outlook email template rendering issues.
-
-= 1.2.77.1 =
-* Added column support for posts in email template.
-* Updated Klaviyo API to version 2026-04-15
-* Improved email template support for Outlook.
-* Fixed subscription bug in Brevo on duplicate contact.
-
-= 1.2.77.0 =
-* Added SendPulse email marketing integration.
-* Added Bento email marketing integration.
-* Increased API request timeout.
-* Improved hiding of content in Outlook email.
-* Added filter to remove footer section from email template DOM.
-* Fixed Carbon issues with Dates.
-* Improved admin ui for WP 7.
-
-= 1.2.76.0 =
-* Added Mailercloud email marketing integration.
-* Improved admin UI.
-* Added Cloudflare Turnstile integration
-* Added Background processing of external optin.
-* Fixed fatal error with cloning optin.
-* Fixed fatal error with optin titles containing % in charts.
-* Fixed bug where Sender integration did not fetch all lists.
-* Fixed bug where Flodesk integration didn't return all segments.
 
 See the [changelog file](https://plugins.svn.wordpress.org/mailoptin/trunk/changelog.txt) for complete change log information.

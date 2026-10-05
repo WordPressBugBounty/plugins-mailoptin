@@ -598,10 +598,11 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
             // bail if this is a CTA button only
             if (OptinCampaignsRepository::get_customizer_value($optin_campaign_id, 'display_only_button')) return '';
 
-            $integrations_data = json_decode(
-                OptinCampaignsRepository::get_customizer_value($optin_campaign_id, 'integrations', ''),
-                true
-            );
+            $integrations_data = OptinCampaignsRepository::get_customizer_value($optin_campaign_id, 'integrations', '');
+
+            if (is_string($integrations_data)) {
+                $integrations_data = json_decode($integrations_data, true);
+            }
 
             if ( ! is_array($integrations_data)) return '';
 
@@ -740,10 +741,11 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
 
     public function include_segment_field_font($fonts, $optin_campaign_id)
     {
-        $integrations_data = json_decode(
-            OptinCampaignsRepository::get_customizer_value($optin_campaign_id, 'integrations', ''),
-            true
-        );
+        $integrations_data = OptinCampaignsRepository::get_customizer_value($optin_campaign_id, 'integrations', '');
+
+        if (is_string($integrations_data)) {
+            $integrations_data = json_decode($integrations_data, true);
+        }
 
         if (is_array($integrations_data) && ! empty($integrations_data)) {
 
@@ -904,32 +906,32 @@ class Connect extends AbstractMailChimpConnect implements ConnectionInterface
 
         if (is_string($integrations_data)) {
             $integrations_data = json_decode($integrations_data, true);
+        }
 
-            if (is_array($integrations_data)) {
+        if (is_array($integrations_data)) {
 
-                $default_values = $this->default_segmentation_values($abstractOptinFormClass->optin_campaign_type);
+            $default_values = $this->default_segmentation_values($abstractOptinFormClass->optin_campaign_type);
 
-                $interest_found_flag = false;
+            $interest_found_flag = false;
 
-                foreach ($integrations_data as $integration_data) {
-                    if ($interest_found_flag === true) break;
+            foreach ($integrations_data as $integration_data) {
+                if ($interest_found_flag === true) break;
 
-                    $segment_type       = $this->get_integration_data('MailChimpConnect_group_segment_type', $integration_data, $default_values['segment_type']);
-                    $connection_service = $this->get_integration_data('connection_service', $integration_data);
+                $segment_type       = $this->get_integration_data('MailChimpConnect_group_segment_type', $integration_data, $default_values['segment_type']);
+                $connection_service = $this->get_integration_data('connection_service', $integration_data);
 
-                    if ($connection_service !== 'MailChimpConnect') continue;
-                    if ($segment_type == 'automatic') continue;
+                if ($connection_service !== 'MailChimpConnect') continue;
+                if ($segment_type == 'automatic') continue;
 
-                    $choices = $this->get_integration_data('MailChimpConnect_interests', $integration_data, []);
+                $choices = $this->get_integration_data('MailChimpConnect_interests', $integration_data, []);
 
-                    if (is_array($choices) && ! empty($choices)) $interest_found_flag = true;
+                if (is_array($choices) && ! empty($choices)) $interest_found_flag = true;
 
-                    $error_msg        = $this->get_integration_data('MailChimpConnect_segment_required_error', $integration_data, $default_values['segment_required_error']);
-                    $segment_required = $this->get_integration_data('MailChimpConnect_segment_required', $integration_data, $default_values['segment_required']);
+                $error_msg        = $this->get_integration_data('MailChimpConnect_segment_required_error', $integration_data, $default_values['segment_required_error']);
+                $segment_required = $this->get_integration_data('MailChimpConnect_segment_required', $integration_data, $default_values['segment_required']);
 
-                    $js_config['mailchimp_segment_required']       = $segment_required;
-                    $js_config['mailchimp_segment_required_error'] = $error_msg;
-                }
+                $js_config['mailchimp_segment_required']       = $segment_required;
+                $js_config['mailchimp_segment_required_error'] = $error_msg;
             }
         }
 
