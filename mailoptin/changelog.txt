@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 1.2.78.6 =
+* Added fix for array/object fatal error behind "mailoptin_customizer_normalize_saved_values" filter.
+* Fixed Customizer page targeting multiselect persistence.
+* Updated name to Benchmark Email Classic.
+
 = 1.2.78.5 =
 * Added rate limiting to the public subscribe_to_email_list handler to curb repeated subscription attempts.
 * Fixed the Mailchimp opt-in fatal error caused when integrations are already a PHP array instead of JSON text.

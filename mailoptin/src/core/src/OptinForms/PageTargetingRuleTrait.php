@@ -42,6 +42,7 @@ trait PageTargetingRuleTrait
         $cpt_never_load                  = OCR::get_customizer_value($id, 'cpt_never_load');
         $post_categories_load            = OCR::get_customizer_value($id, 'post_categories_load');
         $post_categories_hide            = OCR::get_customizer_value($id, 'post_categories_hide');
+        $post_tags_hide                  = OCR::get_customizer_value($id, 'post_tags_hide');
         $post_tags_load                  = OCR::get_customizer_value($id, 'post_tags_load');
         $exclusive_post_types_posts_load = OCR::get_customizer_value($id, 'exclusive_post_types_posts_load');
         $post_types_load                 = OCR::get_customizer_value($id, 'exclusive_post_types_load');
@@ -71,6 +72,14 @@ trait PageTargetingRuleTrait
                 }
             }
 
+            // If current post has a tag that the optin should not load for, return false.
+            if ( ! empty($post_tags_hide) && is_singular('post')) {
+                $intersect = array_intersect($post_tags, $post_tags_hide);
+                if ( ! empty($intersect)) {
+                    return false;
+                }
+            }
+
             return true;
         }
 
@@ -78,15 +87,13 @@ trait PageTargetingRuleTrait
         // to stop the optin display otherwise return the default filter var which is basically not doing anything.
         $custom_check_circuit = apply_filters('mailoptin_page_targeting_optin_rule_short_circuit', null, $id, $post_id);
 
-        if ( ! is_null($custom_check_circuit) && is_bool($custom_check_circuit)) {
+        if (is_bool($custom_check_circuit)) {
             return $custom_check_circuit;
         }
 
         $custom_check = apply_filters('mailoptin_page_targeting_optin_rule', null, $id, $post_id);
 
-        if ( ! is_null($custom_check) && is_bool($custom_check)) {
-            return $custom_check;
-        }
+        if (is_bool($custom_check)) return $custom_check;
 
         // if current view is neither frontpage, homepage, archive page or search page, return false.
         if ( ! empty($load_optin_index) && (is_front_page() || is_home() || is_archive() || is_search())) {
@@ -107,6 +114,14 @@ trait PageTargetingRuleTrait
         if ( ! empty($post_categories_hide) && is_singular('post')) {
 
             $intersect = array_intersect($post_categories, $post_categories_hide);
+            if ( ! empty($intersect)) {
+                return false;
+            }
+        }
+
+        // If current post has a tag that the optin should not load for, return false.
+        if ( ! empty($post_tags_hide) && is_singular('post')) {
+            $intersect = array_intersect($post_tags, $post_tags_hide);
             if ( ! empty($intersect)) {
                 return false;
             }
@@ -152,7 +167,7 @@ trait PageTargetingRuleTrait
 
         $custom_check = apply_filters('mailoptin_page_targeting_optin_rule_after', null, $id, $post_id);
 
-        if ( ! is_null($custom_check) && is_bool($custom_check)) {
+        if (is_bool($custom_check)) {
             return $custom_check;
         }
 

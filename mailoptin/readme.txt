@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.2.78.5
+Stable tag: 1.2.78.6
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -187,7 +187,13 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.78.6 =
+* Added fix for array/object fatal error behind "mailoptin_customizer_normalize_saved_values" filter.
+* Fixed Customizer page targeting multiselect persistence.
+* Updated name to Benchmark Email Classic.
+
 = 1.2.78.5 =
+* Prevented the opt-in campaign Customizer from fatalling when saved control values are arrays or objects.
 * Added rate limiting to the public subscribe_to_email_list handler to curb repeated subscription attempts.
 * Fixed the Mailchimp opt-in fatal error caused when integrations are already a PHP array instead of JSON text.
 * Blocked unrecognized public subscription requests early to prevent MailOptin conversion handling or campaign error emails.

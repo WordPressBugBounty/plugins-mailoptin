@@ -38,7 +38,7 @@ class Connect extends AbstractBenchmarkEmailConnect implements ConnectionInterfa
      */
     public function register_connection($connections)
     {
-        $connections[self::$connectionName] = __('Benchmark Email', 'mailoptin');
+        $connections[self::$connectionName] = __('Benchmark Email (Classic)', 'mailoptin');
 
         return $connections;
     }

@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.78.5\n"
+"Project-Id-Version: MailOptin - Lite 1.2.78.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-05T13:30:01+00:00\n"
+"POT-Creation-Date: 2026-10-10T15:53:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -556,11 +556,11 @@ msgstr ""
 
 #: src/connections/BenchmarkEmailConnect/Connect.php:41
 #: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:25
-msgid "Benchmark Email"
+msgid "Benchmark Email (Classic)"
 msgstr ""
 
 #: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:26
-msgid "Benchmark Email Connection"
+msgid "Benchmark Email (Classic) Connection"
 msgstr ""
 
 #: src/connections/BenchmarkEmailConnect/ConnectSettingsPage.php:34
@@ -4886,7 +4886,7 @@ msgid "WordPress Registered Users"
 msgstr ""
 
 #: src/connections/RegisteredUsersConnect/Connect.php:98
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1578
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1592
 msgid "Restrict to User Role"
 msgstr ""
 
@@ -7171,7 +7171,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/CustomControls/WP_Customize_Fields_Repeater_Control.php:723
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:222
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1244
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1432
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1446
 msgid "Premium Version Available"
 msgstr ""
 
@@ -8420,125 +8420,133 @@ msgstr ""
 msgid "Hide the optin on posts that are in any of the selected categories."
 msgstr ""
 
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1405
+msgid "Never show on these post tags:"
+msgstr ""
+
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1408
-msgid "Select the pages this optin should never be loaded on."
+msgid "Hide the optin on posts that have any of the selected tags."
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1422
-msgid "Select \"custom post type\" posts this optin should never be loaded on."
+msgid "Select the pages this optin should never be loaded on."
 msgstr ""
 
 #: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1436
+msgid "Select \"custom post type\" posts this optin should never be loaded on."
+msgstr ""
+
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1450
 #, php-format
 msgid "Upgrade to %sMailOptin Premium%s to embed with shortcodes, get optin triggers such as %3$sExit Intent%4$s, %3$sPage views%4$s, %3$sTime on Site%4$s, %3$sAdBlock detection%4$s, %3$sReferral Detection%4$s, %3$sScroll trigger%4$s, powerful page-level targeting and display rules proven to boost conversions."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1494
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1508
 msgid "Query String"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1499
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1513
 msgid "Select Action"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1500
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1514
 msgid "Only show on matching pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1501
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1515
 msgid "Hide on matching pages"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1503
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1517
 msgid "Specify whether to display or hide the opt-in if the conditions below are met."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1509
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1523
 msgid "Query String Name"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1513
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1527
 msgid "Specify the query string where this opt-in should show/hide."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1519
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1533
 msgid "Query String Value"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1523
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1537
 msgid "Leave blank if you want to match the query string irrespective of its value."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1561
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1575
 msgid "Who should see this optin?"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1564
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1578
 msgid "Decide who are able to see this optin."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1566
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1580
 msgid "Show to all visitors and users"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1567
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1581
 msgid "Show to only logged-in users"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1568
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1582
 msgid "Show to only users not logged-in"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1569
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1583
 msgid "Show to specific user roles"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1581
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1595
 msgid "The opt-in form will only be shown to users with any of the roles you select here."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1591
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1605
 msgid "Prefill Form with User Data"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1594
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1608
 msgid "Enable to prefill form with the name and email address of logged in users."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1635
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1649
 msgid "In-post optins are automatically added before or after your post/page content. Only use the embed feature if you want to show your optin in a specific area of your site."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1640
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1654
 msgid "Widget"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1644
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1658
 #, php-format
 msgid "Use the MailOptin widget to embed optin to your website sidebar and other widget area. %sLearn more%s"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1652
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1666
 msgid "Shortcode"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1655
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1669
 msgid "Use the shortcode below to embed this opt-in form anywhere in your WordPress posts or pages. All page, query string and user targeting rules are ignored when you use shortcode."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1661
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1675
 msgid "Template Tag"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1664
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1678
 msgid "Use the template tag below to embed this opt-in form anywhere in your theme. All page, query string and user targeting rules are ignored when you use shortcode."
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1669
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1683
 msgid "Editor Block"
 msgstr ""
 
-#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1672
+#: src/core/src/Admin/Customizer/OptinForm/CustomizerControls.php:1686
 msgid "You can also use the MailOptin block in the new WordPress block editor to embed your optins. All page, query string and user targeting rules are ignored when you use MailOptin's block."
 msgstr ""
 

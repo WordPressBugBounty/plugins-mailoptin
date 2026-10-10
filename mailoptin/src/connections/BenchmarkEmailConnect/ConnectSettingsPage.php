@@ -22,8 +22,8 @@ class ConnectSettingsPage
         }
 
         $settingsArg[] = [
-            'section_title_without_status' => __('Benchmark Email', 'mailoptin'),
-            'section_title'                => __('Benchmark Email Connection', 'mailoptin') . " $status",
+            'section_title_without_status' => __('Benchmark Email (Classic)', 'mailoptin'),
+            'section_title'                => __('Benchmark Email (Classic) Connection', 'mailoptin') . " $status",
             'type'                         => AbstractConnect::EMAIL_MARKETING_TYPE,
             'logo_url'                     => MAILOPTIN_CONNECTION_ASSETS_URL . 'images/bechmark-integration.png',
             'benchmarkemail_api_key'             => [
