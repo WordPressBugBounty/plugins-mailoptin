@@ -1,5 +1,8 @@
 ﻿== Changelog ==
 
+= 1.2.78.7 =
+* Fixed security issue from unsanitized field mapping parameter.
+
 = 1.2.78.6 =
 * Added fix for array/object fatal error behind "mailoptin_customizer_normalize_saved_values" filter.
 * Fixed Customizer page targeting multiselect persistence.

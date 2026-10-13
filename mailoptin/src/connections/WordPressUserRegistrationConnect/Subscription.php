@@ -31,12 +31,19 @@ class Subscription extends AbstractConnect
 
         $custom_field_mappings = $this->form_custom_field_mappings();
 
+        // only these wp_insert_user() fields can be populated from mapped form fields.
+        // never allow ID, role, user_email, meta_input etc. to be set via field mapping.
+        $allowed_user_fields = array_keys(Connect::get_instance()->get_optin_fields());
+
         if (is_array($custom_field_mappings) && ! empty($custom_field_mappings)) {
 
             foreach ($custom_field_mappings as $wordpressUserFieldKey => $customFieldKey) {
-                $value = $this->extras[$customFieldKey];
 
-                $user_fields[$wordpressUserFieldKey] = esc_html($value);
+                if ( ! is_string($wordpressUserFieldKey) || ! in_array($wordpressUserFieldKey, $allowed_user_fields, true)) continue;
+
+                if ( ! is_scalar($customFieldKey) || ! isset($this->extras[$customFieldKey]) || ! is_scalar($this->extras[$customFieldKey])) continue;
+
+                $user_fields[$wordpressUserFieldKey] = esc_html($this->extras[$customFieldKey]);
             }
         }
 
@@ -60,6 +67,9 @@ class Subscription extends AbstractConnect
         $lead_data = array_merge($user_data, $lead_data);
 
         $lead_data['role'] = $this->role == 'administrator' ? '' : $this->role;
+
+        // this integration only ever creates new users. never update an existing account.
+        unset($lead_data['ID'], $lead_data['meta_input']);
 
         $lead_data = apply_filters('mo_connections_wordpress_user_registration_parameters', $lead_data, $this);
 

@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailOptin - Lite 1.2.78.6\n"
+"Project-Id-Version: MailOptin - Lite 1.2.78.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailoptin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-10T15:53:49+00:00\n"
+"POT-Creation-Date: 2026-10-13T17:57:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mailoptin\n"
@@ -134,7 +134,7 @@ msgstr ""
 #: src/core/src/Admin/Customizer/EmailCampaign/CustomizerControls.php:956
 #: src/core/src/Admin/SettingsPage/AddEmailCampaign.php:77
 #: src/core/src/Admin/SettingsPage/Email_Campaign_List.php:382
-#: src/core/src/AjaxHandler.php:1297
+#: src/core/src/AjaxHandler.php:1333
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1160
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1191
 #: src/core/src/OptinForms/AbstractOptinTheme.php:1204
@@ -1418,7 +1418,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:38
 #: src/connections/WPFormsConnect/MailOptin.php:403
 #: src/connections/WSFormConnect/WSFMailOptin.php:765
-#: src/core/src/AjaxHandler.php:1288
+#: src/core/src/AjaxHandler.php:1324
 msgid "First Name"
 msgstr ""
 
@@ -1494,7 +1494,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:39
 #: src/connections/WPFormsConnect/MailOptin.php:408
 #: src/connections/WSFormConnect/WSFMailOptin.php:770
-#: src/core/src/AjaxHandler.php:1289
+#: src/core/src/AjaxHandler.php:1325
 msgid "Last Name"
 msgstr ""
 
@@ -1543,7 +1543,7 @@ msgstr ""
 #: src/connections/ForminatorFormConnect/panel-settings-view.php:11
 #: src/connections/GravityFormsConnect/GFMailOptin.php:163
 #: src/connections/WebHookConnect/Connect.php:40
-#: src/core/src/AjaxHandler.php:1290
+#: src/core/src/AjaxHandler.php:1326
 msgid "Email Address"
 msgstr ""
 
@@ -1610,7 +1610,7 @@ msgstr ""
 #: src/connections/WebHookConnect/Connect.php:37
 #: src/connections/WPFormsConnect/MailOptin.php:398
 #: src/connections/WSFormConnect/WSFMailOptin.php:760
-#: src/core/src/AjaxHandler.php:1287
+#: src/core/src/AjaxHandler.php:1323
 msgid "Full Name"
 msgstr ""
 
@@ -2883,7 +2883,7 @@ msgid "Back"
 msgstr ""
 
 #: src/connections/ForminatorFormConnect/ModuleSettingsPageTrait.php:441
-#: src/core/src/AjaxHandler.php:1316
+#: src/core/src/AjaxHandler.php:1352
 msgid "Save"
 msgstr ""
 
@@ -9497,46 +9497,46 @@ msgstr ""
 msgid "Email campaign with similar name exist already."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:707
+#: src/core/src/AjaxHandler.php:710
 msgid "Too many subscription attempts. Please try again later."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:785
+#: src/core/src/AjaxHandler.php:819
 #, php-format
 msgid "No email provider or list has been set for this optin. %sSee fix here%s"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:821
-#: src/core/src/AjaxHandler.php:843
+#: src/core/src/AjaxHandler.php:855
+#: src/core/src/AjaxHandler.php:877
 #: src/core/src/OptinForms/AbstractOptinForm.php:1297
 msgid "Your submission has been flagged as potential spam."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:831
+#: src/core/src/AjaxHandler.php:865
 msgid "Email address is invalid. Try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1051
+#: src/core/src/AjaxHandler.php:1085
 msgid "Email address is not valid. Please try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1140
+#: src/core/src/AjaxHandler.php:1176
 msgid "Error log successfully deleted"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1145
+#: src/core/src/AjaxHandler.php:1181
 msgid "This will delete the error log forever. Press OK to confirm"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1146
+#: src/core/src/AjaxHandler.php:1182
 msgid "Delete Error Log"
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1276
+#: src/core/src/AjaxHandler.php:1312
 msgid "Error: No integration field found. Select a list first if you haven't and try again."
 msgstr ""
 
-#: src/core/src/AjaxHandler.php:1281
+#: src/core/src/AjaxHandler.php:1317
 msgid "Map integration fields to form custom fields"
 msgstr ""
 

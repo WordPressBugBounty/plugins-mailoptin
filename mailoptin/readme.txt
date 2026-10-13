@@ -5,7 +5,7 @@ Tags: popup, popup maker, popups, newsletter, mailchimp
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.2.78.6
+Stable tag: 1.2.78.7
 License: GPL-2.0+
 
 Create popup, optin forms using easy form builder & popup maker. Send automated email to subscribers — Mailchimp, ActiveCampaign, Campaign Monitor etc
@@ -187,6 +187,9 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 
 == Changelog ==
 
+= 1.2.78.7 =
+* Fixed security issue from unsanitized field mapping parameter.
+
 = 1.2.78.6 =
 * Added fix for array/object fatal error behind "mailoptin_customizer_normalize_saved_values" filter.
 * Fixed Customizer page targeting multiselect persistence.
@@ -205,21 +208,5 @@ Yes, MailOptin has complete translation and localization support. All .mo and .p
 * Migrated Omnisend api from v3 to 2026-03-15.
 * Fixed PHP error: Function curl_close() is deprecated since 8.5.
 * Fixed PHP fatal error with emogrify.
-
-= 1.2.78.3 =
-* Fixed Fatal PHP error when sending.
-
-= 1.2.78.2 =
-* Improved security of license upgrader.
-* Upgraded internal PHP dependencies.
-* Added mo_leadbank_lead_data filter to lead bank payload.
-
-= 1.2.78.1 =
-* Fixed XSS in optin block.
-* Fixed Mailchimp lead subscription bug due to an invalid IP address.
-
-= 1.2.78.0 =
-* Added [Copper CRM integration](https://mailoptin.io/article/connect-wordpress-copper-crm/).
-* Fixed security issue where a non-whitelisted option could be used as a list-subscription field value.
 
 See the [changelog file](https://plugins.svn.wordpress.org/mailoptin/trunk/changelog.txt) for complete change log information.
